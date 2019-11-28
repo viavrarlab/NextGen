@@ -109,8 +109,96 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arm
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/ArmBone
+        weight: 1
+      - path: Armature/ArmBone/ArmBone_end
+        weight: 1
+      - path: Armature/BigMotor
+        weight: 1
+      - path: Armature/BigMotor/BigMotor_end
+        weight: 1
+      - path: Armature/BigMotorCog
+        weight: 1
+      - path: Armature/BigMotorCog/BigMotorCog_end
+        weight: 1
+      - path: Armature/BottomCase 1
+        weight: 1
+      - path: Armature/BottomCase 1/BottomCase_end
+        weight: 1
+      - path: Armature/InsideWiresToPCB
+        weight: 1
+      - path: Armature/InsideWiresToPCB/InsideWiresToPCB_end
+        weight: 1
+      - path: Armature/InsideWiresToSmallMotor.001
+        weight: 1
+      - path: Armature/InsideWiresToSmallMotor.001/InsideWiresToSmallMotor.001_end
+        weight: 1
+      - path: Armature/MiddleBottomCog
+        weight: 1
+      - path: Armature/MiddleBottomCog/MiddleBottomCog_end
+        weight: 1
+      - path: Armature/MiddleRod
+        weight: 1
+      - path: Armature/MiddleRod/MiddleRod_end
+        weight: 1
+      - path: Armature/MiddleTopCog
+        weight: 1
+      - path: Armature/MiddleTopCog/MiddleTopCog_end
+        weight: 1
+      - path: Armature/PCb
+        weight: 1
+      - path: Armature/PCb/PCb_end
+        weight: 1
+      - path: Armature/SmallMotor
+        weight: 1
+      - path: Armature/SmallMotor/SmallMotor_end
+        weight: 1
+      - path: Armature/SmallMotorBottomCog
+        weight: 1
+      - path: Armature/SmallMotorBottomCog/SmallMotorBottomCog_end
+        weight: 1
+      - path: Armature/SmallMotorTopCog 1
+        weight: 1
+      - path: Armature/SmallMotorTopCog 1/SmallMotorTopCog_end
+        weight: 1
+      - path: Armature/TopCase 1
+        weight: 1
+      - path: Armature/TopCase 1/TopCase_end
+        weight: 1
+      - path: Big_motor
+        weight: 1
+      - path: Big_Motor_Cog
+        weight: 1
+      - path: BigMotor_Wires
+        weight: 1
+      - path: BottomCase
+        weight: 1
+      - path: Cog_Shaft
+        weight: 1
+      - path: MiddleCogBottom
+        weight: 1
+      - path: MiddleCogTop
+        weight: 1
+      - path: PCB
+        weight: 1
+      - path: Small_Motor_With_Shaft
+        weight: 1
+      - path: SmallMotorBotomCog
+        weight: 1
+      - path: SmallMotorTopCog
+        weight: 1
+      - path: TopCase
+        weight: 1
+      - path: wires_To_small_motor
+        weight: 1
+      maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     isReadable: 0
