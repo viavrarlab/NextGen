@@ -53,22 +53,4 @@ public class DisableAnimator : MonoBehaviour
             Debug.Log(gameObjList.ToString());
         }
     }
-    void GetBones()
-    {
-        foreach(Transform child in _armature.transform)
-        {
-            if (child.tag == "Grab")
-            {
-                Debug.Log("add");
-                gameObjList.Add(child.gameObject);               
-            }
-        }
-    }
-    void EnablePhysics()
-    {
-        foreach(GameObject obj in gameObjList)
-        {
-            obj.GetComponent<Rigidbody>().isKinematic = false;
-        }
-    }
 }
