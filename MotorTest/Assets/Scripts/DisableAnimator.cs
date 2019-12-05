@@ -45,7 +45,7 @@ public class DisableAnimator : MonoBehaviour
     {
         foreach (GameObject obj in gameObjList)
         {
-            m_Animator.enabled = false;
+            //m_Animator.enabled = false;
             EnablePhysics();
         }
         if (Input.GetKeyDown(KeyCode.A))
