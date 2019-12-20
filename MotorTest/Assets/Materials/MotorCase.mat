@@ -21,14 +21,14 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MotorCase
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_ShaderKeywords: _NORMALMAP
+  m_Shader: {fileID: -6465566751694194690, guid: b98f31d852d2313419a55e28b137467f,
+    type: 3}
+  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3100
-  stringTagMap:
-    RenderType: Transparent
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses:
   - SHADOWCASTER
   m_SavedProperties:
@@ -79,14 +79,17 @@ Material:
     - Boolean_6DA570F0: 0
     - Vector1_1125972B: 0.368
     - Vector1_2DFBC20D: 0
+    - Vector1_48095F36: 0.648
+    - Vector1_6520C5D3: 1
     - Vector1_8563C885: 0.6
+    - Vector1_CA169414: 0
     - Vector1_DF1506FC: 0.577
     - _AlphaClip: 0
-    - _Blend: 2
+    - _Blend: 1
     - _BumpScale: 10
     - _Cull: 2
     - _Cutoff: 0.5
-    - _DstBlend: 1
+    - _DstBlend: 10
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -103,6 +106,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 0
     m_Colors:
+    - Color_2E7B6A17: {r: 0.018912422, g: 0.4244925, b: 0.8018868, a: 0}
     - Vector2_950C3D5B: {r: 1, g: 1, b: 0, a: 0}
     - _BaseColor: {r: 0.25, g: 0.45546544, b: 1, a: 0.74509805}
     - _Color: {r: 0, g: 0.03288772, b: 0.8000001, a: 1}
