@@ -7,14 +7,8 @@ public class LocationSnapTest : MonoBehaviour
     float snapSpeed = 2f;
     float t = 0f;
     
-    float StartX;
-    float EndX;
     bool isWithInX;
-    float StartY;
-    float EndY;
     bool isWithInY;
-    float StartZ;
-    float EndZ;
     bool isWithInZ;
     // Start is called before the first frame update
     void Start()
@@ -38,7 +32,7 @@ public class LocationSnapTest : MonoBehaviour
             print("atrodas starp punktiem");
         }
     }
-    void checkLocation(GameObject obj)
+    void checkLocation(GameObject obj, float StartX, float EndX, float StartY, float EndY, float StartZ, float EndZ)
     {
         if(StartX > obj.transform.position.x && obj.transform.position.x > EndX)
         {
