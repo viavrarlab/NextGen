@@ -10,6 +10,10 @@ public class LocationSnapTest : MonoBehaviour
     bool isWithInX;
     bool isWithInY;
     bool isWithInZ;
+
+    public List<GameObject> ArmatureBones;
+    GameObject Armature;
+    public GameObject Model;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +23,11 @@ public class LocationSnapTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        checkLocationTest();
+        //checkLocationTest();
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            GetAllArmature();
+        }
     }
     void checkLocationTest()
     {
@@ -45,6 +53,26 @@ public class LocationSnapTest : MonoBehaviour
         if (StartZ > obj.transform.position.z && obj.transform.position.z > EndZ)
         {
             isWithInZ = true;
+        }
+    }
+    void GetAllArmature()
+    {
+        foreach(Transform child in Model.transform)
+        {
+            if(child.tag == "Armature")
+            {
+                Armature = child.gameObject;
+                print("Ir armatura");
+            }
+        }
+        print(Armature.tag);
+        foreach(Transform child in Armature.transform)
+        {
+            if(child.tag == "Grab")
+            {
+                ArmatureBones.Add(child.gameObject);
+                print("Ir kauli");
+            }
         }
     }
 }
