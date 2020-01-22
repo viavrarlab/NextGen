@@ -6,11 +6,13 @@ public class LocationSnapTest : MonoBehaviour
 {
     float snapSpeed = 2f;
     float t = 0f;
-    
+
     bool isWithInX;
     bool isWithInY;
     bool isWithInZ;
 
+    public float offset;
+    public GameObject reference_obj;
     public List<GameObject> ArmatureBones;
     GameObject Armature;
     public GameObject Model;
@@ -28,6 +30,7 @@ public class LocationSnapTest : MonoBehaviour
         {
             GetAllArmature();
         }
+        checkLocationTest();
     }
     void checkLocationTest()
     {
@@ -40,21 +43,21 @@ public class LocationSnapTest : MonoBehaviour
             print("atrodas starp punktiem");
         }
     }
-    void checkLocation(GameObject obj, float StartX, float EndX, float StartY, float EndY, float StartZ, float EndZ)
-    {
-        if(StartX > obj.transform.position.x && obj.transform.position.x > EndX)
-        {
-            isWithInX = true;
-        }
-        if(StartY > obj.transform.position.y && obj.transform.position.y > EndY)
-        {
-            isWithInY = true;
-        }
-        if (StartZ > obj.transform.position.z && obj.transform.position.z > EndZ)
-        {
-            isWithInZ = true;
-        }
-    }
+    //void checkLocation()
+    //{
+    //    if (-offset > reference_obj.transform.localPosition.x && reference_obj.transform.localPosition.x > offset)
+    //    {
+    //        isWithInX = true;
+    //    }
+    //    if(-offset > reference_obj.transform.localPosition.y && reference_obj.transform.localPosition.y > offset)
+    //    {
+    //        isWithInY = true;
+    //    }
+    //    if (-offset > reference_obj.transform.localPosition.z && reference_obj.transform.localPosition.z > offset)
+    //    {
+    //        isWithInZ = true;
+    //    }
+    //}
     void GetAllArmature()
     {
         foreach(Transform child in Model.transform)
