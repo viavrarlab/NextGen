@@ -14,12 +14,21 @@ public class PlacementPoint : MonoBehaviour
     public Vector3 m_CorrectPlacementAngle = Vector3.zero; // TODO: make this automated somehow. Maybe when generating placement points / ObjectConfig.. IDK
     public bool m_IsOccupied = false; // If this socket/point has something socketed 
     public float m_CorrectAngleThreshold = 5f; // How precise does the Placeable objects' rotation has to be in order to allow snapping into socket. Used in CheckAngle(). Measures as angle degrees.
+    public bool m_CheckForCorrectAngle = false;
 
+    public List<SocketPair> m_IntersectingSockets = new List<SocketPair>();
     
+
+    public Color m_DefaultStateColor = Color.white;
     public Color m_ValidObjectColor = Color.green;
     public Color m_InvalidObjectColor = Color.red;
     public Color m_ValidRotationColor = Color.cyan;
     public Color m_InvalidRotationColor = Color.yellow;
+
+    public enum SocketState { None, Empty, Snapped, IntersectingValidObject, IntersectingInvalidObject, IntersectingValidRotation, IntersectingInvalidRotation}
+    public SocketState m_CurrentSocketState = SocketState.None;
+
+    private SocketState m_LastSocketState;
 
 
     private MeshRenderer m_MeshRenderer; // PlacementPoints' graphics. For now they are on the same object and the MR is assigned automatically
@@ -35,8 +44,59 @@ public class PlacementPoint : MonoBehaviour
         m_MeshRenderer = GetComponent<MeshRenderer>();
         m_MaterialPropertyBlock = new MaterialPropertyBlock();
 
-        UpdateMaterial(0f); // Hide the graphics
-        UpdateMaterial(m_ValidObjectColor);
+        //UpdateMaterial(0.2f); // Hide the graphics
+        //UpdateMaterial(m_DefaultStateColor);
+        //ToggleIntersectingSockets(false);
+        SwitchSocketState(SocketState.Empty);
+    }
+
+    void Update()
+    {
+        if (m_CurrentSocketState != m_LastSocketState)
+        {
+            switch (m_CurrentSocketState)
+            {
+                case SocketState.Empty:
+                    UpdateMaterial(m_DefaultStateColor);
+                    FadeAlphaTo(0.2f);
+                    m_LastSocketState = m_CurrentSocketState;
+                    return;
+                case SocketState.IntersectingValidObject:
+                    ToggleIntersectingSockets(false);
+                    UpdateMaterial(m_ValidObjectColor);
+                    FadeAlphaTo(0.5f);
+                    m_LastSocketState = m_CurrentSocketState;
+                    return;
+                case SocketState.IntersectingInvalidObject:
+                    UpdateMaterial(m_InvalidObjectColor);
+                    FadeAlphaTo(0.5f);
+                    m_LastSocketState = m_CurrentSocketState;
+                    return;
+                case SocketState.IntersectingValidRotation:
+                    UpdateMaterial(m_ValidRotationColor);
+                    FadeAlphaTo(0.5f);
+                    m_LastSocketState = m_CurrentSocketState;
+                    return;
+                case SocketState.IntersectingInvalidRotation:
+                    UpdateMaterial(m_InvalidRotationColor);
+                    FadeAlphaTo(0.5f);
+                    m_LastSocketState = m_CurrentSocketState;
+                    return;
+                case SocketState.Snapped:
+                    ToggleIntersectingSockets(true);
+                    UpdateMaterial(m_DefaultStateColor);
+                    FadeAlphaTo(0f);
+                    m_LastSocketState = m_CurrentSocketState;
+                    return;
+                default:
+                    return;
+            }
+        }
+    }
+
+    void SwitchSocketState(SocketState _state)
+    {
+        m_CurrentSocketState = _state;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -47,20 +107,20 @@ public class PlacementPoint : MonoBehaviour
             Placeable p = other.gameObject.GetComponent<Placeable>(); // Get the Placeable component on incoming object.
             if (p != null)
             {
-                FadeAlphaTo(1f);
-
                 if (p.m_ID == m_PlaceableID) // Check if the incoming Placeable objects ID is what this socket wants
                 {
-                    if (m_SnappableObject != p) // Kind of redundant, but whatever. Just setting the member variable to incoming objects Placeable script reference.
+                    if (m_SnappableObject != p) // Kind of redundant check, but whatever - just keep it as extra security. Just setting the member variable to incoming objects Placeable script reference.
                     {
                         m_SnappableObject = p;
                     }
+                    SwitchSocketState(SocketState.IntersectingValidObject);
+                    
                     //m_IsOccupied = true;
-                    UpdateMaterial(m_ValidObjectColor);
                 }
                 else
                 {
-                    UpdateMaterial(m_InvalidObjectColor);
+                    //SwitchSocketState(SocketState.IntersectingInvalidObject);
+                    //Timer.Register(1f, () => SwitchSocketState(SocketState.Empty));
                 }
             }
         }
@@ -69,51 +129,91 @@ public class PlacementPoint : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (m_SnappableObject != null && !m_SnappableObject.m_IsPlaced) { // If we have a valid Placeable object and it isn't already placed
-            if (CheckAngle(m_SnappableObject.transform.rotation))   // Check if user has rotated the object correctly
+        if (m_SnappableObject != null && !m_SnappableObject.m_IsPlaced)  // If we have a valid Placeable object and it isn't already placed
+        {
+            if (m_CheckForCorrectAngle)
             {
-                UpdateMaterial(m_ValidRotationColor);   // change color to valid
-                if (m_GrabScript.grabAction.GetLastStateUp(m_GrabScript.handType) && !m_IsOccupied) // If user has released the grab button and the socket is not already occupied
+                if (CheckAngle(m_SnappableObject.transform.rotation))   // Check if user has rotated the object correctly
                 {
-                    SnapObject();   // snap the object to the socket
-                    UpdateMaterial(m_ValidObjectColor);
+                    SwitchSocketState(SocketState.IntersectingValidRotation);
+                    if (m_GrabScript.grabAction.GetLastStateUp(m_GrabScript.handType) && !m_IsOccupied) // If user has released the grab button and the socket is not already occupied
+                    {
+                        SnapObject();   // snap the object to the socket
+                    }
+                }
+                else
+                {
+                    SwitchSocketState(SocketState.IntersectingInvalidRotation);
                 }
             }
             else
             {
-                UpdateMaterial(m_InvalidRotationColor); // change color to invalid
+                SwitchSocketState(SocketState.IntersectingValidObject);
+                if (m_GrabScript.grabAction.GetLastStateUp(m_GrabScript.handType) && !m_IsOccupied) // If user has released the grab button and the socket is not already occupied
+                {
+                    SnapObject();   // snap the object to the socket
+                }
             }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (m_IsOccupied)
+        //if (m_IsOccupied)
+        //{
+
+        //bool otherIsNull = other.gameObject != null;
+        //bool snappableIsNull = m_SnappableObject != null;
+        //bool otherIsNotSnappable = other.gameObject != m_SnappableObject.gameObject;
+
+        //if ()
+        //{
+        //    return;
+        //}
+        if (m_SnappableObject != null)
         {
-            if(other.gameObject != m_SnappableObject.gameObject)
-            {
-                return;
-            }
             m_SnappableObject.m_IsPlaced = false;
             m_IsOccupied = false;
             m_SnappableObject = null;
+            SwitchSocketState(SocketState.Empty);
         }
-        if (GetMaterialAlpha() > 0f)
+        //}
+        //else
+        //{
+        //    SwitchSocketState(SocketState.Empty);
+        //}
+    }
+
+    void ToggleIntersectingSockets(bool _state)
+    {
+        foreach (SocketPair sp in m_IntersectingSockets)
         {
-            FadeAlphaTo(0f);
+            sp.m_Collider.enabled = _state;
+            if (!_state)
+            {
+                if (sp.m_PlacementPoint.m_SnappableObject != null && sp.m_PlacementPoint.m_SnappableObject.m_IsPlaced)
+                {
+                    sp.m_PlacementPoint.SwitchSocketState(SocketState.Snapped);
+                }
+                else
+                {
+                    sp.m_PlacementPoint.SwitchSocketState(SocketState.Empty);
+                }
+            }
         }
     }
 
     void SnapObject()
     {
+        SwitchSocketState(SocketState.Snapped);
         m_SnappableObject.transform.position = transform.position;
         m_SnappableObject.transform.rotation = Quaternion.Euler(m_CorrectPlacementAngle);
         m_SnappableObject.m_IsPlaced = true;
         m_IsOccupied = true;
-        FadeAlphaTo(0f);
+
     }
 
-    void FadeAlphaTo(float to)
+    public void FadeAlphaTo(float to)
     {
         float val = 1f - to;
         DOTween.To(() => val, x => val = x, to, 0.25f).OnUpdate(() =>

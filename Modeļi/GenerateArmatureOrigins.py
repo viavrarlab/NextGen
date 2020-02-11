@@ -23,7 +23,7 @@ def create_armature_at_origins():
     bpy.ops.object.add(type='ARMATURE', location=(0.0,0.0,0.0)) # Creates an empty Armature object at 0,0,0 position
     armature = bpy.data.objects['Armature'] # Store Armature object in variable for easy access
     for obj in all_objects: # Loop over all mesh objects to create a bone for each of them
-        object_name = obj.name  # Store current object's name for later use
+        object_name = obj.name+"_Bone"  # Store current object's name for later use
         C.scene.cursor.location = obj.location  # Set 3D cursor position to current object's origin location
         cursor = C.scene.cursor.location # Store 3D cursor's location for later use
         C.view_layer.objects.active = armature  # Set Armature object as active to perform bone adding and positioning actions
@@ -37,18 +37,24 @@ def rig():
     armature = bpy.data.objects['Armature'] # Store Armature object in variable for later use
     for obj in all_objects: # Loop over all mesh objects to set parent to the Armature
         deselect_all()  # Make sure nothing is selected to prevent selection errors for future operations
-        
+                
         armature.select_set(True) # Select Armature
         
         OP.mode_set(mode='EDIT')    # Go into Edit mode for Armature
-        parent_bone = obj.name  # Get and store current object's name to use to find the correct bone for parenting
+        parent_bone = obj.name+"_Bone"  # Get and store current object's name to use to find the correct bone for parenting
         armature.data.edit_bones.active = armature.data.edit_bones[parent_bone] # Set previously determined bone as selected 
         OP.mode_set(mode='OBJECT') # Go into Object mode for Armature
         deselect_all() # Make sure nothing is selected to prevent selection errors for future operations
-        
+                
         obj.select_set(True)    # Select mesh object as first, making it the object to be parented
         armature.select_set(True) # Select the Armature as second, making it the parent object
-        bpy.ops.object.parent_set(type='BONE')  # Parent the selected objects using the active/selected bone type
+        bpy.ops.object.parent_set(type='ARMATURE_NAME')  # Parent the selected objects using the active/selected bone type (BONE)
+        
+        vg = obj.vertex_groups[parent_bone]
+        verts = []
+        for vert in obj.data.vertices:
+            verts.append(vert.index)
+        vg.add(verts, 1.0, 'ADD')
 
 def main():
     for collection in D.collections:    # Loops over all Collections in scene (it's suggested to have only 1 collection to prevent errors)
