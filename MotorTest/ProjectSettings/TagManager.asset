@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Grab
   - Armature
+  - projectile
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Locked
   - Placeable
   - PlacementPoint
-  - 
+  - Teleport
   - 
   - 
   - 

@@ -40,12 +40,24 @@ Material:
         m_Texture: {fileID: 2800000, guid: 0eda50ade8076204da3ddd2dc6e5808e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NormalTex:
+        m_Texture: {fileID: 2800000, guid: bf257e67baa045f4db8b1079eef2a66f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ThicknessTex:
+        m_Texture: {fileID: 2800000, guid: 8bf87a981725aac4aace860e9238e7e0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -70,11 +82,17 @@ Material:
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
+    - _fLTDistortion: 0
+    - _fLTScale: 0.54
+    - _fLightAttentuation: 1.43
+    - _iLTPower: 28.6
     m_Colors:
     - _BaseColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _fLTAmbient: {r: 0, g: 0, b: 0, a: 1}
+    - _lightPosition: {r: 0, g: 0, b: 1, a: 0}
 --- !u!114 &4958862087454772290
 MonoBehaviour:
   m_ObjectHideFlags: 11

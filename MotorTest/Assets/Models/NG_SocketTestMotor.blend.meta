@@ -6,7 +6,57 @@ ModelImporter:
   - first:
       74: -623603649343465320
     second: Scene
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cogs
+    second: {fileID: 2100000, guid: c58283dac4397bc49b305b49e6d0fa25, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MotorCase
+    second: {fileID: 2100000, guid: d567decd4d39b224784b64a8762b2f8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Motors
+    second: {fileID: 2100000, guid: 49f6b42a5b4a5b043a50d337adfd6d9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PCB_Base
+    second: {fileID: 2100000, guid: d4d4c7af63a7f2c4dbe9830c52eb5c00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PCBs_Capacitors
+    second: {fileID: 2100000, guid: 51a1ec7207698d8458c7d666f28a3f1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PCBs_Chip
+    second: {fileID: 2100000, guid: efa0d5da0d2b8744cae60596b60ef7fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PCBs_Resistors
+    second: {fileID: 2100000, guid: e4e7212a563f7884099385b158bf851f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rods
+    second: {fileID: 2100000, guid: b021bd8f3eab7df4691b7a1b2d259de3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WireBlue
+    second: {fileID: 2100000, guid: 41688d8c3d0017340bcff46b83a7eb14, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WireRed
+    second: {fileID: 2100000, guid: fb67c8657a7a2034bac7630c031a5ea5, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
