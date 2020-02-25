@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
+using DG.Tweening;
 
 public class Teleport : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class Teleport : MonoBehaviour
     private bool m_IsTeleporting = false;
     public float m_FadeTime = 0.25f;
 
+    private MeshRenderer m_Renderer;
+    private Material m_Material;
+
     void Start()
     {
         m_Pose = GetComponent<SteamVR_Behaviour_Pose>();
@@ -25,6 +29,18 @@ public class Teleport : MonoBehaviour
     {
         m_HasPosition = UpdatePointer();
         m_Marker.SetActive(m_HasPosition);
+
+        //if (m_Material != null)
+        //{
+        //    if (m_HasPosition)
+        //    {
+        //        m_Material.DOColor(Color.white, 0.15f);
+        //    }
+        //    else
+        //    {
+        //        m_Material.DOColor(Color.clear, 0.15f);
+        //    }
+        //}
 
         if (m_TeleportAction.GetStateUp(m_Pose.inputSource))
         {
@@ -71,6 +87,11 @@ public class Teleport : MonoBehaviour
         if(Physics.Raycast(ray, out hit, 50f, m_TeleportLayers) )
         {
             m_Marker.transform.position = hit.point;
+            //if (m_Renderer == null || (m_Renderer.gameObject != hit.collider.gameObject))
+            //{
+            //    m_Renderer = hit.collider.GetComponent<MeshRenderer>();
+            //    m_Material = m_Renderer.material;
+            //}
             return true;
         }
 
