@@ -72,10 +72,11 @@ public class PlacementSocketGenerator : MonoBehaviour
             BoxCollider col = socket.gameObject.AddComponent<BoxCollider>() as BoxCollider;
             Bounds bounds = new Bounds(mesh.transform.position, Vector3.zero);
             bounds.Encapsulate(mesh.bounds);
+            Debug.Log($"Teksts - {mesh.bounds}");
             Vector3 localCenter = bounds.center - socket.transform.position;
             bounds.center = localCenter;
             col.center = bounds.center;
-            col.size = bounds.size * 100f;
+            col.size = bounds.size;
             col.isTrigger = true;
 
             // PlacementPoint.cs
@@ -119,14 +120,14 @@ public class PlacementSocketGenerator : MonoBehaviour
 
             BoxCollider col = bone.gameObject.AddComponent<BoxCollider>() as BoxCollider;
             Renderer rend = GetMeshRenderer(bone.name);
-
+            Debug.Log($"Mesh - {bone.name}");
             Bounds bounds = new Bounds(rend.transform.position, Vector3.zero);
             bounds.Encapsulate(rend.bounds);
             Vector3 localCenter = bounds.center - bone.position;
             bounds.center = localCenter;
 
             col.center = bounds.center;
-            col.size = bounds.size * 100f;
+            col.size = bounds.size;
 
             Placeable placeable = Placeable.CreateComponentReturn(bone.gameObject, id);
             id++;
@@ -153,7 +154,7 @@ public class PlacementSocketGenerator : MonoBehaviour
         }
         foreach (SkinnedMeshRenderer mesh in m_MeshList)
         {
-            if(_boneName.Contains(mesh.gameObject.name))
+            if(_boneName == mesh.gameObject.name + "_Bone")
             {
                 return mesh;
             }

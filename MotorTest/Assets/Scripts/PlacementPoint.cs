@@ -16,6 +16,8 @@ public class PlacementPoint : MonoBehaviour
     public float m_CorrectAngleThreshold = 5f; // How precise does the Placeable objects' rotation has to be in order to allow snapping into socket. Used in CheckAngle(). Measures as angle degrees.
     public bool m_CheckForCorrectAngle = false;
 
+    public float snapspeed = 2f;
+
     public List<SocketPair> m_IntersectingSockets = new List<SocketPair>();
     
 
@@ -138,7 +140,8 @@ public class PlacementPoint : MonoBehaviour
                     SwitchSocketState(SocketState.IntersectingValidRotation);
                     if (m_GrabScript.grabAction.GetLastStateUp(m_GrabScript.handType) && !m_IsOccupied) // If user has released the grab button and the socket is not already occupied
                     {
-                        SnapObject();   // snap the object to the socket
+                        //SnapObject();   // snap the object to the socket
+                        StartCoroutine(SnapWithAnimation());
                     }
                 }
                 else
@@ -151,7 +154,8 @@ public class PlacementPoint : MonoBehaviour
                 SwitchSocketState(SocketState.IntersectingValidObject);
                 if (m_GrabScript.grabAction.GetLastStateUp(m_GrabScript.handType) && !m_IsOccupied) // If user has released the grab button and the socket is not already occupied
                 {
-                    SnapObject();   // snap the object to the socket
+                    //SnapObject();   // snap the object to the socket
+                    StartCoroutine(SnapWithAnimation());
                 }
             }
         }
@@ -265,5 +269,22 @@ public class PlacementPoint : MonoBehaviour
 
         bool isSameRotation = Mathf.Abs(angle) < m_CorrectAngleThreshold;   // If the difference is less than a threshold then we accept that it's the same rotation
         return isSameRotation;
+    }
+    private IEnumerator SnapWithAnimation()
+    {
+        float t = 0f;
+        while(t <= 1f)
+        {
+            t += Time.deltaTime / snapspeed;
+            Vector3 currentposition = Vector3.Lerp(m_SnappableObject.transform.position, transform.position, t);
+            Quaternion Currentroatation = Quaternion.Lerp(m_SnappableObject.transform.rotation, Quaternion.Euler(m_CorrectPlacementAngle), t);
+            m_SnappableObject.transform.rotation = Currentroatation;
+            m_SnappableObject.transform.position = currentposition;
+            yield return null;
+        }
+        m_SnappableObject.m_IsPlaced = true;
+        m_IsOccupied = true;
+        SwitchSocketState(SocketState.Snapped);
+        yield return null;
     }
 }
