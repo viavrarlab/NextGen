@@ -1,4 +1,6 @@
 import bpy
+from math import radians
+from mathutils import Vector
 
 D = bpy.data
 C = bpy.context
@@ -9,6 +11,9 @@ all_objects = []    # Array to store all mesh objects in scene
 
 def deselect_all():
     bpy.ops.object.select_all(action='DESELECT')    # Deselects all objects in scene
+    
+def select_all():
+    bpy.ops.object.select_all(action='SELECT')    # Deselects all objects in scene
 
 def set_origin(obj):
     deselect_all()  # Make sure nothing is selected to prevent selection errors for future operations
@@ -32,6 +37,14 @@ def create_armature_at_origins():
         b.head = cursor # Position the new bone's head end at 3D cursor
         b.tail = (cursor.x+0.0, cursor.y+0.0, cursor.z+1.0) # Position the new bone's tail end at offset from 3D cursor
         bpy.ops.object.editmode_toggle() # Toggle out of Edit mode
+        
+def fix_object_rotation():
+    deselect_all()
+    select_all()
+    bpy.ops.transform.rotate(value=radians(-90), orient_axis='X', orient_type='GLOBAL', orient_matrix=((1, 0, 0), (0, 1, 0), (0, 0, 1)), orient_matrix_type='GLOBAL')
+    bpy.ops.object.transform_apply(location=False, rotation=True, scale=False)
+    bpy.ops.transform.rotate(value=radians(90), orient_axis='X', orient_type='GLOBAL', orient_matrix=((1, 0, 0), (0, 1, 0), (0, 0, 1)), orient_matrix_type='GLOBAL')
+        
         
 def rig():
     armature = bpy.data.objects['Armature'] # Store Armature object in variable for later use
@@ -62,6 +75,8 @@ def main():
         for obj in collection.objects:  # Loop over all objects in a collection
             set_origin(obj) # Function call: Set current objects origin
             add_object_to_array(obj)    # Function call: Add current object to all objects array
+        
+        fix_object_rotation()
         
         create_armature_at_origins()    # Function call: Create an Armature and its bones at each mesh objects origin
         rig()   # Function call: Parent all mesh objects to Armature
