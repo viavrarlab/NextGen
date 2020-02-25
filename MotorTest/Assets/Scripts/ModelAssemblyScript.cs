@@ -9,7 +9,6 @@ public class ModelAssemblyScript : MonoBehaviour
     public GameObject ReferenceModel;
     List<GameObject> ArmatureBones = new List<GameObject>();
     GameObject Armature;
-
     bool isWithInX;
     bool isWithInY;
     bool isWithInZ;
@@ -43,6 +42,11 @@ public class ModelAssemblyScript : MonoBehaviour
                 ArmatureBones.Add(child.gameObject);
                 print("Ir kauli");
             }
+        }
+        foreach(GameObject bone in ArmatureBones)
+        {
+            string Bname = bone.name;
+            Type MyScriptType = Type.GetType(Bname + ",Assembly-CSharp");
         }
     }
     void Assembly()

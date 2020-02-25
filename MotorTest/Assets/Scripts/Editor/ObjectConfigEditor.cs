@@ -11,6 +11,7 @@ public class ObjectConfigEditor : Editor
     GameObject armature;
     List<GameObject> Bones;
     ObjectConfig Configs;
+    public List<Tuple<GameObject, int>> BonesWithId = new List<Tuple<GameObject, int>>(); 
     private void OnEnable()
     {
         Configs = (ObjectConfig)target;
@@ -24,11 +25,15 @@ public class ObjectConfigEditor : Editor
         {
             AddComponents();
             AddTag();
-            Create();
+            //CreateScripts();
         }
-        if (GUILayout.Button("AddScript"))
+        if (GUILayout.Button("CustomList"))
         {
-            AddIDScript();
+            CustomList();
+        }
+        if (GUILayout.Button("ReturListValue"))
+        {
+            GetCustomListValues();
         }
     }
     public void FindArmature()
@@ -64,53 +69,61 @@ public class ObjectConfigEditor : Editor
             obj.tag = "Grab";
         }
     }
-    void Create()
-    {
-        int Index = 1;
-        foreach(GameObject bone in Bones)
-        {
-            // remove whitespace and minus
-            string name = bone.name.Replace(" ", "");
-            string copyPath = "Assets/IDScripts/" + name + ".cs";
-            Debug.Log("Creating Classfile: " + copyPath);
-            if (File.Exists(copyPath) == false)
-            { // do not overwrite
-                using (StreamWriter outfile =
-                    new StreamWriter(copyPath))
-                {
-                    outfile.WriteLine("using UnityEngine;");
-                    outfile.WriteLine("using System.Collections;");
-                    outfile.WriteLine("");
-                    outfile.WriteLine("public class " + name + " : MonoBehaviour {");
-                    outfile.WriteLine(" ");
-                    outfile.WriteLine("    public int Index =  " + Index + ";" );
-                    outfile.WriteLine(" // Use this for initialization");
-                    outfile.WriteLine(" void Start () {");
-                    outfile.WriteLine(" ");
-                    outfile.WriteLine(" }");
-                    outfile.WriteLine(" ");
-                    outfile.WriteLine(" ");
-                    outfile.WriteLine(" // Update is called once per frame");
-                    outfile.WriteLine(" void Update () {");
-                    outfile.WriteLine(" ");
-                    outfile.WriteLine(" }");
-                    outfile.WriteLine("}");
-                }//File written
-            }
-            Index++;
-        }
-        AssetDatabase.Refresh();
-    }
+    //void CreateScripts()
+    //{
+    //    int Index = 1;
+    //    foreach (GameObject bone in Bones)
+    //    {
+    //        // remove whitespace and minus
+    //        string name = bone.name.Replace(" ", "");
+    //        string copyPath = "Assets/IDScripts/" + name + ".cs";
+    //        Debug.Log("Creating Classfile: " + copyPath);
+    //        if (File.Exists(copyPath) == false)
+    //        { // do not overwrite
+    //            using (StreamWriter outfile =
+    //                new StreamWriter(copyPath))
+    //            {
+    //                outfile.WriteLine("using UnityEngine;");
+    //                outfile.WriteLine("using System.Collections;");
+    //                outfile.WriteLine("");
+    //                outfile.WriteLine("public class " + name + " : MonoBehaviour {");
+    //                outfile.WriteLine(" ");
+    //                outfile.WriteLine("    public static int Index =  " + Index + ";");
+    //                outfile.WriteLine("}");
+    //            }//File written
+    //        }
+    //        Index++;
+    //    }
+    //    AssetDatabase.Refresh();
+    //}
     void AddIDScript()
     {
         FindArmature();
         foreach (GameObject bone in Bones)
         {
-            string Bname = bone.name;
-            Type MyScriptType = Type.GetType(Bname + ",Assembly-CSharp");
-            Debug.Log(MyScriptType);
-            bone.AddComponent(MyScriptType);
-            Debug.Log("Scripts Added To Bone");
+            //string Bname = bone.name;
+            //Type MyScriptType = Type.GetType(Bname + ",Assembly-CSharp");
+            //Debug.Log(MyScriptType);
+            //bone.AddComponent(MyScriptType);
+            //Debug.Log("Scripts Added To Bone");
+
         }
+
+    }
+    void CustomList()
+    {
+        int id = 1;
+        FindArmature();
+        foreach(GameObject bone in Bones)
+        {
+            BonesWithId.Add(new Tuple<GameObject,int>(bone,id));
+            id++;
+            Debug.Log(BonesWithId.Count);
+        }
+    }
+    Tuple<GameObject, int> GetCustomListValues()
+    {
+        Debug.Log(BonesWithId[1]);
+        return BonesWithId[1];
     }
 }
