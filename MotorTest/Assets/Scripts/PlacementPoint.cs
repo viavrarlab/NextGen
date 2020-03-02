@@ -16,7 +16,7 @@ public class PlacementPoint : MonoBehaviour
     public float m_CorrectAngleThreshold = 5f; // How precise does the Placeable objects' rotation has to be in order to allow snapping into socket. Used in CheckAngle(). Measures as angle degrees.
     public bool m_CheckForCorrectAngle = false;
 
-    public float snapspeed = 2f;
+    public float snapspeed = .4f;
 
     public List<SocketPair> m_IntersectingSockets = new List<SocketPair>();
     
@@ -273,11 +273,13 @@ public class PlacementPoint : MonoBehaviour
     private IEnumerator SnapWithAnimation()
     {
         float t = 0f;
+        Vector3 StartPosition = m_SnappableObject.transform.position;
+        Quaternion StartRotation = m_SnappableObject.transform.rotation;
         while(t <= 1f)
         {
             t += Time.deltaTime / snapspeed;
-            Vector3 currentposition = Vector3.Lerp(m_SnappableObject.transform.position, transform.position, t);
-            Quaternion Currentroatation = Quaternion.Lerp(m_SnappableObject.transform.rotation, Quaternion.Euler(m_CorrectPlacementAngle), t);
+            Vector3 currentposition = Vector3.Lerp(StartPosition, transform.position, t);
+            Quaternion Currentroatation = Quaternion.Lerp(StartRotation, Quaternion.Euler(m_CorrectPlacementAngle), t);
             m_SnappableObject.transform.rotation = Currentroatation;
             m_SnappableObject.transform.position = currentposition;
             yield return null;
