@@ -72,7 +72,7 @@ public class PlacementSocketGenerator : MonoBehaviour
             BoxCollider col = socket.gameObject.AddComponent<BoxCollider>() as BoxCollider;
             Bounds bounds = new Bounds(mesh.transform.position, Vector3.zero);
             bounds.Encapsulate(mesh.bounds);
-            Debug.Log($"Teksts - {mesh.bounds}");
+            //Debug.Log($"Teksts - {mesh.bounds}");
             Vector3 localCenter = bounds.center - socket.transform.position;
             bounds.center = localCenter;
             col.center = bounds.center;

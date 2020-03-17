@@ -49,20 +49,6 @@ public class GrabTests : MonoBehaviour
                 ReleaseObject();
             }
         }
-        if (teleportAction.GetLastState(handType))
-        {
-            if(collidingObject.tag == "Button")
-            {
-                //SceneChange();
-            }
-        }
-        if (teleportAction.GetStateUp(handType))
-        {
-            if (collidingObject.tag == "Spawn")
-            {
-                //SpawnBall();
-            }
-        }
     }
     public bool GetTeleportDown()
     {
@@ -90,7 +76,7 @@ public class GrabTests : MonoBehaviour
     private void GrabObject()
     {
         objectinhand = collidingObject;
-        collidingObject = null;
+        //collidingObject = null;
         var joint = AddFixedJoint();
         joint.connectedBody = objectinhand.GetComponent<Rigidbody>();
     }
