@@ -5,7 +5,6 @@ using UnityEngine;
 public class CorrectOrderTests : MonoBehaviour
 {
     public List<GameObject> BoneList;
-
     public void GetMeshArry()
     {
 
