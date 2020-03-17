@@ -59,27 +59,32 @@ public class PlacementPoint : MonoBehaviour
             switch (m_CurrentSocketState)
             {
                 case SocketState.Empty:
+                    ToggleSocketMeshRenderer(true);
                     UpdateMaterial(m_DefaultStateColor);
                     FadeAlphaTo(0.2f);
                     m_LastSocketState = m_CurrentSocketState;
                     return;
                 case SocketState.IntersectingValidObject:
+                    ToggleSocketMeshRenderer(true);
                     ToggleIntersectingSockets(false);
                     UpdateMaterial(m_ValidObjectColor);
                     FadeAlphaTo(0.5f);
                     m_LastSocketState = m_CurrentSocketState;
                     return;
                 case SocketState.IntersectingInvalidObject:
+                    ToggleSocketMeshRenderer(true);
                     UpdateMaterial(m_InvalidObjectColor);
                     FadeAlphaTo(0.5f);
                     m_LastSocketState = m_CurrentSocketState;
                     return;
                 case SocketState.IntersectingValidRotation:
+                    ToggleSocketMeshRenderer(true);
                     UpdateMaterial(m_ValidRotationColor);
                     FadeAlphaTo(0.5f);
                     m_LastSocketState = m_CurrentSocketState;
                     return;
                 case SocketState.IntersectingInvalidRotation:
+                    ToggleSocketMeshRenderer(true);
                     UpdateMaterial(m_InvalidRotationColor);
                     FadeAlphaTo(0.5f);
                     m_LastSocketState = m_CurrentSocketState;
@@ -87,7 +92,8 @@ public class PlacementPoint : MonoBehaviour
                 case SocketState.Snapped:
                     ToggleIntersectingSockets(true);
                     UpdateMaterial(m_DefaultStateColor);
-                    FadeAlphaTo(0f);
+                    //FadeAlphaTo(0f);
+                    ToggleSocketMeshRenderer(false);
                     m_LastSocketState = m_CurrentSocketState;
                     return;
                 default:
@@ -103,6 +109,11 @@ public class PlacementPoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.tag == "PlayerHand" || m_IsOccupied) // If the object is the player hand object OR the socket is already occupied, then just return and ignore the resto of the function
+        {
+            return;
+        }
+
         // If the socket is not occupied, allow the entered Placeable object to be processed.
         if (!m_IsOccupied)
         {
@@ -131,6 +142,11 @@ public class PlacementPoint : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        if (other.tag == "PlayerHand" || m_IsOccupied) // If the object is the player hand object OR the socket is already occupied, then just return and ignore the resto of the function
+        {
+            return;
+        }
+
         if (m_SnappableObject != null && !m_SnappableObject.m_IsPlaced)  // If we have a valid Placeable object and it isn't already placed
         {
             if (m_CheckForCorrectAngle)
@@ -163,6 +179,13 @@ public class PlacementPoint : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        
+        if(other.tag == "PlayerHand" || (other.gameObject != m_SnappableObject.gameObject)) // If the object is the player hand object, then just return and ignore the resto of the function
+        {
+            return;
+        }
+
+
         //if (m_IsOccupied)
         //{
 
@@ -217,9 +240,18 @@ public class PlacementPoint : MonoBehaviour
 
     }
 
+    void ToggleSocketMeshRenderer(bool _state)
+    {
+        if (m_MeshRenderer.enabled != _state)
+        {
+            m_MeshRenderer.enabled = _state;
+        }
+    }
+
     public void FadeAlphaTo(float to)
     {
-        float val = 1f - to;
+        //float val = 1f - to;
+        float val = to;
         DOTween.To(() => val, x => val = x, to, 0.25f).OnUpdate(() =>
         {
             UpdateMaterial(val);
