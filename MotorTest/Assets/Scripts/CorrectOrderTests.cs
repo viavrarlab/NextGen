@@ -1,12 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SubjectNerd.Utilities;
 
 public class CorrectOrderTests : MonoBehaviour
 {
-    public List<GameObject> BoneList;
-    public void GetMeshArry()
-    {
-
-    }
+    [Reorderable]
+    public List<GameObject> Parts;
 }
