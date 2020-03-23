@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SubjectNerd.Utilities;
 
+[System.Serializable]
 public class CorrectOrderTests : MonoBehaviour
 {
-    [Reorderable]
-    public List<GameObject> Parts;
+    public string Name;
+    public List<CustomListClass> Parts;
+
 }
+
