@@ -11,69 +11,85 @@ public class PlacementOrderEditor : Editor
 { 
     CorrectOrderTests m_CorrOrder;
     GameObject armature;
+
     CustomListClass item;
+    
 
     ReorderableList PartsList;
 
     float lineheight;
     float lineheightspace;
     private void OnEnable()
-    {       
+    {
         m_CorrOrder = (CorrectOrderTests)target;
-
-        lineheight = EditorGUIUtility.singleLineHeight;
-        lineheightspace = lineheight + 5;
 
         PartsList = new ReorderableList(serializedObject, serializedObject.FindProperty("Parts"),true,true,true,true);
 
+    }
+    private void drawList()
+    {
+        //List Item Headers
+        //PartsList.drawHeaderCallback = (Rect rect) =>
+        //{
+        //    EditorGUI.LabelField(rect, "Part");
+        //};
+        // List main body
         PartsList.drawElementCallback = (Rect rect, int index, bool isActive, bool isFocused) =>
         {
             SerializedProperty element = PartsList.serializedProperty.GetArrayElementAtIndex(index);
 
-            var elementObj = element.serializedObject as object as SerializedObject;
-
+            var elementObj = element.serializedObject as SerializedObject;
             //EditorGUI.LabelField(new Rect(rect.x,rect.y,rect.width,lineheight), elementObj.FindProperty("Name").stringValue);
-            EditorGUI.PropertyField(new Rect(rect.x, rect.y, rect.width, lineheight), element.FindPropertyRelative("obj"));
-            //EditorGUI.PropertyField(new Rect(rect.x, rect.y + lineheight, rect.width, lineheight), element.FindPropertyRelative("set"));
+            EditorGUI.PropertyField(new Rect(rect.x, rect.y, rect.width/2, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("obj"), GUIContent.none);
+            EditorGUI.PropertyField(new Rect(rect.x+200, rect.y, rect.width/2, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("set"),GUIContent.none);
 
-            SerializedProperty propertyIterator = elementObj.GetIterator();
+            //SerializedProperty propertyIterator = elementObj.GetIterator();
 
-            int i = 0;
+            //if (propertyIterator.NextVisible(true))
+            //{
+
+            //    do
+            //    {
+            //        if (propertyIterator.name == "obj")
+            //        {
+            //            EditorGUI.indentLevel++;
+            //        }
+            //        else
+            //        {
+            //            EditorGUI.PropertyField(new Rect(rect.x, rect.y + lineheight, rect.width, lineheight), element.FindPropertyRelative("obj"), GUIContent.none);
+            //            EditorGUI.PropertyField(new Rect(rect.x, rect.y + lineheight, rect.width, lineheight), element.FindPropertyRelative("set"));
+            //        }
+            //    } while (propertyIterator.NextVisible(false));
+            //}
+
+            //int i = 0;
             //while (propertyIterator.NextVisible(true))
             //{
-            //    EditorGUI.PropertyField(new Rect(rect.x, rect.y + (lineheightspace * i), rect.width, lineheight), propertyIterator);
+            //    //EditorGUI.PropertyField(new Rect(rect.x, rect.y + (lineheightspace * i), rect.width, lineheight), propertyIterator);
             //    //EditorGUI.PropertyField(new Rect(rect.x, rect.y, rect.width, lineheight), element.FindPropertyRelative("obj"));
             //    Debug.Log("fignja");
             //    i++;
+            //    break;
             //}
+            elementObj.ApplyModifiedProperties();
 
         };
+        // ---- Line Spacing for reordable list --- currently not usable
+        PartsList.elementHeightCallback = (int index) =>
+        {
+            SerializedProperty element = PartsList.serializedProperty.GetArrayElementAtIndex(index);
 
-        //PartsList.elementHeightCallback = (int index) =>
-        //{
-        //    float height = 0;
-
-        //    SerializedProperty element = PartsList.serializedProperty.GetArrayElementAtIndex(index);
-
-        //    var elementObj = element.serializedObject as object as SerializedObject;
-
-        //    SerializedProperty propertyIterator = elementObj.GetIterator();
-        //    int i = 0;
-        //    while (i < listLenght)
-        //    {
-        //        i++;
-        //    }
-        //    height = lineheightspace * i;
-
-        //    return height;
-        //};
+            var elementHeight = EditorGUI.GetPropertyHeight(element.FindPropertyRelative("set"), true);
+            var margin = EditorGUIUtility.standardVerticalSpacing;
+            return elementHeight + margin;
+        };
     }
-
 
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
-
+        serializedObject.Update();
+        drawList();
         PartsList.DoLayoutList();
 
         if (GUILayout.Button("Fill List"))
@@ -108,6 +124,6 @@ public class PlacementOrderEditor : Editor
     }
     public void ClearList()
     {
-        m_CorrOrder.Parts.Clear();;
+        m_CorrOrder.Parts.Clear();
     }
 }
