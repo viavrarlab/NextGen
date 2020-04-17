@@ -9,6 +9,7 @@ TagManager:
   - projectile
   - FxTemporaire
   - PlayerHand
+  - Door
   layers:
   - Default
   - TransparentFX
