@@ -29,7 +29,7 @@ public class PlacementSocketGenerator : MonoBehaviour
 
     public List<SocketPair> m_SocketPairs;
 
-
+    CorrectOrderTests m_CorrOrder;
     void Start()
     {
         
@@ -42,6 +42,7 @@ public class PlacementSocketGenerator : MonoBehaviour
 
     public void GenerateSockets()
     {
+        m_CorrOrder = GetComponent<CorrectOrderTests>();
         foreach(Transform child in this.transform)
         {
             SkinnedMeshRenderer rend = child.GetComponent<SkinnedMeshRenderer>();
@@ -50,46 +51,73 @@ public class PlacementSocketGenerator : MonoBehaviour
                 m_MeshList.Add(rend);
             }
         }
+        // get object set count
+        int maxValue = 0;
+        foreach (CustomListClass obj in m_CorrOrder.Parts)
+        {
+            if (obj.set > maxValue)
+            {
+                maxValue = obj.set;
+            }
+        }
 
         // create empty object for holding sockets
         GameObject socketRoot = new GameObject("PlacementSocket_Root");
         socketRoot.transform.SetParent(transform,false);
-        // create objects for sockets
-        int id = 0;
-        foreach(SkinnedMeshRenderer mesh in m_MeshList)
+
+        //Create sets
+        int count = 0;
+        while (count <= maxValue)
         {
-            GameObject socket = new GameObject(mesh.gameObject.name + "_Socket");
-            socket.transform.SetParent(socketRoot.transform, false);
-            socket.transform.position = mesh.transform.position;
-            socket.transform.rotation = mesh.transform.rotation;
-            // mesh filter
-            MeshFilter mf = socket.AddComponent<MeshFilter>() as MeshFilter;
-            mf.mesh = mesh.sharedMesh;
-            // mesh renderer with same mesh as expected object (from m_MeshList)
-            MeshRenderer mr = socket.AddComponent<MeshRenderer>() as MeshRenderer;
-            mr.material = m_SocketMaterial;
-
-            BoxCollider col = socket.gameObject.AddComponent<BoxCollider>() as BoxCollider;
-            Bounds bounds = new Bounds(mesh.transform.position, Vector3.zero);
-            bounds.Encapsulate(mesh.bounds);
-            //Debug.Log($"Teksts - {mesh.bounds}");
-            Vector3 localCenter = bounds.center - socket.transform.position;
-            bounds.center = localCenter;
-            col.center = bounds.center;
-            col.size = bounds.size;
-            col.isTrigger = true;
-
-            // PlacementPoint.cs
-            PlacementPoint pp = socket.AddComponent<PlacementPoint>() as PlacementPoint;
-            pp.m_PlaceableID = id;
-            pp.m_CheckForCorrectAngle = false;
-
-            SocketPair sp = new SocketPair(col,pp);
-            m_SocketPairs.Add(sp);
-
-            id++;
+            GameObject set = new GameObject("set" + count.ToString());
+            set.transform.parent = socketRoot.transform;
+            count++;
         }
 
+        // create objects for sockets and add to each set
+        int id = 0;
+        int setID = 0;
+        while (setID <= maxValue)
+        {
+            foreach (CustomListClass obj in m_CorrOrder.Parts)
+            {
+                if (obj.set == setID)
+                {
+                    string setname = "set" + setID.ToString();
+                    GameObject socket = new GameObject(obj.obj.gameObject.name + "_Socket");
+                    socket.transform.SetParent(GameObject.Find(setname).transform, false);
+                    socket.transform.position = obj.obj.transform.position;
+                    socket.transform.rotation = obj.obj.transform.rotation;
+                    // mesh filter
+                    MeshFilter mf = socket.AddComponent<MeshFilter>() as MeshFilter;
+                    mf.mesh = obj.obj.GetComponent<SkinnedMeshRenderer>().sharedMesh;
+                    // mesh renderer with same mesh as expected object (from m_MeshList)
+                    MeshRenderer mr = socket.AddComponent<MeshRenderer>() as MeshRenderer;
+                    mr.material = m_SocketMaterial;
+
+                    BoxCollider col = socket.gameObject.AddComponent<BoxCollider>() as BoxCollider;
+                    Bounds bounds = new Bounds(obj.obj.transform.position, Vector3.zero);
+                    bounds.Encapsulate(obj.obj.GetComponent<SkinnedMeshRenderer>().bounds);
+                    //Debug.Log($"Teksts - {mesh.bounds}");
+                    Vector3 localCenter = bounds.center - socket.transform.position;
+                    bounds.center = localCenter;
+                    col.center = bounds.center;
+                    col.size = bounds.size;
+                    col.isTrigger = true;
+
+                    // PlacementPoint.cs
+                    PlacementPoint pp = socket.AddComponent<PlacementPoint>() as PlacementPoint;
+                    pp.m_PlaceableID = id;
+                    pp.m_CheckForCorrectAngle = false;
+
+                    SocketPair sp = new SocketPair(col, pp);
+                    m_SocketPairs.Add(sp);
+
+                    id++;
+                }
+            }
+            setID++;
+        }
         foreach(SocketPair sp in m_SocketPairs)
         {
             foreach(SocketPair checkPair in m_SocketPairs)
@@ -111,25 +139,25 @@ public class PlacementSocketGenerator : MonoBehaviour
     {
         GameObject armatureRoot = transform.Find("Armature").gameObject;
         int id = 0;
-        foreach (Transform bone in armatureRoot.transform)
+        foreach (CustomListClass obj in m_CorrOrder.Parts)
         {
-            Rigidbody rb = bone.gameObject.AddComponent<Rigidbody>() as Rigidbody;
+            Rigidbody rb = obj.Bone.gameObject.AddComponent<Rigidbody>() as Rigidbody;
             rb.isKinematic = false;
             rb.useGravity = false;
             rb.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
 
-            BoxCollider col = bone.gameObject.AddComponent<BoxCollider>() as BoxCollider;
-            Renderer rend = GetMeshRenderer(bone.name);
-            Debug.Log($"Mesh - {bone.name}");
+            BoxCollider col = obj.Bone.gameObject.AddComponent<BoxCollider>() as BoxCollider;
+            Renderer rend = GetMeshRenderer(obj.Bone.name);
+            Debug.Log($"Mesh - {obj.Bone.name}");
             Bounds bounds = new Bounds(rend.transform.position, Vector3.zero);
             bounds.Encapsulate(rend.bounds);
-            Vector3 localCenter = bounds.center - bone.position;
+            Vector3 localCenter = bounds.center - obj.Bone.transform.position;
             bounds.center = localCenter;
 
             col.center = bounds.center;
             col.size = bounds.size;
 
-            Placeable placeable = Placeable.CreateComponentReturn(bone.gameObject, id);
+            Placeable placeable = Placeable.CreateComponentReturn(obj.Bone.gameObject, id);
             id++;
         }
     }

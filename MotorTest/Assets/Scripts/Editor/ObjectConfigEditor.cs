@@ -11,7 +11,8 @@ public class ObjectConfigEditor : Editor
     GameObject armature;
     List<GameObject> Bones;
     ObjectConfig Configs;
-    public List<Tuple<GameObject, int>> BonesWithId = new List<Tuple<GameObject, int>>(); 
+    public List<Tuple<GameObject, int>> BonesWithId = new List<Tuple<GameObject, int>>();
+    //CorrectOrderTests lists;
     private void OnEnable()
     {
         Configs = (ObjectConfig)target;
@@ -26,10 +27,6 @@ public class ObjectConfigEditor : Editor
             AddComponents();
             AddTag();
             //CreateScripts();
-        }
-        if (GUILayout.Button("CustomList"))
-        {
-            CustomList();
         }
         if (GUILayout.Button("ReturListValue"))
         {
@@ -110,20 +107,8 @@ public class ObjectConfigEditor : Editor
         }
 
     }
-    void CustomList()
+    void GetCustomListValues()
     {
-        int id = 1;
-        FindArmature();
-        foreach(GameObject bone in Bones)
-        {
-            BonesWithId.Add(new Tuple<GameObject,int>(bone,id));
-            id++;
-            Debug.Log(BonesWithId.Count);
-        }
-    }
-    Tuple<GameObject, int> GetCustomListValues()
-    {
-        Debug.Log(BonesWithId[1]);
-        return BonesWithId[1];
+
     }
 }

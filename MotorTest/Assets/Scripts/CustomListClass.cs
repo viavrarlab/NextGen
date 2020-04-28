@@ -7,4 +7,5 @@ public class CustomListClass
 {
     public GameObject obj;
     public int set;
+    public GameObject Bone;
 }

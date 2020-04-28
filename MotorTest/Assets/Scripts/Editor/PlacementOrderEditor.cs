@@ -14,8 +14,9 @@ public class PlacementOrderEditor : Editor
 
     CustomListClass item;
     
-
     ReorderableList PartsList;
+
+    GameObject SortedMotor;
 
     float lineheight;
     float lineheightspace;
@@ -72,7 +73,6 @@ public class PlacementOrderEditor : Editor
             //    break;
             //}
             elementObj.ApplyModifiedProperties();
-
         };
         // ---- Line Spacing for reordable list --- currently not usable
         PartsList.elementHeightCallback = (int index) =>
@@ -103,23 +103,25 @@ public class PlacementOrderEditor : Editor
     }
     public void GetParts()
     {
+        GameObject armatureRoot = m_CorrOrder.gameObject.transform.Find("Armature").gameObject;
         foreach (Transform child in m_CorrOrder.gameObject.transform)
         {
-            if (child.name == "Armature")
+            SkinnedMeshRenderer rend = child.GetComponent<SkinnedMeshRenderer>();
+            if (rend != null)
             {
-                armature = child.gameObject;
-                Debug.Log("Armatura atrasta");
+                item = new CustomListClass
+                {
+                    obj = child.gameObject,
+                    set = 0
+                };
+                m_CorrOrder.Parts.Add(item);
             }
         }
-        foreach (Transform child in armature.transform)
+        int index = 0;
+        foreach (Transform bone in armatureRoot.transform)
         {
-            item = new CustomListClass
-            {
-                obj = child.gameObject,
-                set = 0
-            };
-            m_CorrOrder.Parts.Add(item);
-
+            m_CorrOrder.Parts[index].Bone = bone.gameObject;
+            index++;
         }
     }
     public void ClearList()
