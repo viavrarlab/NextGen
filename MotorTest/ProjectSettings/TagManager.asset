@@ -10,6 +10,7 @@ TagManager:
   - FxTemporaire
   - PlayerHand
   - Door
+  - MotorCollider
   layers:
   - Default
   - TransparentFX
@@ -24,8 +25,8 @@ TagManager:
   - Placeable
   - PlacementPoint
   - Teleport
-  - 
-  - 
+  - Interactable
+  - Hand
   - 
   - 
   - 

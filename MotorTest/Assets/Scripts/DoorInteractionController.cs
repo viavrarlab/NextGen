@@ -1,14 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Valve.VR;
+//using Valve.VR;
+using HTC.UnityPlugin.Vive;
 
 public class DoorInteractionController : MonoBehaviour
 {
-    public SteamVR_Input_Sources handType;
-    public SteamVR_Action_Boolean grabAction;
+    //public SteamVR_Input_Sources handType;
+    //public SteamVR_Action_Boolean grabAction;
 
-    public SteamVR_Behaviour_Pose controllerPose;
+    //public SteamVR_Behaviour_Pose controllerPose;
+
+    //public HandRole m_HandRole;
+    //public ControllerButton m_ControllerButton;
 
     private GameObject collidingObject;
     private GameObject objectinhand;
@@ -20,7 +24,11 @@ public class DoorInteractionController : MonoBehaviour
         {
             return;
         }
-        collidingObject = col.gameObject;
+        //print("colliding with:: " + collidingObject);
+        if (col.tag == "Door")
+        {
+            collidingObject = col.gameObject;
+        }
     }
 
     // Start is called before the first frame update
@@ -47,31 +55,51 @@ public class DoorInteractionController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    //void Update()
+    //{
+
+    //    if(ViveInput.GetPressDown(m_HandRole, m_ControllerButton))
+    //    {
+    //        if (collidingObject != null)
+    //        {
+    //            GrabObject();
+    //        }
+    //    }
+
+    //    if (ViveInput.GetPressUp(m_HandRole, m_ControllerButton))
+    //    {
+    //        if (objectinhand)
+    //        {
+    //            ReleaseObject();
+    //        }
+    //    }
+    //}
+
+    public void TryGrabDoor()
     {
-        if (grabAction.GetLastStateDown(handType))
+        if (collidingObject != null)
         {
-            if (collidingObject.tag == "Door")
-            {
-                //print("i collided with " + collidingObject.name);
-                GrabObject();
-            }
+            GrabObject();
         }
-        if (grabAction.GetLastStateUp(handType))
+    }
+
+    public void ReleaseDoor()
+    {
+        if (objectinhand)
         {
-            if (objectinhand)
-            {
-                ReleaseObject();
-            }
+            ReleaseObject();
         }
     }
 
     private void GrabObject()
     {
+
         objectinhand = collidingObject;
+
         //collidingObject = null;
         var joint = AddFixedJoint();
         joint.connectedBody = objectinhand.GetComponent<Rigidbody>();
+        // objectinhand.GetComponent<DoorHinge>().GrabDoor(transform);
     }
     private FixedJoint AddFixedJoint()
     {
@@ -88,10 +116,12 @@ public class DoorInteractionController : MonoBehaviour
             Destroy(GetComponent<FixedJoint>());
 
             // FIXME: The velocity values shouldn't be negative. This is probably something to do with how the door armature is made.
-            objectinhand.GetComponent<Rigidbody>().velocity = -controllerPose.GetVelocity();
-            objectinhand.GetComponent<Rigidbody>().angularVelocity = -controllerPose.GetAngularVelocity();
+            //objectinhand.GetComponent<Rigidbody>().velocity = -controllerPose.GetVelocity();
+            //objectinhand.GetComponent<Rigidbody>().angularVelocity = -controllerPose.GetAngularVelocity();
 
         }
+
+        // objectinhand.GetComponent<DoorHinge>().ReleaseDoor();
         objectinhand = null;
     }
 }

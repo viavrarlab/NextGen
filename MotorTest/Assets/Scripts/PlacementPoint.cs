@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using Valve.VR;
+using HTC.UnityPlugin.Vive;
 
 
 /// <summary>
@@ -154,7 +155,7 @@ public class PlacementPoint : MonoBehaviour
                 if (CheckAngle(m_SnappableObject.transform.rotation))   // Check if user has rotated the object correctly
                 {
                     SwitchSocketState(SocketState.IntersectingValidRotation);
-                    if (m_GrabScript.grabAction.GetLastStateUp(m_GrabScript.handType) && !m_IsOccupied) // If user has released the grab button and the socket is not already occupied
+                    if (ViveInput.GetPressUp(m_GrabScript.m_HandRole, m_GrabScript.m_ControllerButton) && !m_IsOccupied) // If user has released the grab button and the socket is not already occupied
                     {
                         //SnapObject();   // snap the object to the socket
                         StartCoroutine(SnapWithAnimation());
@@ -168,7 +169,7 @@ public class PlacementPoint : MonoBehaviour
             else
             {
                 SwitchSocketState(SocketState.IntersectingValidObject);
-                if (m_GrabScript.grabAction.GetLastStateUp(m_GrabScript.handType) && !m_IsOccupied) // If user has released the grab button and the socket is not already occupied
+                if (ViveInput.GetPressUp(m_GrabScript.m_HandRole, m_GrabScript.m_ControllerButton) && !m_IsOccupied) // If user has released the grab button and the socket is not already occupied
                 {
                     //SnapObject();   // snap the object to the socket
                     StartCoroutine(SnapWithAnimation());

@@ -28,6 +28,9 @@ public class ObjectConfigEditor : Editor
             AddTag();
             //CreateScripts();
         }
+
+
+
         if (GUILayout.Button("ReturListValue"))
         {
             GetCustomListValues();

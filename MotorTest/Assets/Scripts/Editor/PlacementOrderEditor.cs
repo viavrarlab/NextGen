@@ -96,7 +96,13 @@ public class PlacementOrderEditor : Editor
         {
             GetParts();
         }
-        if(GUILayout.Button("Clear List"))
+
+        if (GUILayout.Button("Fill List No Armature"))
+        {
+            m_CorrOrder.GetPartsNoArmature();
+        }
+
+        if (GUILayout.Button("Clear List"))
         {
             ClearList();
         }
