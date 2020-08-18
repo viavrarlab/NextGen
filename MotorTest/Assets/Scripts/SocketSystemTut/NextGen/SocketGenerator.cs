@@ -172,21 +172,21 @@ public class SocketGenerator : MonoBehaviour
     public void GenerateGrabbables()
     {
         int id = 0;
-        foreach (Transform t in transform)
+        foreach (CustomListClass t in m_CorrOrder.Parts)
         {
 
-            if(t.name == "PlacementSocket_Root")
+            if(t.obj.name == "PlacementSocket_Root")
             {
                 continue;
             }
 
-            if (t.gameObject.GetComponent<Rigidbody>() == null)
+            if (t.obj.gameObject.GetComponent<Rigidbody>() == null)
             {
-                t.gameObject.AddComponent<Rigidbody>();
+                t.obj.gameObject.AddComponent<Rigidbody>();
             }
 
 
-            Rigidbody rb = t.gameObject.GetComponent<Rigidbody>();
+            Rigidbody rb = t.obj.gameObject.GetComponent<Rigidbody>();
             rb.useGravity = false;
             rb.isKinematic = false;
             //rb.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
@@ -195,18 +195,18 @@ public class SocketGenerator : MonoBehaviour
             //{
             //    Placeable placeable = Placeable.CreateComponentReturn(t.gameObject, id);
             //}
-            if (t.gameObject.GetComponent<Moveable>() == null)
+            if (t.obj.gameObject.GetComponent<Moveable>() == null)
             {
-                Moveable moveable = t.gameObject.AddComponent<Moveable>();
+                Moveable moveable = t.obj.gameObject.AddComponent<Moveable>();
             }
 
-            Moveable m = t.gameObject.GetComponent<Moveable>();
+            Moveable m = t.obj.gameObject.GetComponent<Moveable>();
             m.m_ID = id;
 
             //t.gameObject.tag = m_TagName;
-            t.gameObject.layer = LayerMask.NameToLayer(m_LayerName);
+            t.obj.gameObject.layer = LayerMask.NameToLayer(m_LayerName);
 
-            Transform[] childrenHullObjects = FindChildren(t, "Hull");
+            Transform[] childrenHullObjects = FindChildren(t.obj.transform, "Hull");
             foreach (Transform child in childrenHullObjects)
             {
                 child.gameObject.tag = m_TagName;
@@ -287,6 +287,7 @@ public class SocketGenerator : MonoBehaviour
         {
             GameObject set = new GameObject("set" + count.ToString());
             set.transform.parent = socketRoot.transform;
+            set.gameObject.AddComponent<SetComplete>().SetID = count;
             setObjectRoots.Add(set);
             count++;
         }

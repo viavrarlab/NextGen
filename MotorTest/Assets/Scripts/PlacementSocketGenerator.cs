@@ -137,27 +137,26 @@ public class PlacementSocketGenerator : MonoBehaviour
 
     public void GenerateGrabbableObjects()
     {
-        GameObject armatureRoot = transform.Find("Armature").gameObject;
         int id = 0;
         foreach (CustomListClass obj in m_CorrOrder.Parts)
         {
-            Rigidbody rb = obj.Bone.gameObject.AddComponent<Rigidbody>() as Rigidbody;
+            Rigidbody rb = obj.obj.gameObject.AddComponent<Rigidbody>() as Rigidbody;
             rb.isKinematic = false;
             rb.useGravity = false;
             rb.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
 
-            BoxCollider col = obj.Bone.gameObject.AddComponent<BoxCollider>() as BoxCollider;
-            Renderer rend = GetMeshRenderer(obj.Bone.name);
-            Debug.Log($"Mesh - {obj.Bone.name}");
+            BoxCollider col = obj.obj.gameObject.AddComponent<BoxCollider>() as BoxCollider;
+            Renderer rend = GetMeshRenderer(obj.obj.name);
+            Debug.Log($"Mesh - {obj.obj.name}");
             Bounds bounds = new Bounds(rend.transform.position, Vector3.zero);
             bounds.Encapsulate(rend.bounds);
-            Vector3 localCenter = bounds.center - obj.Bone.transform.position;
+            Vector3 localCenter = bounds.center - obj.obj.transform.position;
             bounds.center = localCenter;
 
             col.center = bounds.center;
             col.size = bounds.size;
 
-            Placeable placeable = Placeable.CreateComponentReturn(obj.Bone.gameObject, id);
+            Placeable placeable = Placeable.CreateComponentReturn(obj.obj.gameObject, id);
             id++;
         }
     }

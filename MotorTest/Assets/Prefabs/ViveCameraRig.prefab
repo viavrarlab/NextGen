@@ -169,9 +169,12 @@ GameObject:
   - component: {fileID: 3472144916834809357}
   - component: {fileID: 3472144916827819769}
   - component: {fileID: 3472144916827819768}
-  - component: {fileID: 3472144916827819775}
   - component: {fileID: 3472144916827819760}
   - component: {fileID: 950046246}
+  - component: {fileID: 8329449437352397146}
+  - component: {fileID: 6933599666338625363}
+  - component: {fileID: 8577170290008639772}
+  - component: {fileID: 5791603224305186384}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: PlayerHand
@@ -262,26 +265,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.025
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3472144916827819775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3472144916827680603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10604503f0a1bad41ac3a7aa27214b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  handType: 0
-  teleportAction:
-    actionPath: 
-    needsReinit: 0
-  grabAction:
-    actionPath: 
-    needsReinit: 0
-  controllerPose: {fileID: 0}
 --- !u!114 &3472144916827819760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,10 +277,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84524441ac910a1428a085bf3cc943ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Marker: {fileID: 0}
-  m_TeleportAction:
-    actionPath: 
-    needsReinit: 0
+  m_Marker: {fileID: -927199367670048503, guid: a7c591c6cda846242a3472b65096d3b3,
+    type: 3}
+  m_CameraRig: {fileID: 3472144916827889591}
+  m_Camera: {fileID: 3472144916827956099}
   m_TeleportLayers:
     serializedVersion: 2
     m_Bits: 4096
@@ -314,11 +297,148 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b46323350aa09d42ae0ffb962acd046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handType: 0
-  grabAction:
-    actionPath: 
-    needsReinit: 0
-  controllerPose: {fileID: 0}
+--- !u!114 &8329449437352397146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472144916827680603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f811c0733a48a1f47add9212b3275877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ContactInteractables: []
+--- !u!114 &6933599666338625363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472144916827680603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e66a111c50beeb94eaeb53e19060938e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TriggerButton: 0
+  OnTriggerDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8329449437352397146}
+        m_MethodName: TryInteraction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnTriggerUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5791603224305186384}
+        m_MethodName: ActivateNextSet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_AButton: 4
+  OnADown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8329449437352397146}
+        m_MethodName: StopInteraction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnAUp:
+    m_PersistentCalls:
+      m_Calls: []
+  m_GripButton: 2
+  OnGripDown:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGripUp:
+    m_PersistentCalls:
+      m_Calls: []
+  m_TouchpadButton: 1
+  OnTouchpadDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3472144916827819760}
+        m_MethodName: TeleportStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnTouchpadUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3472144916827819760}
+        m_MethodName: TeleportEnd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_JoystickXAxis: 0
+  OnJoystickXPositive:
+    m_PersistentCalls:
+      m_Calls: []
+  OnJoystickXNegative:
+    m_PersistentCalls:
+      m_Calls: []
+  m_JoystickThreshold: 0.9
+--- !u!114 &8577170290008639772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472144916827680603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5791603224305186384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472144916827680603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4555817c9c3b9be4fa69f2ee69ffb03a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sets: []
+  PlacementSocketRoot: {fileID: 0}
 --- !u!1 &3472144916827685117
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,6 +753,11 @@ GameObject:
   - component: {fileID: 3472144916834688653}
   - component: {fileID: 3472144916827819771}
   - component: {fileID: 3472144916827819748}
+  - component: {fileID: 1137669368425558300}
+  - component: {fileID: 7388632822136519991}
+  - component: {fileID: 1874767863892786215}
+  - component: {fileID: 884967086909606459}
+  - component: {fileID: 4952504354606123009}
   m_Layer: 0
   m_Name: LeftHand
   m_TagString: PlayerHand
@@ -723,6 +848,168 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.025
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1137669368425558300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472144916827713293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f811c0733a48a1f47add9212b3275877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ContactInteractables: []
+--- !u!114 &7388632822136519991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472144916827713293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1874767863892786215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472144916827713293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4555817c9c3b9be4fa69f2ee69ffb03a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sets: []
+  PlacementSocketRoot: {fileID: 0}
+--- !u!114 &884967086909606459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472144916827713293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84524441ac910a1428a085bf3cc943ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Marker: {fileID: -927199367670048503, guid: a7c591c6cda846242a3472b65096d3b3,
+    type: 3}
+  m_CameraRig: {fileID: 3472144916827889591}
+  m_Camera: {fileID: 3472144916827956099}
+  m_TeleportLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_FadeTime: 0.25
+--- !u!114 &4952504354606123009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472144916827713293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e66a111c50beeb94eaeb53e19060938e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TriggerButton: 0
+  OnTriggerDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1137669368425558300}
+        m_MethodName: TryInteraction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnTriggerUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1874767863892786215}
+        m_MethodName: ActivateNextSet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_AButton: 4
+  OnADown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1137669368425558300}
+        m_MethodName: StopInteraction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnAUp:
+    m_PersistentCalls:
+      m_Calls: []
+  m_GripButton: 0
+  OnGripDown:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGripUp:
+    m_PersistentCalls:
+      m_Calls: []
+  m_TouchpadButton: 0
+  OnTouchpadDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 884967086909606459}
+        m_MethodName: TeleportStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnTouchpadUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 884967086909606459}
+        m_MethodName: TeleportEnd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_JoystickXAxis: 0
+  OnJoystickXPositive:
+    m_PersistentCalls:
+      m_Calls: []
+  OnJoystickXNegative:
+    m_PersistentCalls:
+      m_Calls: []
+  m_JoystickThreshold: 0.9
 --- !u!1 &3472144916827717319
 GameObject:
   m_ObjectHideFlags: 0

@@ -41,9 +41,9 @@ public class PlacementOrderEditor : Editor
 
             var elementObj = element.serializedObject as SerializedObject;
             //EditorGUI.LabelField(new Rect(rect.x,rect.y,rect.width,lineheight), elementObj.FindProperty("Name").stringValue);
-            EditorGUI.PropertyField(new Rect(rect.x, rect.y, rect.width/2, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("obj"), GUIContent.none);
-            EditorGUI.PropertyField(new Rect(rect.x+200, rect.y, rect.width/2, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("set"),GUIContent.none);
-
+            EditorGUI.PropertyField(new Rect(rect.x, rect.y, rect.width / 2, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("obj"), GUIContent.none);
+            EditorGUI.PropertyField(new Rect(rect.x + 180, rect.y, rect.width / 8, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("set"), GUIContent.none);
+            EditorGUI.PropertyField(new Rect(rect.x + 250, rect.y, rect.width / 6, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("OrderNotMandatory"), GUIContent.none);
             //SerializedProperty propertyIterator = elementObj.GetIterator();
 
             //if (propertyIterator.NextVisible(true))
@@ -109,7 +109,6 @@ public class PlacementOrderEditor : Editor
     }
     public void GetParts()
     {
-        GameObject armatureRoot = m_CorrOrder.gameObject.transform.Find("Armature").gameObject;
         foreach (Transform child in m_CorrOrder.gameObject.transform)
         {
             SkinnedMeshRenderer rend = child.GetComponent<SkinnedMeshRenderer>();
@@ -118,16 +117,11 @@ public class PlacementOrderEditor : Editor
                 item = new CustomListClass
                 {
                     obj = child.gameObject,
-                    set = 0
+                    set = 0,
+                    OrderNotMandatory =false
                 };
                 m_CorrOrder.Parts.Add(item);
             }
-        }
-        int index = 0;
-        foreach (Transform bone in armatureRoot.transform)
-        {
-            m_CorrOrder.Parts[index].Bone = bone.gameObject;
-            index++;
         }
     }
     public void ClearList()

@@ -18,7 +18,7 @@ public class CorrectOrderTests : MonoBehaviour
                 {
                     obj = child.gameObject,
                     set = 0,
-                    Bone = child.gameObject
+                    OrderNotMandatory = false
                 };
 
                 Parts.Add(item);
