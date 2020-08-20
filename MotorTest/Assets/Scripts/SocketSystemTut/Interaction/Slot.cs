@@ -220,18 +220,20 @@ public class Slot : Interactable
         //        //SwitchSocketState(SocketState.IntersectingInvalidObject);
         //    }
         //}
+        Moveable obj = other.transform.parent.transform.parent.gameObject.GetComponent<Moveable>();
+        if (obj.m_ID != m_PlaceableID)
+        {
+            SwitchSocketState(SocketState.IntersectingInvalidObject);
+        }
 
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.transform.parent.transform.parent.gameObject.GetComponent<Moveable>() != null)
+        if (other.transform.parent.transform.parent.gameObject.GetComponent<Moveable>())
         {
             Moveable obj = other.transform.parent.transform.parent.gameObject.GetComponent<Moveable>();
             //Check if object and socet id's match, if not then change to socket to invalid object
-            if (obj.m_ID != m_PlaceableID)
-            {
-                SwitchSocketState(SocketState.IntersectingInvalidObject);
-            }
+
             //check if object id's match and if fixed joint is connected
             if (obj.m_ID == m_PlaceableID && GetComponent<FixedJoint>().connectedBody == null)
             {
@@ -241,8 +243,12 @@ public class Slot : Interactable
             //if not null change to snapped
             if (GetComponent<FixedJoint>().connectedBody != null)
             {
-                Debug.Log("Snapped");
+                //Debug.Log("Snapped");
                 SwitchSocketState(SocketState.Snapped);
+            }
+            if (m_CurrentSocketState == SocketState.Snapped)
+            {
+
             }
         }
     }
