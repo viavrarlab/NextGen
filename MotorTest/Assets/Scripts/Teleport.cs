@@ -1,17 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Valve.VR;
+//using Valve.VR;
 using DG.Tweening;
+using HTC.UnityPlugin.Vive;
 
 public class Teleport : MonoBehaviour
 {
     public GameObject m_Marker;
-    public SteamVR_Action_Boolean m_TeleportAction;
+    public Transform m_CameraRig;
+    public Transform m_Camera;
+    //public SteamVR_Action_Boolean m_TeleportAction;
 
     public LayerMask m_TeleportLayers = -1;
 
-    private SteamVR_Behaviour_Pose m_Pose = null;
+    //public HandRole m_HandRole;
+    //public ControllerButton m_ControllerButton;
+
+    private bool m_TeleportStarted = false;
+
+    //private SteamVR_Behaviour_Pose m_Pose = null;
     private bool m_HasPosition = false;
 
     private bool m_IsTeleporting = false;
@@ -19,63 +27,76 @@ public class Teleport : MonoBehaviour
 
     private MeshRenderer m_Renderer;
     private Material m_Material;
+    RaycastHit m_Hit;
 
     void Start()
     {
-        m_Pose = GetComponent<SteamVR_Behaviour_Pose>();
+        //m_Pose = GetComponent<SteamVR_Behaviour_Pose>();
+        m_Marker.SetActive(false);
     }
 
     void FixedUpdate()
     {
-        m_HasPosition = UpdatePointer();
-        m_Marker.SetActive(m_HasPosition);
+        if (m_TeleportStarted)
+        {
+            m_HasPosition = UpdatePointer();
+        }
 
-        //if (m_Material != null)
+        // THIS IS THE LAST USED:  =================
+
+        //if (ViveInput.GetPressUp(m_HandRole, m_ControllerButton))
         //{
-        //    if (m_HasPosition)
-        //    {
-        //        m_Material.DOColor(Color.white, 0.15f);
-        //    }
-        //    else
-        //    {
-        //        m_Material.DOColor(Color.clear, 0.15f);
-        //    }
+        //    TryTeleport();
         //}
 
-        if (m_TeleportAction.GetStateUp(m_Pose.inputSource))
-        {
-            TryTeleport();
-        }
+    }
+
+    public void TeleportStart()
+    {
+        m_TeleportStarted = true;
+        m_Marker.SetActive(true);
+    }
+
+    public void TeleportEnd()
+    {
+        m_TeleportStarted = false;
+        TryTeleport();
     }
 
     private void TryTeleport()
     {
-        if(!m_HasPosition || m_IsTeleporting)
+        if (!m_HasPosition || m_IsTeleporting)
         {
             return;
         }
 
-        Transform cameraRig = SteamVR_Render.Top().origin;
-        Vector3 headPosition = SteamVR_Render.Top().head.position;
-        Vector3 groundPosition = new Vector3(headPosition.x, cameraRig.position.y, headPosition.z);
-        Vector3 translateVector = m_Marker.transform.position - groundPosition;
-        StartCoroutine(MoveRig(cameraRig, translateVector));
+        var headVector = Vector3.ProjectOnPlane(m_Camera.position - m_CameraRig.position, m_CameraRig.up);
+        var targetPos = m_Hit.point - headVector;
+
+        StartCoroutine(DoTeleport(m_CameraRig, /*m_Marker.transform*/targetPos));
     }
 
-    private IEnumerator MoveRig(Transform cameraRig, Vector3 translation)
+    private IEnumerator DoTeleport(Transform cameraRig, Vector3 targetPos)
     {
         m_IsTeleporting = true;
 
-        //SteamVR_Fade.Start(Color.black, m_FadeTime, true);
-        SteamVR_Fade.View(Color.black, m_FadeTime);
 
-        yield return new WaitForSeconds(m_FadeTime);
-        cameraRig.position += translation;
+        //SteamVR_Fade.Start(Color.black, m_FadeTime, true);
+        //SteamVR_Fade.View(Color.black, m_FadeTime);
+
+        //yield return new WaitForSeconds(m_FadeTime);
+        yield return new WaitForEndOfFrame();
+        //Vector3 posRig = new Vector3(targetPos.position.x, cameraRig.position.y, targetPos.position.z);
+        //Vector3 posCam = new Vector3(targetPos.position.x, m_Camera.position.y, targetPos.position.z);
+        cameraRig.position = targetPos;
+        //m_Camera.position = posCam;
+
 
         //SteamVR_Fade.Start(Color.clear, m_FadeTime, true);
-        SteamVR_Fade.View(Color.clear, m_FadeTime);
+        //SteamVR_Fade.View(Color.clear, m_FadeTime);
 
         m_IsTeleporting = false;
+        m_Marker.SetActive(false);
 
     }
 
@@ -84,14 +105,10 @@ public class Teleport : MonoBehaviour
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
 
-        if(Physics.Raycast(ray, out hit, 50f, m_TeleportLayers) )
+        if (Physics.Raycast(ray, out hit, 50f, m_TeleportLayers))
         {
+            m_Hit = hit;
             m_Marker.transform.position = hit.point;
-            //if (m_Renderer == null || (m_Renderer.gameObject != hit.collider.gameObject))
-            //{
-            //    m_Renderer = hit.collider.GetComponent<MeshRenderer>();
-            //    m_Material = m_Renderer.material;
-            //}
             return true;
         }
 

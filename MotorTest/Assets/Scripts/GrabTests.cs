@@ -4,13 +4,17 @@ using UnityEngine;
 using Valve.VR;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using HTC.UnityPlugin.Vive;
 public class GrabTests : MonoBehaviour
 {
-    public SteamVR_Input_Sources handType;
-    public SteamVR_Action_Boolean teleportAction;
-    public SteamVR_Action_Boolean grabAction;
+    //public SteamVR_Input_Sources handType;
+    //public SteamVR_Action_Boolean teleportAction;
+    //public SteamVR_Action_Boolean grabAction;
 
-    public SteamVR_Behaviour_Pose controllerPose;
+    //public SteamVR_Behaviour_Pose controllerPose;
+
+    public HandRole m_HandRole;
+    public ControllerButton m_ControllerButton;
 
     private GameObject collidingObject;
     private GameObject objectinhand;
@@ -34,15 +38,33 @@ public class GrabTests : MonoBehaviour
         //{
         //    print("Grab" + handType);
         //}
-        if (grabAction.GetLastStateDown(handType))
+
+        //if (grabAction.GetLastStateDown(handType))
+        //{
+        //    if (collidingObject.tag == "Grab")
+        //    {
+        //        print("i collided with "+collidingObject.name);
+        //        GrabObject();
+        //    }
+        //}
+        //if (grabAction.GetLastStateUp(handType))
+        //{
+        //    if (objectinhand)
+        //    {
+        //        ReleaseObject();
+        //    }
+        //}
+
+        if (ViveInput.GetPressDown(m_HandRole, m_ControllerButton))
         {
-            if (collidingObject.tag == "Grab")
+            if (collidingObject != null && collidingObject.tag == "Grab")
             {
-                print("i collided with "+collidingObject.name);
+                print("i collided with " + collidingObject.name);
                 GrabObject();
             }
         }
-        if (grabAction.GetLastStateUp(handType))
+
+        if (ViveInput.GetPressUp(m_HandRole, m_ControllerButton))
         {
             if (objectinhand)
             {
@@ -50,16 +72,17 @@ public class GrabTests : MonoBehaviour
             }
         }
     }
-    public bool GetTeleportDown()
-    {
-        return teleportAction.GetStateDown(handType);
-    }
-    public bool GetGrab()
-    {
-        return grabAction.GetState(handType);
-    }
+    //public bool GetTeleportDown()
+    //{
+    //    return teleportAction.GetStateDown(handType);
+    //}
+    //public bool GetGrab()
+    //{
+    //    return grabAction.GetState(handType);
+    //}
     public void OnTriggerEnter(Collider other)
     {
+        print("i collided with " + other.gameObject.name);
         SetCollidiongObject(other);
     }
     public void OnTriggerStay(Collider other)
@@ -89,10 +112,11 @@ public class GrabTests : MonoBehaviour
     }
     private void ReleaseObject()
     {
-        if (GetComponent<FixedJoint>())
+        FixedJoint fj = GetComponent<FixedJoint>();
+        if (fj)
         {
-            GetComponent<FixedJoint>().connectedBody = null;
-            Destroy(GetComponent<FixedJoint>());
+            fj.connectedBody = null;
+            Destroy(fj);
             //objectinhand.GetComponent<Rigidbody>().velocity = controllerPose.GetVelocity();
             //objectinhand.GetComponent<Rigidbody>().angularVelocity = controllerPose.GetAngularVelocity();
 

@@ -39,9 +39,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2374282598440368505}
+  - component: {fileID: 1995221509}
+  - component: {fileID: 1995221508}
+  - component: {fileID: 1995221507}
   m_Layer: 0
   m_Name: Armature_Door-R
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,6 +64,70 @@ Transform:
   m_Father: {fileID: 387610598252540305}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1995221509
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2630278246011396692}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &1995221508
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2630278246011396692}
+  m_ConnectedBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 0, y: 1, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -1.5195062, y: 1.0136957, z: -0.4368209}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 1
+  m_Limits:
+    min: -110
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!65 &1995221507
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2630278246011396692}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08587849, y: 1.8, z: 0.07386848}
+  m_Center: {x: 0.41617358, y: 0, z: 0.024393186}
 --- !u!1 &3691342086655837058
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,7 +193,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6881082222311748716}
   - component: {fileID: 9180099230647550593}
-  - component: {fileID: 4619467294792047238}
   m_Layer: 0
   m_Name: Cabinet_Doors-R
   m_TagString: Untagged
@@ -199,20 +265,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.23438965, y: -0.0045377314, z: 0.030011714}
     m_Extent: {x: 0.23948611, y: 0.011734484, z: 0.885096}
   m_DirtyAABB: 0
---- !u!64 &4619467294792047238
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3732367736478503129}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!1 &4421809677267978749
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +368,6 @@ GameObject:
   - component: {fileID: 1102240276647046568}
   - component: {fileID: 4781089194761537325}
   - component: {fileID: 767976650956322623}
-  - component: {fileID: 4619467294792047237}
   m_Layer: 0
   m_Name: Cabinet_Shell
   m_TagString: Untagged
@@ -384,20 +435,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &4619467294792047237
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5187174552564512624}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -3424279457188773356, guid: de9cda2610ac716408970e857f50903e, type: 3}
 --- !u!1 &5751403044789950597
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,9 +444,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1579626602197094387}
+  - component: {fileID: 374966852}
+  - component: {fileID: 374966851}
+  - component: {fileID: 374966850}
   m_Layer: 0
   m_Name: Armature_Door-L
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -429,6 +469,70 @@ Transform:
   m_Father: {fileID: 387610598252540305}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &374966852
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5751403044789950597}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08587849, y: 1.8, z: 0.07386848}
+  m_Center: {x: -0.4161736, y: 0, z: 0.024393186}
+--- !u!54 &374966851
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5751403044789950597}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &374966850
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5751403044789950597}
+  m_ConnectedBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 0, y: 1, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -2.4684937, y: 1.0136957, z: -0.4368209}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 1
+  m_Limits:
+    min: 0
+    max: 110
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &7124035625262508681
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,7 +543,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4085787272437323287}
   - component: {fileID: 8518655022528870523}
-  - component: {fileID: 4619467294792047239}
   m_Layer: 0
   m_Name: Cabinet_Doors-L
   m_TagString: Untagged
@@ -512,17 +615,3 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.23438974, y: -0.005563288, z: 0.03001237}
     m_Extent: {x: 0.23948605, y: 0.010708927, z: 0.8850968}
   m_DirtyAABB: 0
---- !u!64 &4619467294792047239
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7124035625262508681}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
