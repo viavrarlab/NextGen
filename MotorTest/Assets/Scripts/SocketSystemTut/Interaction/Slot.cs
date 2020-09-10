@@ -233,6 +233,7 @@ public class Slot : Interactable
         if (other.CompareTag("PlayerHand") )
         {
             Debug.Log("It's a hand you fool!");
+            return;
         }
         if (other.CompareTag("PlacementRoot") || other.CompareTag("Socket"))
         {
@@ -278,6 +279,7 @@ public class Slot : Interactable
         if (other.CompareTag("PlayerHand"))
         {
             Debug.Log("It's a hand you fool! or a socket?");
+            return;
         }
         if (other.CompareTag("PlacementRoot") || other.CompareTag("Socket"))
         {
