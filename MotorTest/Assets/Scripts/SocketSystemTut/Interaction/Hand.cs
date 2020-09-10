@@ -61,7 +61,6 @@ public class Hand : MonoBehaviour
         {
             return;
         }
-
         HeldInteraction();
     }
 

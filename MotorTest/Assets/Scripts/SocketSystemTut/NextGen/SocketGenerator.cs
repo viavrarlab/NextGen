@@ -150,6 +150,8 @@ public class SocketGenerator : MonoBehaviour
         }
         if (m_MeshList.Count > 0) m_MeshList.Clear();
         if (m_SocketPairs.Count > 0) m_SocketPairs.Clear();
+        if (m_AllSlots.Count > 0) m_AllSlots.Clear();
+
         transform.localScale = Vector3.one;
     }
 
@@ -278,6 +280,8 @@ public class SocketGenerator : MonoBehaviour
         // create empty object for holding sockets
         GameObject socketRoot = new GameObject("PlacementSocket_Root");
         socketRoot.transform.SetParent(transform, false);
+        socketRoot.AddComponent<BoxCollider>();
+        socketRoot.tag = "PlacementRoot";
 
         List<GameObject> setObjectRoots = new List<GameObject>();
 
@@ -348,7 +352,7 @@ public class SocketGenerator : MonoBehaviour
                     m_AllSlots.Add(slot);
                     //m_SocketPairs.Add(sp);
 
-                    socket.gameObject.tag = "Untagged";
+                    socket.gameObject.tag = "Socket";
                     socket.gameObject.layer = LayerMask.NameToLayer(m_LayerName);
 
                     id++;

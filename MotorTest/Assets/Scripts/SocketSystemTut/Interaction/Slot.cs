@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System;
+using Valve.VR.InteractionSystem;
 
 public class Slot : Interactable
 {
@@ -27,6 +29,12 @@ public class Slot : Interactable
 
     private Socket m_Socket = null;
 
+    private CorrectOrderTests m_CorrOrder;
+    private bool canPlace;
+
+    SocketGenerator m_SG;
+    public Slot[] SlotArray;
+
     private void Awake()
     {
         m_Socket = GetComponent<Socket>();
@@ -36,6 +44,8 @@ public class Slot : Interactable
     private void Start()
     {
         SwitchSocketState(SocketState.Empty);
+        m_SG = GameObject.FindObjectOfType<SocketGenerator>();
+        SlotArray = m_SG.m_AllSlots.ToArray();
     }
 
     public override void StartInteraction(Hand hand)
@@ -220,36 +230,83 @@ public class Slot : Interactable
         //        //SwitchSocketState(SocketState.IntersectingInvalidObject);
         //    }
         //}
-        Moveable obj = other.transform.parent.transform.parent.gameObject.GetComponent<Moveable>();
-        if (obj.m_ID != m_PlaceableID)
+        if (other.CompareTag("PlayerHand") )
         {
-            SwitchSocketState(SocketState.IntersectingInvalidObject);
+            Debug.Log("It's a hand you fool!");
         }
+        if (other.CompareTag("PlacementRoot") || other.CompareTag("Socket"))
+        {
+            Physics.IgnoreCollision(this.gameObject.GetComponent<Collider>(), other.gameObject.GetComponent<Collider>());
+        }
+        else
+        {
+            if (other.transform.parent.transform.parent.gameObject.GetComponent<Moveable>() != null)
+            {
+                Moveable obj = other.transform.parent.transform.parent.gameObject.GetComponent<Moveable>();
+                if (obj.m_ID != m_PlaceableID)
+                {
+                    SwitchSocketState(SocketState.IntersectingInvalidObject);
+                }
+                for(int i =0; i<SlotArray.Length;i++)
+                {
+                    //Debug.Log(slt.name.ToString());
+                    if (obj.m_ID == 0)
+                    {
+                        canPlace = true;
+                        print("pirmais objekts");
+                    }
+                    else
+                    {
+                        if (SlotArray[obj.m_ID-1].m_CurrentSocketState == SocketState.Snapped)
+                        {
+                            print("Bus istais");
+                            canPlace = true;
+                        }
+                        else
+                        {
+                            print("Nevar likt");
+                            canPlace = false;
+                        }
+                    }
 
+                }
+            }
+        }
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.transform.parent.transform.parent.gameObject.GetComponent<Moveable>())
+        if (other.CompareTag("PlayerHand"))
         {
-            Moveable obj = other.transform.parent.transform.parent.gameObject.GetComponent<Moveable>();
-            //Check if object and socet id's match, if not then change to socket to invalid object
+            Debug.Log("It's a hand you fool! or a socket?");
+        }
+        if (other.CompareTag("PlacementRoot") || other.CompareTag("Socket"))
+        {
+            Physics.IgnoreCollision(this.gameObject.GetComponent<Collider>(), other.gameObject.GetComponent<Collider>());
+        }
+        else
+        {
+                if (other.transform.parent.transform.parent.gameObject.GetComponent<Moveable>() != null)
+                {
+                    Moveable obj = other.transform.parent.transform.parent.gameObject.GetComponent<Moveable>();
+                    //Check if object and socet id's match, if not then change to socket to invalid object
 
-            //check if object id's match and if fixed joint is connected
-            if (obj.m_ID == m_PlaceableID && GetComponent<FixedJoint>().connectedBody == null)
-            {
-                Debug.Log("Valid Intersect");
-                SwitchSocketState(SocketState.IntersectingValidObject);
-            }
-            //if not null change to snapped
-            if (GetComponent<FixedJoint>().connectedBody != null)
-            {
-                //Debug.Log("Snapped");
-                SwitchSocketState(SocketState.Snapped);
-            }
-            if (m_CurrentSocketState == SocketState.Snapped)
-            {
+                    //check if object id's match and if fixed joint is connected
+                    if (obj.m_ID == m_PlaceableID && GetComponent<FixedJoint>().connectedBody == null)
+                    {
+                        Debug.Log("Valid Intersect");
+                        SwitchSocketState(SocketState.IntersectingValidObject);
+                    }
+                    //if not null change to snapped
+                    if (GetComponent<FixedJoint>().connectedBody != null)
+                    {
+                        //Debug.Log("Snapped");
+                        SwitchSocketState(SocketState.Snapped);
+                    }
+                    if (m_CurrentSocketState == SocketState.Snapped)
+                    {
 
-            }
+                    }
+                }    
         }
     }
 

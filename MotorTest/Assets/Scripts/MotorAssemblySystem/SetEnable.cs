@@ -11,6 +11,7 @@ public class SetEnable : MonoBehaviour
     public GameObject PlacementSocketRoot;
     private void Start()
     {
+        PlacementSocketRoot = GameObject.Find("PlacementSocket_Root");
         foreach(Transform child in PlacementSocketRoot.transform)
         {
             Sets.Add(child.gameObject);

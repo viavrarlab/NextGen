@@ -11,6 +11,9 @@ TagManager:
   - PlayerHand
   - Door
   - MotorCollider
+  - SetGrab
+  - Socket
+  - PlacementRoot
   layers:
   - Default
   - TransparentFX

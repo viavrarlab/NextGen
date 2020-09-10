@@ -85,6 +85,7 @@ public class PlacementSocketGenerator : MonoBehaviour
                 {
                     string setname = "set" + setID.ToString();
                     GameObject socket = new GameObject(obj.obj.gameObject.name + "_Socket");
+
                     socket.transform.SetParent(GameObject.Find(setname).transform, false);
                     socket.transform.position = obj.obj.transform.position;
                     socket.transform.rotation = obj.obj.transform.rotation;
