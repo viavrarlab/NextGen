@@ -24,18 +24,21 @@ public class SocketGeneratorEditor : Editor
         {
             m_SocketGen.GenerateSockets();
         }
+
         if (GUILayout.Button("Generate Grabbables"))
         {
             m_SocketGen.GenerateGrabbables();
         }
-        if (GUILayout.Button("Clear"))
-        {
-            m_SocketGen.Clear();
-        }
+
 
         if (GUILayout.Button("Post Gen Setup"))
         {
             m_SocketGen.SetPostGenerationOptions();
+        }
+
+        if (GUILayout.Button("Clear"))
+        {
+            m_SocketGen.Clear();
         }
     }
 

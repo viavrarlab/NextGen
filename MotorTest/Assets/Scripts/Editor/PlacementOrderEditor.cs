@@ -41,9 +41,20 @@ public class PlacementOrderEditor : Editor
 
             var elementObj = element.serializedObject as SerializedObject;
             //EditorGUI.LabelField(new Rect(rect.x,rect.y,rect.width,lineheight), elementObj.FindProperty("Name").stringValue);
-            EditorGUI.PropertyField(new Rect(rect.x, rect.y, rect.width / 2, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("obj"), GUIContent.none);
-            EditorGUI.PropertyField(new Rect(rect.x + 180, rect.y, rect.width / 8, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("set"), GUIContent.none);
-            EditorGUI.PropertyField(new Rect(rect.x + 250, rect.y, rect.width / 6, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("OrderNotMandatory"), GUIContent.none);
+
+            //EditorGUI.PropertyField(new Rect(rect.x, rect.y, rect.width / 2, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("obj"), GUIContent.none);
+            //EditorGUI.PropertyField(new Rect(rect.x + 180, rect.y, rect.width / 8, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("set"), GUIContent.none);
+            //EditorGUI.PropertyField(new Rect(rect.x + 250, rect.y, rect.width / 6, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("OrderNotMandatory"), GUIContent.none);
+
+            float width = rect.width;
+            //Debug.Log(x);
+
+            EditorGUI.PropertyField(new Rect(rect.x, rect.y, width * 0.7f, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("obj"), GUIContent.none);
+            EditorGUI.PropertyField(new Rect(rect.x + (width * 0.7f), rect.y, width * 0.2f, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("set"), GUIContent.none);
+            EditorGUI.PropertyField(new Rect(rect.x + (width * 0.9f), rect.y, width * 0.1f, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("OrderNotMandatory"), GUIContent.none);
+
+
+
             //SerializedProperty propertyIterator = elementObj.GetIterator();
 
             //if (propertyIterator.NextVisible(true))
