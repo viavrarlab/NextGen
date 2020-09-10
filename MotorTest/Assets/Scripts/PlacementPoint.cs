@@ -212,6 +212,7 @@ public class PlacementPoint : MonoBehaviour
         //}
     }
 
+    // TODO: Check if this is still needed! And figure out what exactly it was supposed to fix...
     void ToggleIntersectingSockets(bool _state)
     {
         foreach (SocketPair sp in m_IntersectingSockets)

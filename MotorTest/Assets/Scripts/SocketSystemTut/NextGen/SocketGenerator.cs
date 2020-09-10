@@ -43,6 +43,12 @@ public class SocketGenerator : MonoBehaviour
 
     public Vector3 m_PostGenerationScale = Vector3.one;
 
+    public bool m_GenerateSetBoundaryCollider = true;
+    public bool m_GenerateSocketRootBoundaryCollider = true;
+
+
+    private List<GameObject> m_AllSets = new List<GameObject>();
+
     public void GenerateColliders()
     {
         EditorCoroutineUtility.StartCoroutine(Generate(), this);
@@ -150,7 +156,10 @@ public class SocketGenerator : MonoBehaviour
         }
         if (m_MeshList.Count > 0) m_MeshList.Clear();
         if (m_SocketPairs.Count > 0) m_SocketPairs.Clear();
-        if (m_AllSlots.Count > 0) m_AllSlots.Clear();
+        if (m_AllSlots.Count > 0)
+        {
+            m_AllSlots.Clear();
+        }
 
         transform.localScale = Vector3.one;
     }
@@ -293,8 +302,12 @@ public class SocketGenerator : MonoBehaviour
             set.transform.parent = socketRoot.transform;
             set.gameObject.AddComponent<SetComplete>().SetID = count;
             setObjectRoots.Add(set);
+            m_AllSets.Add(set);
+
             count++;
         }
+
+
 
         // create objects for sockets and add to each set
         int id = 0;
@@ -375,6 +388,73 @@ public class SocketGenerator : MonoBehaviour
                 }
             }
         }
+
+        if (m_GenerateSetBoundaryCollider)
+        {
+            foreach (GameObject set in m_AllSets)
+            {
+                CalculateSetBounds(set);
+            }
+        }
+
+        if (m_GenerateSocketRootBoundaryCollider)
+        {
+            CalculateRootBounds(socketRoot.transform);
+        }
+
+    }
+
+    public void CalculateRootBounds(Transform rootObj)
+    {
+        Bounds bounds = new Bounds(Vector3.zero, Vector3.zero);
+        List<MeshFilter> mr = new List<MeshFilter>();
+
+        foreach (Transform t1 in rootObj)
+        {
+            foreach (Transform t2 in t1)
+            {
+                if (t2.GetComponent<MeshFilter>() == null)
+                {
+                    continue;
+                }
+                mr.Add(t2.GetComponent<MeshFilter>());
+            }
+        }
+
+        foreach(MeshFilter rend in mr)
+        {
+            bounds.Encapsulate(rend.sharedMesh.bounds);
+        }
+
+        Vector3 newCenter = new Vector3(bounds.center.x, bounds.size.y / 2f, bounds.center.z);
+        BoxCollider collider = rootObj.gameObject.AddComponent<BoxCollider>();
+        collider.isTrigger = true;
+        collider.center = newCenter;
+        collider.size = bounds.size;
+    }
+    public void CalculateSetBounds(GameObject set)
+    {
+        Bounds allObjectBounds = new Bounds(Vector3.zero, Vector3.zero);
+        Vector3 allPositions = Vector3.zero;
+        int childCount = 0;
+
+        foreach (Transform t in set.transform)
+        {
+            Bounds childRendererBounds = t.GetComponent<MeshFilter>().sharedMesh.bounds;
+
+            allObjectBounds.Encapsulate(childRendererBounds);
+            allPositions += t.localPosition;
+            childCount++;
+        }
+
+        Vector3 averagedPosition = new Vector3(allPositions.x / childCount, allPositions.y / childCount, allPositions.z / childCount);
+        Vector3 localCenter = allObjectBounds.center - averagedPosition;
+        allObjectBounds.center = localCenter;
+
+        BoxCollider collider = set.AddComponent<BoxCollider>();
+        collider.isTrigger = true;
+        collider.center = averagedPosition;
+        collider.size = allObjectBounds.size;
     }
 
     Transform FindSetRoot(List<GameObject> allSetRootObjects, string setName)
