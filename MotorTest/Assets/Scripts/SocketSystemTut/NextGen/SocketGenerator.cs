@@ -47,7 +47,7 @@ public class SocketGenerator : MonoBehaviour
     public bool m_GenerateSocketRootBoundaryCollider = true;
 
 
-    private List<GameObject> m_AllSets = new List<GameObject>();
+    public List<GameObject> m_AllSets = new List<GameObject>();
 
     public void GenerateColliders()
     {
@@ -159,6 +159,10 @@ public class SocketGenerator : MonoBehaviour
         if (m_AllSlots.Count > 0)
         {
             m_AllSlots.Clear();
+        }
+        if (m_AllSets.Count > 0)
+        {
+            m_AllSets.Clear();
         }
 
         transform.localScale = Vector3.one;
@@ -289,7 +293,7 @@ public class SocketGenerator : MonoBehaviour
         // create empty object for holding sockets
         GameObject socketRoot = new GameObject("PlacementSocket_Root");
         socketRoot.transform.SetParent(transform, false);
-        socketRoot.AddComponent<BoxCollider>();
+        //socketRoot.AddComponent<BoxCollider>();
         socketRoot.tag = "PlacementRoot";
 
         List<GameObject> setObjectRoots = new List<GameObject>();
