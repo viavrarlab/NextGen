@@ -1528,6 +1528,8 @@ MonoBehaviour:
   m_LayerName: Interactable
   m_TagName: MotorCollider
   m_PostGenerationScale: {x: 1, y: 1, z: 1}
+  m_GenerateSetBoundaryCollider: 1
+  m_GenerateSocketRootBoundaryCollider: 1
 --- !u!114 &544972
 MonoBehaviour:
   m_ObjectHideFlags: 0
