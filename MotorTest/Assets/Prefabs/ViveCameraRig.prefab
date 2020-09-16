@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 6933599666338625363}
   - component: {fileID: 8577170290008639772}
   - component: {fileID: 5791603224305186384}
+  - component: {fileID: 692642564399571359}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: PlayerHand
@@ -351,6 +352,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnTriggerHold:
+    m_PersistentCalls:
+      m_Calls: []
   m_AButton: 4
   OnADown:
     m_PersistentCalls:
@@ -369,11 +373,17 @@ MonoBehaviour:
   OnAUp:
     m_PersistentCalls:
       m_Calls: []
+  OnAHold:
+    m_PersistentCalls:
+      m_Calls: []
   m_GripButton: 2
   OnGripDown:
     m_PersistentCalls:
       m_Calls: []
   OnGripUp:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGripHold:
     m_PersistentCalls:
       m_Calls: []
   m_TouchpadButton: 1
@@ -412,6 +422,16 @@ MonoBehaviour:
   OnJoystickXNegative:
     m_PersistentCalls:
       m_Calls: []
+  m_JoystickYAxis: 0
+  OnJoystickYPositive:
+    m_PersistentCalls:
+      m_Calls: []
+  OnJoystickYNegative:
+    m_PersistentCalls:
+      m_Calls: []
+  OnJoystickYRelease:
+    m_PersistentCalls:
+      m_Calls: []
   m_JoystickThreshold: 0.9
 --- !u!114 &8577170290008639772
 MonoBehaviour:
@@ -439,6 +459,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sets: []
   PlacementSocketRoot: {fileID: 0}
+--- !u!114 &692642564399571359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472144916827680603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10604503f0a1bad41ac3a7aa27214b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HandRole: 0
+  m_ControllerButton: 0
 --- !u!1 &3472144916827685117
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,6 +982,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnTriggerHold:
+    m_PersistentCalls:
+      m_Calls: []
   m_AButton: 4
   OnADown:
     m_PersistentCalls:
@@ -966,11 +1003,17 @@ MonoBehaviour:
   OnAUp:
     m_PersistentCalls:
       m_Calls: []
+  OnAHold:
+    m_PersistentCalls:
+      m_Calls: []
   m_GripButton: 0
   OnGripDown:
     m_PersistentCalls:
       m_Calls: []
   OnGripUp:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGripHold:
     m_PersistentCalls:
       m_Calls: []
   m_TouchpadButton: 0
@@ -1007,6 +1050,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   OnJoystickXNegative:
+    m_PersistentCalls:
+      m_Calls: []
+  m_JoystickYAxis: 0
+  OnJoystickYPositive:
+    m_PersistentCalls:
+      m_Calls: []
+  OnJoystickYNegative:
+    m_PersistentCalls:
+      m_Calls: []
+  OnJoystickYRelease:
     m_PersistentCalls:
       m_Calls: []
   m_JoystickThreshold: 0.9

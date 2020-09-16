@@ -9,7 +9,7 @@ public class Socket : MonoBehaviour
 
 
 
-
+    [SerializeField]
     private Moveable m_StoredObject = null;
     private FixedJoint m_FixedJoint = null;
 
@@ -20,6 +20,7 @@ public class Socket : MonoBehaviour
 
     public void Attach(Moveable newObject)
     {
+        print($"Current stored object in socket <{gameObject.name}> is <{m_StoredObject}>");
         if (m_StoredObject)
         {
             return;

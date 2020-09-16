@@ -17,10 +17,10 @@ public class GrabTests : MonoBehaviour
     public ControllerButton m_ControllerButton;
 
     private GameObject collidingObject;
-    private GameObject objectinhand;
-    private GameObject ThrownObject;
+    public GameObject objectinhand;
+    private Moveable CurrentPickUpOBJ;
 
-    private void SetCollidiongObject(Collider col)
+    private void SetCollidiongObject(Transform col)
     {
         if(collidingObject|| !col.GetComponent<Rigidbody>()){
             return;
@@ -57,7 +57,7 @@ public class GrabTests : MonoBehaviour
 
         if (ViveInput.GetPressDown(m_HandRole, m_ControllerButton))
         {
-            if (collidingObject != null && collidingObject.tag == "Grab")
+            if (collidingObject != null && collidingObject.transform.GetChild(0).GetChild(0).tag == "MotorCollider")
             {
                 print("i collided with " + collidingObject.name);
                 GrabObject();
@@ -68,6 +68,7 @@ public class GrabTests : MonoBehaviour
         {
             if (objectinhand)
             {
+                PlaceInSocket();
                 ReleaseObject();
             }
         }
@@ -82,12 +83,11 @@ public class GrabTests : MonoBehaviour
     //}
     public void OnTriggerEnter(Collider other)
     {
-        print("i collided with " + other.gameObject.name);
-        SetCollidiongObject(other);
+        SetCollidiongObject(other.transform.parent.transform.parent.transform);
     }
     public void OnTriggerStay(Collider other)
     {
-        SetCollidiongObject(other);
+        SetCollidiongObject(other.transform.parent.transform);
     }
     public void OnTriggerExit(Collider other)
     {   
@@ -100,28 +100,29 @@ public class GrabTests : MonoBehaviour
     {
         objectinhand = collidingObject;
         //collidingObject = null;
-        var joint = AddFixedJoint();
+        FixedJoint joint = GetComponent<FixedJoint>();
         joint.connectedBody = objectinhand.GetComponent<Rigidbody>();
+        CurrentPickUpOBJ = objectinhand.GetComponent<Moveable>();
     }
-    private FixedJoint AddFixedJoint()
+    //Checks for values coming form movable script and uses attachnewsocket method form movable script
+    private void PlaceInSocket()
     {
-        FixedJoint fx = gameObject.AddComponent<FixedJoint>();
-        fx.breakForce = 20000;
-        fx.breakTorque = 20000;
-        return fx;
+        print(CurrentPickUpOBJ.IsSocket.ToString());
+        if(CurrentPickUpOBJ.IsSocket == true)
+        {
+            CurrentPickUpOBJ.AttachNewSocket(CurrentPickUpOBJ.CurrentCollidingSocket);
+        }
     }
+
     private void ReleaseObject()
     {
         FixedJoint fj = GetComponent<FixedJoint>();
         if (fj)
         {
             fj.connectedBody = null;
-            Destroy(fj);
-            //objectinhand.GetComponent<Rigidbody>().velocity = controllerPose.GetVelocity();
-            //objectinhand.GetComponent<Rigidbody>().angularVelocity = controllerPose.GetAngularVelocity();
-
         }
         objectinhand = null;
+        CurrentPickUpOBJ = null;
     }
 
 

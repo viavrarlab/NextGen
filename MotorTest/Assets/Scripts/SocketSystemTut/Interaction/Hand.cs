@@ -63,6 +63,27 @@ public class Hand : MonoBehaviour
         }
         HeldInteraction();
     }
+    public void PlaceIneraction()
+    {
+        if (checkForSocket())
+        {
+            return;
+        }
+        else
+        {
+            StopInteraction();
+        }
+
+    }
+    private bool checkForSocket()
+    {
+        Interactable nearestobj = Utility.GetNearestInteractable(transform.position, m_ContactInteractables);
+        if(nearestobj)
+        {
+            nearestobj.StartInteraction(this);
+        }
+        return nearestobj;
+    }
 
     private bool NearestInteraction()
     {
