@@ -155,11 +155,11 @@ public class PlacementPoint : MonoBehaviour
                 if (CheckAngle(m_SnappableObject.transform.rotation))   // Check if user has rotated the object correctly
                 {
                     SwitchSocketState(SocketState.IntersectingValidRotation);
-                    if (ViveInput.GetPressUp(m_GrabScript.m_HandRole, m_GrabScript.m_ControllerButton) && !m_IsOccupied) // If user has released the grab button and the socket is not already occupied
-                    {
-                        //SnapObject();   // snap the object to the socket
-                        StartCoroutine(SnapWithAnimation());
-                    }
+                    //if (ViveInput.GetPressUp(m_GrabScript.m_HandRole, m_GrabScript.m_ControllerButton) && !m_IsOccupied) // If user has released the grab button and the socket is not already occupied
+                    //{
+                    //    //SnapObject();   // snap the object to the socket
+                    //    StartCoroutine(SnapWithAnimation());
+                    //}
                 }
                 else
                 {
@@ -169,11 +169,11 @@ public class PlacementPoint : MonoBehaviour
             else
             {
                 SwitchSocketState(SocketState.IntersectingValidObject);
-                if (ViveInput.GetPressUp(m_GrabScript.m_HandRole, m_GrabScript.m_ControllerButton) && !m_IsOccupied) // If user has released the grab button and the socket is not already occupied
-                {
-                    //SnapObject();   // snap the object to the socket
-                    StartCoroutine(SnapWithAnimation());
-                }
+                //if (ViveInput.GetPressUp(m_GrabScript.m_HandRole, m_GrabScript.m_ControllerButton) && !m_IsOccupied) // If user has released the grab button and the socket is not already occupied
+                //{
+                //    //SnapObject();   // snap the object to the socket
+                //    StartCoroutine(SnapWithAnimation());
+                //}
             }
         }
     }

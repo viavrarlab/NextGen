@@ -18,6 +18,10 @@ public class SetEnable : MonoBehaviour
         }
         disableNextSets();
     }
+    private void Update()
+    {
+        ActivateNextSet();
+    }
     public void ActivateNextSet()
     {
         foreach (GameObject set in Sets)
