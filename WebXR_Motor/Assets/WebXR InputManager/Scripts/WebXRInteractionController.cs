@@ -74,7 +74,7 @@ namespace DaviisLV.WebXR
         void Awake()
         {
             controller = GetComponent<WebXRController>();
-            if (controller.inputMap.name == "XRRightControllerMap")
+            if (controller.inputMap.name == "XRRightControllerMap_DaviisLV")
                 controllerSide = rightController;
             else
                 controllerSide = leftController;
