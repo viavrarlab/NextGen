@@ -777,6 +777,12 @@ Transform:
   m_Father: {fileID: 1898235221}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &124959662 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3632024155216009759, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+    type: 3}
+  m_PrefabInstance: {fileID: 3636567640508686268}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &141127808 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2053206095955015056, guid: 538c38736effd7649aa3428c5c9d0caf,
@@ -1910,6 +1916,28 @@ MonoBehaviour:
   - {fileID: 643922969}
   - {fileID: 200662724}
   SlotArray: []
+--- !u!1 &213276581 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3634582934579066853, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+    type: 3}
+  m_PrefabInstance: {fileID: 3636567640508686268}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &213276582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213276581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75c78b95b8b93894a840aafd6e68763d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_VRRig: {fileID: 124959662}
+  m_VRCamera: {fileID: 1947710971}
+  m_TurnAngle: 45
+  m_AxisThreshold: 0.999
 --- !u!137 &239541142 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7102446737450876344, guid: 538c38736effd7649aa3428c5c9d0caf,
@@ -2915,7 +2943,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 3636567640508686268}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1041967457}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f811c0733a48a1f47add9212b3275877, type: 3}
@@ -10723,8 +10751,6 @@ MonoBehaviour:
   m_VRRig: {fileID: 929255491}
   m_VRCamera: {fileID: 929255494}
   m_TurnAngle: 45
-  m_HandRole: 0
-  m_ControllerAxis: 0
   m_AxisThreshold: 0.999
 --- !u!114 &929255496
 MonoBehaviour:
@@ -10974,8 +11000,6 @@ MonoBehaviour:
   m_VRRig: {fileID: 929255491}
   m_VRCamera: {fileID: 929255494}
   m_TurnAngle: 45
-  m_HandRole: 0
-  m_ControllerAxis: 0
   m_AxisThreshold: 0.999
 --- !u!114 &929255505
 MonoBehaviour:
@@ -13291,6 +13315,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.02179, y: 9.599983, z: 8.021784}
   m_Center: {x: -0.000012516975, y: 0.010062218, z: -0.000013113022}
+--- !u!1 &1041967457 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3634909802542540735, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+    type: 3}
+  m_PrefabInstance: {fileID: 3636567640508686268}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1041967458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041967457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75c78b95b8b93894a840aafd6e68763d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_VRRig: {fileID: 124959662}
+  m_VRCamera: {fileID: 1947710971}
+  m_TurnAngle: 45
+  m_AxisThreshold: 0.999
 --- !u!1001 &1050911425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31382,6 +31428,12 @@ MonoBehaviour:
   - {fileID: 735687288}
   - {fileID: 1298471849}
   SlotArray: []
+--- !u!4 &1947710971 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3636656932457799955, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+    type: 3}
+  m_PrefabInstance: {fileID: 3636567640508686268}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1949678866
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36216,9 +36268,79 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3636567639319917096, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXPositive.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636567639319917096, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXNegative.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636567639319917096, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXPositive.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636567639319917096, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXPositive.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636567639319917096, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXNegative.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636567639319917096, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXNegative.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636567639319917096, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXPositive.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 213276582}
+    - target: {fileID: 3636567639319917096, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXNegative.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 213276582}
+    - target: {fileID: 3636567639319917096, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXPositive.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RotateRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636567639319917096, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXPositive.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636567639319917096, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXNegative.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RotateLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636567639319917096, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXNegative.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3636567639974316985, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
         type: 3}
       propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636567639974316985, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXNegative.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636567639974316985, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXPositive.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3636567639974316985, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
@@ -36236,6 +36358,56 @@ PrefabInstance:
       propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 330795173}
+    - target: {fileID: 3636567639974316985, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXNegative.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636567639974316985, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXNegative.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636567639974316985, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXPositive.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636567639974316985, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXPositive.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636567639974316985, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXPositive.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1041967458}
+    - target: {fileID: 3636567639974316985, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXNegative.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1041967458}
+    - target: {fileID: 3636567639974316985, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXPositive.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RotateRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636567639974316985, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXPositive.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636567639974316985, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXNegative.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RotateLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636567639974316985, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
+        type: 3}
+      propertyPath: OnJoystickXNegative.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3717377266914819403, guid: cf3bfe7b0d60f0c418dd504f15b14eaa,
         type: 3}
       propertyPath: m_Radius
