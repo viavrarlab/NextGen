@@ -171,7 +171,11 @@ GameObject:
   - component: {fileID: 3472144916827819768}
   - component: {fileID: 3472144916827819760}
   - component: {fileID: 950046246}
+  - component: {fileID: 8329449437352397146}
   - component: {fileID: 6933599666338625363}
+  - component: {fileID: 8577170290008639772}
+  - component: {fileID: 5791603224305186384}
+  - component: {fileID: 692642564399571359}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: PlayerHand
@@ -294,6 +298,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b46323350aa09d42ae0ffb962acd046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8329449437352397146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472144916827680603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f811c0733a48a1f47add9212b3275877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ContactInteractables: []
 --- !u!114 &6933599666338625363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,7 +327,7 @@ MonoBehaviour:
   OnTriggerDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8329449437352397146}
         m_MethodName: TryInteraction
         m_Mode: 1
         m_Arguments:
@@ -324,7 +341,7 @@ MonoBehaviour:
   OnTriggerUp:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5791603224305186384}
         m_MethodName: ActivateNextSet
         m_Mode: 1
         m_Arguments:
@@ -342,7 +359,7 @@ MonoBehaviour:
   OnADown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8329449437352397146}
         m_MethodName: StopInteraction
         m_Mode: 1
         m_Arguments:
@@ -416,6 +433,46 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_JoystickThreshold: 0.9
+--- !u!114 &8577170290008639772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472144916827680603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5791603224305186384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472144916827680603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4555817c9c3b9be4fa69f2ee69ffb03a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sets: []
+  PlacementSocketRoot: {fileID: 0}
+--- !u!114 &692642564399571359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472144916827680603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10604503f0a1bad41ac3a7aa27214b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HandRole: 0
+  m_ControllerButton: 0
 --- !u!1 &3472144916827685117
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,7 +907,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_StoredObject: {fileID: 0}
 --- !u!114 &1874767863892786215
 MonoBehaviour:
   m_ObjectHideFlags: 0
