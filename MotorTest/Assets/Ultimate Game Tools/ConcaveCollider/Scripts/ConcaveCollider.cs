@@ -486,7 +486,11 @@ public class ConcaveCollider : MonoBehaviour
 
                                 meshCollider.sharedMesh = hullMesh;
                                 meshCollider.convex     = true;
-                                
+
+                                meshCollider.gameObject.tag = "MotorCollider";
+                                meshCollider.gameObject.layer = 16;
+
+
                                 hullCollider = meshCollider;
 
                                 if(CreateHullMesh)

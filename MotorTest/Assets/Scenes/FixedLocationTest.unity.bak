@@ -7685,9 +7685,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 69957426}
   - component: {fileID: 69957427}
   m_Layer: 16
+=======
+  - component: {fileID: 38647629}
+  - component: {fileID: 38647630}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -8085,9 +8091,14 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 123154054}
   - component: {fileID: 123154055}
   m_Layer: 16
+=======
+  - component: {fileID: 162759515}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -8129,11 +8140,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 123232764}
   - component: {fileID: 123232765}
   m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
+=======
+  - component: {fileID: 166459280}
+  m_Layer: 0
+  m_Name: Generated Colliders
+  m_TagString: Untagged
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8192,8 +8210,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 150725075}
   m_Layer: 16
+=======
+  - component: {fileID: 174099757}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8223,9 +8246,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 157956755}
   - component: {fileID: 157956756}
   m_Layer: 16
+=======
+  - component: {fileID: 176622467}
+  - component: {fileID: 176622468}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -8267,8 +8296,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 166459280}
   m_Layer: 16
+=======
+  - component: {fileID: 188128907}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8298,8 +8332,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 171251384}
   m_Layer: 16
+=======
+  - component: {fileID: 219203587}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8329,8 +8368,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 188128907}
   m_Layer: 16
+=======
+  - component: {fileID: 229828455}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8404,9 +8448,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 219203587}
   m_Layer: 16
   m_Name: Generated Colliders
+=======
+  - component: {fileID: 234942692}
+  - component: {fileID: 234942689}
+  - component: {fileID: 162759516}
+  - component: {fileID: 284803880}
+  m_Layer: 0
+  m_Name: Cube
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8614,8 +8667,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 229828455}
   m_Layer: 16
+=======
+  - component: {fileID: 262639030}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8645,9 +8703,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 230929845}
   - component: {fileID: 230929844}
   m_Layer: 16
+=======
+  - component: {fileID: 271059943}
+  - component: {fileID: 271059944}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -8798,6 +8862,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
+<<<<<<< HEAD
   m_Size: {x: 0.037498754, y: 0.032474905, z: 0.017483354}
   m_Center: {x: -0.000000009313226, y: -0.00000017881393, z: 0}
 --- !u!1 &259971280
@@ -10811,6 +10876,11 @@ BoxCollider:
   m_Size: {x: 0.037498754, y: 0.03247489, z: 0.017483328}
   m_Center: {x: 0.00000046007335, y: 0.20817189, z: -0.33650014}
 --- !u!1001 &502389645
+=======
+  m_Size: {x: 0.08149596, y: 0.07896783, z: 0.060621817}
+  m_Center: {x: 10.392716, y: 0.06926022, z: -0.04999787}
+--- !u!1001 &303321595
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10820,6 +10890,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_Name
+<<<<<<< HEAD
       value: ViveCameraRig
       objectReference: {fileID: 0}
     - target: {fileID: 3472144916827819760, guid: c4f395288e15c924d80cc1442ad804d7,
@@ -10852,6 +10923,9 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.735
+=======
+      value: MotorSubstancedExport (1)
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
       objectReference: {fileID: 0}
     - target: {fileID: -6036717309293909608, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
@@ -10888,7 +10962,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 3472144916827819768, guid: c4f395288e15c924d80cc1442ad804d7,
+=======
+    - target: {fileID: -6705587813188905174, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
@@ -15717,10 +15795,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 541342924}
   m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
+=======
+  - component: {fileID: 347806311}
+  - component: {fileID: 347806312}
+  m_Layer: 10
+  m_Name: Hull 0
+  m_TagString: MotorCollider
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15739,6 +15825,7 @@ Transform:
   m_Father: {fileID: 1691408549}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &568420850
 GameObject:
   m_ObjectHideFlags: 0
@@ -15757,6 +15844,10 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &568420851
 Transform:
+=======
+--- !u!65 &347806312
+BoxCollider:
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -15776,8 +15867,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 581717128}
   m_Layer: 16
+=======
+  - component: {fileID: 364286730}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15807,9 +15903,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 638619399}
   - component: {fileID: 638619400}
   m_Layer: 16
+=======
+  - component: {fileID: 368296182}
+  - component: {fileID: 368296183}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -15851,8 +15953,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 654440435}
   m_Layer: 16
+=======
+  - component: {fileID: 371670491}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15882,8 +15989,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 662028579}
   m_Layer: 16
+=======
+  - component: {fileID: 371905543}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15913,8 +16025,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 664411882}
   m_Layer: 16
+=======
+  - component: {fileID: 375376548}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16103,9 +16220,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 682685768}
   - component: {fileID: 682685769}
   m_Layer: 16
+=======
+  - component: {fileID: 391417452}
+  - component: {fileID: 391417453}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -16169,6 +16292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84524441ac910a1428a085bf3cc943ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   complete: 0
   SetID: 1
   childs: []
@@ -16190,6 +16314,10 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &707927721
 Transform:
+=======
+--- !u!138 &393521036
+FixedJoint:
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -16254,10 +16382,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 735252454}
   m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
+=======
+  - component: {fileID: 397443469}
+  - component: {fileID: 397443470}
+  m_Layer: 10
+  m_Name: Hull 0
+  m_TagString: MotorCollider
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16297,9 +16433,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 760265779}
   - component: {fileID: 760265780}
   m_Layer: 16
+=======
+  - component: {fileID: 402639567}
+  - component: {fileID: 402639568}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -16341,9 +16483,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 771708389}
   - component: {fileID: 771708390}
   m_Layer: 16
+=======
+  - component: {fileID: 414036712}
+  - component: {fileID: 414036711}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -16386,9 +16534,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 786417160}
   - component: {fileID: 786417161}
   m_Layer: 16
+=======
+  - component: {fileID: 429756398}
+  - component: {fileID: 429756399}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -17184,6 +17338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84524441ac910a1428a085bf3cc943ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   m_PlaceableID: 6
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
@@ -17253,6 +17408,18 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &817079298
 BoxCollider:
+=======
+  m_Marker: {fileID: -927199367670048503, guid: a7c591c6cda846242a3472b65096d3b3,
+    type: 3}
+  m_CameraRig: {fileID: 502389646}
+  m_Camera: {fileID: 502389648}
+  m_TeleportLayers:
+    serializedVersion: 2
+    m_Bits: 4096
+  m_FadeTime: 0.25
+--- !u!138 &502389660
+FixedJoint:
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -17273,9 +17440,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 817633693}
   - component: {fileID: 817633694}
   m_Layer: 16
+=======
+  - component: {fileID: 508237385}
+  - component: {fileID: 508237386}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -17317,11 +17490,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 822881976}
   - component: {fileID: 822881975}
   m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
+=======
+  - component: {fileID: 534018457}
+  m_Layer: 0
+  m_Name: Generated Colliders
+  m_TagString: Untagged
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17380,8 +17560,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 846527735}
   m_Layer: 16
+=======
+  - component: {fileID: 566668494}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17455,11 +17640,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 860809344}
   - component: {fileID: 860809345}
   m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
+=======
+  - component: {fileID: 575241380}
+  m_Layer: 0
+  m_Name: Generated Colliders
+  m_TagString: Untagged
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17689,8 +17881,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 910680964}
   m_Layer: 16
+=======
+  - component: {fileID: 600394291}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17812,9 +18009,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 939912141}
   - component: {fileID: 939912142}
   m_Layer: 16
+=======
+  - component: {fileID: 649670685}
+  - component: {fileID: 649670686}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -17856,10 +18059,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 969716309}
   m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
+=======
+  - component: {fileID: 653370757}
+  - component: {fileID: 653370758}
+  m_Layer: 10
+  m_Name: Hull 0
+  m_TagString: MotorCollider
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17899,8 +18110,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 984615276}
   m_Layer: 16
+=======
+  - component: {fileID: 673741260}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17988,9 +18204,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 994017046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.36, y: 0, z: 0}
+=======
+  m_GameObject: {fileID: 695179076}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2011465372}
@@ -18048,8 +18270,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1019555676}
   m_Layer: 16
+=======
+  - component: {fileID: 709989050}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18317,9 +18544,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1063833401}
   - component: {fileID: 1063833402}
   m_Layer: 16
+=======
+  - component: {fileID: 803038095}
+  - component: {fileID: 803038096}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -18585,9 +18818,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1134550136}
   - component: {fileID: 1134550137}
   m_Layer: 16
+=======
+  - component: {fileID: 861600247}
+  - component: {fileID: 861600248}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -18691,8 +18930,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1149768736}
   m_Layer: 16
+=======
+  - component: {fileID: 886938377}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18854,8 +19098,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1162994621}
   m_Layer: 16
+=======
+  - component: {fileID: 924843867}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19123,8 +19372,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1199828725}
   m_Layer: 16
+=======
+  - component: {fileID: 964835042}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19154,10 +19408,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1201327246}
   m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
+=======
+  - component: {fileID: 970321855}
+  - component: {fileID: 970321854}
+  m_Layer: 0
+  m_Name: Hull 0
+  m_TagString: MotorCollider
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19546,6 +19808,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
+<<<<<<< HEAD
   m_Size: {x: 0.03752778, y: 0.03253211, z: 0.12540948}
   m_Center: {x: 0, y: 0, z: -0.01051867}
 --- !u!1 &1216112317
@@ -19580,6 +19843,11 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1236351345
+=======
+  m_Size: {x: 0.2503575, y: 0.3007972, z: 0.02000016}
+  m_Center: {x: -0.0000014677644, y: -0.000016242266, z: -0.0024295151}
+--- !u!1 &1031509144
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19587,9 +19855,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1236351346}
   - component: {fileID: 1236351347}
   m_Layer: 16
+=======
+  - component: {fileID: 1031509145}
+  - component: {fileID: 1031509146}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -19631,9 +19905,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1238045688}
   - component: {fileID: 1238045689}
   m_Layer: 16
+=======
+  - component: {fileID: 1036274284}
+  - component: {fileID: 1036274285}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -19675,8 +19955,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1240326715}
   m_Layer: 16
+=======
+  - component: {fileID: 1051967899}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19706,10 +19991,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1252604105}
   m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
+=======
+  - component: {fileID: 1065651850}
+  - component: {fileID: 1065651851}
+  m_Layer: 10
+  m_Name: Hull 0
+  m_TagString: MotorCollider
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19780,9 +20073,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1277053368}
   - component: {fileID: 1277053369}
   m_Layer: 16
+=======
+  - component: {fileID: 1091146735}
+  - component: {fileID: 1091146736}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -19824,9 +20123,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1280316573}
   - component: {fileID: 1280316572}
   m_Layer: 16
+=======
+  - component: {fileID: 1096905855}
+  - component: {fileID: 1096905856}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -19868,9 +20173,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1281680035}
   - component: {fileID: 1281680036}
   m_Layer: 16
+=======
+  - component: {fileID: 1130971726}
+  - component: {fileID: 1130971725}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -19913,8 +20224,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1299094687}
   m_Layer: 16
+=======
+  - component: {fileID: 1139794649}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20212,9 +20528,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1309491916}
   - component: {fileID: 1309491917}
   m_Layer: 16
+=======
+  - component: {fileID: 1180258355}
+  - component: {fileID: 1180258356}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -20256,10 +20578,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1343416730}
   m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
+=======
+  - component: {fileID: 1193132590}
+  - component: {fileID: 1193132591}
+  m_Layer: 10
+  m_Name: Hull 0
+  m_TagString: MotorCollider
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20560,8 +20890,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1359110077}
   m_Layer: 16
+=======
+  - component: {fileID: 1214901213}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20591,8 +20926,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1370290113}
   m_Layer: 16
+=======
+  - component: {fileID: 1217234435}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20622,8 +20962,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1371494575}
   m_Layer: 16
+=======
+  - component: {fileID: 1221588495}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20652,11 +20997,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1402785158}
   - component: {fileID: 1402785159}
   m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
+=======
+  - component: {fileID: 1230825220}
+  m_Layer: 0
+  m_Name: Generated Colliders
+  m_TagString: Untagged
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20746,9 +21098,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1445536638}
   - component: {fileID: 1445536639}
   m_Layer: 16
+=======
+  - component: {fileID: 1268865312}
+  - component: {fileID: 1268865313}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -20852,9 +21210,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1498027055}
   - component: {fileID: 1498027056}
   m_Layer: 16
+=======
+  - component: {fileID: 1290152065}
+  - component: {fileID: 1290152066}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -20896,11 +21260,20 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1515035634}
   - component: {fileID: 1515035635}
   m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
+=======
+  - component: {fileID: 1298142829}
+  - component: {fileID: 1298142831}
+  - component: {fileID: 1298142830}
+  m_Layer: 0
+  m_Name: set6
+  m_TagString: Untagged
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20956,9 +21329,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1516593472}
   - component: {fileID: 1516593473}
   m_Layer: 16
+=======
+  - component: {fileID: 1299935716}
+  - component: {fileID: 1299935717}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -21000,8 +21379,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1518359162}
   m_Layer: 16
+=======
+  - component: {fileID: 1336778354}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21031,11 +21415,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1520568363}
   - component: {fileID: 1520568364}
   m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
+=======
+  - component: {fileID: 1338038614}
+  m_Layer: 0
+  m_Name: Generated Colliders
+  m_TagString: Untagged
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21388,8 +21779,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1574633785}
   m_Layer: 16
+=======
+  - component: {fileID: 1375987674}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21419,11 +21815,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1580408986}
   - component: {fileID: 1580408987}
   m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
+=======
+  - component: {fileID: 1401540192}
+  m_Layer: 0
+  m_Name: Generated Colliders
+  m_TagString: Untagged
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21481,8 +21884,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1593415322}
   m_Layer: 16
+=======
+  - component: {fileID: 1412819011}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21512,9 +21920,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1634892214}
   - component: {fileID: 1634892215}
   m_Layer: 16
+=======
+  - component: {fileID: 1419453554}
+  - component: {fileID: 1419453555}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -21754,8 +22168,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1679929558}
   m_Layer: 16
+=======
+  - component: {fileID: 1488655691}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21890,9 +22309,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1710275568}
   - component: {fileID: 1710275569}
   m_Layer: 16
+=======
+  - component: {fileID: 1561024390}
+  - component: {fileID: 1561024391}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -22071,10 +22496,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1725229285}
   m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
+=======
+  - component: {fileID: 1643365472}
+  - component: {fileID: 1643365473}
+  m_Layer: 10
+  m_Name: Hull 0
+  m_TagString: MotorCollider
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22114,9 +22547,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1745159666}
   - component: {fileID: 1745159667}
   m_Layer: 16
+=======
+  - component: {fileID: 1645545812}
+  - component: {fileID: 1645545813}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -22158,10 +22597,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1760684591}
   m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
+=======
+  - component: {fileID: 1647647474}
+  - component: {fileID: 1647647473}
+  m_Layer: 10
+  m_Name: Hull 0
+  m_TagString: MotorCollider
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22202,9 +22649,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1816708232}
   - component: {fileID: 1816708233}
   m_Layer: 16
+=======
+  - component: {fileID: 1648085464}
+  - component: {fileID: 1648085465}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -22246,10 +22699,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1820916741}
   m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
+=======
+  - component: {fileID: 1655131232}
+  - component: {fileID: 1655131233}
+  m_Layer: 10
+  m_Name: Hull 0
+  m_TagString: MotorCollider
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22809,9 +23270,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1892209404}
   - component: {fileID: 1892209405}
   m_Layer: 16
+=======
+  - component: {fileID: 1774209286}
+  - component: {fileID: 1774209287}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -22853,8 +23320,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1901759244}
   m_Layer: 16
+=======
+  - component: {fileID: 1783602665}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22884,10 +23356,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1936894315}
   m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
+=======
+  - component: {fileID: 1784935476}
+  - component: {fileID: 1784935477}
+  m_Layer: 10
+  m_Name: Hull 0
+  m_TagString: MotorCollider
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23077,9 +23557,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1941021189}
   - component: {fileID: 1941021190}
   m_Layer: 16
+=======
+  - component: {fileID: 1815262325}
+  - component: {fileID: 1815262326}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -23121,9 +23607,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1952684812}
   - component: {fileID: 1952684813}
   m_Layer: 16
+=======
+  - component: {fileID: 1825529805}
+  - component: {fileID: 1825529806}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -23165,10 +23657,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1958453859}
   m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
+=======
+  - component: {fileID: 1850803428}
+  - component: {fileID: 1850803429}
+  m_Layer: 10
+  m_Name: Wire_Hole_Left_TB_Socket
+  m_TagString: Socket
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23208,9 +23708,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1982403023}
   - component: {fileID: 1982403024}
   m_Layer: 16
+=======
+  - component: {fileID: 1863340780}
+  - component: {fileID: 1863340779}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -23416,8 +23922,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1984599806}
   m_Layer: 16
+=======
+  - component: {fileID: 1870603736}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23435,6 +23946,7 @@ Transform:
   m_LocalPosition: {x: -10.3, y: -0.75396514, z: -0.032499906}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+<<<<<<< HEAD
   - {fileID: 469850263}
   m_Father: {fileID: 544900}
   m_RootOrder: 0
@@ -23468,6 +23980,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1343416730}
+=======
+  - {fileID: 737495041}
+  m_Father: {fileID: 303321611}
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1880673829
@@ -23478,8 +23994,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1997269751}
   m_Layer: 16
+=======
+  - component: {fileID: 1880673830}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23540,8 +24061,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 2036074224}
   m_Layer: 16
+=======
+  - component: {fileID: 1903102508}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23570,9 +24096,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 2041689226}
   - component: {fileID: 2041689227}
   m_Layer: 16
+=======
+  - component: {fileID: 1914647695}
+  - component: {fileID: 1914647696}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -23614,8 +24146,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 2057814233}
   m_Layer: 16
+=======
+  - component: {fileID: 1925637912}
+  m_Layer: 0
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23734,9 +24271,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 2107858578}
   - component: {fileID: 2107858579}
   m_Layer: 16
+=======
+  - component: {fileID: 1933370579}
+  - component: {fileID: 1933370580}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -23809,9 +24352,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 2123635589}
   - component: {fileID: 2123635590}
   m_Layer: 16
+=======
+  - component: {fileID: 1937045702}
+  - component: {fileID: 1937045703}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -24039,9 +24588,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 2139685025}
   - component: {fileID: 2139685026}
   m_Layer: 16
+=======
+  - component: {fileID: 2110498041}
+  - component: {fileID: 2110498042}
+  m_Layer: 10
+>>>>>>> d21a5287aaf8a63b59a42698545ea878dfd82286
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
