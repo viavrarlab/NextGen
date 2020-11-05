@@ -160,31 +160,41 @@ public class PlacementPoint : MonoBehaviour
         {
             Physics.IgnoreCollision(other, this.gameObject.GetComponent<BoxCollider>());
         }
-        if (m_SnappableObject != null)
+        if (!m_IsOccupied)
         {
-            if (m_PlaceableID == m_SnappableObject.m_ID)
+            if (m_SnappableObject != null)
             {
-                if (m_CheckForCorrectAngle)
+                if (m_PlaceableID == m_SnappableObject.m_ID)
                 {
-                    if (CheckAngle(m_SnappableObject.transform.rotation))   // Check if user has rotated the object correctly
+                    if (m_CheckForCorrectAngle)
                     {
-                        SwitchSocketState(SocketState.IntersectingValidObject);
-                        if (m_ControllerScript.m_TriggerPull == false)
+                        if (CheckAngle(m_SnappableObject.transform.rotation))   // Check if user has rotated the object correctly
                         {
-                            StartCoroutine(SnapWithAnimation());
+                            SwitchSocketState(SocketState.IntersectingValidObject);
+                            if (m_ControllerScript.m_TriggerPull == false)
+                            {
+                                StartCoroutine(SnapWithAnimation());
+                                m_IsOccupied = true;
+                            }
+                        }
+                        else
+                        {
+                            SwitchSocketState(SocketState.IntersectingInvalidRotation);
                         }
                     }
-                    else
-                    {
-                        SwitchSocketState(SocketState.IntersectingInvalidRotation);
-                    }
                 }
+            }
+            else
+            {
+                return;
             }
         }
         else
         {
             return;
         }
+
+    
 
         //if (m_SnappableObject.isHeld == false && m_PlaceableID == m_SnappableObject.m_ID)
         //{
@@ -235,7 +245,6 @@ public class PlacementPoint : MonoBehaviour
         if (other.GetComponentInParent<Placeable>() != null)
         {
             SwitchSocketState(SocketState.Empty);
-            m_IsOccupied = false;
             //m_SnappableObject.GetComponentInParent<ParentConstraint>().constraintActive = false;
             m_SnappableObject = null;
         }
