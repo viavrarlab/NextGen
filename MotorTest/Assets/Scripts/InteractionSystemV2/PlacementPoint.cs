@@ -152,17 +152,18 @@ public class PlacementPoint : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "PlayerHand" && m_IsOccupied) // If the object is the player hand object OR the socket is already occupied, then just return and ignore the resto of the function
+        if (m_ControllerScript.TriggerPull == true && m_IsOccupied && m_ControllerScript.collidingObject != null) // If the object is the player hand object OR the socket is already occupied, then just return and ignore the resto of the function
         {
-
-            if (m_ControllerScript.TriggerPull == true)
+            if(m_ControllerScript.collidingObject == m_SnappableObject.gameObject)
             {
+                Debug.Log("TORORORRLOLORLRORLO");
                 m_SnappableObject.GetComponentInParent<ParentConstraint>().constraintActive = false;
                 m_IsOccupied = false;
             }
+
         }
         else
-        if (other.tag == "PlayerHand" || m_IsOccupied)
+        if (m_IsOccupied)
         {
             return;
         }
@@ -252,11 +253,14 @@ public class PlacementPoint : MonoBehaviour
         {
             return;
         }
+        if (!m_IsOccupied)
+        {
+            SwitchSocketState(SocketState.Empty);
+            m_SnappableObject = null;
+        }
         if (other.GetComponentInParent<Placeable>() != null)
         {
             //SwitchSocketState(SocketState.Empty);
-            //m_SnappableObject.GetComponentInParent<ParentConstraint>().constraintActive = false;
-            m_SnappableObject = null;
         }
         //if (!other.CompareTag("Socket"))
         //{

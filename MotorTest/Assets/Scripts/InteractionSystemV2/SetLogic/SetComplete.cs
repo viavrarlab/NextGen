@@ -19,21 +19,21 @@ public class SetComplete : MonoBehaviour
     }
     private void Update()
     {
-        checkPlacedObject();
+        //checkPlacedObject();
     }
     public void checkPlacedObject()
     {
         for(int i = 0; i <= childs.Count; i++)
         {
 
-                if (childs[0].GetComponent<FixedJoint>().connectedBody != null && childs[childs.Count - 1].GetComponent<FixedJoint>().connectedBody != null)
-                {
-                    complete = true;
-                }
-                else
-                {
-                    complete = false;
-                }
+                //if (childs[0].GetComponent<FixedJoint>().connectedBody != null && childs[childs.Count - 1].GetComponent<FixedJoint>().connectedBody != null)
+                //{
+                //    complete = true;
+                //}
+                //else
+                //{
+                //    complete = false;
+                //}
             Debug.Log("set object count - " + childs.Count.ToString());
         }
         //foreach (Transform child in this.transform)

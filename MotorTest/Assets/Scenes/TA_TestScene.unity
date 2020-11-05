@@ -4010,7 +4010,7 @@ GameObject:
   - component: {fileID: 501791895}
   - component: {fileID: 501791894}
   - component: {fileID: 501791893}
-  m_Layer: 10
+  m_Layer: 15
   m_Name: PlacementSocket_Root
   m_TagString: PlacementRoot
   m_Icon: {fileID: 0}
@@ -10150,12 +10150,12 @@ PrefabInstance:
     - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
         type: 3}
       propertyPath: OnTriggerDown.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
         type: 3}
       propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
         type: 3}
@@ -10257,6 +10257,51 @@ PrefabInstance:
       propertyPath: OnGripUp.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnTriggerDown.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1162208695}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnTriggerDown.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: set_TriggerPull
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnTriggerDown.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnTriggerDown.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnTriggerDown.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1162208695}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: set_TriggerPull
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3472144916827685117, guid: c4f395288e15c924d80cc1442ad804d7,
         type: 3}
       propertyPath: m_Layer
@@ -10304,7 +10349,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collidingObject: {fileID: 0}
   objectinhand: {fileID: 0}
-  m_TriggerPull: 0
 --- !u!138 &1162208694
 FixedJoint:
   m_ObjectHideFlags: 0
@@ -10319,6 +10363,18 @@ FixedJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1162208695 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 985531211850802051, guid: c4f395288e15c924d80cc1442ad804d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1162208691}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162208692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0905b5b08e916543b92d9986cbe6fd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1170166271
 GameObject:
   m_ObjectHideFlags: 0

@@ -35,6 +35,7 @@ public class ControllerScript : MonoBehaviour
         {
             SetCollidiongObject(other.transform);
         }
+
     }
     public void OnTriggerExit(Collider other)
     {
