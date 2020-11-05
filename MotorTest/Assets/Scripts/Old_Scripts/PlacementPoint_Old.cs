@@ -9,7 +9,7 @@ using HTC.UnityPlugin.Vive;
 /// <summary>
 /// This could be automated when creating armature/object IDs - to each ID'd object we add this and configure it accordingly (everything, including mesh, its transforms, trigger bounds, etc)
 /// </summary>
-public class PlacementPoint : MonoBehaviour
+public class PlacementPoint_Old : MonoBehaviour
 {
     public int m_PlaceableID;   // This must correspond to the Placeable objects' ID that you want to place here
     public Vector3 m_CorrectPlacementAngle = Vector3.zero; // TODO: make this automated somehow. Maybe when generating placement points / ObjectConfig.. IDK
@@ -67,7 +67,7 @@ public class PlacementPoint : MonoBehaviour
                     return;
                 case SocketState.IntersectingValidObject:
                     ToggleSocketMeshRenderer(true);
-                    ToggleIntersectingSockets(false);
+                    //ToggleIntersectingSockets(false);
                     UpdateMaterial(m_ValidObjectColor);
                     FadeAlphaTo(0.5f);
                     m_LastSocketState = m_CurrentSocketState;
@@ -91,7 +91,7 @@ public class PlacementPoint : MonoBehaviour
                     m_LastSocketState = m_CurrentSocketState;
                     return;
                 case SocketState.Snapped:
-                    ToggleIntersectingSockets(true);
+                    //ToggleIntersectingSockets(true);
                     UpdateMaterial(m_DefaultStateColor);
                     //FadeAlphaTo(0f);
                     ToggleSocketMeshRenderer(false);
@@ -213,24 +213,24 @@ public class PlacementPoint : MonoBehaviour
     }
 
     // TODO: Check if this is still needed! And figure out what exactly it was supposed to fix...
-    void ToggleIntersectingSockets(bool _state)
-    {
-        foreach (SocketPair sp in m_IntersectingSockets)
-        {
-            sp.m_Collider.enabled = _state;
-            if (!_state)
-            {
-                if (sp.m_PlacementPoint.m_SnappableObject != null && sp.m_PlacementPoint.m_SnappableObject.m_IsPlaced)
-                {
-                    sp.m_PlacementPoint.SwitchSocketState(SocketState.Snapped);
-                }
-                else
-                {
-                    sp.m_PlacementPoint.SwitchSocketState(SocketState.Empty);
-                }
-            }
-        }
-    }
+    //void ToggleIntersectingSockets(bool _state)
+    //{
+    //    foreach (SocketPair sp in m_IntersectingSockets)
+    //    {
+    //        sp.m_Collider.enabled = _state;
+    //        if (!_state)
+    //        {
+    //            if (sp.m_PlacementPoint.m_SnappableObject != null && sp.m_PlacementPoint.m_SnappableObject.m_IsPlaced)
+    //            {
+    //                sp.m_PlacementPoint.SwitchSocketState(SocketState.Snapped);
+    //            }
+    //            else
+    //            {
+    //                sp.m_PlacementPoint.SwitchSocketState(SocketState.Empty);
+    //            }
+    //        }
+    //    }
+    //}
 
     void SnapObject()
     {

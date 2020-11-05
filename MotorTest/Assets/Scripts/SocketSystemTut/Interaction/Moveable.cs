@@ -76,7 +76,7 @@ public class Moveable : Interactable
             return;
         }
 
-        ReleaseOldSocket();
+        //ReleaseOldSocket();
         m_ActiveSocket = newSocket;
 
         m_ActiveSocket.Attach(this);

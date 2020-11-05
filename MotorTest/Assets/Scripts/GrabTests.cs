@@ -142,32 +142,32 @@ public class GrabTests : MonoBehaviour
             OnTriggerHold.Invoke();
 
         // A Button----------------------------------------------------------------------------
-        if (ViveInput.GetPressDown(m_Pose.viveRole, m_AButton))
+        if (ViveInput.GetPressDown(m_HandRole, m_AButton))
             OnADown.Invoke();
 
-        if (ViveInput.GetPressUp(m_Pose.viveRole, m_AButton))
+        if (ViveInput.GetPressUp(m_HandRole, m_AButton))
             OnAUp.Invoke();
-        if (ViveInput.GetPress(m_Pose.viveRole, m_AButton))
+        if (ViveInput.GetPress(m_HandRole, m_AButton))
             OnAHold.Invoke();
 
         // Grip Button----------------------------------------------------------------------------
-        if (ViveInput.GetPressDown(m_Pose.viveRole, m_GripButton))
+        if (ViveInput.GetPressDown(m_HandRole, m_GripButton))
             OnGripDown.Invoke();
 
-        if (ViveInput.GetPressUp(m_Pose.viveRole, m_GripButton))
+        if (ViveInput.GetPressUp(m_HandRole, m_GripButton))
             OnGripUp.Invoke();
-        if (ViveInput.GetPress(m_Pose.viveRole, m_GripButton))
+        if (ViveInput.GetPress(m_HandRole, m_GripButton))
             OnGripHold.Invoke();
 
         // Touchpad Button----------------------------------------------------------------------------
-        if (ViveInput.GetPressDown(m_Pose.viveRole, m_TouchpadButton))
+        if (ViveInput.GetPressDown(m_HandRole, m_TouchpadButton))
             OnTouchpadDown.Invoke();
 
-        if (ViveInput.GetPressUp(m_Pose.viveRole, m_TouchpadButton))
+        if (ViveInput.GetPressUp(m_HandRole, m_TouchpadButton))
             OnTouchpadUp.Invoke();
 
         // Joystick X AXIS----------------------------------------------------------------------------
-        float valueX = ViveInput.GetAxis(m_Pose.viveRole, m_JoystickXAxis);
+        float valueX = ViveInput.GetAxis(m_HandRole, m_JoystickXAxis);
 
         if (valueX > m_JoystickThreshold && m_JoystickXInUse == false)
         {
@@ -187,18 +187,18 @@ public class GrabTests : MonoBehaviour
 
         // Joystick Y AXIS----------------------------------------------------------------------------
         float valueY = ViveInput.GetAxis(m_Pose.viveRole, m_JoystickYAxis);
-        print($"is value between m_JoystickThreshold: {IsBetween(valueY, -m_JoystickThreshold, m_JoystickThreshold)}");
+        //print($"is value between m_JoystickThreshold: {IsBetween(valueY, -m_JoystickThreshold, m_JoystickThreshold)}");
 
         if (valueY > m_JoystickThreshold && m_JoystickYInUse == false)
         {
             m_JoystickYInUse = true;
-            print("y axis positive action");
+            //print("y axis positive action");
             OnJoystickYPositive.Invoke();
         }
         else if (valueY < -m_JoystickThreshold && m_JoystickYInUse == false)
         {
             m_JoystickYInUse = true;
-            print("y axis negative action");
+            //print("y axis negative action");
             OnJoystickYNegative.Invoke();
         }
 
@@ -215,6 +215,56 @@ public class GrabTests : MonoBehaviour
             return testValue >= bound2 && testValue <= bound1;
         return testValue >= bound1 && testValue <= bound2;
     }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("MotorCollider"))
+        {
+            SetCollidiongObject(other.transform.parent.transform.parent.transform);
+            //if (other.transform.parent.transform.parent.GetComponent<Moveable>().IsSocket == true)
+            //{
+            //    checkSocketState = true;
+            //}
+            //else
+            //{
+            //    checkSocketState = false;
+            //}
+        }
+        if (other.CompareTag("PlacementRoot"))
+        {
+            SetCollidiongObject(other.transform);
+        }
+    }
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("MotorCollider"))
+        {
+            SetCollidiongObject(other.transform.parent.transform.parent.transform);
+            if (other.transform.parent.transform.parent.GetComponent<Moveable>().IsSocket == true)
+            {
+                checkSocketState = true;
+            }
+            else
+            {
+                checkSocketState = false;
+            }
+        }
+        Debug.Log("Check Socket State Value - " + checkSocketState.ToString());
+        if (other.CompareTag("PlacementRoot"))
+        {
+            SetCollidiongObject(other.transform);
+        }
+
+        //print("socketstate = " + checkSocketState.ToString());
+        //print("I collided with - " + other.name.ToString());
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        if (!collidingObject)
+        {
+            return;
+        }
+        collidingObject = null;
+    }
     //This method is called form inspector
     public void pickUpOBJ()
     {
@@ -225,8 +275,25 @@ public class GrabTests : MonoBehaviour
                 collidingObject.GetComponent<Moveable>().ReleaseOldSocket();
                 GrabObject();
             }
-            print("i collided with " + collidingObject.name);
+            else
+            {
+                GrabObject();
+            }
+        }
+    }
+    //called from inspector
+    public void pickUPSet()
+    {
+        if (collidingObject != null && collidingObject.tag == "PlacementRoot")
+        {
             GrabObject();
+        }
+    }
+    public void ReleaseSet()
+    {
+        if (objectinhand)
+        {
+            ReleaseObject();
         }
     }
     //This method is called from inspector
@@ -237,35 +304,6 @@ public class GrabTests : MonoBehaviour
             PlaceInSocket();
             ReleaseObject();
         }
-    }
-
-    public void OnTriggerEnter(Collider other)
-    {
-        SetCollidiongObject(other.transform.parent.transform.parent.transform);
-        if (other.CompareTag("MotorCollider"))
-        {
-            if (other.transform.parent.transform.parent.GetComponent<Moveable>().IsSocket == true)
-            {
-                checkSocketState = true;
-            }
-            else
-            {
-                checkSocketState = false;
-            }
-        }
-
-    }
-    public void OnTriggerStay(Collider other)
-    {
-        SetCollidiongObject(other.transform.parent.transform);
-        print("socketstate = " + checkSocketState.ToString());
-    }
-    public void OnTriggerExit(Collider other)
-    {   
-        if(!collidingObject){
-            return;
-        }
-        collidingObject = null;
     }
     private void GrabObject()
     {
@@ -279,13 +317,12 @@ public class GrabTests : MonoBehaviour
     //Checks for values coming form movable script and uses attachnewsocket method form movable script
     private void PlaceInSocket()
     {
-        print(CurrentPickUpOBJ.IsSocket.ToString());
+        //print(CurrentPickUpOBJ.IsSocket.ToString());
         if(CurrentPickUpOBJ.IsSocket == true)
         {
             CurrentPickUpOBJ.AttachNewSocket(CurrentPickUpOBJ.CurrentCollidingSocket);
         }
     }
-
     private void ReleaseObject()
     {
         FixedJoint fj = GetComponent<FixedJoint>();
@@ -296,6 +333,4 @@ public class GrabTests : MonoBehaviour
         objectinhand = null;
         CurrentPickUpOBJ = null;
     }
-
-
 }

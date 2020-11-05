@@ -7,17 +7,27 @@ public class Placeable : MonoBehaviour
 {
     public int m_ID = 0;
     public bool m_IsPlaced = false;
+    public bool isHeld;
 
     public Placeable(int _id)
     {
         m_ID = _id;
     }
 
-    public Placeable()
-    {
-
-    }
-
+    //public void OnTriggerStay(Collider other)
+    //{
+    //    if (other.CompareTag("PlayerHand"))
+    //    {
+    //       if(other.gameObject.GetComponent<FixedJoint>().connectedBody != null)
+    //        {
+    //            isHeld = true;
+    //        }
+    //        else
+    //        {
+    //            isHeld = false;
+    //        }
+    //    }
+    //}
     /// <summary>
     /// Works kind of like a constructor. When in need to add the component through script to a GO, we call this instead of GO.AddComponent<>(). This allows us to set the ID straight on component add, instead of adding it after adding and getting the component.
     /// </summary>
@@ -36,23 +46,12 @@ public class Placeable : MonoBehaviour
         Placeable myC = _where.AddComponent<Placeable>();
         myC.m_ID = _id;
     }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     /// <summary>
     /// Gets called when the script gets added to a GameObject. Set the objects tag and layer.
-    /// </summary>
-    void Reset()
-    {
-        gameObject.tag = "Grab";
-        gameObject.layer = LayerMask.NameToLayer("Placeable");
-    }
+    ///// </summary>
+    //void Reset()
+    //{
+    //    gameObject.tag = "Grab";
+    //    gameObject.layer = LayerMask.NameToLayer("Placeable");
+    //}
 }

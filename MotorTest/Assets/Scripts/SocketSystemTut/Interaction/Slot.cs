@@ -46,6 +46,7 @@ public class Slot : Interactable
         SwitchSocketState(SocketState.Empty);
         m_SG = GameObject.FindObjectOfType<SocketGenerator>();
         SlotArray = m_SG.m_AllSlots.ToArray();
+        SetUpCollisionIgnores();
     }
 
     public override void StartInteraction(Hand hand)
@@ -84,6 +85,14 @@ public class Slot : Interactable
             objectToRetrieve.AttachNewSocket(newSocket);
     }
 
+    void SetUpCollisionIgnores()
+    {
+        Collider thisCollider = gameObject.GetComponent<Collider>();
+        foreach (Slot slot in m_IntersectingSlots)
+        {
+            Physics.IgnoreCollision(thisCollider, slot.GetComponent<Collider>(), true);
+        }
+    }
 
     void SwitchSocketState(SocketState _state)
     {
@@ -144,29 +153,6 @@ public class Slot : Interactable
         {
             m_MeshRenderer.enabled = _state;
         }
-
-        //if (_state == true)
-        //{
-        //    m_MeshRenderer.enabled = true;
-        //    gameObject.layer = LayerMask.NameToLayer("Default");
-        //}
-        //else
-        //{
-        //    m_MeshRenderer.enabled = false;
-        //    gameObject.layer = LayerMask.NameToLayer("NoCollision");
-        //}
-
-        //switch (_state)
-        //{
-        //    case true:
-        //        m_MeshRenderer.enabled = true;
-        //        gameObject.layer = LayerMask.NameToLayer("Default");
-        //        break;
-        //    case false:
-        //        m_MeshRenderer.enabled = false;
-        //        gameObject.layer = LayerMask.NameToLayer("NoCollision");
-        //        break;
-        //}
     }
     void ResetIntersectingSlots()
     {
@@ -218,18 +204,6 @@ public class Slot : Interactable
 
     private void OnTriggerEnter(Collider other)
     {
-        //if (other.tag == "MotorCollider")
-        //{
-        //    Moveable obj = other.transform.parent.transform.parent.gameObject.GetComponent<Moveable>();
-        //    if (obj.m_ID == m_PlaceableID)
-        //    {
-        //        SwitchSocketState(SocketState.IntersectingValidObject);
-        //    }
-        //    else
-        //    {
-        //        //SwitchSocketState(SocketState.IntersectingInvalidObject);
-        //    }
-        //}
         if (other.CompareTag("PlayerHand") )
         {
             Debug.Log("It's a hand you fool!");
@@ -248,40 +222,39 @@ public class Slot : Interactable
                 {
                     SwitchSocketState(SocketState.IntersectingInvalidObject);
                 }
-                for(int i =0; i<SlotArray.Length;i++)
-                {
-                    //Debug.Log(slt.name.ToString());
-                    if (obj.m_ID == 0)
-                    {
-                        canPlace = true;
-                        print("pirmais objekts");
-                    }
-                    else
-                    {
-                        if (SlotArray[obj.m_ID-1].m_CurrentSocketState == SocketState.Snapped)
-                        {
-                            print("Bus istais");
-                            canPlace = true;
-                        }
-                        else
-                        {
-                            print("Nevar likt");
-                            canPlace = false;
-                        }
-                    }
-
-                }
+                //for(int i =0; i<SlotArray.Length;i++)
+                //{
+                //    //Debug.Log(slt.name.ToString());
+                //    if (obj.m_ID == 0)
+                //    {
+                //        canPlace = true;
+                //        print("pirmais objekts");
+                //    }
+                //    else
+                //    {
+                //        if (SlotArray[obj.m_ID-1].m_CurrentSocketState == SocketState.Snapped)
+                //        {
+                //            print("Bus istais");
+                //            canPlace = true;
+                //        }
+                //        else
+                //        {
+                //            print("Nevar likt");
+                //            canPlace = false;
+                //        }
+                //    }
+                //}
             }
         }
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("PlayerHand"))
+        if (other.CompareTag("PlacementRoot") || other.CompareTag("PlayerHand"))
         {
             Debug.Log("It's a hand you fool! or a socket?");
             return;
         }
-        if (other.CompareTag("PlacementRoot") || other.CompareTag("Socket"))
+        if (other.CompareTag("Socket"))
         {
             Physics.IgnoreCollision(this.gameObject.GetComponent<Collider>(), other.gameObject.GetComponent<Collider>());
         }

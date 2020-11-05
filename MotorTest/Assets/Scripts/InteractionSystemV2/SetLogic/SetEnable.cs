@@ -35,14 +35,13 @@ public class SetEnable : MonoBehaviour
             {
                 if(count != 0 && Sets[count-1].GetComponent<SetComplete>().complete == false)
                 {
-                    Debug.Log(Sets[count].name.ToString());
+                    //Debug.Log(Sets[count].name.ToString());
                     Sets[count].SetActive(false);
 
                     count--;
                 }
             }
         }
-        Debug.Log(count);
     }
     public void disableNextSets()
     {
