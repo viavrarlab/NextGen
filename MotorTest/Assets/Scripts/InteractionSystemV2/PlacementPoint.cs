@@ -152,10 +152,21 @@ public class PlacementPoint : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "PlayerHand" || m_IsOccupied) // If the object is the player hand object OR the socket is already occupied, then just return and ignore the resto of the function
+        if (other.tag == "PlayerHand" && m_IsOccupied) // If the object is the player hand object OR the socket is already occupied, then just return and ignore the resto of the function
+        {
+
+            if (m_ControllerScript.TriggerPull == true)
+            {
+                m_SnappableObject.GetComponentInParent<ParentConstraint>().constraintActive = false;
+                m_IsOccupied = false;
+            }
+        }
+        else
+        if (other.tag == "PlayerHand" || m_IsOccupied)
         {
             return;
         }
+
         if (other.CompareTag("Socket"))
         {
             Physics.IgnoreCollision(other, this.gameObject.GetComponent<BoxCollider>());
@@ -171,10 +182,9 @@ public class PlacementPoint : MonoBehaviour
                         if (CheckAngle(m_SnappableObject.transform.rotation))   // Check if user has rotated the object correctly
                         {
                             SwitchSocketState(SocketState.IntersectingValidObject);
-                            if (m_ControllerScript.m_TriggerPull == false)
+                            if (m_ControllerScript.TriggerPull == false)
                             {
                                 StartCoroutine(SnapWithAnimation());
-                                m_IsOccupied = true;
                             }
                         }
                         else

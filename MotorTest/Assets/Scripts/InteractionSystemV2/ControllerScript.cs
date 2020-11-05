@@ -8,7 +8,10 @@ public class ControllerScript : MonoBehaviour
     public GameObject objectinhand;
     private Placeable CurrentPickUpOBJ;
     private bool checkSocketState;
-    public bool m_TriggerPull;
+    private bool triggerPull;
+
+    public bool TriggerPull { get => triggerPull; set => triggerPull = value; }
+
     private void SetCollidiongObject(Transform col)
     {
         if (collidingObject || !col.GetComponent<Rigidbody>())
@@ -53,7 +56,7 @@ public class ControllerScript : MonoBehaviour
         if (collidingObject != null && collidingObject.CompareTag("MotorPart") && !collidingObject.CompareTag("PlacementRoot"))
         {
             GrabObject();
-            m_TriggerPull = true;
+            //TriggerPull = true;
         }
     }
     public void GrabObject()
@@ -73,6 +76,11 @@ public class ControllerScript : MonoBehaviour
         }
         objectinhand = null;
         CurrentPickUpOBJ = null;
-        m_TriggerPull = false;
+        TriggerPull = false;
+    }
+
+    void Update()
+    {
+        print(TriggerPull);
     }
 }
