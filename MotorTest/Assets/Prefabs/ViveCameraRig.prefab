@@ -170,12 +170,10 @@ GameObject:
   - component: {fileID: 3472144916827819769}
   - component: {fileID: 3472144916827819768}
   - component: {fileID: 3472144916827819760}
+  - component: {fileID: 985531211850802051}
   - component: {fileID: 950046246}
-  - component: {fileID: 8329449437352397146}
   - component: {fileID: 6933599666338625363}
-  - component: {fileID: 8577170290008639772}
   - component: {fileID: 5791603224305186384}
-  - component: {fileID: 692642564399571359}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: PlayerHand
@@ -286,6 +284,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   m_FadeTime: 0.25
+--- !u!114 &985531211850802051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472144916827680603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0905b5b08e916543b92d9986cbe6fd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collidingObject: {fileID: 0}
+  objectinhand: {fileID: 0}
+  m_TriggerPull: 0
 --- !u!114 &950046246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,19 +311,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b46323350aa09d42ae0ffb962acd046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8329449437352397146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3472144916827680603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f811c0733a48a1f47add9212b3275877, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ContactInteractables: []
 --- !u!114 &6933599666338625363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,8 +327,8 @@ MonoBehaviour:
   OnTriggerDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8329449437352397146}
-        m_MethodName: TryInteraction
+      - m_Target: {fileID: 985531211850802051}
+        m_MethodName: PickUpObj
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -341,8 +341,8 @@ MonoBehaviour:
   OnTriggerUp:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5791603224305186384}
-        m_MethodName: ActivateNextSet
+      - m_Target: {fileID: 985531211850802051}
+        m_MethodName: ReleaseObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -358,18 +358,7 @@ MonoBehaviour:
   m_AButton: 4
   OnADown:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8329449437352397146}
-        m_MethodName: StopInteraction
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnAUp:
     m_PersistentCalls:
       m_Calls: []
@@ -379,10 +368,32 @@ MonoBehaviour:
   m_GripButton: 2
   OnGripDown:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 985531211850802051}
+        m_MethodName: PickUPSet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnGripUp:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 985531211850802051}
+        m_MethodName: ReleaseObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnGripHold:
     m_PersistentCalls:
       m_Calls: []
@@ -433,18 +444,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_JoystickThreshold: 0.9
---- !u!114 &8577170290008639772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3472144916827680603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5791603224305186384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,20 +458,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sets: []
   PlacementSocketRoot: {fileID: 0}
---- !u!114 &692642564399571359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3472144916827680603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10604503f0a1bad41ac3a7aa27214b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HandRole: 0
-  m_ControllerButton: 0
 --- !u!1 &3472144916827685117
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,6 +892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!114 &1874767863892786215
 MonoBehaviour:
   m_ObjectHideFlags: 0
