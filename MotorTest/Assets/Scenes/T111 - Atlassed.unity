@@ -919,6 +919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &157605491
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1081,6 +1082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &159324601
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1502,6 +1504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &200662721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1735,6 +1738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &212003377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2258,6 +2262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &275946822
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3199,6 +3204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &355652242
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4046,11 +4052,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3472144916827819775, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: grabAction.actionPath
-      value: /actions/default/in/GrabPinch
-      objectReference: {fileID: 0}
     - target: {fileID: 3472144916827819760, guid: c4f395288e15c924d80cc1442ad804d7,
         type: 3}
       propertyPath: m_TeleportAction.actionPath
@@ -4074,6 +4075,11 @@ PrefabInstance:
     - target: {fileID: 950046246, guid: c4f395288e15c924d80cc1442ad804d7, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827819775, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: grabAction.actionPath
+      value: /actions/default/in/GrabPinch
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4f395288e15c924d80cc1442ad804d7, type: 3}
@@ -4734,6 +4740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &496704311
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5021,6 +5028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &535386537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6490,6 +6498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &643922966
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7103,6 +7112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &657765243
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7269,6 +7279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &662447028
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8555,6 +8566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &735687285
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9131,6 +9143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &755820964
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9792,6 +9805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &807339779
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10774,6 +10788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!138 &929255501
 FixedJoint:
   m_ObjectHideFlags: 0
@@ -11024,6 +11039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!138 &929255510
 FixedJoint:
   m_ObjectHideFlags: 0
@@ -11222,6 +11238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &935539523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11388,6 +11405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &944372070
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11552,6 +11570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &948358510
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12060,6 +12079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &986854840
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12255,6 +12275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &992990865
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13948,6 +13969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1116477372
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14310,6 +14332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1141185479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14795,6 +14818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1165841147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15598,6 +15622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1229628059
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16010,6 +16035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1257408603
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16259,6 +16285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1291072507
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16454,6 +16481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1298471846
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16711,6 +16739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1315216126
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17964,6 +17993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1423578507
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19037,6 +19067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1550477398
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19637,6 +19668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1577234635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20160,6 +20192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1627154727
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20333,6 +20366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1643824765
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20958,6 +20992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1664945394
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21209,6 +21244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1670661868
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21691,6 +21727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1714449857
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21855,6 +21892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1720392525
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22417,6 +22455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1752331228
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22603,6 +22642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1754656991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22704,6 +22744,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MotorTexturedExtraParts
+      objectReference: {fileID: 0}
+    - target: {fileID: 7710685034796552383, guid: 0e6b52e40ad74f0428663413766d937a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6726832991981462188, guid: 0e6b52e40ad74f0428663413766d937a,
         type: 3}
@@ -22887,6 +22932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1765586810
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23082,6 +23128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1770434111
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23404,6 +23451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1788397560
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23793,6 +23841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1834565118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23955,6 +24004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1836210496
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24408,6 +24458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1866329307
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24862,6 +24913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1896852870
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25229,7 +25281,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.682
+      value: -2.258
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
@@ -28345,6 +28397,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 51
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235101
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28374,6 +28428,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 50
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235103
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28403,6 +28459,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 49
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235105
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28432,6 +28490,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 48
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235107
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28461,6 +28521,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 47
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235109
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28490,6 +28552,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 46
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235111
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28519,6 +28583,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 45
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235113
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28548,6 +28614,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 44
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235115
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28577,6 +28645,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 43
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235117
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28606,6 +28676,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 42
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235119
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28635,6 +28707,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 41
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235121
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28664,6 +28738,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 40
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235123
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28693,6 +28769,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 39
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235125
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28722,6 +28800,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 38
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235127
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28751,6 +28831,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 37
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235129
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28780,6 +28862,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 36
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235131
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28809,6 +28893,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 35
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235133
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28838,6 +28924,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 34
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235135
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28867,6 +28955,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 33
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235137
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28896,6 +28986,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 32
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235139
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28925,6 +29017,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 31
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235141
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28954,6 +29048,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 30
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235143
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28983,6 +29079,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 29
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235145
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29012,6 +29110,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 28
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235147
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29041,6 +29141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 27
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235149
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29070,6 +29172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 26
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235151
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29099,6 +29203,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 25
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235153
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29128,6 +29234,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 24
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235155
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29157,6 +29265,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 23
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235157
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29186,6 +29296,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 22
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235159
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29215,6 +29327,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 21
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235161
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29244,6 +29358,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 20
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235163
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29273,6 +29389,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 19
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235165
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29302,6 +29420,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 18
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235167
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29331,6 +29451,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 17
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235169
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29360,6 +29482,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 16
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235171
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29389,6 +29513,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 15
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235173
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29418,6 +29544,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 14
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235175
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29447,6 +29575,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 13
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235177
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29476,6 +29606,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 12
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235179
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29505,6 +29637,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 11
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235181
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29534,6 +29668,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 10
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235183
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29563,6 +29699,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 9
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235185
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29592,6 +29730,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 8
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235187
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29621,6 +29761,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 7
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235189
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29650,6 +29792,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 6
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235191
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29679,6 +29823,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 5
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235193
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29708,6 +29854,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 4
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235195
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29737,6 +29885,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 3
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235197
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29766,6 +29916,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 2
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235199
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29795,6 +29947,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 1
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235201
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29824,6 +29978,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ID: 0
+  IsSocket: 0
+  CurrentCollidingSocket: {fileID: 0}
 --- !u!54 &1898235203
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -30284,6 +30440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1905998323
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30692,6 +30849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1925066528
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30853,6 +31011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1936887143
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31590,6 +31749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &1993016221
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31922,6 +32082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &2010310878
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32927,6 +33088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &2088244193
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33440,6 +33602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ccf55ac03b4ba41a482b55e70b838b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoredObject: {fileID: 0}
 --- !u!65 &2143757709
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -32,7 +32,11 @@ TagManager:
   - Interactable
   - Hand
   - Sets
+<<<<<<< Updated upstream
   - Obj
+=======
+  - OBJ
+>>>>>>> Stashed changes
   - 
   - 
   - 
