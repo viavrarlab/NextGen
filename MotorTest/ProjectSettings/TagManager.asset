@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Door
+  - MotorCollider
+  - SetGrab
+  - Socket
+  - PlacementRoot
+  - MotorPart
+  - PlayerHand
   layers:
   - Default
   - TransparentFX
@@ -13,15 +20,15 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PostProcessing
+  - Locked
+  - Placeable
+  - PlacementPoint
+  - Teleport
+  - Interactable
+  - Hand
+  - Sets
+  - OBJ
   - 
   - 
   - 

@@ -108,11 +108,6 @@ public class PlacementOrderEditor : Editor
             GetParts();
         }
 
-        if (GUILayout.Button("Fill List No Armature"))
-        {
-            m_CorrOrder.GetPartsNoArmature();
-        }
-
         if (GUILayout.Button("Clear List"))
         {
             ClearList();
@@ -122,7 +117,7 @@ public class PlacementOrderEditor : Editor
     {
         foreach (Transform child in m_CorrOrder.gameObject.transform)
         {
-            SkinnedMeshRenderer rend = child.GetComponent<SkinnedMeshRenderer>();
+            MeshRenderer rend = child.GetComponent<MeshRenderer>();
             if (rend != null)
             {
                 item = new CustomListClass
