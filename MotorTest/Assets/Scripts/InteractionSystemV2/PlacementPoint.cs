@@ -244,7 +244,7 @@ public class PlacementPoint : MonoBehaviour
         }
         if (other.GetComponentInParent<Placeable>() != null)
         {
-            SwitchSocketState(SocketState.Empty);
+            //SwitchSocketState(SocketState.Empty);
             //m_SnappableObject.GetComponentInParent<ParentConstraint>().constraintActive = false;
             m_SnappableObject = null;
         }
