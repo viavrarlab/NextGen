@@ -7,8 +7,9 @@ using System.Reflection;
 
 //namespace marijnz.EditorCoroutines
 //{
-	public class EditorCoroutines
+public class EditorCoroutines
 	{
+
 		public class EditorCoroutine
 		{
 			public ICoroutineYield currentYield = new YieldDefault();
@@ -87,9 +88,11 @@ using System.Reflection;
 
 		struct YieldWWW : ICoroutineYield
 		{
-			public WWW Www;
+		[Obsolete]
+		public WWW Www;
 
-			public bool IsDone(float deltaTime)
+		[Obsolete]
+		public bool IsDone(float deltaTime)
 			{
 				return Www.isDone;
 			}
@@ -351,8 +354,9 @@ using System.Reflection;
 			return false;
 		}
 
-		// returns false if no next, returns true if OK
-		static bool Process(EditorCoroutine coroutine)
+	// returns false if no next, returns true if OK
+	[Obsolete]
+	static bool Process(EditorCoroutine coroutine)
 		{
 			object current = coroutine.routine.Current;
 			if (current == null)

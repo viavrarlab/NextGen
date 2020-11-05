@@ -99,6 +99,7 @@ public class SocketGenerator : MonoBehaviour
         }
     }
 
+    [System.Obsolete]
     private IEnumerator ColliderTask(Transform t)
     {
         currentProgress = 0f;
@@ -353,6 +354,7 @@ public class SocketGenerator : MonoBehaviour
                     //PlacementPoint pp = socket.AddComponent<PlacementPoint>();
                     //pp.m_PlaceableID = id;
                     //pp.m_CheckForCorrectAngle = false;
+
 
                     socket.layer = LayerMask.NameToLayer(m_LayerName);
 

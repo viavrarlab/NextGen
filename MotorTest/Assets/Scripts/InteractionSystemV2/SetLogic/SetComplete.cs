@@ -7,7 +7,7 @@ public class SetComplete : MonoBehaviour
     public bool complete = false;
     public int SetID;
     private int childrenCount;
-    private int placedobjs = 0;
+    //private int placedobjs = 0;
     public List<GameObject> childs;
     private void Awake()
     {

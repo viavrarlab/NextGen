@@ -152,6 +152,7 @@ public class ConcaveCollider : MonoBehaviour
 
 #if UNITY_EDITOR
 
+    [Obsolete]
     public bool ComputeHulls(LogDelegate log, ProgressDelegate progress)
     {
         bool hadError = false;
@@ -645,6 +646,7 @@ public class ConcaveCollider : MonoBehaviour
     }
 
     [UnityEditor.MenuItem ("GameObject/ConcaveCollider/CreateColliders %&c")]
+    [Obsolete]
     private static void CreateCollidersMenuCommand()
     {
         GameObject obj = UnityEditor.Selection.activeGameObject;
@@ -663,6 +665,7 @@ public class ConcaveCollider : MonoBehaviour
             current.CancelComputation();
     }
 
+    [Obsolete]
     public static void FH_CreateColliders(GameObject obj, string vrmlText, bool isBatchMode)
     {
         if (obj == null)
@@ -713,6 +716,7 @@ public class ConcaveCollider : MonoBehaviour
         InBatchSaveMode = false;
     }
 
+    [Obsolete]
     private static void FH_CreateHullsFromVrml(GameObject obj, string vrml, ProgressDelegate progress)
     {
         Debug.Log("Loading VRML for " + obj.name);
@@ -867,6 +871,7 @@ public class ConcaveCollider : MonoBehaviour
         }
     }
 
+    [Obsolete]
     private static void FH_ComputeHulls(GameObject obj, ProgressDelegate progress = null)
     {
         if (obj == null || shouldCancelBatch)

@@ -75,7 +75,8 @@ using UnityEditor;
 			}
 		}
 
-		IEnumerator ExampleWWW()
+	[System.Obsolete]
+	IEnumerator ExampleWWW()
 		{
 			while (true)
 			{
