@@ -111,7 +111,7 @@ public class InputManager : MonoBehaviour
 
         // Joystick Y AXIS----------------------------------------------------------------------------
         float valueY = ViveInput.GetAxis(m_Pose.viveRole, m_JoystickYAxis);
-        print($"is value between m_JoystickThreshold: {IsBetween(valueY, -m_JoystickThreshold, m_JoystickThreshold)}");
+        //print($"is value between m_JoystickThreshold: {IsBetween(valueY, -m_JoystickThreshold, m_JoystickThreshold)}");
 
         if (valueY > m_JoystickThreshold && m_JoystickYInUse == false)
         {
