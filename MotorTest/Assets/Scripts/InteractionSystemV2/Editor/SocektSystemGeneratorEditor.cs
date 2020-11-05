@@ -105,17 +105,17 @@ public class SocektSystemGeneratorEditor : Editor
             {
                 Mesh mesh = t.GetComponent<MeshFilter>().sharedMesh;
                 float volume = VolumeOfMesh(mesh);
+                t.gameObject.tag = "MotorPart";
                 //print($"Mesh: {t.gameObject.name}, Volume: {volume}, Threshold: {volumeThreshold}");
                 if (volume <= volumeThreshold)
                 {
                     fin = false;
                     //print("Generating BOX COLLIDER.");
-                    t.gameObject.tag = "MotorPart";
                     GameObject colliderParent = new GameObject("Generated Colliders");
                     colliderParent.transform.parent = t;
                     GameObject col = new GameObject("Hull 0");
                     col.gameObject.tag = "MotorCollider";
-                    col.gameObject.layer = 10;
+                    col.gameObject.layer = 16; 
                     col.transform.parent = colliderParent.transform;
                     BoxCollider boxColComp = col.AddComponent<BoxCollider>();
                     MeshRenderer meshRenderer = t.GetComponent<MeshRenderer>();
