@@ -130,7 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4747030}
   - component: {fileID: 4747031}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8913835}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -756,7 +756,7 @@ GameObject:
   m_Component:
   - component: {fileID: 66190411}
   - component: {fileID: 66190412}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -799,7 +799,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 72208624}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -831,7 +831,7 @@ GameObject:
   m_Component:
   - component: {fileID: 87452239}
   - component: {fileID: 87452240}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -875,7 +875,7 @@ GameObject:
   m_Component:
   - component: {fileID: 95638357}
   - component: {fileID: 95638358}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -1082,7 +1082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 143488800}
   - component: {fileID: 143488801}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -1126,7 +1126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 151628601}
   - component: {fileID: 151628602}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -1310,7 +1310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 207694242}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1342,7 +1342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 226688863}
   - component: {fileID: 226688864}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -1385,7 +1385,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 227886034}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1417,7 +1417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 231338714}
   - component: {fileID: 231338715}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -1461,7 +1461,7 @@ GameObject:
   m_Component:
   - component: {fileID: 232631526}
   - component: {fileID: 232631527}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -1495,89 +1495,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2503575, y: 0.3007972, z: 0.02000013}
   m_Center: {x: 0.47386697, y: 0.33317235, z: -0.35248503}
---- !u!1 &238089046
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 238089049}
-  - component: {fileID: 238089048}
-  - component: {fileID: 238089047}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &238089047
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 238089046}
-  m_Enabled: 1
---- !u!20 &238089048
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 238089046}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &238089049
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 238089046}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &273211908
 GameObject:
   m_ObjectHideFlags: 0
@@ -2041,7 +1958,7 @@ GameObject:
   m_Component:
   - component: {fileID: 301784412}
   - component: {fileID: 301784413}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -2085,7 +2002,7 @@ GameObject:
   m_Component:
   - component: {fileID: 302147004}
   - component: {fileID: 302147005}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -2420,7 +2337,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 332523885}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2748,7 +2665,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 336942654}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2779,7 +2696,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 364471134}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2810,7 +2727,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 386408075}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2842,7 +2759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 394328258}
   - component: {fileID: 394328259}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -2886,7 +2803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 402285124}
   - component: {fileID: 402285125}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -3075,7 +2992,7 @@ GameObject:
   m_Component:
   - component: {fileID: 404201211}
   - component: {fileID: 404201212}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -3118,7 +3035,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 417312201}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3149,7 +3066,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 422565510}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3495,7 +3412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 478786537}
   - component: {fileID: 478786538}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -3538,7 +3455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 520643929}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3570,7 +3487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 532471667}
   - component: {fileID: 532471668}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -3903,7 +3820,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 624455662}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3935,7 +3852,7 @@ GameObject:
   m_Component:
   - component: {fileID: 670005713}
   - component: {fileID: 670005714}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -3978,7 +3895,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 671207146}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4009,7 +3926,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 671936108}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4265,7 +4182,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &690057859
 GameObject:
@@ -4276,7 +4193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 690057860}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4445,7 +4362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 702222003}
   - component: {fileID: 702222004}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -4639,7 +4556,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 743763425}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4813,7 +4730,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 790426875}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4844,7 +4761,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 793533922}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4876,7 +4793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 807384269}
   - component: {fileID: 807384270}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -5065,7 +4982,7 @@ GameObject:
   m_Component:
   - component: {fileID: 836781808}
   - component: {fileID: 836781809}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -5249,7 +5166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 846013958}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5281,7 +5198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 863712681}
   - component: {fileID: 863712682}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -5617,7 +5534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 900577281}
   - component: {fileID: 900577282}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -5941,7 +5858,7 @@ GameObject:
   m_Component:
   - component: {fileID: 969609940}
   - component: {fileID: 969609941}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -6133,7 +6050,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1011905873}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6164,7 +6081,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1019579730}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6195,7 +6112,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1026908658}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6226,7 +6143,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1039177813}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6257,7 +6174,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1055921214}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6289,7 +6206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1057611560}
   - component: {fileID: 1057611561}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -6332,7 +6249,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1086489315}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6364,7 +6281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1093031582}
   - component: {fileID: 1093031583}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -6408,7 +6325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1100217594}
   - component: {fileID: 1100217595}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -6451,7 +6368,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1123611431}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6473,6 +6390,235 @@ Transform:
   m_Father: {fileID: 1385987911}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1162208691
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3472144916827726027, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_Name
+      value: ViveCameraRig
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827889591, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827889591, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827889591, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827889591, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827889591, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827889591, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827889591, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827889591, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827889591, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827889591, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827889591, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827680603, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnTriggerDown.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnADown.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnGripDown.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnGripUp.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnTriggerDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1162208693}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnTriggerDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PickUpObj
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnTriggerDown.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnADown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1162208693}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReleaseObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnGripDown.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnGripDown.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnGripUp.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnGripUp.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnGripDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1162208693}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnGripDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PickUPSet
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnGripDown.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnGripUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1162208693}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnGripUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReleaseObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnGripUp.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827685117, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037807039288166052, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c4f395288e15c924d80cc1442ad804d7, type: 3}
+--- !u!1 &1162208692 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3472144916827680603, guid: c4f395288e15c924d80cc1442ad804d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1162208691}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1162208693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162208692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0905b5b08e916543b92d9986cbe6fd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collidingObject: {fileID: 0}
+  objectinhand: {fileID: 0}
+  m_TriggerPull: 0
+--- !u!138 &1162208694
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162208692}
+  m_ConnectedBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &1173968682
 GameObject:
   m_ObjectHideFlags: 0
@@ -6483,7 +6629,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1173968683}
   - component: {fileID: 1173968684}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -6527,7 +6673,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1176839566}
   - component: {fileID: 1176839567}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -6571,7 +6717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1179370354}
   - component: {fileID: 1179370355}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -6614,7 +6760,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1180022942}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6646,7 +6792,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1193880847}
   - component: {fileID: 1193880848}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -6849,7 +6995,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1220922814}
   - component: {fileID: 1220922815}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -7457,7 +7603,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1275180495}
   - component: {fileID: 1275180496}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -7500,7 +7646,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1300648012}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7522,6 +7668,99 @@ Transform:
   m_Father: {fileID: 1385987909}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1319895276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1319895280}
+  - component: {fileID: 1319895279}
+  - component: {fileID: 1319895278}
+  - component: {fileID: 1319895277}
+  m_Layer: 12
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &1319895277
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319895276}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1319895278
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319895276}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1319895279
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319895276}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1319895280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319895276}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1333909464
 GameObject:
   m_ObjectHideFlags: 0
@@ -7531,7 +7770,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1333909465}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7706,7 +7945,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1355286713}
   - component: {fileID: 1355286714}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -7749,7 +7988,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1362870132}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7788,245 +8027,505 @@ PrefabInstance:
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: -6036717309293909608, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8586263604248462298, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586263604248462298, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8261278674250713028, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: 8261278674250713028, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: -6705587813188905174, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -6705587813188905174, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: -4122662500449141678, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: -4122662500449141678, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 4475032186111466521, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475032186111466521, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: -8649620786005604360, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: -8649620786005604360, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: -4072605787053909227, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -4072605787053909227, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: -5194872350950232076, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: -5194872350950232076, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 6756962711086821192, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756962711086821192, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8979174530014745096, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: 8979174530014745096, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 5533562944018937320, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533562944018937320, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7336392281916552678, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: 7336392281916552678, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: -7414138658408101030, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -7414138658408101030, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: -8699775615817401833, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: -8699775615817401833, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 703810613465293047, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 703810613465293047, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6422251393818546382, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: 6422251393818546382, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 7360072301146572885, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360072301146572885, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: -2113678510402504494, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5043445945315229387, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: 5043445945315229387, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: -3226975012777740058, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -3226975012777740058, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: -2199113007098678521, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: -2199113007098678521, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: -7157897592815780582, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -7157897592815780582, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: -2769987047844166544, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: -2769987047844166544, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: -7164713654016040265, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -7164713654016040265, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4606284247243433352, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: 4606284247243433352, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: -23752793804814303, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -23752793804814303, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 2809319050364019334, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: 2809319050364019334, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: -3240100446503512019, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -3240100446503512019, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: -7755320485004825357, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: -7755320485004825357, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1475389769730919587, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 1475389769730919587, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: -1230311762352849275, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: -1230311762352849275, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: -8117151696739496930, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -8117151696739496930, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4244200410093612250, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: 4244200410093612250, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: -2594880652997593017, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -2594880652997593017, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: -115020778011643617, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: -115020778011643617, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: -7252460630885912939, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -7252460630885912939, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7023576831928212047, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: 7023576831928212047, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 5117498481569692002, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117498481569692002, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: -3354945690053053028, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: -3354945690053053028, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435591701551493022, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: -2440591982118362857, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -2440591982118362857, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: -6863273826878097467, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: -6863273826878097467, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: -2303751055220411338, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 3024391501232985233, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 3024391501232985233, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5837538740182000318, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: 5837538740182000318, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: -958593377713698599, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -958593377713698599, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: -7189564331161197904, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: -7189564331161197904, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 6679594278507590999, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679594278507590999, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1695088224493288416, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
+    - target: {fileID: 1695088224493288416, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 7575897229230869506, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 7575897229230869506, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: -1359148677458369837, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
     - target: {fileID: -1359148677458369837, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
@@ -8066,7 +8565,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4d75d25eacd78cd46af0c92d65fd9cf1,
         type: 3}
@@ -14416,7 +14915,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1435309746}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14447,7 +14946,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1453441800}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14479,7 +14978,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1461872295}
   - component: {fileID: 1461872296}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -14522,7 +15021,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1470225451}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14554,7 +15053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1489925138}
   - component: {fileID: 1489925139}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -14934,7 +15433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1516242371}
   - component: {fileID: 1516242372}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -15120,7 +15619,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1569568822}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15152,7 +15651,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1575478569}
   - component: {fileID: 1575478570}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -15195,7 +15694,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1577196514}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15361,7 +15860,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1618348526}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15555,7 +16054,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1625594568}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15587,7 +16086,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1629485499}
   - component: {fileID: 1629485500}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -15914,7 +16413,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1660345548}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16244,7 +16743,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1699682533}
   - component: {fileID: 1699682534}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -16287,7 +16786,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1704094736}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16319,7 +16818,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1723444759}
   - component: {fileID: 1723444760}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -16362,7 +16861,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1726558861}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16534,7 +17033,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1731880505}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16565,7 +17064,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1739253039}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16596,7 +17095,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1751902619}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16775,7 +17274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1797109068}
   - component: {fileID: 1797109069}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -16818,7 +17317,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1801734988}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17001,7 +17500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1876042311}
   - component: {fileID: 1876042312}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -17045,7 +17544,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1899658747}
   - component: {fileID: 1899658748}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -17088,7 +17587,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1904153049}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17120,7 +17619,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1906962968}
   - component: {fileID: 1906962969}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -17164,7 +17663,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1913562398}
   - component: {fileID: 1913562399}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -17208,7 +17707,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1916248848}
   - component: {fileID: 1916248849}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -17693,7 +18192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1947203342}
   - component: {fileID: 1947203343}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -17959,7 +18458,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1957200086}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17990,7 +18489,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1968031797}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18162,7 +18661,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2019610266}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18771,7 +19270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2078483142}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18802,7 +19301,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2083551270}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18834,7 +19333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2089322511}
   - component: {fileID: 2089322512}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -18877,7 +19376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2096896743}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18909,7 +19408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2119644482}
   - component: {fileID: 2119644483}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Hull 0
   m_TagString: MotorCollider
   m_Icon: {fileID: 0}
@@ -18952,7 +19451,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2126810717}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Generated Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
