@@ -6,6 +6,7 @@ using UnityEditor.Experimental.TerrainAPI;
 using UnityEngine.Animations;
 using Unity.EditorCoroutines.Editor;
 using System.Linq;
+using NUnit.Framework.Constraints;
 
 [CustomEditor(typeof(SystemGeneratorScript))]
 public class SocektSystemGeneratorEditor : Editor
@@ -90,11 +91,18 @@ public class SocektSystemGeneratorEditor : Editor
     }
     public void AddObjectID()
     {
-        int id = 0;
+        int id = -1;
         foreach(CustomListClass obj in m_SysGen.m_CorrOrder.Parts)
         {
-            Placeable placeable = Placeable.CreateComponentReturn(obj.obj.gameObject, id);
-            id++;
+            if(obj.OrderNotMandatory == true)
+            {
+                Placeable placeable = Placeable.CreateComponentReturn(obj.obj.gameObject, id);
+            }
+            else
+            {
+                id++;
+                Placeable placeable = Placeable.CreateComponentReturn(obj.obj.gameObject, id);
+            }
         }
     }
     public IEnumerator Generate()
@@ -145,28 +153,58 @@ public class SocektSystemGeneratorEditor : Editor
 
     public void AddParentConstraint()
     {
-
-        foreach (Transform t in m_SysGen.transform)
+        List<GameObject> TempObj = new List<GameObject>();
+        List<ConstraintSource> TempSources = new List<ConstraintSource>();
+        foreach (CustomListClass Obj in m_SysGen.m_CorrOrder.Parts)
         {
-            if (t.name == "PlacementSocket_Root")
+
+            if (Obj.obj.name != Obj.obj.name + "_Socket")
             {
-                return;
-            }
-            if (t.name != t.name + "_Socket")
-            {
-                t.gameObject.AddComponent<ParentConstraint>();
-                GameObject tempGo = GameObject.Find(t.name + "_Socket");
-                source.sourceTransform = tempGo.transform;
-                source.weight = 1;
-                t.gameObject.GetComponent<ParentConstraint>().AddSource(source);
-                if (t.gameObject.GetComponent<Rigidbody>() == null)
+                if(Obj.obj.gameObject.GetComponent<ParentConstraint>() == null)
                 {
-                    t.gameObject.AddComponent<Rigidbody>();
-                    t.gameObject.GetComponent<Rigidbody>().useGravity = false;
+                    if (Obj.OrderNotMandatory == true)
+                    {
+                        TempObj.Add(Obj.obj);
+                        TempObj.ToArray();
+                        for (int i = 0; i < TempObj.Count; i++)
+                        {
+                            if(TempObj[i].gameObject.GetComponent<ParentConstraint>() == null)
+                            {
+                                TempObj[i].gameObject.AddComponent<ParentConstraint>();
+                                GameObject ConstraintTemp = GameObject.Find(TempObj[i].gameObject.name + "_Socket");
+                                source.sourceTransform = ConstraintTemp.transform;
+                                source.weight = 1;
+                                TempSources.Add(source);
+                            }
+                        }
+                        for (int i = 0; i < TempObj.Count; i++)
+                        {
+                            TempObj[i].gameObject.GetComponent<ParentConstraint>().SetSources(TempSources);
+                        }
+                        Debug.Log(TempObj.Count);
+                    }
+                    else
+                    {
+                        TempObj.Clear();
+                        TempSources.Clear();
+                    }
+                }
+                if (Obj.obj.GetComponent<ParentConstraint>() == null)
+                {
+                    Obj.obj.gameObject.AddComponent<ParentConstraint>();
+                    GameObject tempGo = GameObject.Find(Obj.obj.name + "_Socket");
+                    source.sourceTransform = tempGo.transform;
+                    source.weight = 1;
+                    Obj.obj.gameObject.GetComponent<ParentConstraint>().AddSource(source);
+                }
+                if (Obj.obj.gameObject.GetComponent<Rigidbody>() == null)
+                {
+                    Obj.obj.gameObject.AddComponent<Rigidbody>();
+                    Obj.obj.gameObject.GetComponent<Rigidbody>().useGravity = false;
                 }
                 else
                 {
-                    t.gameObject.GetComponent<Rigidbody>().useGravity = false;
+                    Obj.obj.gameObject.GetComponent<Rigidbody>().useGravity = false;
                 }
             }
         }
@@ -219,7 +257,7 @@ public class SocektSystemGeneratorEditor : Editor
         }
 
         // create objects for sockets and add to each set
-        int id = 0;
+        int id = -1;
         int setID = 0;
         while (setID <= maxValue)
         {
@@ -238,7 +276,10 @@ public class SocektSystemGeneratorEditor : Editor
 
                     // mesh renderer with same mesh as expected object (from m_MeshList)
                     MeshRenderer mr = socket.AddComponent<MeshRenderer>() as MeshRenderer;
+                    //In EDitor OBJ with multiple materials need to change the array sizze to the original meshrenderer array size. Unity Editor Does not allow to do this from code.
                     mr.material = m_SysGen.m_SocketMaterial;
+
+
 
                     BoxCollider col = socket.gameObject.AddComponent<BoxCollider>();
                     Bounds bounds = new Bounds(obj.obj.transform.position, Vector3.zero);
@@ -253,7 +294,7 @@ public class SocektSystemGeneratorEditor : Editor
                     socket.layer = LayerMask.NameToLayer(m_LayerName);
 
                     PlacementPoint PP = socket.AddComponent<PlacementPoint>();
-                    PP.m_PlaceableID = id;
+                    socket.AddComponent<OrderCheck>();
                     PP.m_CheckForCorrectAngle = true;
 
                     Rigidbody rigidbody = socket.AddComponent<Rigidbody>();
@@ -267,8 +308,15 @@ public class SocektSystemGeneratorEditor : Editor
 
                     SocketPair sp = new SocketPair(col,PP);
                     m_SysGen.m_SocketPairs.Add(sp);
-
-                    id++;
+                    if(obj.OrderNotMandatory == true)
+                    {
+                        PP.m_PlaceableID = id;
+                    }
+                    else
+                    {
+                        id++;
+                        PP.m_PlaceableID = id;
+                    }
                 }
             }
             setID++;

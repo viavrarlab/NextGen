@@ -115,6 +115,7 @@ public class PlacementOrderEditor : Editor
     }
     public void GetParts()
     {
+        m_CorrOrder.Parts = new List<CustomListClass>();
         foreach (Transform child in m_CorrOrder.gameObject.transform)
         {
             MeshRenderer rend = child.GetComponent<MeshRenderer>();

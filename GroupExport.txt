@@ -1,0 +1,44 @@
+Group0
+--- Step0
+------Front_End_Shield
+------Front_Bearing
+--- Step1
+------Front_Bearing_Front_Lock
+------Front_Bearing_Back_Lock
+------Front_End_Shield_Bearing_Screw_Top
+------Front_End_Shield_Bearing_Screw_Bottom
+------Front_Shield_Bearing_Screw_Nut_Bottom
+------Front_Shield_Bearing_Screw_Nut_Top
+Group1
+--- Step0
+------Front_End_Shield
+------Front_Bearing
+--- Step1
+------Front_Bearing_Front_Lock
+------Front_Bearing_Back_Lock
+------Front_End_Shield_Bearing_Screw_Top
+------Front_End_Shield_Bearing_Screw_Bottom
+------Front_Shield_Bearing_Screw_Nut_Bottom
+------Front_Shield_Bearing_Screw_Nut_Top
+Group2
+--- Step0
+------Front_End_Shield
+------Front_Bearing
+--- Step1
+------Front_Bearing_Front_Lock
+------Front_Bearing_Back_Lock
+------Front_End_Shield_Bearing_Screw_Top
+------Front_End_Shield_Bearing_Screw_Bottom
+------Front_Shield_Bearing_Screw_Nut_Bottom
+------Front_Shield_Bearing_Screw_Nut_Top
+Group3
+--- Step0
+------Front_End_Shield
+------Front_Bearing
+--- Step1
+------Front_Bearing_Front_Lock
+------Front_Bearing_Back_Lock
+------Front_End_Shield_Bearing_Screw_Top
+------Front_End_Shield_Bearing_Screw_Bottom
+------Front_Shield_Bearing_Screw_Nut_Bottom
+------Front_Shield_Bearing_Screw_Nut_Top

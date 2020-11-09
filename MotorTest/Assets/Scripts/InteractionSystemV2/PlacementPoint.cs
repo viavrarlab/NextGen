@@ -156,7 +156,7 @@ public class PlacementPoint : MonoBehaviour
         {
             if(m_ControllerScript.collidingObject == m_SnappableObject.gameObject)
             {
-                Debug.Log("TORORORRLOLORLRORLO");
+
                 m_SnappableObject.GetComponentInParent<ParentConstraint>().constraintActive = false;
                 m_IsOccupied = false;
             }

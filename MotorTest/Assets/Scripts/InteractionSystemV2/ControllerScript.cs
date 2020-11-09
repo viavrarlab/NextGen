@@ -79,9 +79,4 @@ public class ControllerScript : MonoBehaviour
         CurrentPickUpOBJ = null;
         TriggerPull = false;
     }
-
-    void Update()
-    {
-        print(TriggerPull);
-    }
 }
