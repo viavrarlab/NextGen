@@ -50,8 +50,9 @@ public class PlacementOrderEditor : Editor
             //Debug.Log(x);
 
             EditorGUI.PropertyField(new Rect(rect.x, rect.y, width * 0.7f, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("obj"), GUIContent.none);
-            EditorGUI.PropertyField(new Rect(rect.x + (width * 0.7f), rect.y, width * 0.2f, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("set"), GUIContent.none);
-            EditorGUI.PropertyField(new Rect(rect.x + (width * 0.9f), rect.y, width * 0.1f, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("OrderNotMandatory"), GUIContent.none);
+            EditorGUI.PropertyField(new Rect(rect.x + (width * 0.7f), rect.y, width * 0.05f, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("set"), GUIContent.none);
+            EditorGUI.PropertyField(new Rect(rect.x + (width * 0.8f), rect.y, width * 0.1f, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("OrderNotMandatory"), GUIContent.none);
+            EditorGUI.PropertyField(new Rect(rect.x + (width * 0.9f), rect.y, width * 0.1f, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("DifferentObject"), GUIContent.none);
 
 
 
@@ -125,7 +126,8 @@ public class PlacementOrderEditor : Editor
                 {
                     obj = child.gameObject,
                     set = 0,
-                    OrderNotMandatory =false
+                    OrderNotMandatory = false,
+                    DifferentObject = false
                 };
                 m_CorrOrder.Parts.Add(item);
             }

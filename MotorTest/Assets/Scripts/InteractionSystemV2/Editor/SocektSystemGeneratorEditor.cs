@@ -62,7 +62,7 @@ public class SocektSystemGeneratorEditor : Editor
         {
             GenerateSockets();
         }
-        if(GUILayout.Button("Add Parent Constraint + source"))
+        if (GUILayout.Button("Add Parent Constraint + source"))
         {
             AddParentConstraint();
         }
@@ -87,21 +87,33 @@ public class SocektSystemGeneratorEditor : Editor
     }
     public void AddScriptValues()
     {
+        //Sometimes didn't chache the script
         m_SysGen.m_CorrOrder = m_SysGen.GetComponent<CorrectOrderTests>();
     }
     public void AddObjectID()
     {
-        int id = -1;
-        foreach(CustomListClass obj in m_SysGen.m_CorrOrder.Parts)
+        int id = 0;
+        CustomListClass[] CLCarray;
+        CLCarray = m_SysGen.m_CorrOrder.Parts.ToArray();
+        
+        for(int i = 0; i < CLCarray.Count();i++)
         {
-            if(obj.OrderNotMandatory == true)
+            if (CLCarray[i].OrderNotMandatory == true)
             {
-                Placeable placeable = Placeable.CreateComponentReturn(obj.obj.gameObject, id);
+                Placeable placeable = Placeable.CreateComponentReturn(CLCarray[i].obj.gameObject, id);
+                if (CLCarray[i + 1].OrderNotMandatory == false)
+                {
+                    id++;
+                }
+                if (CLCarray[i + 1].DifferentObject == true)
+                {
+                    id++;
+                }
             }
             else
             {
+                Placeable placeable = Placeable.CreateComponentReturn(CLCarray[i].obj.gameObject, id);
                 id++;
-                Placeable placeable = Placeable.CreateComponentReturn(obj.obj.gameObject, id);
             }
         }
     }
@@ -123,7 +135,7 @@ public class SocektSystemGeneratorEditor : Editor
                     colliderParent.transform.parent = t;
                     GameObject col = new GameObject("Hull 0");
                     col.gameObject.tag = "MotorCollider";
-                    col.gameObject.layer = 16; 
+                    col.gameObject.layer = 16;
                     col.transform.parent = colliderParent.transform;
                     BoxCollider boxColComp = col.AddComponent<BoxCollider>();
                     MeshRenderer meshRenderer = t.GetComponent<MeshRenderer>();
@@ -131,7 +143,7 @@ public class SocektSystemGeneratorEditor : Editor
                     boxColComp.center = meshRenderer.bounds.center;
                     boxColComp.size = meshRenderer.bounds.size;
                     boxColComp.isTrigger = collidersAreTriggers;
-                    
+
                     yield return null;
                     fin = true;
                 }
@@ -157,18 +169,22 @@ public class SocektSystemGeneratorEditor : Editor
         List<ConstraintSource> TempSources = new List<ConstraintSource>();
         foreach (CustomListClass Obj in m_SysGen.m_CorrOrder.Parts)
         {
-
             if (Obj.obj.name != Obj.obj.name + "_Socket")
             {
-                if(Obj.obj.gameObject.GetComponent<ParentConstraint>() == null)
+                if (Obj.obj.gameObject.GetComponent<ParentConstraint>() == null)
                 {
                     if (Obj.OrderNotMandatory == true)
                     {
+                        if(Obj.DifferentObject == true)
+                        {
+                            TempObj.Clear();
+                            TempSources.Clear();
+                        }
                         TempObj.Add(Obj.obj);
                         TempObj.ToArray();
                         for (int i = 0; i < TempObj.Count; i++)
                         {
-                            if(TempObj[i].gameObject.GetComponent<ParentConstraint>() == null)
+                            if (TempObj[i].gameObject.GetComponent<ParentConstraint>() == null)
                             {
                                 TempObj[i].gameObject.AddComponent<ParentConstraint>();
                                 GameObject ConstraintTemp = GameObject.Find(TempObj[i].gameObject.name + "_Socket");
@@ -249,30 +265,33 @@ public class SocektSystemGeneratorEditor : Editor
         {
             GameObject set = new GameObject("set" + count.ToString());
             set.transform.parent = socketRoot.transform;
+            set.layer = 15;
             set.gameObject.AddComponent<SetComplete>().SetID = count;
             setObjectRoots.Add(set);
             m_AllSets.Add(set);
 
             count++;
         }
-
+        //Convert List To array
+        CustomListClass[] CLCarray;
+        CLCarray = m_SysGen.m_CorrOrder.Parts.ToArray();
         // create objects for sockets and add to each set
-        int id = -1;
+        int id = 0;
         int setID = 0;
         while (setID <= maxValue)
         {
-            foreach (CustomListClass obj in m_SysGen.m_CorrOrder.Parts)
+            for (int i = 0; i < CLCarray.Count(); i++)
             {
-                if (obj.set == setID)
+                if (CLCarray[i].set == setID)
                 {
                     string setname = "set" + setID.ToString();
-                    GameObject socket = new GameObject(obj.obj.gameObject.name + "_Socket");
+                    GameObject socket = new GameObject(CLCarray[i].obj.gameObject.name + "_Socket");
                     socket.transform.SetParent(FindSetRoot(setObjectRoots, setname), false);
-                    socket.transform.position = obj.obj.transform.position;
-                    socket.transform.rotation = obj.obj.transform.rotation;
+                    socket.transform.position = CLCarray[i].obj.transform.position;
+                    socket.transform.rotation = CLCarray[i].obj.transform.rotation;
                     // mesh filter
                     MeshFilter mf = socket.AddComponent<MeshFilter>() as MeshFilter;
-                    mf.mesh = obj.obj.GetComponent<MeshFilter>().sharedMesh;
+                    mf.mesh = CLCarray[i].obj.GetComponent<MeshFilter>().sharedMesh;
 
                     // mesh renderer with same mesh as expected object (from m_MeshList)
                     MeshRenderer mr = socket.AddComponent<MeshRenderer>() as MeshRenderer;
@@ -282,8 +301,8 @@ public class SocektSystemGeneratorEditor : Editor
 
 
                     BoxCollider col = socket.gameObject.AddComponent<BoxCollider>();
-                    Bounds bounds = new Bounds(obj.obj.transform.position, Vector3.zero);
-                    bounds.Encapsulate(obj.obj.GetComponent<MeshRenderer>().bounds);
+                    Bounds bounds = new Bounds(CLCarray[i].obj.transform.position, Vector3.zero);
+                    bounds.Encapsulate(CLCarray[i].obj.GetComponent<MeshRenderer>().bounds);
                     //Debug.Log($"Teksts - {mesh.bounds}");
                     Vector3 localCenter = bounds.center - socket.transform.position;
                     bounds.center = localCenter;
@@ -306,16 +325,23 @@ public class SocektSystemGeneratorEditor : Editor
                     socket.gameObject.tag = "Socket";
                     socket.gameObject.layer = LayerMask.NameToLayer(m_LayerName);
 
-                    SocketPair sp = new SocketPair(col,PP);
+                    SocketPair sp = new SocketPair(col, PP);
                     m_SysGen.m_SocketPairs.Add(sp);
-                    if(obj.OrderNotMandatory == true)
+                    if (CLCarray[i].OrderNotMandatory == true)
                     {
                         PP.m_PlaceableID = id;
+                        if(CLCarray[i+1].OrderNotMandatory == false)
+                        {
+                            id++;
+                        }if(CLCarray[i+1].DifferentObject == true)
+                        {
+                            id++;
+                        }
                     }
                     else
                     {
-                        id++;
                         PP.m_PlaceableID = id;
+                        id++;
                     }
                 }
             }
@@ -456,11 +482,11 @@ public class SocektSystemGeneratorEditor : Editor
                 DestroyImmediate(t.gameObject);
                 return;
             }
-            if(t.tag != "Untagged")
+            if (t.tag != "Untagged")
             {
                 t.tag = "Untagged";
             }
-            if(t.gameObject.layer != 0)
+            if (t.gameObject.layer != 0)
             {
                 t.gameObject.layer = 0;
             }
