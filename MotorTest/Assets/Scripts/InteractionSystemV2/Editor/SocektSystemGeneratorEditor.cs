@@ -263,13 +263,35 @@ public class SocektSystemGeneratorEditor : Editor
         int count = 0;
         while (count <= maxValue)
         {
-            GameObject set = new GameObject("set" + count.ToString());
+            GameObject set = new GameObject("Set" + count.ToString());
             set.transform.parent = socketRoot.transform;
             set.layer = 15;
             set.gameObject.AddComponent<SetComplete>().SetID = count;
+
+
+            //Adding Mesh for Sets
+            if(GameObject.Find(set.name).GetComponent<MeshRenderer>() != null)
+            {
+                //set.transform.position = GameObject.Find(set.name).transform.position;
+                //set.transform.rotation = GameObject.Find(set.name).transform.rotation;
+                //MeshFilter SetMF = set.AddComponent<MeshFilter>() as MeshFilter;
+                //SetMF.mesh = GameObject.Find(set.name).GetComponent<MeshFilter>().sharedMesh;
+                //MeshRenderer SetMR = set.AddComponent<MeshRenderer>() as MeshRenderer;
+                //SetMR.materials = GameObject.Find(set.name).GetComponent<MeshRenderer>().sharedMaterials;
+                //for (int i = 0; i < GameObject.Find(set.name).GetComponent<MeshRenderer>().sharedMaterials.Length; i++)
+                //{
+                //    SetMR.sharedMaterials[i] = m_SysGen.m_SocketMaterial;
+                //}
+                //Bounds bounds = new Bounds(GameObject.Find(set.name).transform.position, Vector3.zero);
+                //bounds.Encapsulate(GameObject.Find(set.name).GetComponent<MeshRenderer>().bounds);
+                //Vector3 localCenter = bounds.center - set.transform.position;
+                //bounds.center = localCenter;
+            }
+
+            //find centert
+
             setObjectRoots.Add(set);
             m_AllSets.Add(set);
-
             count++;
         }
         //Convert List To array
@@ -284,76 +306,95 @@ public class SocektSystemGeneratorEditor : Editor
             {
                 if (CLCarray[i].set == setID)
                 {
-                    string setname = "set" + setID.ToString();
-                    GameObject socket = new GameObject(CLCarray[i].obj.gameObject.name + "_Socket");
-                    socket.transform.SetParent(FindSetRoot(setObjectRoots, setname), false);
-                    socket.transform.position = CLCarray[i].obj.transform.position;
-                    socket.transform.rotation = CLCarray[i].obj.transform.rotation;
-                    // mesh filter
-                    MeshFilter mf = socket.AddComponent<MeshFilter>() as MeshFilter;
-                    mf.mesh = CLCarray[i].obj.GetComponent<MeshFilter>().sharedMesh;
-
-                    // mesh renderer with same mesh as expected object (from m_MeshList)
-                    MeshRenderer mr = socket.AddComponent<MeshRenderer>() as MeshRenderer;
-                    //In EDitor OBJ with multiple materials need to change the array sizze to the original meshrenderer array size. Unity Editor Does not allow to do this from code.
-                    mr.material = m_SysGen.m_SocketMaterial;
-
-
-
-                    BoxCollider col = socket.gameObject.AddComponent<BoxCollider>();
-                    Bounds bounds = new Bounds(CLCarray[i].obj.transform.position, Vector3.zero);
-                    bounds.Encapsulate(CLCarray[i].obj.GetComponent<MeshRenderer>().bounds);
-                    //Debug.Log($"Teksts - {mesh.bounds}");
-                    Vector3 localCenter = bounds.center - socket.transform.position;
-                    bounds.center = localCenter;
-                    col.center = bounds.center;
-                    col.size = bounds.size;
-                    col.isTrigger = true;
-
-                    socket.layer = LayerMask.NameToLayer(m_LayerName);
-
-                    PlacementPoint PP = socket.AddComponent<PlacementPoint>();
-                    socket.AddComponent<OrderCheck>();
-                    PP.m_CheckForCorrectAngle = true;
-
-                    Rigidbody rigidbody = socket.AddComponent<Rigidbody>();
-                    rigidbody.isKinematic = true;
-                    rigidbody.useGravity = false;
-
-                    //m_AllSlots.Add(slot);
-
-                    socket.gameObject.tag = "Socket";
-                    socket.gameObject.layer = LayerMask.NameToLayer(m_LayerName);
-
-                    SocketPair sp = new SocketPair(col, PP);
-                    m_SysGen.m_SocketPairs.Add(sp);
-                    if (CLCarray[i].OrderNotMandatory == true)
+                    string setname = "Set" + setID.ToString();
+                    Debug.Log(setname);
+                    if (CLCarray[i].obj.name == setname)
                     {
-                        PP.m_PlaceableID = id;
-                        if(CLCarray[i+1].OrderNotMandatory == false)
-                        {
-                            id++;
-                        }if(CLCarray[i+1].DifferentObject == true)
-                        {
-                            id++;
-                        }
+                        return;
                     }
                     else
                     {
-                        PP.m_PlaceableID = id;
-                        id++;
+                        GameObject socket = new GameObject(CLCarray[i].obj.gameObject.name + "_Socket");
+                        socket.transform.SetParent(FindSetRoot(setObjectRoots, setname), false);
+                        socket.transform.position = CLCarray[i].obj.transform.position;
+                        socket.transform.rotation = CLCarray[i].obj.transform.rotation;
+                        // mesh filter
+                        MeshFilter mf = socket.AddComponent<MeshFilter>() as MeshFilter;
+                        mf.mesh = CLCarray[i].obj.GetComponent<MeshFilter>().sharedMesh;
+
+                        // mesh renderer with same mesh as expected object (from m_MeshList)
+                        MeshRenderer mr = socket.AddComponent<MeshRenderer>() as MeshRenderer;
+                        if(CLCarray[i].obj.GetComponent<MeshRenderer>().sharedMaterials.Length > 1)
+                        {
+                            List<Material> TempList = new List<Material>();
+                            foreach (Material mat in CLCarray[i].obj.GetComponent<MeshRenderer>().sharedMaterials)
+                            {
+                                //mr.material = m_SysGen.m_SocketMaterial;
+                                TempList.Add(m_SysGen.m_SocketMaterial);
+                            }
+                            mr.materials = TempList.ToArray();
+                        }
+                        else
+                        {
+                            mr.material = m_SysGen.m_SocketMaterial;
+                        }
+
+                        BoxCollider col = socket.gameObject.AddComponent<BoxCollider>();
+                        Bounds bounds = new Bounds(CLCarray[i].obj.transform.position, Vector3.zero);
+                        bounds.Encapsulate(CLCarray[i].obj.GetComponent<MeshRenderer>().bounds);
+                        //Debug.Log($"Teksts - {mesh.bounds}");
+                        Vector3 localCenter = bounds.center - socket.transform.position;
+                        bounds.center = localCenter;
+                        col.center = bounds.center;
+                        col.size = bounds.size;
+                        col.isTrigger = true;
+
+                        socket.layer = LayerMask.NameToLayer(m_LayerName);
+
+                        PlacementPoint PP = socket.AddComponent<PlacementPoint>();
+                        socket.AddComponent<OrderCheck>();
+                        PP.m_CheckForCorrectAngle = true;
+
+                        Rigidbody rigidbody = socket.AddComponent<Rigidbody>();
+                        rigidbody.isKinematic = true;
+                        rigidbody.useGravity = false;
+
+                        //m_AllSlots.Add(slot);
+
+                        socket.gameObject.tag = "Socket";
+                        socket.gameObject.layer = LayerMask.NameToLayer(m_LayerName);
+
+                        SocketPair sp = new SocketPair(col, PP);
+                        m_SysGen.m_SocketPairs.Add(sp);
+                        if (CLCarray[i].OrderNotMandatory == true)
+                        {
+                            PP.m_PlaceableID = id;
+                            if (CLCarray[i + 1].OrderNotMandatory == false)
+                            {
+                                id++;
+                            }
+                            if (CLCarray[i + 1].DifferentObject == true)
+                            {
+                                id++;
+                            }
+                        }
+                        else
+                        {
+                            PP.m_PlaceableID = id;
+                            id++;
+                        }
                     }
                 }
             }
             setID++;
         }
-        if (m_GenerateSetBoundaryCollider)
-        {
-            foreach (GameObject set in m_AllSets)
-            {
-                CalculateSetBounds(set);
-            }
-        }
+        //if (m_GenerateSetBoundaryCollider)
+        //{
+        //    foreach (GameObject set in m_AllSets)
+        //    {
+        //        //CalculateSetBounds(set);
+        //    }
+        //}
 
         if (m_GenerateSocketRootBoundaryCollider)
         {

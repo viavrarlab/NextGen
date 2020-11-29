@@ -6,59 +6,91 @@ public class SetComplete : MonoBehaviour
 {
     public bool complete = false;
     public int SetID;
-    private int childrenCount;
-    //private int placedobjs = 0;
+
+    public GameObject SetMesh;
+
+    MeshRenderer SetMR;
+
     public List<GameObject> childs;
+    public List<GameObject> SetModels;
+    CorrectOrderTests COT;
     private void Awake()
     {
-        foreach(Transform child in this.transform)
+        foreach (Transform child in this.transform)
         {
             childs.Add(child.gameObject);
         }
         childs.ToArray();
+
+        if (GameObject.Find(gameObject.name).tag == "MotorPart")
+        {
+            SetMesh = GameObject.Find(gameObject.name);
+        }
+        else
+        {
+            return;
+        }
+
+        if(SetMesh.GetComponent<MeshRenderer>() != null)
+        {
+            SetMR = SetMesh.GetComponent<MeshRenderer>();
+            if (SetMR.enabled == true)
+            {
+                SetMR.enabled = false;
+            } 
+        }
+        COT = GetComponentInParent<CorrectOrderTests>();
+        foreach(CustomListClass GO in COT.Parts)
+        {
+            if(GO.set == SetID)
+            {
+                SetModels.Add(GO.obj);
+            }
+        }
     }
     private void Update()
     {
-        //checkPlacedObject();
+        checkPlacedObject();
+        if(SetMR.enabled == false && complete == true)
+        {
+            EnableSetModelMesh();
+        }
+        if(SetMR.enabled == true && complete == false)
+        {
+            DisableSetModelMesh();
+        }
     }
     public void checkPlacedObject()
     {
-        for(int i = 0; i <= childs.Count; i++)
+        for(int i = 0; i < childs.Count; i++)
         {
 
-                //if (childs[0].GetComponent<FixedJoint>().connectedBody != null && childs[childs.Count - 1].GetComponent<FixedJoint>().connectedBody != null)
-                //{
-                //    complete = true;
-                //}
-                //else
-                //{
-                //    complete = false;
-                //}
-            Debug.Log("set object count - " + childs.Count.ToString());
+            if (childs[i].GetComponent<PlacementPoint>().m_IsOccupied)
+            {
+                complete = true;
+            }
+            else
+            {
+                complete = false;
+                break;
+            }
+
         }
-        //foreach (Transform child in this.transform)
-        //{
-        //    if (placedobjs >= 0)
-        //    {
-        //        if (child.GetComponent<FixedJoint>().connectedBody != null)
-        //        {
-        //            placedobjs++;
-        //        }
-        //        if (child.GetComponent<FixedJoint>().connectedBody == null)
-        //        {
-        //            placedobjs--;
-        //        }
-        //    }
-        //}
-        //print("In set placed = " + placedobjs.ToString() + "objects");
-        ////Debug.Log(placedobjs.ToString());
-        //if (placedobjs == childrenCount)
-        //{
-        //    complete = true;
-        //}
-        //else
-        //{
-        //    complete = false;
-        //}
+    }
+    public void EnableSetModelMesh() 
+    {
+        SetMR.enabled = true;
+        foreach(GameObject GO in SetModels)
+        {
+            GO.GetComponent<MeshRenderer>().enabled = false;
+        }
+    }
+    public void DisableSetModelMesh()
+    {
+        SetMR.enabled = false;
+        foreach (GameObject GO in SetModels)
+        {
+            GO.GetComponent<MeshRenderer>().enabled = true;
+        }
     }
 }

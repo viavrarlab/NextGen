@@ -6,7 +6,6 @@ public class CorrectOrderTests : MonoBehaviour
 {
     //public string Name;
     public List<CustomListClass> Parts;
-
 }
 
 

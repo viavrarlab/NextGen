@@ -18,6 +18,8 @@ public class PlacementPoint : MonoBehaviour
     public float m_CorrectAngleThreshold = 5f; // How precise does the Placeable objects' rotation has to be in order to allow snapping into socket. Used in CheckAngle(). Measures as angle degrees.
     public bool m_CheckForCorrectAngle = false;
 
+    public OrderCheck m_OrderCheck;
+
     public float snapspeed = .4f;
 
     public List<SocketPair> m_IntersectingSockets = new List<SocketPair>();
@@ -47,6 +49,7 @@ public class PlacementPoint : MonoBehaviour
         m_ControllerScript = GameObject.FindObjectOfType<ControllerScript>();
         m_MeshRenderer = GetComponent<MeshRenderer>();
         m_MaterialPropertyBlock = new MaterialPropertyBlock();
+        m_OrderCheck = GetComponent<OrderCheck>();
 
         //UpdateMaterial(0.2f); // Hide the graphics
         //UpdateMaterial(m_DefaultStateColor);
@@ -125,7 +128,6 @@ public class PlacementPoint : MonoBehaviour
             Physics.IgnoreCollision(other, this.gameObject.GetComponent<BoxCollider>());
             return;
         }
-        //print(other.gameObject.name);
         // If the socket is not occupied, allow the entered Placeable object to be processed.
         if (!m_IsOccupied)
         {
@@ -140,11 +142,6 @@ public class PlacementPoint : MonoBehaviour
                     }
                     //m_IsOccupied = true;
                 }
-                else
-                {
-                    //SwitchSocketState(SocketState.IntersectingInvalidObject);
-                    //Timer.Register(1f, () => SwitchSocketState(SocketState.Empty));
-                }
             }
         }
         
@@ -152,11 +149,12 @@ public class PlacementPoint : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        //If object is placed and want to take it out of the socket
         if (m_ControllerScript.TriggerPull == true && m_IsOccupied && m_ControllerScript.collidingObject != null) // If the object is the player hand object OR the socket is already occupied, then just return and ignore the resto of the function
         {
-            if(m_ControllerScript.collidingObject == m_SnappableObject.gameObject)
+            if(m_ControllerScript.objectinhand == m_SnappableObject.gameObject)
             {
-
+                Debug.Log("Pacēlu");
                 m_SnappableObject.GetComponentInParent<ParentConstraint>().constraintActive = false;
                 m_IsOccupied = false;
             }
@@ -172,26 +170,33 @@ public class PlacementPoint : MonoBehaviour
         {
             Physics.IgnoreCollision(other, this.gameObject.GetComponent<BoxCollider>());
         }
-        if (!m_IsOccupied)
+        if (!m_IsOccupied && !m_ControllerScript.GrabPush)
         {
             if (m_SnappableObject != null)
             {
                 if (m_PlaceableID == m_SnappableObject.m_ID)
                 {
-                    if (m_CheckForCorrectAngle)
+                    if (m_OrderCheck.m_OrderCorrect)
                     {
-                        if (CheckAngle(m_SnappableObject.transform.rotation))   // Check if user has rotated the object correctly
+                        if (m_CheckForCorrectAngle)
                         {
-                            SwitchSocketState(SocketState.IntersectingValidObject);
-                            if (m_ControllerScript.TriggerPull == false)
+                            if (CheckAngle(m_SnappableObject.transform.rotation))   // Check if user has rotated the object correctly
                             {
-                                StartCoroutine(SnapWithAnimation());
+                                SwitchSocketState(SocketState.IntersectingValidObject);
+                                if (m_ControllerScript.TriggerPull == false)
+                                {
+                                    StartCoroutine(SnapWithAnimation());
+                                }
+                            }
+                            else
+                            {
+                                SwitchSocketState(SocketState.IntersectingInvalidRotation);
                             }
                         }
-                        else
-                        {
-                            SwitchSocketState(SocketState.IntersectingInvalidRotation);
-                        }
+                    }
+                    else
+                    {
+                        SwitchSocketState(SocketState.IntersectingInvalidObject);
                     }
                 }
             }
@@ -204,42 +209,6 @@ public class PlacementPoint : MonoBehaviour
         {
             return;
         }
-
-    
-
-        //if (m_SnappableObject.isHeld == false && m_PlaceableID == m_SnappableObject.m_ID)
-        //{
-        //    StartCoroutine(SnapWithAnimation());
-        //}
-
-        //if (m_SnappableObject != null && !m_SnappableObject.m_IsPlaced)  // If we have a valid Placeable object and it isn't already placed
-        //{
-        //    if (m_CheckForCorrectAngle)
-        //    {
-        //        if (CheckAngle(m_SnappableObject.transform.rotation))   // Check if user has rotated the object correctly
-        //        {
-        //            SwitchSocketState(SocketState.IntersectingValidRotation);
-        //            //if (ViveInput.GetPressUp(m_GrabScript.m_HandRole, m_GrabScript.m_ControllerButton) && !m_IsOccupied) // If user has released the grab button and the socket is not already occupied
-        //            //{
-        //            //    //SnapObject();   // snap the object to the socket
-        //            //    StartCoroutine(SnapWithAnimation());
-        //            //}
-        //        }
-        //        else
-        //        {
-        //            SwitchSocketState(SocketState.IntersectingInvalidRotation);
-        //        }
-        //    }
-        //    else
-        //    {
-        //        SwitchSocketState(SocketState.IntersectingValidObject);
-        //        //if (ViveInput.GetPressUp(m_GrabScript.m_HandRole, m_GrabScript.m_ControllerButton) && !m_IsOccupied) // If user has released the grab button and the socket is not already occupied
-        //        //{
-        //        //    //SnapObject();   // snap the object to the socket
-        //        //    StartCoroutine(SnapWithAnimation());
-        //        //}
-        //    }
-        //}
     }
 
     private void OnTriggerExit(Collider other)

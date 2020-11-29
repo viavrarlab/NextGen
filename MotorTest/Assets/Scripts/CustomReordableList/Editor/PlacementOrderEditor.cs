@@ -3,7 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEditorInternal;
-
+using System.Linq;
+using System.Text;
+using System.IO;
+using UnityEngine.Windows;
+using JetBrains.Annotations;
+using System;
 
 [CustomEditor(typeof(CorrectOrderTests))]
 [CanEditMultipleObjects]
@@ -113,6 +118,15 @@ public class PlacementOrderEditor : Editor
         {
             ClearList();
         }
+
+        if (GUILayout.Button("Export List"))
+        {
+            ExportList();
+        }
+        if (GUILayout.Button("Import List"))
+        {
+            ListImport();
+        }
     }
     public void GetParts()
     {
@@ -137,4 +151,22 @@ public class PlacementOrderEditor : Editor
     {
         m_CorrOrder.Parts.Clear();
     }
+    public void ExportList()
+    {
+        System.Text.StringBuilder sb = new System.Text.StringBuilder();
+        foreach (var item in m_CorrOrder.Parts)
+        {
+            sb.AppendLine(item.ToString());
+        }
+        System.IO.File.WriteAllText(
+                System.IO.Path.Combine("Assets/Scripts/","SortedList.txt"),
+                sb.ToString());
+    }
+    public void ListImport()
+    {
+        string path = EditorUtility.OpenFilePanel("Find List CSV", "", "txt");
+
+        m_CorrOrder.Parts = System.IO.File.ReadAllLines(path).Select(v => CustomListClass.FromCSV(v)).ToList();
+    }
 }
+

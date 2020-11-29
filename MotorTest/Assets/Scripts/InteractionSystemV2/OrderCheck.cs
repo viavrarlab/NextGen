@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.Animations;
+using System.Linq;
+
 public class OrderCheck : MonoBehaviour
 {
     public GameObject[] SocketGameObj;
     public PlacementPoint[] PP_Array;
+    public bool m_OrderCorrect;
+
+    OrderCheckList item;
     void Start()
     {
         SocketGameObj = GameObject.FindGameObjectsWithTag("Socket");
@@ -27,29 +32,107 @@ public class OrderCheck : MonoBehaviour
         }
         if (other.transform.parent.transform.parent.GetComponent<ParentConstraint>().sourceCount > 1)
         {
-            ParentConstraint TempConst = other.transform.parent.transform.parent.GetComponent<ParentConstraint>();
-            List<ConstraintSource> TempOriginalSources = new List<ConstraintSource>();
-            TempConst.GetSources(TempOriginalSources);
-            List<ConstraintSource> TempUpdatedSources = new List<ConstraintSource>();
-            foreach (ConstraintSource Constr in TempOriginalSources)
+            if (other.transform.parent.transform.parent.GetComponent<Placeable>().m_ID == gameObject.GetComponent<PlacementPoint>().m_PlaceableID)
             {
-                ConstraintSource TempSource = Constr;
-                Debug.Log(TempSource.sourceTransform.name);
-                if (gameObject.name == TempSource.sourceTransform.name)
+                ParentConstraint TempConst = other.transform.parent.transform.parent.GetComponent<ParentConstraint>();
+                List<ConstraintSource> TempOriginalSources = new List<ConstraintSource>();
+                TempConst.GetSources(TempOriginalSources);
+                List<ConstraintSource> TempUpdatedSources = new List<ConstraintSource>();
+                foreach (ConstraintSource Constr in TempOriginalSources)
                 {
-                    Debug.Log(gameObject.name);
-                    TempSource.weight = 1f;
-                    TempUpdatedSources.Add(TempSource);
+                    ConstraintSource TempSource = Constr;
+                    if (gameObject.name == TempSource.sourceTransform.name)
+                    {
+                        TempSource.weight = 1f;
+                        TempUpdatedSources.Add(TempSource);
+                    }
+                    else
+                    {
+                        TempSource.weight = 0f;
+                        TempUpdatedSources.Add(TempSource);
+                    }
                 }
-                else
-                {
-                    TempSource.weight = 0f;
-                    TempUpdatedSources.Add(TempSource);
-                }
-                Debug.Log(TempSource.weight);
+                TempConst.SetSources(TempUpdatedSources);
             }
-            TempConst.SetSources(TempUpdatedSources);
         }
+        if (other.transform.parent.transform.parent.GetComponent<Placeable>().m_ID == gameObject.GetComponent<PlacementPoint>().m_PlaceableID)
+        {
+            List<OrderCheckList> TempList = new List<OrderCheckList>();
+            for(int i = 0;i < PP_Array.Length; i++ )
+            {
+                item = new OrderCheckList
+                {
+                    m_Obj_ID = PP_Array[i].m_PlaceableID,
+                    m_isPlaced = PP_Array[i].m_IsOccupied
+                };
+                TempList.Add(item);
+            }
+            if(TempList != null)
+            {
+                for(int i = 0; i < TempList.Count; i++)
+                {
+                    OrderCheckList tempOrder = TempList[i];
+                    if (tempOrder.m_Obj_ID == other.transform.parent.transform.parent.GetComponent<Placeable>().m_ID)
+                    {
+                        m_OrderCorrect = true;
+                    }
+                    else
+                    {
+                        if(tempOrder.m_Obj_ID >= 0 && tempOrder.m_Obj_ID == other.transform.parent.transform.parent.GetComponent<Placeable>().m_ID - 1)
+                        {
+                            Debug.Log(tempOrder.m_Obj_ID);
+                            if(tempOrder.m_isPlaced == true)
+                            {
+                                m_OrderCorrect = true;
+                            }
+                            else
+                            {
+                                m_OrderCorrect = false;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //if (other.transform.parent.transform.parent.GetComponent<Placeable>().m_ID == gameObject.GetComponent<PlacementPoint>().m_PlaceableID)
+        //{
+        //    int m_OrderNotMandatoryID = 0;
+        //    for (int i = 0; i < PP_Array.Length; i++)
+        //    {
+        //        if (PP_Array[i].m_PlaceableID == gameObject.GetComponent<PlacementPoint>().m_PlaceableID)
+        //        {
+        //            for (int j = 0; j <= i; j++)
+        //            {
+        //                if (PP_Array[j].m_PlaceableID == 0)
+        //                {
+        //                    m_OrderCorrect = true;
+        //                }
+        //                else
+        //                {
+        //                    Debug.Log("PlaceableID from array - " + PP_Array[j].m_PlaceableID);
+        //                    Debug.Log("PlaceableID of Gameobject - " + gameObject.GetComponent<PlacementPoint>().m_PlaceableID.ToString());
+        //                    //Debug.Log("j value - " + j.ToString());
+        //                    if (PP_Array[j].m_PlaceableID -1 == GetComponent<PlacementPoint>().m_PlaceableID - 1)
+        //                    {
+        //                        Debug.Log("PlaceableID from array after if - " + PP_Array[j].m_PlaceableID);
+        //                        if (PP_Array[j - m_OrderNotMandatoryID].m_IsOccupied)
+        //                        {
+        //                            m_OrderCorrect = true;
+        //                        }
+        //                    }
+        //                    else
+        //                    {
+        //                        m_OrderCorrect = false;
+        //                    }
+        //                }
+        //            }
+        //        }
+        //        Debug.Log("OrderCorrect =>" + m_OrderCorrect.ToString());
+        //    }
+        //}
+
     }
     private void OnTriggerStay(Collider other)
     {

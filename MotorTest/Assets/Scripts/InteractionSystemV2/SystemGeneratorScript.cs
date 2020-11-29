@@ -12,4 +12,3 @@ public class SystemGeneratorScript : MonoBehaviour
     public CorrectOrderTests m_CorrOrder;
     public List<SocketPair> m_SocketPairs;
 }
-
