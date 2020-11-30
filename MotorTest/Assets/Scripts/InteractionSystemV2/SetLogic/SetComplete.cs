@@ -22,7 +22,7 @@ public class SetComplete : MonoBehaviour
         }
         childs.ToArray();
 
-        if (GameObject.Find(gameObject.name).tag == "MotorPart")
+        if (GameObject.Find(gameObject.name).tag == "SetGrab")
         {
             SetMesh = GameObject.Find(gameObject.name);
         }

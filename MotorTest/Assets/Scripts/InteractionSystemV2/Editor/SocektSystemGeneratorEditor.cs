@@ -75,6 +75,10 @@ public class SocektSystemGeneratorEditor : Editor
         {
             GenerateColliders();
         }
+        if (GUILayout.Button("Place Set Sockets"))
+        {
+            PlaceSetSocekts();
+        }
         if (GUILayout.Button("Clear"))
         {
             Clear();
@@ -84,38 +88,6 @@ public class SocektSystemGeneratorEditor : Editor
     public void GenerateColliders()
     {
         EditorCoroutineUtility.StartCoroutine(Generate(), this);
-    }
-    public void AddScriptValues()
-    {
-        //Sometimes didn't chache the script
-        m_SysGen.m_CorrOrder = m_SysGen.GetComponent<CorrectOrderTests>();
-    }
-    public void AddObjectID()
-    {
-        int id = 0;
-        CustomListClass[] CLCarray;
-        CLCarray = m_SysGen.m_CorrOrder.Parts.ToArray();
-        
-        for(int i = 0; i < CLCarray.Count();i++)
-        {
-            if (CLCarray[i].OrderNotMandatory == true)
-            {
-                Placeable placeable = Placeable.CreateComponentReturn(CLCarray[i].obj.gameObject, id);
-                if (CLCarray[i + 1].OrderNotMandatory == false)
-                {
-                    id++;
-                }
-                if (CLCarray[i + 1].DifferentObject == true)
-                {
-                    id++;
-                }
-            }
-            else
-            {
-                Placeable placeable = Placeable.CreateComponentReturn(CLCarray[i].obj.gameObject, id);
-                id++;
-            }
-        }
     }
     public IEnumerator Generate()
     {
@@ -162,7 +134,59 @@ public class SocektSystemGeneratorEditor : Editor
             }
         }
     }
+    public void AddScriptValues()
+    {
+        //Sometimes didn't chache the script
+        m_SysGen.m_CorrOrder = m_SysGen.GetComponent<CorrectOrderTests>();
+    }
+    public void AddObjectID()
+    {
+        int id = 0;
+        CustomListClass[] CLCarray;
+        CLCarray = m_SysGen.m_CorrOrder.Parts.ToArray();
+        
+        for(int i = 0; i < CLCarray.Count();i++)
+        {
+            if (CLCarray[i].OrderNotMandatory == true)
+            {
+                Placeable placeable = Placeable.CreateComponentReturn(CLCarray[i].obj.gameObject, id);
+                if (CLCarray[i + 1].OrderNotMandatory == false)
+                {
+                    id++;
+                }
+                if (CLCarray[i + 1].DifferentObject == true)
+                {
+                    id++;
+                }
+            }
+            else
+            {
+                Placeable placeable = Placeable.CreateComponentReturn(CLCarray[i].obj.gameObject, id);
+                id++;
+            }
+        }
+    }
 
+    public void PlaceSetSocekts()
+    {
+        GameObject PlacementRoot = GameObject.Find("PlacementSocket_Root");
+        List<GameObject> SetList = new List<GameObject>();
+        for(int i = 0; i < PlacementRoot.transform.childCount; i++)
+        {
+            SetList.Add(PlacementRoot.transform.GetChild(i).gameObject);
+        }
+        foreach(Transform t in m_SysGen.transform)
+        {
+            foreach(GameObject Set in SetList)
+            {
+                if (Set.name == t.gameObject.name && t.gameObject.active == true) 
+                {
+                    Set.transform.parent = t;
+                    t.gameObject.tag = "SetGrab";
+                }
+            }
+        }
+    }
     public void AddParentConstraint()
     {
         List<GameObject> TempObj = new List<GameObject>();
@@ -252,7 +276,7 @@ public class SocektSystemGeneratorEditor : Editor
         socketRoot.AddComponent<Rigidbody>();
         socketRoot.GetComponent<Rigidbody>().isKinematic = false;
         socketRoot.GetComponent<Rigidbody>().useGravity = false;
-        socketRoot.AddComponent<SetEnable>();
+        m_SysGen.transform.gameObject.AddComponent<SetEnable>();
         //socketRoot.AddComponent<BoxCollider>();
         socketRoot.tag = "PlacementRoot";
         socketRoot.layer = 10;
@@ -268,27 +292,24 @@ public class SocektSystemGeneratorEditor : Editor
             set.layer = 15;
             set.gameObject.AddComponent<SetComplete>().SetID = count;
 
-
-            //Adding Mesh for Sets
-            if(GameObject.Find(set.name).GetComponent<MeshRenderer>() != null)
-            {
-                //set.transform.position = GameObject.Find(set.name).transform.position;
-                //set.transform.rotation = GameObject.Find(set.name).transform.rotation;
-                //MeshFilter SetMF = set.AddComponent<MeshFilter>() as MeshFilter;
-                //SetMF.mesh = GameObject.Find(set.name).GetComponent<MeshFilter>().sharedMesh;
-                //MeshRenderer SetMR = set.AddComponent<MeshRenderer>() as MeshRenderer;
-                //SetMR.materials = GameObject.Find(set.name).GetComponent<MeshRenderer>().sharedMaterials;
-                //for (int i = 0; i < GameObject.Find(set.name).GetComponent<MeshRenderer>().sharedMaterials.Length; i++)
-                //{
-                //    SetMR.sharedMaterials[i] = m_SysGen.m_SocketMaterial;
-                //}
-                //Bounds bounds = new Bounds(GameObject.Find(set.name).transform.position, Vector3.zero);
-                //bounds.Encapsulate(GameObject.Find(set.name).GetComponent<MeshRenderer>().bounds);
-                //Vector3 localCenter = bounds.center - set.transform.position;
-                //bounds.center = localCenter;
-            }
-
-            //find centert
+            //------Adding Mesh for Sets ---------
+            //if(GameObject.Find(set.name).GetComponent<MeshRenderer>() != null)
+            //{
+            //    //set.transform.position = GameObject.Find(set.name).transform.position;
+            //    //set.transform.rotation = GameObject.Find(set.name).transform.rotation;
+            //    //MeshFilter SetMF = set.AddComponent<MeshFilter>() as MeshFilter;
+            //    //SetMF.mesh = GameObject.Find(set.name).GetComponent<MeshFilter>().sharedMesh;
+            //    //MeshRenderer SetMR = set.AddComponent<MeshRenderer>() as MeshRenderer;
+            //    //SetMR.materials = GameObject.Find(set.name).GetComponent<MeshRenderer>().sharedMaterials;
+            //    //for (int i = 0; i < GameObject.Find(set.name).GetComponent<MeshRenderer>().sharedMaterials.Length; i++)
+            //    //{
+            //    //    SetMR.sharedMaterials[i] = m_SysGen.m_SocketMaterial;
+            //    //}
+            //    //Bounds bounds = new Bounds(GameObject.Find(set.name).transform.position, Vector3.zero);
+            //    //bounds.Encapsulate(GameObject.Find(set.name).GetComponent<MeshRenderer>().bounds);
+            //    //Vector3 localCenter = bounds.center - set.transform.position;
+            //    //bounds.center = localCenter;
+            //}
 
             setObjectRoots.Add(set);
             m_AllSets.Add(set);
@@ -523,6 +544,13 @@ public class SocektSystemGeneratorEditor : Editor
                 DestroyImmediate(t.gameObject);
                 return;
             }
+            if(t.childCount >=1)
+            {
+                for(int i = 0; i < t.childCount; i++)
+                {
+                    DestroyImmediate(t.GetChild(i).gameObject);
+                }
+            }
             if (t.tag != "Untagged")
             {
                 t.tag = "Untagged";
@@ -554,6 +582,11 @@ public class SocektSystemGeneratorEditor : Editor
             ConcaveCollider colliderGen = t.gameObject.GetComponent<ConcaveCollider>();
 
             colliderGen.DestroyHulls();
+        }
+        if(m_SysGen.gameObject.GetComponent<SetEnable>() != null)
+        {
+            var SetEnb = m_SysGen.gameObject.GetComponent<SetEnable>();
+            DestroyImmediate(SetEnb);
         }
         if (m_SysGen.m_MeshList.Count > 0) m_SysGen.m_MeshList.Clear();
         if (m_SysGen.m_SocketPairs.Count > 0) m_SysGen.m_SocketPairs.Clear();

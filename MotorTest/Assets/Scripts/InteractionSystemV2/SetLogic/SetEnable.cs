@@ -8,13 +8,22 @@ public class SetEnable : MonoBehaviour
 {
     int count = 0;
     public List<GameObject> Sets;
-    public GameObject PlacementSocketRoot;
+
+
     private void Start()
     {
-        PlacementSocketRoot = GameObject.Find("PlacementSocket_Root");
-        foreach(Transform child in PlacementSocketRoot.transform)
+        foreach(Transform child in this.transform)
         {
-            Sets.Add(child.gameObject);
+            if (child.childCount > 1)
+            {
+                for(int i = 0; i < child.childCount; i++)
+                {
+                    if (child.GetChild(i).gameObject.layer == 15)
+                    {
+                        Sets.Add(child.GetChild(i).gameObject);
+                    }
+                }
+            }
         }
         disableNextSets();
     }

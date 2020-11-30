@@ -13,9 +13,9 @@ using TMPro;
 public class PlacementPoint : MonoBehaviour
 {
     public int m_PlaceableID;   // This must correspond to the Placeable objects' ID that you want to place here
-    public Vector3 m_CorrectPlacementAngle = Vector3.zero; // TODO: make this automated somehow. Maybe when generating placement points / ObjectConfig.. IDK
+    public Vector3 m_CorrectPlacementAngle; // TODO: make this automated somehow. Maybe when generating placement points / ObjectConfig.. IDK
     public bool m_IsOccupied = false; // If this socket/point has something socketed 
-    public float m_CorrectAngleThreshold = 5f; // How precise does the Placeable objects' rotation has to be in order to allow snapping into socket. Used in CheckAngle(). Measures as angle degrees.
+    public float m_CorrectAngleThreshold = 7.5f; // How precise does the Placeable objects' rotation has to be in order to allow snapping into socket. Used in CheckAngle(). Measures as angle degrees.
     public bool m_CheckForCorrectAngle = false;
 
     public OrderCheck m_OrderCheck;
@@ -139,6 +139,7 @@ public class PlacementPoint : MonoBehaviour
                     if (m_SnappableObject != p) // Kind of redundant check, but whatever - just keep it as extra security. Just setting the member variable to incoming objects Placeable script reference.
                     {
                         m_SnappableObject = p;
+                        m_CorrectPlacementAngle = transform.rotation.eulerAngles; // update socket angle
                     }
                     //m_IsOccupied = true;
                 }
@@ -154,7 +155,6 @@ public class PlacementPoint : MonoBehaviour
         {
             if(m_ControllerScript.objectinhand == m_SnappableObject.gameObject)
             {
-                Debug.Log("Pacēlu");
                 m_SnappableObject.GetComponentInParent<ParentConstraint>().constraintActive = false;
                 m_IsOccupied = false;
             }
@@ -170,7 +170,7 @@ public class PlacementPoint : MonoBehaviour
         {
             Physics.IgnoreCollision(other, this.gameObject.GetComponent<BoxCollider>());
         }
-        if (!m_IsOccupied && !m_ControllerScript.GrabPush)
+        if (!m_IsOccupied)
         {
             if (m_SnappableObject != null)
             {
@@ -231,42 +231,6 @@ public class PlacementPoint : MonoBehaviour
         {
             //SwitchSocketState(SocketState.Empty);
         }
-        //if (!other.CompareTag("Socket"))
-        //{
-        //        if (other.CompareTag("MotorCollider"))
-        //        {
-        //            SwitchSocketState(SocketState.Empty);
-        //            m_SnappableObject.m_IsPlaced = false;
-        //            m_IsOccupied = false;
-        //            m_SnappableObject.GetComponent<ParentConstraint>().constraintActive = false;
-        //            m_SnappableObject = null;
-        //        }
-        //}
-
-
-
-        //if (m_IsOccupied)
-        //{
-
-        //bool otherIsNull = other.gameObject != null;
-        //bool snappableIsNull = m_SnappableObject != null;
-        //bool otherIsNotSnappable = other.gameObject != m_SnappableObject.gameObject;
-
-        //if ()
-        //{
-        //    return;
-        //}
-        //if (m_SnappableObject != null)
-        //{
-        //    m_SnappableObject.m_IsPlaced = false;
-        //    m_IsOccupied = false;
-        //    m_SnappableObject = null;
-        //    SwitchSocketState(SocketState.Empty);
-        //}
-        //else
-        //{
-        //    SwitchSocketState(SocketState.Empty);
-        //}
     }
 
     // TODO: Check if this is still needed! And figure out what exactly it was supposed to fix...

@@ -53,16 +53,28 @@ public class ControllerScript : MonoBehaviour
     }
     public void PickUPSet()
     {
-        if (collidingObject != null && collidingObject.CompareTag("PlacementRoot") && !collidingObject.CompareTag("MotorPart"))
+        if (collidingObject != null)
         {
-            GrabObject();
+            if (!collidingObject.CompareTag("MotorPart"))
+            {
+                if (collidingObject.CompareTag("SetGrab") || !collidingObject.CompareTag("PlacementRoot"))
+                {
+                    GrabObject();
+                }
+            }
         }
     }
     public void PickUpObj()
     {
-        if (collidingObject != null && collidingObject.CompareTag("MotorPart") && !collidingObject.CompareTag("PlacementRoot"))
+        if (collidingObject != null)
         {
-            GrabObject();
+            if (!collidingObject.CompareTag("PlacementRoot") || !collidingObject.CompareTag("SetGrab"))
+            {
+                if (collidingObject.CompareTag("MotorPart"))
+                {
+                    GrabObject();
+                }
+            }
         }
     }
     public void GrabObject()
