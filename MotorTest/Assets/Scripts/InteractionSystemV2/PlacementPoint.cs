@@ -18,6 +18,8 @@ public class PlacementPoint : MonoBehaviour
     public float m_CorrectAngleThreshold = 7.5f; // How precise does the Placeable objects' rotation has to be in order to allow snapping into socket. Used in CheckAngle(). Measures as angle degrees.
     public bool m_CheckForCorrectAngle = false;
 
+    public bool m_CanTakeOut;
+
     public OrderCheck m_OrderCheck;
 
     public float snapspeed = .4f;
@@ -150,10 +152,44 @@ public class PlacementPoint : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        if (m_ControllerScript.objectinhand != null)
+        {
+            if (gameObject.GetComponent<PlacementPoint>().m_IsOccupied == true && m_ControllerScript.objectinhand.GetComponent<Placeable>().m_ID == gameObject.GetComponent<PlacementPoint>().m_PlaceableID)
+            {
+                List<OrderCheckList> TempList = new List<OrderCheckList>();
+                for (int i = 0; i < m_OrderCheck.PP_Array.Length; i++)
+                {
+                    m_OrderCheck.item = new OrderCheckList
+                    {
+                        m_Obj_ID = m_OrderCheck.PP_Array[i].m_PlaceableID,
+                        m_isPlaced = m_OrderCheck.PP_Array[i].m_IsOccupied
+                    };
+                }
+                TempList.Add(m_OrderCheck.item);
+                for (int i = 0; i < TempList.Count; i++)
+                {
+                    OrderCheckList tempOrder = TempList[i];
+                    if (tempOrder.m_Obj_ID >= 0 && tempOrder.m_Obj_ID == m_ControllerScript.objectinhand.GetComponent<Placeable>().m_ID + 1)
+                    {
+                        Debug.Log(gameObject.name + "TRORORORLOLOLOOL");
+                        if (tempOrder.m_isPlaced == false)
+                        {
+                            m_CanTakeOut = true;
+                        }
+                        else
+                        {
+                            m_CanTakeOut = false;
+                            break;
+                        }
+                    }
+
+                }
+            }
+        }
         //If object is placed and want to take it out of the socket
         if (m_ControllerScript.TriggerPull == true && m_IsOccupied && m_ControllerScript.collidingObject != null) // If the object is the player hand object OR the socket is already occupied, then just return and ignore the resto of the function
         {
-            if(m_ControllerScript.objectinhand == m_SnappableObject.gameObject)
+            if(m_ControllerScript.objectinhand == m_SnappableObject.gameObject && m_CanTakeOut)
             {
                 m_SnappableObject.GetComponentInParent<ParentConstraint>().constraintActive = false;
                 m_IsOccupied = false;

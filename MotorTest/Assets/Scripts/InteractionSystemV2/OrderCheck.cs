@@ -11,9 +11,11 @@ public class OrderCheck : MonoBehaviour
     public PlacementPoint[] PP_Array;
     public bool m_OrderCorrect;
 
-    OrderCheckList item;
+    public OrderCheckList item;
+
     void Start()
     {
+        //Get All Socket OBJ
         SocketGameObj = GameObject.FindGameObjectsWithTag("Socket");
 
         PP_Array = new PlacementPoint[SocketGameObj.Length];
@@ -30,6 +32,7 @@ public class OrderCheck : MonoBehaviour
         {
             Physics.IgnoreCollision(GetComponent<BoxCollider>(), other.GetComponent<BoxCollider>());
         }
+        //Check if Constraint has more than 1 source and change weights according to the gameobject
         if (other.transform.parent.transform.parent.GetComponent<ParentConstraint>().sourceCount > 1)
         {
             if (other.transform.parent.transform.parent.GetComponent<Placeable>().m_ID == gameObject.GetComponent<PlacementPoint>().m_PlaceableID)
@@ -58,7 +61,7 @@ public class OrderCheck : MonoBehaviour
         if (other.transform.parent.transform.parent.GetComponent<Placeable>().m_ID == gameObject.GetComponent<PlacementPoint>().m_PlaceableID)
         {
             List<OrderCheckList> TempList = new List<OrderCheckList>();
-            for(int i = 0;i < PP_Array.Length; i++ )
+            for (int i = 0; i < PP_Array.Length; i++)
             {
                 item = new OrderCheckList
                 {
@@ -67,9 +70,9 @@ public class OrderCheck : MonoBehaviour
                 };
                 TempList.Add(item);
             }
-            if(TempList != null)
+            if (TempList != null)
             {
-                for(int i = 0; i < TempList.Count; i++)
+                for (int i = 0; i < TempList.Count; i++)
                 {
                     OrderCheckList tempOrder = TempList[i];
                     if (tempOrder.m_Obj_ID == other.transform.parent.transform.parent.GetComponent<Placeable>().m_ID)
@@ -78,10 +81,10 @@ public class OrderCheck : MonoBehaviour
                     }
                     else
                     {
-                        if(tempOrder.m_Obj_ID >= 0 && tempOrder.m_Obj_ID == other.transform.parent.transform.parent.GetComponent<Placeable>().m_ID - 1)
+                        if (tempOrder.m_Obj_ID >= 0 && tempOrder.m_Obj_ID == other.transform.parent.transform.parent.GetComponent<Placeable>().m_ID - 1)
                         {
                             Debug.Log(tempOrder.m_Obj_ID);
-                            if(tempOrder.m_isPlaced == true)
+                            if (tempOrder.m_isPlaced == true)
                             {
                                 m_OrderCorrect = true;
                             }
@@ -95,44 +98,6 @@ public class OrderCheck : MonoBehaviour
                 }
             }
         }
-
-        //if (other.transform.parent.transform.parent.GetComponent<Placeable>().m_ID == gameObject.GetComponent<PlacementPoint>().m_PlaceableID)
-        //{
-        //    int m_OrderNotMandatoryID = 0;
-        //    for (int i = 0; i < PP_Array.Length; i++)
-        //    {
-        //        if (PP_Array[i].m_PlaceableID == gameObject.GetComponent<PlacementPoint>().m_PlaceableID)
-        //        {
-        //            for (int j = 0; j <= i; j++)
-        //            {
-        //                if (PP_Array[j].m_PlaceableID == 0)
-        //                {
-        //                    m_OrderCorrect = true;
-        //                }
-        //                else
-        //                {
-        //                    Debug.Log("PlaceableID from array - " + PP_Array[j].m_PlaceableID);
-        //                    Debug.Log("PlaceableID of Gameobject - " + gameObject.GetComponent<PlacementPoint>().m_PlaceableID.ToString());
-        //                    //Debug.Log("j value - " + j.ToString());
-        //                    if (PP_Array[j].m_PlaceableID -1 == GetComponent<PlacementPoint>().m_PlaceableID - 1)
-        //                    {
-        //                        Debug.Log("PlaceableID from array after if - " + PP_Array[j].m_PlaceableID);
-        //                        if (PP_Array[j - m_OrderNotMandatoryID].m_IsOccupied)
-        //                        {
-        //                            m_OrderCorrect = true;
-        //                        }
-        //                    }
-        //                    else
-        //                    {
-        //                        m_OrderCorrect = false;
-        //                    }
-        //                }
-        //            }
-        //        }
-        //        Debug.Log("OrderCorrect =>" + m_OrderCorrect.ToString());
-        //    }
-        //}
-
     }
     private void OnTriggerStay(Collider other)
     {

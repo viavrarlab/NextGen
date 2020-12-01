@@ -7,6 +7,7 @@ using UnityEngine.Animations;
 using Unity.EditorCoroutines.Editor;
 using System.Linq;
 using NUnit.Framework.Constraints;
+using ModelOutline;
 
 [CustomEditor(typeof(SystemGeneratorScript))]
 public class SocektSystemGeneratorEditor : Editor
@@ -78,6 +79,10 @@ public class SocektSystemGeneratorEditor : Editor
         if (GUILayout.Button("Place Set Sockets"))
         {
             PlaceSetSocekts();
+        }
+        if(GUILayout.Button("Add outlines"))
+        {
+            AddOutlines();
         }
         if (GUILayout.Button("Clear"))
         {
@@ -166,6 +171,15 @@ public class SocektSystemGeneratorEditor : Editor
             }
         }
     }
+    public void AddOutlines()
+    {
+        foreach(Transform t in m_SysGen.transform)
+        {
+            t.gameObject.AddComponent<Outline>();
+            t.gameObject.GetComponent<Outline>().enabled = false;
+        }
+    }
+
 
     public void PlaceSetSocekts()
     {
@@ -567,6 +581,11 @@ public class SocektSystemGeneratorEditor : Editor
             {
                 var Componenet = t.gameObject.GetComponent<ParentConstraint>();
                 DestroyImmediate(Componenet);
+            }
+            if (t.gameObject.GetComponent<Outline>())
+            {
+                var Outline = t.gameObject.GetComponent<Outline>();
+                DestroyImmediate(Outline);
             }
             if (t.gameObject.GetComponent<Placeable>())
             {
