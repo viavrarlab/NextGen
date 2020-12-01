@@ -51,13 +51,17 @@ public class SetComplete : MonoBehaviour
     private void Update()
     {
         checkPlacedObject();
-        if(SetMR.enabled == false && complete == true)
+        if (SetMR != null)
         {
-            EnableSetModelMesh();
-        }
-        if(SetMR.enabled == true && complete == false)
-        {
-            DisableSetModelMesh();
+            if (SetMR.enabled == false && complete == true)
+            {
+                EnableSetModelMesh();
+            }
+            if (SetMR.enabled == true && complete == false)
+            {
+                DisableSetModelMesh();
+            }
+
         }
     }
     public void checkPlacedObject()

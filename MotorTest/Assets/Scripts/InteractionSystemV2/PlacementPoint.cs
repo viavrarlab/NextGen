@@ -152,7 +152,7 @@ public class PlacementPoint : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (m_ControllerScript.objectinhand != null)
+        if (m_ControllerScript.objectinhand != null && m_ControllerScript.objectinhand.GetComponent<Placeable>() != null)
         {
             if (gameObject.GetComponent<PlacementPoint>().m_IsOccupied == true && m_ControllerScript.objectinhand.GetComponent<Placeable>().m_ID == gameObject.GetComponent<PlacementPoint>().m_PlaceableID)
             {
@@ -164,8 +164,8 @@ public class PlacementPoint : MonoBehaviour
                         m_Obj_ID = m_OrderCheck.PP_Array[i].m_PlaceableID,
                         m_isPlaced = m_OrderCheck.PP_Array[i].m_IsOccupied
                     };
+                    TempList.Add(m_OrderCheck.item);
                 }
-                TempList.Add(m_OrderCheck.item);
                 for (int i = 0; i < TempList.Count; i++)
                 {
                     OrderCheckList tempOrder = TempList[i];
@@ -187,7 +187,7 @@ public class PlacementPoint : MonoBehaviour
             }
         }
         //If object is placed and want to take it out of the socket
-        if (m_ControllerScript.TriggerPull == true && m_IsOccupied && m_ControllerScript.collidingObject != null) // If the object is the player hand object OR the socket is already occupied, then just return and ignore the resto of the function
+        if (m_ControllerScript.TriggerPush == true && m_IsOccupied && m_ControllerScript.collidingObject != null) // If the object is the player hand object OR the socket is already occupied, then just return and ignore the resto of the function
         {
             if(m_ControllerScript.objectinhand == m_SnappableObject.gameObject && m_CanTakeOut)
             {
@@ -219,7 +219,7 @@ public class PlacementPoint : MonoBehaviour
                             if (CheckAngle(m_SnappableObject.transform.rotation))   // Check if user has rotated the object correctly
                             {
                                 SwitchSocketState(SocketState.IntersectingValidObject);
-                                if (m_ControllerScript.TriggerPull == false)
+                                if (m_ControllerScript.TriggerPush == false)
                                 {
                                     StartCoroutine(SnapWithAnimation());
                                 }
@@ -227,6 +227,16 @@ public class PlacementPoint : MonoBehaviour
                             else
                             {
                                 SwitchSocketState(SocketState.IntersectingInvalidRotation);
+                            }
+                        }
+                        else
+                        {
+                            {
+                                SwitchSocketState(SocketState.IntersectingValidObject);
+                                if (m_ControllerScript.TriggerPush == false)
+                                {
+                                    StartCoroutine(SnapWithAnimation());
+                                }
                             }
                         }
                     }

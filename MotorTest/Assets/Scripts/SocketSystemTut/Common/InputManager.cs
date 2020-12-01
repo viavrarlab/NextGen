@@ -8,9 +8,11 @@ public class InputManager : MonoBehaviour
 
     [Header("Trigger")]
     public ControllerButton m_TriggerButton;
+    public ControllerAxis m_TriggerPull;
     public UnityEvent OnTriggerDown = new UnityEvent();
     public UnityEvent OnTriggerUp = new UnityEvent();
     public UnityEvent OnTriggerHold = new UnityEvent();
+    public UnityEvent Triggerpull = new UnityEvent();
     
 
     [Header("A Button")]
@@ -64,6 +66,13 @@ public class InputManager : MonoBehaviour
 
         if (ViveInput.GetPress(m_Pose.viveRole, m_TriggerButton))
             OnTriggerHold.Invoke();
+
+        float TriggerPullFloat = ViveInput.GetAxis(m_Pose.viveRole, m_TriggerPull);
+        if (0.1f < TriggerPullFloat && TriggerPullFloat < m_JoystickThreshold)
+        {
+            print("ir");
+            Triggerpull.Invoke();
+        }
 
         // A Button----------------------------------------------------------------------------
         if (ViveInput.GetPressDown(m_Pose.viveRole, m_AButton))
