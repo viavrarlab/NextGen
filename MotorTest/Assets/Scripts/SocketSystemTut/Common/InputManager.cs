@@ -70,7 +70,6 @@ public class InputManager : MonoBehaviour
         float TriggerPullFloat = ViveInput.GetAxis(m_Pose.viveRole, m_TriggerPull);
         if (0.1f < TriggerPullFloat && TriggerPullFloat < m_JoystickThreshold)
         {
-            print("ir");
             Triggerpull.Invoke();
         }
 
@@ -125,20 +124,17 @@ public class InputManager : MonoBehaviour
         if (valueY > m_JoystickThreshold && m_JoystickYInUse == false)
         {
             m_JoystickYInUse = true;
-            print("y axis positive action");
             OnJoystickYPositive.Invoke();
         }
         else if (valueY < -m_JoystickThreshold && m_JoystickYInUse == false)
         {
             m_JoystickYInUse = true;
-            print("y axis negative action");
             OnJoystickYNegative.Invoke();
         }
 
         if ((IsBetween(valueY, -m_JoystickThreshold, m_JoystickThreshold)) && m_JoystickYInUse == true)
         {
             m_JoystickYInUse = false;
-            print("y axis release action");
             OnJoystickYRelease.Invoke();
         }
 

@@ -9,8 +9,7 @@ public class Placeable : MonoBehaviour
     public int m_ID = 0;
     public bool m_IsPlaced = false;
     public bool isHeld;
-    public bool Outline;
-
+    public bool CanTakeOut;
     public Placeable(int _id)
     {
         m_ID = _id;
@@ -25,21 +24,5 @@ public class Placeable : MonoBehaviour
     {
         Placeable myC = _where.AddComponent<Placeable>();
         myC.m_ID = _id;
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("PlayerHand"))
-        {
-            gameObject.GetComponent<Outline>().enabled = true;
-            Outline = true;
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("PlayerHand"))
-        {
-            gameObject.GetComponent<Outline>().enabled = false;
-            Outline = false;
-        }
     }
 }

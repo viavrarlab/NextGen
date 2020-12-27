@@ -1,103 +1,147 @@
-﻿using System.Collections;
+﻿using ModelOutline;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ControllerScript : MonoBehaviour
 {
-    public GameObject collidingObject;
+    public GameObject collidingObjectToBePickedUp;
     public GameObject objectinhand;
+
     private Placeable CurrentPickUpOBJ;
+    public CorrectOrderTests m_CorrectOrder;
+    public Placeable[] m_PlaceArray;
+    public bool Outline;
     private bool m_triggerPush;
     private bool m_GrabPush;
     private bool m_triggerAxisPull;
-    public Collider ObjCol;
     public bool TriggerPush { get => m_triggerPush; set => m_triggerPush = value; }
     public bool TriggerAxisPull { get => m_triggerAxisPull; set => m_triggerAxisPull = value; }
     public bool GrabPush { get => m_GrabPush; set => m_GrabPush = value; }
 
-    private void SetCollidiongObject(Transform col)
-    {
-        if (collidingObject || !col.GetComponent<Rigidbody>())
-        {
-            return;
-        }
-        collidingObject = col.gameObject;
-    }
+    public List<GameObject> CollidingObj = new List<GameObject>();
 
+    private void Awake()
+    {
+        m_PlaceArray = new Placeable[m_CorrectOrder.Parts.Count];
+        for(int i = 0; i < m_CorrectOrder.Parts.Count; i++)
+        {
+            if(m_CorrectOrder.Parts[i].obj.GetComponent<Placeable>() != null)
+            {
+                m_PlaceArray[i] = m_CorrectOrder.Parts[i].obj.GetComponent<Placeable>();
+            }
+        }
+    }
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Socket"))
         {
             Physics.IgnoreCollision(this.gameObject.GetComponent<Collider>(), other);
         }
-        if (other.CompareTag("MotorCollider"))
+        if (other.CompareTag("MotorCollider") || other.CompareTag("SetGrab") || other.CompareTag("PlacementRoot"))
         {
-            SetCollidiongObject(other.transform.parent.transform.parent.transform);
+            if (other.CompareTag("PlacementRoot"))
+            {
+                CollidingObj.Add(other.gameObject);
+            }
+            if (other.CompareTag("MotorCollider") || other.CompareTag("SetGrab"))
+            {
+                //add object to pickup array
+                CollidingObj.Add(other.transform.parent.transform.parent.gameObject);
+                //check if the obj can be taken out
+                if(other.transform.parent.transform.parent.GetComponent<Placeable>() != null && other.transform.parent.transform.parent.gameObject.GetComponent<Placeable>().m_IsPlaced == true)
+                {
+                    for(int i = 0; i < m_PlaceArray.Length; i++)
+                    {
+                        if(m_PlaceArray[i] != null)
+                        {
+                            if (m_PlaceArray[i].m_IsPlaced == true && m_PlaceArray[i + 1].m_IsPlaced == false)
+                            {
+                                m_PlaceArray[i].CanTakeOut = true;
+                            }
+                            else
+                            {
+                                m_PlaceArray[i].CanTakeOut = false;
+                            }
+                        }
+                    }
+                }
+            }
         }
-        if (other.CompareTag("SetGrab"))
-        {
-            SetCollidiongObject(other.transform.parent.transform.parent.transform);
-        }
-        if (other.CompareTag("PlacementRoot"))
-        {
-            SetCollidiongObject(other.transform);
-        }
-        ObjCol = collidingObject.GetComponentInChildren<Collider>();
     }
     public void OnTriggerStay(Collider other)
     {
-        // ----- Work In progress For selecting either set or object
-        //if (collidingObject != null)
-        //{
-        //    if (m_triggerAxisPull == true && collidingObject.CompareTag("SetGrab"))
-        //    {
-        //        ObjCol.enabled = false;
-        //    }
-        //    else
-        //    {
-        //        ObjCol.enabled = true;
-        //    }
-        //}
+        foreach (GameObject GO in CollidingObj)
+        {
+            if (GO == CollidingObj.Last())
+            {
+                GO.GetComponent<Outline>().enabled = true;
+            }
+            else
+            {
+                GO.GetComponent<Outline>().enabled = false;
+            }
+        }
     }
     public void OnTriggerExit(Collider other)
     {
-        if (!collidingObject)
+        if (other.CompareTag("PlacementRoot"))
+        {
+            other.GetComponent<Outline>().enabled = false;
+            CollidingObj.Remove(other.gameObject);
+        }
+        else
+        {
+            other.transform.parent.transform.parent.gameObject.GetComponent<Outline>().enabled = false;
+            CollidingObj.Remove(other.transform.parent.transform.parent.gameObject);
+        }
+
+        if (!collidingObjectToBePickedUp)
         {
             return;
         }
-        collidingObject = null;
-        ObjCol = null;
+        collidingObjectToBePickedUp = null;
+
     }
     public void PickUPSet()
     {
-        print(TriggerAxisPull.ToString());
-        if (collidingObject != null)
+        foreach (GameObject go in CollidingObj)
         {
-            if (!collidingObject.CompareTag("MotorPart"))
+            if (!go.CompareTag("MotorPart"))
             {
-                if (collidingObject.CompareTag("SetGrab") || collidingObject.CompareTag("PlacementRoot"))
+                if (go.CompareTag("SetGrab") || go.CompareTag("PlacementRoot"))
                 {
-                    GrabObject();
+                    collidingObjectToBePickedUp = go;
+                    break;
                 }
             }
+        }
+        if (collidingObjectToBePickedUp != null)
+        {
+            GrabObject();
         }
     }
     public void PickUpObj()
     {
-        if (collidingObject != null)
+        foreach (GameObject go in CollidingObj)
         {
-            if (!collidingObject.CompareTag("PlacementRoot") || !collidingObject.CompareTag("SetGrab"))
+            if (!go.CompareTag("PlacementRoot") || !go.CompareTag("SetGrab"))
             {
-                if (collidingObject.CompareTag("MotorPart"))
+                if (go.CompareTag("MotorPart") && CollidingObj.Last())
                 {
-                    GrabObject();
+                    collidingObjectToBePickedUp = go;
                 }
             }
+        }
+        if (collidingObjectToBePickedUp != null)
+        {
+            GrabObject();
         }
     }
     public void GrabObject()
     {
-        objectinhand = collidingObject;
+        objectinhand = collidingObjectToBePickedUp;
         FixedJoint joint = GetComponent<FixedJoint>();
         joint.connectedBody = objectinhand.GetComponent<Rigidbody>();
         CurrentPickUpOBJ = objectinhand.GetComponent<Placeable>();
@@ -112,6 +156,7 @@ public class ControllerScript : MonoBehaviour
         }
         objectinhand = null;
         CurrentPickUpOBJ = null;
+        collidingObjectToBePickedUp = null;
         TriggerPush = false;
     }
 }

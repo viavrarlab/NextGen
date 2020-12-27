@@ -186,7 +186,7 @@ MonoBehaviour:
   m_ID: 7
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &6953410 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4538958370406230753, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -318,7 +318,7 @@ MonoBehaviour:
   m_ID: 5
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &18392933 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8565722187761266043, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -560,7 +560,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -611,6 +610,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -785,6 +785,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -851,7 +852,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -988,7 +988,7 @@ MonoBehaviour:
   m_ID: 2
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &82421131 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6669448204987874447, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -1094,7 +1094,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -1145,6 +1144,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -1317,7 +1317,7 @@ MonoBehaviour:
   m_ID: 3
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &94203046 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1268234462599742413, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -1423,7 +1423,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -1476,6 +1475,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -1635,7 +1635,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -1684,6 +1683,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -1799,7 +1799,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -1864,6 +1863,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -2050,7 +2050,7 @@ MonoBehaviour:
   m_ID: 15
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &124460853 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3633769798661197940, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -2200,7 +2200,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -2255,6 +2254,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -2484,7 +2484,7 @@ MonoBehaviour:
   m_ID: 23
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &178749420 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1221561435995418165, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -2656,7 +2656,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -2705,6 +2704,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -2877,7 +2877,7 @@ MonoBehaviour:
   m_ID: 18
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &209377713 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6895322302111772792, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -3009,7 +3009,7 @@ MonoBehaviour:
   m_ID: 1
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &221236435 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 914096372427975746, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -3141,7 +3141,7 @@ MonoBehaviour:
   m_ID: 8
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &224637109 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5280772743845393265, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -3526,6 +3526,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -3592,7 +3593,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -3858,7 +3858,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -3905,6 +3904,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -4157,7 +4157,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -4208,6 +4207,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -4424,7 +4424,7 @@ MonoBehaviour:
   m_ID: 22
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &409628976 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1836677492363112135, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -4570,6 +4570,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -4636,7 +4637,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -4866,6 +4866,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -4932,7 +4933,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -5042,6 +5042,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -5062,7 +5063,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets: []
@@ -5196,7 +5196,7 @@ MonoBehaviour:
   m_ID: 14
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &473657035 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5641939726979971628, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -5340,7 +5340,7 @@ MonoBehaviour:
   m_ID: 13
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!23 &484693946 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7517512608573694778, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -5472,7 +5472,7 @@ MonoBehaviour:
   m_ID: 14
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &492354554 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7447514447295356195, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -5647,7 +5647,7 @@ MonoBehaviour:
   m_ID: 27
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &496005703 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6256505805272400907, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -5779,7 +5779,7 @@ MonoBehaviour:
   m_ID: 10
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &499859646 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3623219545351695485, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -5889,7 +5889,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -5936,6 +5935,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -6633,41 +6633,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
-    - target: {fileID: 2914091574404357642, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
-    - target: {fileID: 972124814708142405, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e162363bcb808384ba97a900f0f1060f, type: 2}
-    - target: {fileID: 4363779845555021730, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
-    - target: {fileID: -5151885427081489709, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
-    - target: {fileID: -724270141783932088, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e162363bcb808384ba97a900f0f1060f, type: 2}
-    - target: {fileID: 4629752804577896049, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
-    - target: {fileID: -1366594682967193095, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 847dfba9df0277547ab70e38c6e17d40, type: 2}
     - target: {fileID: -4216859302048453862, guid: e57ec0787ed14aa45bf32059f07cc3aa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6723,131 +6688,61 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4235996013131850151, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+    - target: {fileID: -921265565743080697, guid: e57ec0787ed14aa45bf32059f07cc3aa,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
-    - target: {fileID: 4301962634254732452, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+      propertyPath: m_LocalPosition.z
+      value: -0.465
+      objectReference: {fileID: 0}
+    - target: {fileID: -921265565743080697, guid: e57ec0787ed14aa45bf32059f07cc3aa,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 847dfba9df0277547ab70e38c6e17d40, type: 2}
-    - target: {fileID: 2314528318379617981, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e162363bcb808384ba97a900f0f1060f, type: 2}
-    - target: {fileID: -518506627082563222, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
-    - target: {fileID: -5454824537204489718, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
-    - target: {fileID: 493516086611615764, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
-    - target: {fileID: -7755842921125307395, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+      propertyPath: m_LocalPosition.y
+      value: 0.335
+      objectReference: {fileID: 0}
+    - target: {fileID: 849296615079559276, guid: e57ec0787ed14aa45bf32059f07cc3aa,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 847dfba9df0277547ab70e38c6e17d40, type: 2}
-    - target: {fileID: -8160834350981824852, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e162363bcb808384ba97a900f0f1060f, type: 2}
-    - target: {fileID: -5675316393102236560, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
-    - target: {fileID: -5821804501344488243, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+    - target: {fileID: -4209067251856302209, guid: e57ec0787ed14aa45bf32059f07cc3aa,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 847dfba9df0277547ab70e38c6e17d40, type: 2}
-    - target: {fileID: -2735502304652473899, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+    - target: {fileID: -1366594682967193095, guid: e57ec0787ed14aa45bf32059f07cc3aa,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
+      objectReference: {fileID: 2100000, guid: 847dfba9df0277547ab70e38c6e17d40, type: 2}
     - target: {fileID: -8620953242548655, guid: e57ec0787ed14aa45bf32059f07cc3aa,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 847dfba9df0277547ab70e38c6e17d40, type: 2}
-    - target: {fileID: -2701508167761017623, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
-    - target: {fileID: -3421763497869800969, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+    - target: {fileID: 4301962634254732452, guid: e57ec0787ed14aa45bf32059f07cc3aa,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 847dfba9df0277547ab70e38c6e17d40, type: 2}
-    - target: {fileID: -7140234356307243975, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
-    - target: {fileID: -7258866300712941608, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
-    - target: {fileID: 4022429668097518782, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 847dfba9df0277547ab70e38c6e17d40, type: 2}
-    - target: {fileID: -8400284344623054166, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
     - target: {fileID: 8519888289735113473, guid: e57ec0787ed14aa45bf32059f07cc3aa,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 847dfba9df0277547ab70e38c6e17d40, type: 2}
-    - target: {fileID: -539669142426510622, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+    - target: {fileID: -3421763497869800969, guid: e57ec0787ed14aa45bf32059f07cc3aa,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
+      objectReference: {fileID: 2100000, guid: 847dfba9df0277547ab70e38c6e17d40, type: 2}
     - target: {fileID: -4215673052183748528, guid: e57ec0787ed14aa45bf32059f07cc3aa,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 847dfba9df0277547ab70e38c6e17d40, type: 2}
-    - target: {fileID: -4859319006107364192, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+    - target: {fileID: -5821804501344488243, guid: e57ec0787ed14aa45bf32059f07cc3aa,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 847dfba9df0277547ab70e38c6e17d40, type: 2}
-    - target: {fileID: -5914872877225275818, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e162363bcb808384ba97a900f0f1060f, type: 2}
-    - target: {fileID: -9140284913020440116, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 847dfba9df0277547ab70e38c6e17d40, type: 2}
-    - target: {fileID: -1473793833206880622, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
     - target: {fileID: -9214027040323252706, guid: e57ec0787ed14aa45bf32059f07cc3aa,
         type: 3}
       propertyPath: m_Materials.Array.data[2]
@@ -6863,12 +6758,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
-    - target: {fileID: 849296615079559276, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+    - target: {fileID: -5914872877225275818, guid: e57ec0787ed14aa45bf32059f07cc3aa,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 847dfba9df0277547ab70e38c6e17d40, type: 2}
-    - target: {fileID: -4209067251856302209, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+      objectReference: {fileID: 2100000, guid: e162363bcb808384ba97a900f0f1060f, type: 2}
+    - target: {fileID: -7140234356307243975, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
+    - target: {fileID: -2701508167761017623, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
+    - target: {fileID: -7755842921125307395, guid: e57ec0787ed14aa45bf32059f07cc3aa,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6878,17 +6783,7 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 847dfba9df0277547ab70e38c6e17d40, type: 2}
-    - target: {fileID: -8858660673215269730, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
-    - target: {fileID: 8887786090004966815, guid: e57ec0787ed14aa45bf32059f07cc3aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
-    - target: {fileID: 8252027655861350179, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+    - target: {fileID: -5675316393102236560, guid: e57ec0787ed14aa45bf32059f07cc3aa,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6898,16 +6793,121 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
-    - target: {fileID: -921265565743080697, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+    - target: {fileID: 4363779845555021730, guid: e57ec0787ed14aa45bf32059f07cc3aa,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.465
-      objectReference: {fileID: 0}
-    - target: {fileID: -921265565743080697, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
+    - target: {fileID: -7258866300712941608, guid: e57ec0787ed14aa45bf32059f07cc3aa,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.335
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
+    - target: {fileID: -1473793833206880622, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
+    - target: {fileID: 8252027655861350179, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
+    - target: {fileID: -539669142426510622, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
+    - target: {fileID: -5454824537204489718, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
+    - target: {fileID: 8887786090004966815, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
+    - target: {fileID: -5151885427081489709, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
+    - target: {fileID: -8160834350981824852, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e162363bcb808384ba97a900f0f1060f, type: 2}
+    - target: {fileID: -4859319006107364192, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 847dfba9df0277547ab70e38c6e17d40, type: 2}
+    - target: {fileID: -724270141783932088, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e162363bcb808384ba97a900f0f1060f, type: 2}
+    - target: {fileID: -518506627082563222, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
+    - target: {fileID: -8858660673215269730, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
+    - target: {fileID: -8400284344623054166, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
+    - target: {fileID: 2314528318379617981, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e162363bcb808384ba97a900f0f1060f, type: 2}
+    - target: {fileID: 4022429668097518782, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 847dfba9df0277547ab70e38c6e17d40, type: 2}
+    - target: {fileID: 4235996013131850151, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
+    - target: {fileID: 493516086611615764, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
+    - target: {fileID: 4629752804577896049, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
+    - target: {fileID: -2735502304652473899, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
+    - target: {fileID: 2914091574404357642, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7dc90327ec20a084cb59caacd69af5e0, type: 2}
+    - target: {fileID: 972124814708142405, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e162363bcb808384ba97a900f0f1060f, type: 2}
+    - target: {fileID: -9140284913020440116, guid: e57ec0787ed14aa45bf32059f07cc3aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 847dfba9df0277547ab70e38c6e17d40, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e57ec0787ed14aa45bf32059f07cc3aa, type: 3}
 --- !u!1 &570104845
@@ -7108,7 +7108,7 @@ MonoBehaviour:
   m_ID: 25
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &573927419 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -1005738906630443671, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -7320,7 +7320,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -7373,6 +7372,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -7604,6 +7604,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -7670,7 +7671,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -7803,7 +7803,7 @@ MonoBehaviour:
   m_ID: 23
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &621381557 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1753408122225334105, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -7913,7 +7913,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -7962,6 +7961,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -8103,7 +8103,7 @@ MonoBehaviour:
   m_ID: 31
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &626467165 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4801575470963200017, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -8253,7 +8253,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -8308,6 +8307,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -8467,7 +8467,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -8522,6 +8521,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -8844,7 +8844,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -8893,6 +8892,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -9034,7 +9034,7 @@ MonoBehaviour:
   m_ID: 26
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &719109687 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8226423247567844855, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -9125,7 +9125,7 @@ GameObject:
   - component: {fileID: 724115518}
   - component: {fileID: 724115517}
   - component: {fileID: 724115519}
-  m_Layer: 10
+  m_Layer: 15
   m_Name: PlacementSocket_Root
   m_TagString: PlacementRoot
   m_Icon: {fileID: 0}
@@ -9140,7 +9140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724115515}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.888, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 187527463}
@@ -9160,8 +9160,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8696712, y: 0.97195834, z: 1.5255246}
-  m_Center: {x: 0.07753798, y: 0.48597917, z: 0.22913587}
+  m_Size: {x: 0.7192804, y: 0.72215897, z: 1.0074586}
+  m_Center: {x: 0.002342552, y: 0.36107948, z: -0.05388254}
 --- !u!54 &724115518
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9262,7 +9262,7 @@ MonoBehaviour:
   m_ID: 16
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &736040480 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7858158019375595785, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -9512,7 +9512,7 @@ MonoBehaviour:
   m_ID: 11
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &779567533 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8809888726414287217, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -9666,7 +9666,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -9715,6 +9714,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -9858,6 +9858,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -9924,7 +9925,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -10138,7 +10138,7 @@ MonoBehaviour:
   m_ID: 0
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &877614385 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9000258415932053329, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -10420,7 +10420,7 @@ MonoBehaviour:
   m_ID: 30
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &891960696 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -1819858969145466147, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -11656,7 +11656,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -11753,6 +11752,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -11894,7 +11894,7 @@ MonoBehaviour:
   m_ID: 11
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &963419222 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3358435016169209822, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -12030,7 +12030,7 @@ MonoBehaviour:
   m_ID: 10
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &966871620 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9164377110457725927, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -12228,7 +12228,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -12311,6 +12310,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -12485,7 +12485,7 @@ MonoBehaviour:
   m_ID: 9
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &993188344 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -910761191096339362, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -12591,7 +12591,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -12644,6 +12643,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -12785,7 +12785,7 @@ MonoBehaviour:
   m_ID: 35
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!54 &994049026
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12955,7 +12955,7 @@ MonoBehaviour:
   m_ID: 22
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1009684800 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7769691024409347182, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -13250,7 +13250,7 @@ MonoBehaviour:
   m_ID: 19
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1037981253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6158009087576772405, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -13482,7 +13482,7 @@ MonoBehaviour:
   m_ID: 17
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1052592633 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8817251290492317517, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -13616,6 +13616,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -13636,7 +13637,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -13881,7 +13881,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -14016,6 +14015,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -14157,7 +14157,7 @@ MonoBehaviour:
   m_ID: 24
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1078491820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3977899580341748514, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -14263,7 +14263,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -14316,6 +14315,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -14501,7 +14501,7 @@ MonoBehaviour:
   m_ID: 20
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1103835470 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3160505221250294962, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -14633,7 +14633,7 @@ MonoBehaviour:
   m_ID: 22
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1107759255 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3311792598598049414, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -14973,6 +14973,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -15039,7 +15040,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -15121,7 +15121,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -15176,6 +15175,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -15936,6 +15936,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 985531211850802051, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_CorrectOrder
+      value: 
+      objectReference: {fileID: 1221640971}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4f395288e15c924d80cc1442ad804d7, type: 3}
 --- !u!1 &1162208692 stripped
@@ -16071,7 +16076,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -16118,6 +16122,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -16910,7 +16915,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -16959,6 +16963,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -17131,7 +17136,7 @@ MonoBehaviour:
   m_ID: 19
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1275810163 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3188836014351024488, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -17275,7 +17280,7 @@ MonoBehaviour:
   m_ID: 4
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1276987381 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -1567852277371039788, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -17411,7 +17416,7 @@ MonoBehaviour:
   m_ID: 14
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1289092365 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -519802648528801919, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -17555,7 +17560,7 @@ MonoBehaviour:
   m_ID: 21
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1296728416 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -921265565743080697, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -17687,7 +17692,7 @@ MonoBehaviour:
   m_ID: 32
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1303425615 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8845819713396871236, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -17793,7 +17798,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -17878,6 +17882,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -18200,7 +18205,7 @@ MonoBehaviour:
   m_ID: 26
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1344456712 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1592960313872155082, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -18375,7 +18380,7 @@ MonoBehaviour:
   m_ID: 26
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1351619679 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -824648386722860948, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -18638,7 +18643,7 @@ MonoBehaviour:
   m_ID: 29
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1402782876 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8452406925075566936, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -19127,7 +19132,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -19180,6 +19184,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -19515,7 +19520,7 @@ MonoBehaviour:
   m_ID: 30
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1448937797 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7221337375063262012, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -19625,7 +19630,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -19676,6 +19680,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -19817,7 +19822,7 @@ MonoBehaviour:
   m_ID: 5
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1467907563 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3559433904963110713, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -19997,7 +20002,7 @@ MonoBehaviour:
   m_ID: 19
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1477745619 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3279699775871593425, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -20185,7 +20190,7 @@ MonoBehaviour:
   m_ID: 33
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1484860361 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4223318399172058643, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -20363,6 +20368,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -20429,7 +20435,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -20533,6 +20538,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -20599,7 +20605,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -20675,7 +20680,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -20720,6 +20724,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -20861,7 +20866,7 @@ MonoBehaviour:
   m_ID: 26
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1534075397 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7145189952265757678, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -21093,7 +21098,7 @@ MonoBehaviour:
   m_ID: 6
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1546614052 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2191395982081024204, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -21199,7 +21204,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -21252,6 +21256,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -21424,7 +21429,7 @@ MonoBehaviour:
   m_ID: 19
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1574905614 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8681613373958939145, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -21702,6 +21707,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -21768,7 +21774,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -22110,7 +22115,7 @@ MonoBehaviour:
   m_ID: 34
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1683823198 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4135128459715861793, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -22348,7 +22353,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -22397,6 +22401,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -22540,6 +22545,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -22606,7 +22612,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -22724,6 +22729,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -22790,7 +22796,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -23154,7 +23159,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -23209,6 +23213,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -23395,7 +23400,7 @@ MonoBehaviour:
   m_ID: 12
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1763980226 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5519098462408223918, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -23545,7 +23550,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -23590,6 +23594,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -23775,7 +23780,7 @@ MonoBehaviour:
   m_ID: 28
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1796224883 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7504666608029215416, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -23991,7 +23996,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -24088,6 +24092,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -24203,7 +24208,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -24256,6 +24260,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -24668,6 +24673,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -24734,7 +24740,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -24880,7 +24885,7 @@ MonoBehaviour:
   m_ID: 4
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1872962438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3951971224518899340, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -25034,7 +25039,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -25079,6 +25083,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -25625,7 +25630,7 @@ MonoBehaviour:
   m_ID: 14
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &1998975583 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8004017847312543813, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -25771,6 +25776,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -25837,7 +25843,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -26003,7 +26008,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -26052,6 +26056,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -26317,7 +26322,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -26374,6 +26378,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -26533,7 +26538,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -26608,6 +26612,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -26751,7 +26756,7 @@ MonoBehaviour:
   m_ID: 28
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &2100875040 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3733498010997463340, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -26931,7 +26936,7 @@ MonoBehaviour:
   m_ID: 22
   m_IsPlaced: 0
   isHeld: 0
-  Outline: 0
+  CanTakeOut: 0
 --- !u!4 &2141188693 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3616011566020242768, guid: e57ec0787ed14aa45bf32059f07cc3aa,
@@ -27049,7 +27054,6 @@ MonoBehaviour:
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
   m_OrderCheck: {fileID: 0}
   snapspeed: 0.4
   m_IntersectingSockets:
@@ -27098,6 +27102,7 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
   item:
     m_Obj_ID: 0
     m_isPlaced: 0

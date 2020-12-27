@@ -18,8 +18,6 @@ public class PlacementPoint : MonoBehaviour
     public float m_CorrectAngleThreshold = 7.5f; // How precise does the Placeable objects' rotation has to be in order to allow snapping into socket. Used in CheckAngle(). Measures as angle degrees.
     public bool m_CheckForCorrectAngle = false;
 
-    public bool m_CanTakeOut;
-
     public OrderCheck m_OrderCheck;
 
     public float snapspeed = .4f;
@@ -53,9 +51,6 @@ public class PlacementPoint : MonoBehaviour
         m_MaterialPropertyBlock = new MaterialPropertyBlock();
         m_OrderCheck = GetComponent<OrderCheck>();
 
-        //UpdateMaterial(0.2f); // Hide the graphics
-        //UpdateMaterial(m_DefaultStateColor);
-        //ToggleIntersectingSockets(false);
         SwitchSocketState(SocketState.Empty);
     }
 
@@ -152,46 +147,13 @@ public class PlacementPoint : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (m_ControllerScript.objectinhand != null && m_ControllerScript.objectinhand.GetComponent<Placeable>() != null)
-        {
-            if (gameObject.GetComponent<PlacementPoint>().m_IsOccupied == true && m_ControllerScript.objectinhand.GetComponent<Placeable>().m_ID == gameObject.GetComponent<PlacementPoint>().m_PlaceableID)
-            {
-                List<OrderCheckList> TempList = new List<OrderCheckList>();
-                for (int i = 0; i < m_OrderCheck.PP_Array.Length; i++)
-                {
-                    m_OrderCheck.item = new OrderCheckList
-                    {
-                        m_Obj_ID = m_OrderCheck.PP_Array[i].m_PlaceableID,
-                        m_isPlaced = m_OrderCheck.PP_Array[i].m_IsOccupied
-                    };
-                    TempList.Add(m_OrderCheck.item);
-                }
-                for (int i = 0; i < TempList.Count; i++)
-                {
-                    OrderCheckList tempOrder = TempList[i];
-                    if (tempOrder.m_Obj_ID >= 0 && tempOrder.m_Obj_ID == m_ControllerScript.objectinhand.GetComponent<Placeable>().m_ID + 1)
-                    {
-                        Debug.Log(gameObject.name + "TRORORORLOLOLOOL");
-                        if (tempOrder.m_isPlaced == false)
-                        {
-                            m_CanTakeOut = true;
-                        }
-                        else
-                        {
-                            m_CanTakeOut = false;
-                            break;
-                        }
-                    }
-
-                }
-            }
-        }
         //If object is placed and want to take it out of the socket
-        if (m_ControllerScript.TriggerPush == true && m_IsOccupied && m_ControllerScript.collidingObject != null) // If the object is the player hand object OR the socket is already occupied, then just return and ignore the resto of the function
+        if (m_ControllerScript.TriggerPush == true && m_IsOccupied && m_ControllerScript.collidingObjectToBePickedUp != null && m_SnappableObject.CanTakeOut) // If the object is the player hand object OR the socket is already occupied, then just return and ignore the resto of the function
         {
-            if(m_ControllerScript.objectinhand == m_SnappableObject.gameObject && m_CanTakeOut)
+            if(m_ControllerScript.objectinhand == m_SnappableObject.gameObject)
             {
                 m_SnappableObject.GetComponentInParent<ParentConstraint>().constraintActive = false;
+                m_SnappableObject.m_IsPlaced = false;
                 m_IsOccupied = false;
             }
 
@@ -212,16 +174,16 @@ public class PlacementPoint : MonoBehaviour
             {
                 if (m_PlaceableID == m_SnappableObject.m_ID)
                 {
-                    if (m_OrderCheck.m_OrderCorrect)
+                    if (m_OrderCheck.m_OrderCorrect) 
                     {
-                        if (m_CheckForCorrectAngle)
+                        if (m_CheckForCorrectAngle) // if option is check
                         {
                             if (CheckAngle(m_SnappableObject.transform.rotation))   // Check if user has rotated the object correctly
                             {
                                 SwitchSocketState(SocketState.IntersectingValidObject);
                                 if (m_ControllerScript.TriggerPush == false)
                                 {
-                                    StartCoroutine(SnapWithAnimation());
+                                    StartCoroutine(SnapWithAnimation()); //snap object in
                                 }
                             }
                             else
@@ -277,35 +239,6 @@ public class PlacementPoint : MonoBehaviour
         {
             //SwitchSocketState(SocketState.Empty);
         }
-    }
-
-    // TODO: Check if this is still needed! And figure out what exactly it was supposed to fix...
-    //void ToggleIntersectingSockets(bool _state)
-    //{
-    //    foreach (SocketPair sp in m_IntersectingSockets)
-    //    {
-    //        sp.m_Collider.enabled = _state;
-    //        if (!_state)
-    //        {
-    //            if (sp.m_PlacementPoint.m_SnappableObject != null && sp.m_PlacementPoint.m_SnappableObject.m_IsPlaced)
-    //            {
-    //                sp.m_PlacementPoint.SwitchSocketState(SocketState.Snapped);
-    //            }
-    //            else
-    //            {
-    //                sp.m_PlacementPoint.SwitchSocketState(SocketState.Empty);
-    //            }
-    //        }
-    //    }
-    //}
-
-    void SnapObject()
-    {
-        SwitchSocketState(SocketState.Snapped);
-        m_SnappableObject.transform.position = transform.position;
-        m_SnappableObject.transform.rotation = Quaternion.Euler(m_CorrectPlacementAngle);
-        m_SnappableObject.m_IsPlaced = true;
-        m_IsOccupied = true;
     }
 
     void ToggleSocketMeshRenderer(bool _state)
