@@ -175,8 +175,17 @@ public class SocektSystemGeneratorEditor : Editor
     {
         foreach(Transform t in m_SysGen.transform)
         {
-            t.gameObject.AddComponent<Outline>();
-            t.gameObject.GetComponent<Outline>().enabled = false;
+            if (t.gameObject.CompareTag("SetGrab") || t.gameObject.CompareTag("PlacementRoot"))
+            {
+                t.gameObject.AddComponent<Outline>();
+                t.gameObject.GetComponent<Outline>().OutlineColor = Color.blue;
+                t.gameObject.GetComponent<Outline>().enabled = false;
+            }
+            else
+            {
+                t.gameObject.AddComponent<Outline>();
+                t.gameObject.GetComponent<Outline>().enabled = false;
+            }
         }
     }
 

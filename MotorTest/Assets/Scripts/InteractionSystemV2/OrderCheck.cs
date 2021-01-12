@@ -12,6 +12,10 @@ public class OrderCheck : MonoBehaviour
     public bool m_OrderCorrect;
     public bool m_CanTakeOut;
 
+    ParentConstraint TempConst;
+
+    public List<ConstraintSource> TempUpdatedSources;
+    public List<ConstraintSource> TempOriginalSources;
     public OrderCheckList item;
 
     void Start()
@@ -36,29 +40,30 @@ public class OrderCheck : MonoBehaviour
         //Check if Constraint has more than 1 source and change weights according to the gameobject
         if (other.transform.parent.transform.parent != null && other.transform.parent.transform.parent.GetComponent<ParentConstraint>().sourceCount > 1)
         {
-            if (other.transform.parent.transform.parent.GetComponent<Placeable>().m_ID == gameObject.GetComponent<PlacementPoint>().m_PlaceableID)
+            if (other.transform.parent.transform.parent.GetComponent<Placeable>().m_ID == gameObject.GetComponent<PlacementPoint>().m_PlaceableID && !gameObject.GetComponent<PlacementPoint>().m_IsOccupied)
             {
-                ParentConstraint TempConst = other.transform.parent.transform.parent.GetComponent<ParentConstraint>();
-                List<ConstraintSource> TempOriginalSources = new List<ConstraintSource>();
+                TempConst = other.transform.parent.transform.parent.GetComponent<ParentConstraint>();
+                TempOriginalSources = new List<ConstraintSource>();
                 TempConst.GetSources(TempOriginalSources);
-                List<ConstraintSource> TempUpdatedSources = new List<ConstraintSource>();
-                foreach (ConstraintSource Constr in TempOriginalSources)
-                {
-                    ConstraintSource TempSource = Constr;
-                    if (gameObject.name == TempSource.sourceTransform.name)
-                    {
-                        TempSource.weight = 1f;
-                        TempUpdatedSources.Add(TempSource);
-                    }
-                    else
-                    {
-                        TempSource.weight = 0f;
-                        TempUpdatedSources.Add(TempSource);
-                    }
-                }
-                TempConst.SetSources(TempUpdatedSources);
+                TempUpdatedSources = new List<ConstraintSource>();
+                //foreach (ConstraintSource Constr in TempOriginalSources)
+                //{
+                //    ConstraintSource TempSource = Constr;
+                //    if (gameObject.name == TempSource.sourceTransform.name)
+                //    {
+                //        TempSource.weight = 1f;
+                //        TempUpdatedSources.Add(TempSource);
+                //    }
+                //    else
+                //    {
+                //        TempSource.weight = 0f;
+                //        TempUpdatedSources.Add(TempSource);
+                //    }
+                //}
+                //TempConst.SetSources(TempUpdatedSources);
             }
         }
+        //Check for object order - if objects are placed or not
         if (other.transform.parent.transform.parent != null)
         {
             if (other.transform.parent.transform.parent.GetComponent<Placeable>().m_ID == gameObject.GetComponent<PlacementPoint>().m_PlaceableID)
@@ -102,5 +107,50 @@ public class OrderCheck : MonoBehaviour
                 }
             }
         }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        //if multiple sockets, check which socket will the object be placed in and change parent constraint source weight
+        if (other.transform.parent.transform.parent != null && other.transform.parent.transform.parent.GetComponent<ParentConstraint>().sourceCount > 1)
+        {
+            if (other.transform.parent.transform.parent.GetComponent<Placeable>().m_ID == gameObject.GetComponent<PlacementPoint>().m_PlaceableID && m_OrderCorrect && !gameObject.GetComponent<PlacementPoint>().m_IsOccupied)
+            {
+                if (TempConst != null)
+                {
+                    if (!TempUpdatedSources.Equals(TempOriginalSources))
+                    {
+                        foreach (ConstraintSource Constr in TempOriginalSources)
+                        {
+                            ConstraintSource TempSource = Constr;
+                            if (gameObject.name == TempSource.sourceTransform.name)
+                            {
+                                TempSource.weight = 1f;
+                                if (!TempUpdatedSources.Contains(TempSource))
+                                {
+                                    TempUpdatedSources.Add(TempSource);
+                                }
+                            }
+                            else
+                            {
+                                TempSource.weight = 0f;
+                                if (!TempUpdatedSources.Contains(TempSource))
+                                {
+                                    TempUpdatedSources.Add(TempSource);
+                                }
+
+                            }
+                        }
+                        TempConst.SetSources(TempUpdatedSources);
+                    }
+
+                }
+            }
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        TempUpdatedSources.Clear();
+        TempOriginalSources.Clear();
+        TempConst = null;
     }
 }
