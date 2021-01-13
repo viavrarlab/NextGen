@@ -140,7 +140,7 @@ public class PlacementPoint : MonoBehaviour
                     if (m_SnappableObject != p) // Kind of redundant check, but whatever - just keep it as extra security. Just setting the member variable to incoming objects Placeable script reference.
                     {
                         m_SnappableObject = p;
-                        m_CorrectPlacementAngle = transform.localRotation; // update socket angle
+                        m_CorrectPlacementAngle = transform.rotation; // update socket angle
                     }
                     //m_IsOccupied = true;
                 }

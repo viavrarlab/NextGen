@@ -52,4 +52,3 @@ Hook,3,False,False
 Shaft_Key,3,False,False
 Shaft_Sleeve,3,False,False
 NamePlate,3,False,False
-Set2,4,False,False

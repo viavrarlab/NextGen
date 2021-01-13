@@ -110,17 +110,34 @@ public class SocektSystemGeneratorEditor : Editor
                     //print("Generating BOX COLLIDER.");
                     GameObject colliderParent = new GameObject("Generated Colliders");
                     colliderParent.transform.parent = t;
-                    GameObject col = new GameObject("Hull 0");
-                    col.gameObject.tag = "MotorCollider";
-                    col.gameObject.layer = 16;
-                    col.transform.parent = colliderParent.transform;
-                    BoxCollider boxColComp = col.AddComponent<BoxCollider>();
-                    MeshRenderer meshRenderer = t.GetComponent<MeshRenderer>();
+                    if (t.name.StartsWith("Set"))
+                    {
+                        Debug.Log("Setgrab tags");
+                        GameObject col = new GameObject("Hull 0");
+                        col.gameObject.tag = "SetGrab";
+                        col.gameObject.layer = 16;
+                        col.transform.parent = colliderParent.transform;
+                        BoxCollider boxColComp = col.AddComponent<BoxCollider>();
+                        MeshRenderer meshRenderer = t.GetComponent<MeshRenderer>();
 
-                    boxColComp.center = meshRenderer.bounds.center;
-                    boxColComp.size = meshRenderer.bounds.size;
-                    boxColComp.isTrigger = collidersAreTriggers;
+                        boxColComp.center = meshRenderer.bounds.center;
+                        boxColComp.size = meshRenderer.bounds.size;
+                        boxColComp.isTrigger = collidersAreTriggers;
+                    }
+                    else
+                    {
+                        GameObject col = new GameObject("Hull 0");
+                        col.gameObject.tag = "MotorCollider";
+                        col.gameObject.layer = 16;
+                        col.transform.parent = colliderParent.transform;
+                        BoxCollider boxColComp = col.AddComponent<BoxCollider>();
+                        MeshRenderer meshRenderer = t.GetComponent<MeshRenderer>();
 
+                        boxColComp.center = meshRenderer.bounds.center;
+                        boxColComp.size = meshRenderer.bounds.size;
+                        boxColComp.isTrigger = collidersAreTriggers;
+                    }
+   
                     yield return null;
                     fin = true;
                 }
@@ -202,7 +219,7 @@ public class SocektSystemGeneratorEditor : Editor
         {
             foreach(GameObject Set in SetList)
             {
-                if (Set.name == t.gameObject.name && t.gameObject.active == true) 
+                if (Set.name == t.gameObject.name && t.gameObject.active) 
                 {
                     Set.transform.parent = t;
                     t.gameObject.tag = "SetGrab";
