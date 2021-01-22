@@ -16,6 +16,8 @@ public class PlacementPoint : MonoBehaviour
     public Quaternion m_CorrectPlacementAngle; // TODO: make this automated somehow. Maybe when generating placement points / ObjectConfig.. IDK
     public bool m_IsOccupied = false; // If this socket/point has something socketed 
     public float m_CorrectAngleThreshold = 7.5f; // How precise does the Placeable objects' rotation has to be in order to allow snapping into socket. Used in CheckAngle(). Measures as angle degrees.
+    [Header("Disable order check")]
+    public bool m_CheckOrder = true;
     [Header("Disable angle checks")]
     public bool m_CheckForCorrectAngle = false;
     public bool m_SkipXAngle = false;

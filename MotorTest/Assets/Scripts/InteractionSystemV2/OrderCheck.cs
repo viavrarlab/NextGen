@@ -11,6 +11,8 @@ public class OrderCheck : MonoBehaviour
     public PlacementPoint[] PP_Array;
     public bool m_OrderCorrect;
     public bool m_CanTakeOut;
+    [Header("Disable for no order checking")]
+    public bool m_checkOrder = true;
 
     ParentConstraint TempConst;
 
@@ -46,60 +48,63 @@ public class OrderCheck : MonoBehaviour
                 TempOriginalSources = new List<ConstraintSource>();
                 TempConst.GetSources(TempOriginalSources);
                 TempUpdatedSources = new List<ConstraintSource>();
-                //foreach (ConstraintSource Constr in TempOriginalSources)
-                //{
-                //    ConstraintSource TempSource = Constr;
-                //    if (gameObject.name == TempSource.sourceTransform.name)
-                //    {
-                //        TempSource.weight = 1f;
-                //        TempUpdatedSources.Add(TempSource);
-                //    }
-                //    else
-                //    {
-                //        TempSource.weight = 0f;
-                //        TempUpdatedSources.Add(TempSource);
-                //    }
-                //}
-                //TempConst.SetSources(TempUpdatedSources);
+                foreach (ConstraintSource Constr in TempOriginalSources)
+                {
+                    ConstraintSource TempSource = Constr;
+                    if (gameObject.name == TempSource.sourceTransform.name)
+                    {
+                        TempSource.weight = 1f;
+                        TempUpdatedSources.Add(TempSource);
+                    }
+                    else
+                    {
+                        TempSource.weight = 0f;
+                        TempUpdatedSources.Add(TempSource);
+                    }
+                }
+                TempConst.SetSources(TempUpdatedSources);
             }
         }
         //Check for object order - if objects are placed or not
-        if (other.transform.parent.transform.parent != null)
+        if (m_checkOrder)
         {
-            if (other.transform.parent.transform.parent.GetComponent<Placeable>().m_ID == gameObject.GetComponent<PlacementPoint>().m_PlaceableID)
+            if (other.transform.parent.transform.parent != null)
             {
-                List<OrderCheckList> TempList = new List<OrderCheckList>();
-                for (int i = 0; i < PP_Array.Length; i++)
+                if (other.transform.parent.transform.parent.GetComponent<Placeable>().m_ID == gameObject.GetComponent<PlacementPoint>().m_PlaceableID)
                 {
-                    item = new OrderCheckList
+                    List<OrderCheckList> TempList = new List<OrderCheckList>();
+                    for (int i = 0; i < PP_Array.Length; i++)
                     {
-                        m_Obj_ID = PP_Array[i].m_PlaceableID,
-                        m_isPlaced = PP_Array[i].m_IsOccupied
-                    };
-                    TempList.Add(item);
-                }
-                if (TempList != null)
-                {
-                    for (int i = 0; i < TempList.Count; i++)
+                        item = new OrderCheckList
+                        {
+                            m_Obj_ID = PP_Array[i].m_PlaceableID,
+                            m_isPlaced = PP_Array[i].m_IsOccupied
+                        };
+                        TempList.Add(item);
+                    }
+                    if (TempList != null)
                     {
-                        OrderCheckList tempOrder = TempList[i];
-                        if (tempOrder.m_Obj_ID == other.transform.parent.transform.parent.GetComponent<Placeable>().m_ID)
+                        for (int i = 0; i < TempList.Count; i++)
                         {
-                            m_OrderCorrect = true;
-                        }
-                        else
-                        {
-                            if (tempOrder.m_Obj_ID >= 0 && tempOrder.m_Obj_ID == other.transform.parent.transform.parent.GetComponent<Placeable>().m_ID - 1)
+                            OrderCheckList tempOrder = TempList[i];
+                            if (tempOrder.m_Obj_ID == other.transform.parent.transform.parent.GetComponent<Placeable>().m_ID)
                             {
-                                Debug.Log(tempOrder.m_Obj_ID);
-                                if (tempOrder.m_isPlaced == true)
+                                m_OrderCorrect = true;
+                            }
+                            else
+                            {
+                                if (tempOrder.m_Obj_ID >= 0 && tempOrder.m_Obj_ID == other.transform.parent.transform.parent.GetComponent<Placeable>().m_ID - 1)
                                 {
-                                    m_OrderCorrect = true;
-                                }
-                                else
-                                {
-                                    m_OrderCorrect = false;
-                                    break;
+                                    Debug.Log(tempOrder.m_Obj_ID);
+                                    if (tempOrder.m_isPlaced == true)
+                                    {
+                                        m_OrderCorrect = true;
+                                    }
+                                    else
+                                    {
+                                        m_OrderCorrect = false;
+                                        break;
+                                    }
                                 }
                             }
                         }
@@ -107,6 +112,10 @@ public class OrderCheck : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            m_OrderCorrect = true;
+        }       
     }
     private void OnTriggerStay(Collider other)
     {

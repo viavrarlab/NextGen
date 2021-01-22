@@ -11,6 +11,7 @@ TagManager:
   - PlacementRoot
   - MotorPart
   - PlayerHand
+  - LeftHandUI
   layers:
   - Default
   - TransparentFX

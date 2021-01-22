@@ -541,6 +541,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -608,6 +609,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -710,6 +712,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -777,6 +780,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -1069,6 +1073,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -1136,6 +1141,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -1204,6 +1210,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -1259,6 +1266,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -1663,6 +1671,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -1730,6 +1739,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -2184,6 +2194,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -2239,6 +2250,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -2416,6 +2428,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -2483,6 +2496,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -2709,6 +2723,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -2776,6 +2791,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -2846,6 +2862,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -2903,6 +2920,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -3063,6 +3081,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 1
   m_SkipYAngle: 0
@@ -3116,6 +3135,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -3457,6 +3477,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -3526,6 +3547,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -3672,6 +3694,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -3739,6 +3762,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -4131,6 +4155,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -4198,6 +4223,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -4343,6 +4369,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -4402,6 +4429,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -4548,6 +4576,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -4615,6 +4644,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -4715,6 +4745,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -4782,6 +4813,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -5096,6 +5128,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -5163,6 +5196,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -5291,6 +5325,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 1
   m_SkipYAngle: 0
@@ -5344,6 +5379,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -6443,6 +6479,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -6510,6 +6547,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -6720,6 +6758,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -6787,6 +6826,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -7062,6 +7102,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -7113,6 +7154,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -7525,6 +7567,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -7592,6 +7635,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -7738,6 +7782,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -7793,6 +7838,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -8014,6 +8060,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -8081,6 +8128,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -8181,6 +8229,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -8248,6 +8297,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -8486,6 +8536,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -8553,6 +8604,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -8711,6 +8763,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -8778,6 +8831,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -8954,6 +9008,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -9021,6 +9076,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -9135,6 +9191,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -9202,6 +9259,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -9338,6 +9396,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -9359,6 +9418,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -9543,6 +9603,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -9610,6 +9671,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -9712,6 +9774,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -9779,6 +9842,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -10371,6 +10435,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -10438,6 +10503,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -10744,6 +10810,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -10795,6 +10862,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -11805,7 +11873,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564263747}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.213, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1375303262}
@@ -12244,6 +12312,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -12301,6 +12370,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -12447,6 +12517,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -12514,6 +12585,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -12554,6 +12626,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.17899114, y: 0.17932898, z: 0.047500044}
   m_Center: {x: -0.0003059553, y: -0.00004220009, z: 0.00002938509}
+--- !u!224 &609754719 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 609754719, guid: c4f395288e15c924d80cc1442ad804d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1162208691}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &609754722 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 609754722, guid: c4f395288e15c924d80cc1442ad804d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1162208691}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &613329761
 GameObject:
   m_ObjectHideFlags: 0
@@ -12835,6 +12919,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 1
@@ -12888,6 +12973,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -13118,6 +13204,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -13177,6 +13264,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -13435,6 +13523,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -13494,6 +13583,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -13731,6 +13821,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -13798,6 +13889,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -14178,6 +14270,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 1
   m_SkipYAngle: 0
@@ -14231,6 +14324,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -14807,6 +14901,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -14874,6 +14969,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -14960,6 +15056,72 @@ MonoBehaviour:
   SetMesh: {fileID: 0}
   childs: []
   SetModels: []
+--- !u!1 &754716246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 754716249}
+  - component: {fileID: 754716248}
+  - component: {fileID: 754716247}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &754716247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754716246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &754716248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754716246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &754716249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754716246}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &779567531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15188,62 +15350,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: MotorExportWithSetsFix
       objectReference: {fileID: 0}
-    - target: {fileID: -8699775615817401833, guid: 047f179ec85aaea49adefb7fcd702f39,
+    - target: {fileID: -6036717309293909608, guid: 047f179ec85aaea49adefb7fcd702f39,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
-    - target: {fileID: -8649620786005604360, guid: 047f179ec85aaea49adefb7fcd702f39,
+    - target: {fileID: 8586263604248462298, guid: 047f179ec85aaea49adefb7fcd702f39,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
-    - target: {fileID: -8117151696739496930, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: -7842928328027888782, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: SetGrab
-      objectReference: {fileID: 0}
-    - target: {fileID: -7791043773047532996, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.014
-      objectReference: {fileID: 0}
-    - target: {fileID: -7755320485004825357, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: -7414138658408101030, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: -7252460630885912939, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: -7189564331161197904, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: -7164713654016040265, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: -7157897592815780582, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: -6863273826878097467, guid: 047f179ec85aaea49adefb7fcd702f39,
+    - target: {fileID: 8261278674250713028, guid: 047f179ec85aaea49adefb7fcd702f39,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
@@ -15253,12 +15370,252 @@ PrefabInstance:
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
-    - target: {fileID: -6036717309293909608, guid: 047f179ec85aaea49adefb7fcd702f39,
+    - target: {fileID: -4122662500449141678, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475032186111466521, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -8649620786005604360, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -4072605787053909227, guid: 047f179ec85aaea49adefb7fcd702f39,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
       objectReference: {fileID: 0}
     - target: {fileID: -5194872350950232076, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756962711086821192, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979174530014745096, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533562944018937320, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 7336392281916552678, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -7414138658408101030, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -8699775615817401833, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 703810613465293047, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 6422251393818546382, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360072301146572885, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -2113678510402504494, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 5043445945315229387, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -3226975012777740058, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -2199113007098678521, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -7157897592815780582, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -2769987047844166544, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -7164713654016040265, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 4606284247243433352, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -23752793804814303, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809319050364019334, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -3240100446503512019, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -7755320485004825357, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 1475389769730919587, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -1230311762352849275, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -8117151696739496930, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244200410093612250, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -2594880652997593017, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -115020778011643617, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -7252460630885912939, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 7023576831928212047, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117498481569692002, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -3354945690053053028, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435591701551493022, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409264515408312929, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: SetGrab
+      objectReference: {fileID: 0}
+    - target: {fileID: -7842928328027888782, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: SetGrab
+      objectReference: {fileID: 0}
+    - target: {fileID: -2440591982118362857, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -6863273826878097467, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -2303751055220411338, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 3024391501232985233, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 5837538740182000318, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -958593377713698599, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -7189564331161197904, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679594278507590999, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695088224493288416, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 7575897229230869506, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_TagString
+      value: MotorPart
+      objectReference: {fileID: 0}
+    - target: {fileID: -1359148677458369837, guid: 047f179ec85aaea49adefb7fcd702f39,
         type: 3}
       propertyPath: m_TagString
       value: MotorPart
@@ -15318,210 +15675,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -4122662500449141678, guid: 047f179ec85aaea49adefb7fcd702f39,
+    - target: {fileID: -7791043773047532996, guid: 047f179ec85aaea49adefb7fcd702f39,
         type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: -4072605787053909227, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: -3354945690053053028, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: -3240100446503512019, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: -3226975012777740058, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: -2769987047844166544, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: -2594880652997593017, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: -2440591982118362857, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: -2303751055220411338, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: -2199113007098678521, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: -2113678510402504494, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: -1359148677458369837, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: -1230311762352849275, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: -958593377713698599, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: -115020778011643617, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: -23752793804814303, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: 703810613465293047, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: 1475389769730919587, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: 1695088224493288416, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: 2809319050364019334, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: 3024391501232985233, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: 4244200410093612250, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475032186111466521, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: 4606284247243433352, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: 5043445945315229387, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: 5117498481569692002, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: 5435591701551493022, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: 5533562944018937320, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: 5837538740182000318, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: 6422251393818546382, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: 6679594278507590999, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: 6756962711086821192, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: 7023576831928212047, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: 7336392281916552678, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: 7360072301146572885, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: 7575897229230869506, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: 8261278674250713028, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
-      objectReference: {fileID: 0}
-    - target: {fileID: 8409264515408312929, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: SetGrab
-      objectReference: {fileID: 0}
-    - target: {fileID: 8586263604248462298, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
+      propertyPath: m_LocalPosition.z
+      value: 1.014
       objectReference: {fileID: 0}
     - target: {fileID: 8777977069738792445, guid: 047f179ec85aaea49adefb7fcd702f39,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.818
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979174530014745096, guid: 047f179ec85aaea49adefb7fcd702f39,
-        type: 3}
-      propertyPath: m_TagString
-      value: MotorPart
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 047f179ec85aaea49adefb7fcd702f39, type: 3}
@@ -15594,6 +15756,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 1
@@ -15647,6 +15810,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -15793,6 +15957,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -15862,6 +16027,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -15996,6 +16162,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -16063,6 +16230,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -16799,6 +16967,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -16844,6 +17013,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -17271,6 +17441,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -17338,6 +17509,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -17622,6 +17794,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -17689,6 +17862,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -18241,6 +18415,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -18308,6 +18483,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -18374,6 +18550,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -18475,6 +18652,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -18715,6 +18893,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -18782,6 +18961,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -19266,6 +19446,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -19333,6 +19514,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -19403,6 +19585,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -19490,6 +19673,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -19638,6 +19822,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -19705,6 +19890,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -19809,6 +19995,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -19878,6 +20065,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -20119,6 +20307,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -20176,6 +20365,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -20436,6 +20626,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -20503,6 +20694,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -21474,6 +21666,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -21541,6 +21734,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -21812,6 +22006,83 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.08149596, y: 0.07896783, z: 0.060621817}
   m_Center: {x: -0.09859657, y: 0.45926026, z: -0.8147742}
+--- !u!1 &1055374187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1055374188}
+  - component: {fileID: 1055374190}
+  - component: {fileID: 1055374189}
+  m_Layer: 14
+  m_Name: TotalTime
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1055374188
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055374187}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 609754719}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -100, y: 206.90729}
+  m_SizeDelta: {x: 262.89, y: 29.802795}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1055374189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055374187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1055374190
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055374187}
+  m_CullTransparentMesh: 0
 --- !u!1 &1058806359
 GameObject:
   m_ObjectHideFlags: 0
@@ -21880,6 +22151,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -21947,6 +22219,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -22067,6 +22340,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -22088,6 +22362,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -22379,6 +22654,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -22518,6 +22794,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -22748,6 +23025,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -22805,6 +23083,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -23460,6 +23739,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -23527,6 +23807,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -23611,6 +23892,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -23670,6 +23952,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -24009,450 +24292,71 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3472144916827680603, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerDown.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnADown.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripDown.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripUp.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerHold.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripHold.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: Triggerpull.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1162208695}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PickUpObj
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerDown.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnADown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1162208695}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ReleaseObject
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripDown.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripDown.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripUp.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripUp.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1162208695}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_TriggerAxisPull
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripDown.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1162208695}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ReleaseObject
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripUp.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerDown.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1162208695}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerDown.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_TriggerPull
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerDown.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerDown.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerDown.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1162208695}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_TriggerPush
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerHold.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerHold.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerHold.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1162208695}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerHold.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_TriggerPush
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerHold.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerHold.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripHold.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripHold.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripUp.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripUp.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripUp.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1162208695}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripHold.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1162208695}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripUp.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_GrabPush
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripUp.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripHold.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_GrabPush
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripHold.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripHold.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: m_TriggerPull
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: Triggerpull.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: Triggerpull.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: Triggerpull.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1162208695}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: Triggerpull.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_TriggerAxisPull
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: Triggerpull.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: Triggerpull.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1162208695}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: set_TriggerAxisPull
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnTriggerUp.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripHold.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripHold.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripHold.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripHold.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1162208695}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripHold.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_TriggerAxisPull
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripHold.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripDown.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripDown.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripDown.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1162208695}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripDown.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PickUPSet
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripDown.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6933599666338625363, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: OnGripDown.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3472144916827685117, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1037807039288166052, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 3472144916827713293, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 3472144916827784069, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 2575235098141083843, guid: c4f395288e15c924d80cc1442ad804d7,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 985531211850802051, guid: c4f395288e15c924d80cc1442ad804d7,
         type: 3}
       propertyPath: m_CorrectOrder
       value: 
       objectReference: {fileID: 1221640971}
+    - target: {fileID: 4952504354606123009, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnADown.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4952504354606123009, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnADown.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4952504354606123009, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnADown.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4952504354606123009, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnADown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1162208692}
+    - target: {fileID: 4952504354606123009, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnADown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnableUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4952504354606123009, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: OnADown.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 609754718, guid: c4f395288e15c924d80cc1442ad804d7, type: 3}
+      propertyPath: m_Name
+      value: ControllerUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560164213447323786, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: ControllerUI
+      value: 
+      objectReference: {fileID: 609754722}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4f395288e15c924d80cc1442ad804d7, type: 3}
---- !u!1 &1162208692 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3472144916827680603, guid: c4f395288e15c924d80cc1442ad804d7,
+--- !u!114 &1162208692 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3560164213447323786, guid: c4f395288e15c924d80cc1442ad804d7,
     type: 3}
   m_PrefabInstance: {fileID: 1162208691}
   m_PrefabAsset: {fileID: 0}
---- !u!138 &1162208694
-FixedJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1162208692}
-  m_ConnectedBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0ad94f0785fe44cbe5db4daba732b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1162208695 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 985531211850802051, guid: c4f395288e15c924d80cc1442ad804d7,
     type: 3}
   m_PrefabInstance: {fileID: 1162208691}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1162208692}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0905b5b08e916543b92d9986cbe6fd4, type: 3}
@@ -24526,6 +24430,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -24593,6 +24498,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -24823,6 +24729,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -24874,6 +24781,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -25289,6 +25197,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -25356,6 +25265,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -26005,6 +25915,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -26064,6 +25975,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -26224,6 +26136,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 1
@@ -26277,6 +26190,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -26485,6 +26399,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -26552,6 +26467,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -26902,6 +26818,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -26969,6 +26886,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -27710,6 +27628,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -27799,6 +27718,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -28690,6 +28610,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -28757,6 +28678,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -29591,6 +29513,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -29648,6 +29571,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -29936,6 +29860,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -30003,6 +29928,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -30336,6 +30262,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -30403,6 +30330,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -30632,6 +30560,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -30687,6 +30616,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -30803,6 +30733,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -30860,6 +30791,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -31683,6 +31615,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -31750,6 +31683,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -31889,6 +31823,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -31956,6 +31891,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -32034,6 +31970,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 1
@@ -32083,6 +32020,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -32568,6 +32506,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -32635,6 +32574,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -32875,6 +32815,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -32932,6 +32873,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -33398,6 +33340,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -33465,6 +33408,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -33775,6 +33719,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -33842,6 +33787,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -34111,6 +34057,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -34178,6 +34125,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -34789,6 +34737,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 1
   m_SkipYAngle: 0
@@ -34842,6 +34791,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -35019,6 +34969,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -35086,6 +35037,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -35208,6 +35160,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -35275,6 +35228,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -35937,6 +35891,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -35996,6 +35951,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -36217,6 +36173,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -36284,6 +36241,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -36519,6 +36477,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 1
   m_SkipYAngle: 0
@@ -36568,6 +36527,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -36833,6 +36793,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -36900,6 +36861,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -37340,6 +37302,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -37441,6 +37404,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -37557,6 +37521,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 1
@@ -37614,6 +37579,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -37897,6 +37863,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -37964,6 +37931,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -38303,6 +38271,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -38370,6 +38339,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -39164,6 +39134,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -39231,6 +39202,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -39338,6 +39310,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 1
   m_SkipYAngle: 0
@@ -39387,6 +39360,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -39533,6 +39507,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -39600,6 +39575,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -40076,6 +40052,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -40143,6 +40120,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -40752,6 +40730,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -40819,6 +40798,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -40929,6 +40909,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -40996,6 +40977,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -41258,6 +41240,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 1
@@ -41311,6 +41294,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -41519,6 +41503,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -41586,6 +41571,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -41698,6 +41684,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -41765,6 +41752,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -42091,6 +42079,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -42152,6 +42141,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -42344,6 +42334,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 0
@@ -42423,6 +42414,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
@@ -42896,6 +42888,58 @@ Transform:
   m_Father: {fileID: 315979544}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2126141703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2126141705}
+  - component: {fileID: 2126141704}
+  m_Layer: 0
+  m_Name: GradingController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2126141704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126141703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e089b1f6f7988da49973e454a8e01ba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControllerScript: {fileID: 1162208695}
+  m_ControllerUI: {fileID: 609754722}
+  m_CurrPickUpObjRes:
+    partName: 
+    PickUpCount: 0
+    isPaused: 0
+    PartPickTime: 
+  m_Results: []
+  MethodExecuted: 0
+--- !u!4 &2126141705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126141703}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.40140134, y: 0.15745237, z: -0.4473912}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2141188691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43060,6 +43104,7 @@ MonoBehaviour:
   m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 0
   m_CheckForCorrectAngle: 1
   m_SkipXAngle: 0
   m_SkipYAngle: 1
@@ -43113,6 +43158,7 @@ MonoBehaviour:
   PP_Array: []
   m_OrderCorrect: 0
   m_CanTakeOut: 0
+  m_checkOrder: 1
   TempUpdatedSources: []
   TempOriginalSources: []
   item:
