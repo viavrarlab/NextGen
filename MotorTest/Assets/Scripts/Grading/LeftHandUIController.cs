@@ -7,11 +7,18 @@ public class LeftHandUIController : MonoBehaviour
 {
     [SerializeField]
     Canvas m_ControllerUI;
+    [SerializeField]
+    Image m_HintImage;
+
+    Object[] m_Thumbnails;
+
+    CorrectOrderTests m_CorrOrder;
 
     private void Awake()
     {
         m_ControllerUI = gameObject.GetComponentInChildren<Canvas>();
         m_ControllerUI.enabled = false;
+        m_CorrOrder = FindObjectOfType<CorrectOrderTests>();
     }
     public void EnableUI()
     {
@@ -22,7 +29,38 @@ public class LeftHandUIController : MonoBehaviour
         else
         {
             m_ControllerUI.enabled = true;
+            NextPartHint();
         }
+    }
+    void NextPartHint()
+    {
+        m_Thumbnails = Resources.LoadAll("Thumbnails", typeof(Sprite));
+
+        for(int i = 0; i < m_CorrOrder.Parts.Count; i++)
+        {
+            if(m_CorrOrder.Parts[i].obj.GetComponent<Placeable>().m_IsPlaced == true)
+            {
+                foreach (Sprite img in m_Thumbnails)
+                {
+                    if (img.name == m_CorrOrder.Parts[i+1].obj.name + "_Thumbnail")
+                    {
+                        m_HintImage.sprite = img;
+                    }
+                }
+            }
+            else
+            {
+                foreach (Sprite img in m_Thumbnails)
+                {
+                    if (img.name == m_CorrOrder.Parts[i].obj.name + "_Thumbnail")
+                    {
+                        m_HintImage.GetComponentInChildren<Image>().sprite = img;
+                    }
+                }
+                break;
+            }
+        }
+
     }
 
 }

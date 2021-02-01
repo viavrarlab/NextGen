@@ -8,10 +8,25 @@ public class GradingController : MonoBehaviour
 {
     [SerializeField]
     ControllerScript m_ControllerScript;
+
     [SerializeField]
     Canvas m_ControllerUI;
+
+    [SerializeField]
+    Canvas m_ResultUI;
+
+    [SerializeField]
+    GameObject m_ListContent;
+    Button m_Refresh;
+
+    [SerializeField]
+    GameObject m_ResultRow;
+
+    Object[] m_Thumbnails;
+
     [SerializeField]
     public Results m_CurrPickUpObjRes;
+
     public List<Results> m_Results;
     [SerializeField]
     bool MethodExecuted;
@@ -27,6 +42,8 @@ public class GradingController : MonoBehaviour
     {
         m_ControllerScript = FindObjectOfType<ControllerScript>();
         m_TotalTimerText = m_ControllerUI.GetComponentInChildren<Text>();
+        m_Refresh = m_ResultUI.GetComponentInChildren<Button>();
+        m_Refresh.onClick.AddListener(DisplayList);
         StartCoroutine(TotalTimer());
         m_Results = new List<Results>();
     }
@@ -44,10 +61,6 @@ public class GradingController : MonoBehaviour
                 {
                     AddResToList(m_ControllerScript.objectinhand);
                     TimerCountControl(m_ControllerScript.objectinhand);
-                    if(m_CurrPickUpObjRes != null)
-                    {
-                        print(m_CurrPickUpObjRes.PartPickTime);
-                    }
                 }
             }
             else
@@ -74,7 +87,6 @@ public class GradingController : MonoBehaviour
                 PickUpCount = 0,
                 isPaused = false,
             };
-            //TempRes.StartTimer(this);
             m_Results.Add(TempRes);
         }
         else
@@ -84,18 +96,15 @@ public class GradingController : MonoBehaviour
             if (Contains)
             {
                 m_CurrPickUpObjRes.isPaused = false;
-                //m_CurrPickUpObjRes.PickUpCount++;
             }
             else
             {
-                print(go.name);
                 Results TempRes = new Results
                 {
                     partName = go.name,
                     PickUpCount = 0,
                     isPaused = false
                 };
-                //TempRes.StartTimer(this);
                 m_Results.Add(TempRes);
                 return;
             }
@@ -122,6 +131,31 @@ public class GradingController : MonoBehaviour
             TempRes = null;
         }
     }
+    public void DisplayList()
+    {
+        m_Thumbnails = Resources.LoadAll("Thumbnails", typeof(Sprite));
+        if(m_Results != null)
+        {
+            foreach(Results res in m_Results)
+            {
+                if(m_Thumbnails != null)
+                {
+                    foreach(Sprite img in m_Thumbnails)
+                    {
+                        if (img.name == res.partName + "_Thumbnail")
+                        {
+                            m_ResultRow.GetComponent<ListEntryValues>().UpdateTextsAndImage(img,res.partName, res.PickUpCount.ToString(), res.PartPickTime.ToString());
+                        }
+                    }
+                }
+                else
+                {
+                    m_ResultRow.GetComponent<ListEntryValues>().UpdateTexts(res.partName, res.PickUpCount.ToString(), res.PartPickTime.ToString());
+                }
+                Instantiate(m_ResultRow, m_ListContent.transform);
+            }
+        }
+    }
     public IEnumerator TotalTimer()
     {
 
@@ -136,4 +170,5 @@ public class GradingController : MonoBehaviour
             yield return m_TotalTimerText;
         }
     }
+
 }

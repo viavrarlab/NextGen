@@ -12,6 +12,7 @@ TagManager:
   - MotorPart
   - PlayerHand
   - LeftHandUI
+  - GradingController
   layers:
   - Default
   - TransparentFX

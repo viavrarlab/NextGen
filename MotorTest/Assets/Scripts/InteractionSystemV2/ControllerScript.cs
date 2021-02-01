@@ -11,7 +11,7 @@ public class ControllerScript : MonoBehaviour
 
     private Placeable CurrentPickUpOBJ;
     public CorrectOrderTests m_CorrectOrder;
-    public Placeable[] m_PlaceArray;
+    public GameObject[] m_PlaceArray;
     public bool Outline;
     private bool m_triggerPush;
     private bool m_GrabPush;
@@ -24,12 +24,12 @@ public class ControllerScript : MonoBehaviour
 
     private void Awake()
     {
-        m_PlaceArray = new Placeable[m_CorrectOrder.Parts.Count];
-        for(int i = 0; i < m_CorrectOrder.Parts.Count; i++)
+        m_PlaceArray = new GameObject[m_CorrectOrder.Parts.Count];
+        for (int i = 0; i < m_CorrectOrder.Parts.Count; i++)
         {
-            if(m_CorrectOrder.Parts[i].obj.GetComponent<Placeable>() != null)
+            if (m_CorrectOrder.Parts[i].obj != null)
             {
-                m_PlaceArray[i] = m_CorrectOrder.Parts[i].obj.GetComponent<Placeable>();
+                m_PlaceArray[i] = m_CorrectOrder.Parts[i].obj;
             }
         }
     }
@@ -50,19 +50,20 @@ public class ControllerScript : MonoBehaviour
                 //add object to pickup array
                 CollidingObj.Add(other.transform.parent.transform.parent.gameObject);
                 //check if the obj can be taken out
-                if(other.transform.parent.transform.parent.GetComponent<Placeable>() != null && other.transform.parent.transform.parent.gameObject.GetComponent<Placeable>().m_IsPlaced == true)
+                if (other.transform.parent.transform.parent.GetComponent<Placeable>() != null)
                 {
-                    for(int i = 0; i < m_PlaceArray.Length; i++)
+                    for (int i = 0; i < m_PlaceArray.Length; i++)
                     {
-                        if(m_PlaceArray[i] != null)
+                        if (m_PlaceArray[i] != null && m_PlaceArray[i].GetComponent<Placeable>() != null && i != m_PlaceArray.Length)
                         {
-                            if (m_PlaceArray[i].m_IsPlaced == true && m_PlaceArray[i + 1].m_IsPlaced == false)
+                            if (other.transform.parent.transform.parent.gameObject.GetComponent<Placeable>().m_ID == m_PlaceArray[i].GetComponent<Placeable>().m_ID && m_PlaceArray[i + 1].GetComponent<Placeable>().m_IsPlaced == false)
                             {
-                                m_PlaceArray[i].CanTakeOut = true;
+                                m_PlaceArray[i].GetComponent<Placeable>().CanTakeOut = true;
+                                return;
                             }
                             else
                             {
-                                m_PlaceArray[i].CanTakeOut = false;
+                                m_PlaceArray[i].GetComponent<Placeable>().CanTakeOut = false;
                             }
                         }
                     }
@@ -94,6 +95,7 @@ public class ControllerScript : MonoBehaviour
         else
         {
             other.transform.parent.transform.parent.gameObject.GetComponent<Outline>().enabled = false;
+            other.transform.parent.transform.parent.gameObject.GetComponent<Placeable>().CanTakeOut = false;
             CollidingObj.Remove(other.transform.parent.transform.parent.gameObject);
         }
 

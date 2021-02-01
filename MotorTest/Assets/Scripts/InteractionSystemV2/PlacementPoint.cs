@@ -301,7 +301,7 @@ public class PlacementPoint : MonoBehaviour
 
     bool CheckAngle(Quaternion _incomingRotation)
     {
-        // might need optimization or some bug fixing... not good with quaternions...
+        // might need optimization and some bug fixing... not good with quaternions...
         float angle = 0f;
 
         //skip angle check on x axis
@@ -331,7 +331,6 @@ public class PlacementPoint : MonoBehaviour
             Quaternion angleA = m_CorrectPlacementAngle;  // Convert Euler angles to Quaternion for the correct/expected rotation and store it in a variable.
             Quaternion angleB = _incomingRotation;  // Store incoming Placeable objects' rotation in variable
             angle = Quaternion.Angle(angleA, angleB); // Calculate difference between the 2 angles
-            Debug.Log("No Angles");
         }
         bool isSameRotation = Mathf.Abs(angle) < m_CorrectAngleThreshold;   // If the difference is less than a threshold then we accept that it's the same rotation
         return isSameRotation;
