@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LeftHandUIController : MonoBehaviour
 {
@@ -13,23 +14,30 @@ public class LeftHandUIController : MonoBehaviour
     Object[] m_Thumbnails;
 
     CorrectOrderTests m_CorrOrder;
-
+    GameControllerSC m_Gcontroller;
     private void Awake()
     {
         m_ControllerUI = gameObject.GetComponentInChildren<Canvas>();
         m_ControllerUI.enabled = false;
         m_CorrOrder = FindObjectOfType<CorrectOrderTests>();
+        m_Gcontroller = FindObjectOfType<GameControllerSC>();
     }
     public void EnableUI()
     {
-        if (m_ControllerUI.enabled)
+        if(SceneManager.GetActiveScene().buildIndex != 0)
         {
-            m_ControllerUI.enabled = false;
-        }
-        else
-        {
-            m_ControllerUI.enabled = true;
-            NextPartHint();
+            if (m_Gcontroller.EnableHint)
+            {
+                if (m_ControllerUI.enabled)
+                {
+                    m_ControllerUI.enabled = false;
+                }
+                else
+                {
+                    m_ControllerUI.enabled = true;
+                    NextPartHint();
+                }
+            }
         }
     }
     void NextPartHint()

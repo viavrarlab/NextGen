@@ -1,0 +1,972 @@
+fileFormatVersion: 2
+guid: 7a80d49c98b1eb04f9666f642979c40d
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Aurora R7.001|Aurora R7_Body|Dupli|
+    100002: Aurora R7.001|Aurora R7_Stand|Dupli|1
+    100004: Aurora R7.002|Aurora R7_Body|Dupli|
+    100006: Aurora R7.002|Aurora R7_Stand|Dupli|1
+    100008: Aurora R7.003|Aurora R7_Body|Dupli|
+    100010: Aurora R7.003|Aurora R7_Stand|Dupli|1
+    100012: Aurora R7.004|Aurora R7_Body|Dupli|
+    100014: Aurora R7.004|Aurora R7_Stand|Dupli|1
+    100016: Aurora R7.005|Aurora R7_Body|Dupli|
+    100018: Aurora R7.005|Aurora R7_Stand|Dupli|1
+    100020: Aurora R7.007|Aurora R7_Body|Dupli|
+    100022: Aurora R7.007|Aurora R7_Stand|Dupli|1
+    100024: Aurora R7.008|Aurora R7_Body|Dupli|
+    100026: Aurora R7.008|Aurora R7_Stand|Dupli|1
+    100028: Aurora R7.009|Aurora R7_Body|Dupli|
+    100030: Aurora R7.009|Aurora R7_Stand|Dupli|1
+    100032: Aurora R7.011|Aurora R7_Body|Dupli|
+    100034: Aurora R7.011|Aurora R7_Stand|Dupli|1
+    100036: Aurora R7.012|Aurora R7_Body|Dupli|
+    100038: Aurora R7.012|Aurora R7_Stand|Dupli|1
+    100040: Aurora R7.013|Aurora R7_Body|Dupli|
+    100042: Aurora R7.013|Aurora R7_Stand|Dupli|1
+    100044: Aurora R7.015|Aurora R7_Body|Dupli|
+    100046: Aurora R7.015|Aurora R7_Stand|Dupli|1
+    100048: Blinds.000|Blinds_Holder|Dupli|
+    100050: Blinds.001|Blinds_Holder|Dupli|
+    100052: Ceiling
+    100054: CeilingLight_Low
+    100056: Chair.001|Chair_Base|Dupli|
+    100058: Chair.002|Chair_Base|Dupli|
+    100060: Chair.003|Chair_Base|Dupli|
+    100062: Chair.004|Chair_Base|Dupli|
+    100064: Chair.005|Chair_Base|Dupli|
+    100066: Chair.006|Chair_Base|Dupli|
+    100068: Chair.007|Chair_Base|Dupli|
+    100070: Chair.008|Chair_Base|Dupli|
+    100072: Chair.009|Chair_Base|Dupli|
+    100074: Chair.010|Chair_Base|Dupli|
+    100076: Chair.011|Chair_Base|Dupli|
+    100078: Chair.012|Chair_Base|Dupli|
+    100080: Chair.013|Chair_Base|Dupli|
+    100082: Chair.014|Chair_Base|Dupli|
+    100084: Chair.015|Chair_Base|Dupli|
+    100086: Chair.016|Chair_Base|Dupli|
+    100088: Chair|Chair_Base|Dupli|
+    100090: Door_T110_Door
+    100092: Door_T111_Door
+    100094: ElectricOutlet.001|ElectricOutlet_L|Dupli|
+    100096: ElectricOutlet.002|ElectricOutlet_L|Dupli|
+    100098: ElectricOutlet.003|ElectricOutlet_L|Dupli|
+    100100: ElectricOutlet.004|ElectricOutlet_L|Dupli|
+    100102: ElectricOutlet.005|ElectricOutlet_L|Dupli|
+    100104: ElectricOutlet.006|ElectricOutlet_L|Dupli|
+    100106: ElectricOutlet|ElectricOutlet_L|Dupli|
+    100108: Floor
+    100110: Floor Lath
+    100112: Keyboard.001|Keyboard|Dupli|
+    100114: Keyboard.002|Keyboard|Dupli|
+    100116: Keyboard.003|Keyboard|Dupli|
+    100118: Keyboard.004|Keyboard|Dupli|
+    100120: Keyboard.005|Keyboard|Dupli|
+    100122: Keyboard.006|Keyboard|Dupli|
+    100124: Keyboard.007|Keyboard|Dupli|
+    100126: Keyboard.008|Keyboard|Dupli|
+    100128: Keyboard.009|Keyboard|Dupli|
+    100130: Keyboard.010|Keyboard|Dupli|
+    100132: Keyboard.011|Keyboard|Dupli|
+    100134: Keyboard.012|Keyboard|Dupli|
+    100136: Keyboard.013|Keyboard|Dupli|
+    100138: Monitor.000|Monitor_Screen|Dupli|
+    100140: Monitor.000|Monitor_Stand|Dupli|1
+    100142: Monitor.000|Monitor_Stand|Dupli|1.001
+    100144: Monitor.001|Monitor_Screen|Dupli|
+    100146: Monitor.001|Monitor_Stand|Dupli|1
+    100148: Monitor.002|Monitor_Screen|Dupli|
+    100150: Monitor.003|Monitor_Screen|Dupli|
+    100152: Monitor.003|Monitor_Stand|Dupli|1
+    100154: Monitor.004|Monitor_Screen|Dupli|
+    100156: Monitor.004|Monitor_Stand|Dupli|1
+    100158: Monitor.005|Monitor_Screen|Dupli|
+    100160: Monitor.005|Monitor_Stand|Dupli|1
+    100162: Monitor.006|Monitor_Screen|Dupli|
+    100164: Monitor.006|Monitor_Stand|Dupli|1
+    100166: Monitor.007|Monitor_Screen|Dupli|
+    100168: Monitor.007|Monitor_Stand|Dupli|1
+    100170: Monitor.008|Monitor_Screen|Dupli|
+    100172: Monitor.008|Monitor_Stand|Dupli|1
+    100174: Monitor.009|Monitor_Screen|Dupli|
+    100176: Monitor.009|Monitor_Stand|Dupli|1
+    100178: Monitor.010|Monitor_Screen|Dupli|
+    100180: Monitor.010|Monitor_Stand|Dupli|1
+    100182: Monitor.011|Monitor_Screen|Dupli|
+    100184: Monitor.011|Monitor_Stand|Dupli|1
+    100186: Monitor.012|Monitor_Screen|Dupli|
+    100188: Monitor.012|Monitor_Stand|Dupli|1
+    100190: Mouse.001|Mouse_Base|Dupli|
+    100192: Mouse.002|Mouse_Base|Dupli|
+    100194: Mouse.003|Mouse_Base|Dupli|
+    100196: Mouse.004|Mouse_Base|Dupli|
+    100198: Mouse.005|Mouse_Base|Dupli|
+    100200: Mouse.006|Mouse_Base|Dupli|
+    100202: Mouse.007|Mouse_Base|Dupli|
+    100204: Mouse.008|Mouse_Base|Dupli|
+    100206: Mouse.009|Mouse_Base|Dupli|
+    100208: Mouse.010|Mouse_Base|Dupli|
+    100210: Mouse.011|Mouse_Base|Dupli|
+    100212: Mouse.012|Mouse_Base|Dupli|
+    100214: Mouse|Mouse_Base|Dupli|
+    100216: Projector_Projector_L
+    100218: Projector_Stand_L
+    100220: Radiator.001|Radiator_Control|Dupli|
+    100222: Radiator.001|Radiator_L|Dupli|1
+    100224: Radiator_Pipe
+    100226: Radiator|Radiator_Control|Dupli|
+    100228: Radiator|Radiator_L|Dupli|1
+    100230: Shelf_Large
+    100232: Shelve_Small.001|Shelf_Small|Dupli|
+    100234: Shelve_Small|Shelf_Small|Dupli|
+    100236: //RootNode
+    100238: Table.001|Backplate_L|Dupli|1
+    100240: Table.001|Top|Dupli|
+    100242: Table.002|Backplate_L|Dupli|1
+    100244: Table.002|Top|Dupli|
+    100246: Table.003|Backplate_L|Dupli|1
+    100248: Table.003|Top|Dupli|
+    100250: Table.004|Backplate_L|Dupli|1
+    100252: Table.004|Top|Dupli|
+    100254: Table.005|Backplate_L|Dupli|1
+    100256: Table.005|Top|Dupli|
+    100258: Table.006|Backplate_L|Dupli|1
+    100260: Table.006|Top|Dupli|
+    100262: Table.007|Backplate_L|Dupli|1
+    100264: Table.007|Top|Dupli|
+    100266: Table.008|Backplate_L|Dupli|1
+    100268: Table.008|Top|Dupli|
+    100270: Table|Backplate_L|Dupli|1
+    100272: Table|Top|Dupli|
+    100274: Walls
+    100276: Whiteboard_Board
+    100278: Window.001|Window_Frame|Dupli|
+    100280: Window_Sill
+    100282: Window_Sill.001
+    100284: Window|Window_Frame|Dupli|
+    400000: Aurora R7.001|Aurora R7_Body|Dupli|
+    400002: Aurora R7.001|Aurora R7_Stand|Dupli|1
+    400004: Aurora R7.002|Aurora R7_Body|Dupli|
+    400006: Aurora R7.002|Aurora R7_Stand|Dupli|1
+    400008: Aurora R7.003|Aurora R7_Body|Dupli|
+    400010: Aurora R7.003|Aurora R7_Stand|Dupli|1
+    400012: Aurora R7.004|Aurora R7_Body|Dupli|
+    400014: Aurora R7.004|Aurora R7_Stand|Dupli|1
+    400016: Aurora R7.005|Aurora R7_Body|Dupli|
+    400018: Aurora R7.005|Aurora R7_Stand|Dupli|1
+    400020: Aurora R7.007|Aurora R7_Body|Dupli|
+    400022: Aurora R7.007|Aurora R7_Stand|Dupli|1
+    400024: Aurora R7.008|Aurora R7_Body|Dupli|
+    400026: Aurora R7.008|Aurora R7_Stand|Dupli|1
+    400028: Aurora R7.009|Aurora R7_Body|Dupli|
+    400030: Aurora R7.009|Aurora R7_Stand|Dupli|1
+    400032: Aurora R7.011|Aurora R7_Body|Dupli|
+    400034: Aurora R7.011|Aurora R7_Stand|Dupli|1
+    400036: Aurora R7.012|Aurora R7_Body|Dupli|
+    400038: Aurora R7.012|Aurora R7_Stand|Dupli|1
+    400040: Aurora R7.013|Aurora R7_Body|Dupli|
+    400042: Aurora R7.013|Aurora R7_Stand|Dupli|1
+    400044: Aurora R7.015|Aurora R7_Body|Dupli|
+    400046: Aurora R7.015|Aurora R7_Stand|Dupli|1
+    400048: Blinds.000|Blinds_Holder|Dupli|
+    400050: Blinds.001|Blinds_Holder|Dupli|
+    400052: Ceiling
+    400054: CeilingLight_Low
+    400056: Chair.001|Chair_Base|Dupli|
+    400058: Chair.002|Chair_Base|Dupli|
+    400060: Chair.003|Chair_Base|Dupli|
+    400062: Chair.004|Chair_Base|Dupli|
+    400064: Chair.005|Chair_Base|Dupli|
+    400066: Chair.006|Chair_Base|Dupli|
+    400068: Chair.007|Chair_Base|Dupli|
+    400070: Chair.008|Chair_Base|Dupli|
+    400072: Chair.009|Chair_Base|Dupli|
+    400074: Chair.010|Chair_Base|Dupli|
+    400076: Chair.011|Chair_Base|Dupli|
+    400078: Chair.012|Chair_Base|Dupli|
+    400080: Chair.013|Chair_Base|Dupli|
+    400082: Chair.014|Chair_Base|Dupli|
+    400084: Chair.015|Chair_Base|Dupli|
+    400086: Chair.016|Chair_Base|Dupli|
+    400088: Chair|Chair_Base|Dupli|
+    400090: Door_T110_Door
+    400092: Door_T111_Door
+    400094: ElectricOutlet.001|ElectricOutlet_L|Dupli|
+    400096: ElectricOutlet.002|ElectricOutlet_L|Dupli|
+    400098: ElectricOutlet.003|ElectricOutlet_L|Dupli|
+    400100: ElectricOutlet.004|ElectricOutlet_L|Dupli|
+    400102: ElectricOutlet.005|ElectricOutlet_L|Dupli|
+    400104: ElectricOutlet.006|ElectricOutlet_L|Dupli|
+    400106: ElectricOutlet|ElectricOutlet_L|Dupli|
+    400108: Floor
+    400110: Floor Lath
+    400112: Keyboard.001|Keyboard|Dupli|
+    400114: Keyboard.002|Keyboard|Dupli|
+    400116: Keyboard.003|Keyboard|Dupli|
+    400118: Keyboard.004|Keyboard|Dupli|
+    400120: Keyboard.005|Keyboard|Dupli|
+    400122: Keyboard.006|Keyboard|Dupli|
+    400124: Keyboard.007|Keyboard|Dupli|
+    400126: Keyboard.008|Keyboard|Dupli|
+    400128: Keyboard.009|Keyboard|Dupli|
+    400130: Keyboard.010|Keyboard|Dupli|
+    400132: Keyboard.011|Keyboard|Dupli|
+    400134: Keyboard.012|Keyboard|Dupli|
+    400136: Keyboard.013|Keyboard|Dupli|
+    400138: Monitor.000|Monitor_Screen|Dupli|
+    400140: Monitor.000|Monitor_Stand|Dupli|1
+    400142: Monitor.000|Monitor_Stand|Dupli|1.001
+    400144: Monitor.001|Monitor_Screen|Dupli|
+    400146: Monitor.001|Monitor_Stand|Dupli|1
+    400148: Monitor.002|Monitor_Screen|Dupli|
+    400150: Monitor.003|Monitor_Screen|Dupli|
+    400152: Monitor.003|Monitor_Stand|Dupli|1
+    400154: Monitor.004|Monitor_Screen|Dupli|
+    400156: Monitor.004|Monitor_Stand|Dupli|1
+    400158: Monitor.005|Monitor_Screen|Dupli|
+    400160: Monitor.005|Monitor_Stand|Dupli|1
+    400162: Monitor.006|Monitor_Screen|Dupli|
+    400164: Monitor.006|Monitor_Stand|Dupli|1
+    400166: Monitor.007|Monitor_Screen|Dupli|
+    400168: Monitor.007|Monitor_Stand|Dupli|1
+    400170: Monitor.008|Monitor_Screen|Dupli|
+    400172: Monitor.008|Monitor_Stand|Dupli|1
+    400174: Monitor.009|Monitor_Screen|Dupli|
+    400176: Monitor.009|Monitor_Stand|Dupli|1
+    400178: Monitor.010|Monitor_Screen|Dupli|
+    400180: Monitor.010|Monitor_Stand|Dupli|1
+    400182: Monitor.011|Monitor_Screen|Dupli|
+    400184: Monitor.011|Monitor_Stand|Dupli|1
+    400186: Monitor.012|Monitor_Screen|Dupli|
+    400188: Monitor.012|Monitor_Stand|Dupli|1
+    400190: Mouse.001|Mouse_Base|Dupli|
+    400192: Mouse.002|Mouse_Base|Dupli|
+    400194: Mouse.003|Mouse_Base|Dupli|
+    400196: Mouse.004|Mouse_Base|Dupli|
+    400198: Mouse.005|Mouse_Base|Dupli|
+    400200: Mouse.006|Mouse_Base|Dupli|
+    400202: Mouse.007|Mouse_Base|Dupli|
+    400204: Mouse.008|Mouse_Base|Dupli|
+    400206: Mouse.009|Mouse_Base|Dupli|
+    400208: Mouse.010|Mouse_Base|Dupli|
+    400210: Mouse.011|Mouse_Base|Dupli|
+    400212: Mouse.012|Mouse_Base|Dupli|
+    400214: Mouse|Mouse_Base|Dupli|
+    400216: Projector_Projector_L
+    400218: Projector_Stand_L
+    400220: Radiator.001|Radiator_Control|Dupli|
+    400222: Radiator.001|Radiator_L|Dupli|1
+    400224: Radiator_Pipe
+    400226: Radiator|Radiator_Control|Dupli|
+    400228: Radiator|Radiator_L|Dupli|1
+    400230: Shelf_Large
+    400232: Shelve_Small.001|Shelf_Small|Dupli|
+    400234: Shelve_Small|Shelf_Small|Dupli|
+    400236: //RootNode
+    400238: Table.001|Backplate_L|Dupli|1
+    400240: Table.001|Top|Dupli|
+    400242: Table.002|Backplate_L|Dupli|1
+    400244: Table.002|Top|Dupli|
+    400246: Table.003|Backplate_L|Dupli|1
+    400248: Table.003|Top|Dupli|
+    400250: Table.004|Backplate_L|Dupli|1
+    400252: Table.004|Top|Dupli|
+    400254: Table.005|Backplate_L|Dupli|1
+    400256: Table.005|Top|Dupli|
+    400258: Table.006|Backplate_L|Dupli|1
+    400260: Table.006|Top|Dupli|
+    400262: Table.007|Backplate_L|Dupli|1
+    400264: Table.007|Top|Dupli|
+    400266: Table.008|Backplate_L|Dupli|1
+    400268: Table.008|Top|Dupli|
+    400270: Table|Backplate_L|Dupli|1
+    400272: Table|Top|Dupli|
+    400274: Walls
+    400276: Whiteboard_Board
+    400278: Window.001|Window_Frame|Dupli|
+    400280: Window_Sill
+    400282: Window_Sill.001
+    400284: Window|Window_Frame|Dupli|
+    2100000: Walls.001
+    2100002: Floor.001
+    2100004: Ceiling.001
+    2100006: FloorLath.001
+    2100008: Table.001
+    2100010: Table_Backplate.001
+    2100012: Shelf_Large.001
+    2100014: ShelfSmall.001
+    2100016: Blinds.001
+    2100018: Door_T111.001
+    2100020: Door_T110.001
+    2100022: Chair.001
+    2100024: Window.001
+    2100026: WindowSill.001
+    2100028: AuroraR7.001
+    2100030: AuroraR7_Stand.001
+    2100032: Radiator_Control.001
+    2100034: Radiator.001
+    2100036: Radiator_Pipe.001
+    2100038: Monitor_Screen.001
+    2100040: Monitor_Stand.001
+    2100042: Whiteboard.001
+    2100044: Projector_Stand.001
+    2100046: Projector.001
+    2100048: CeilingLight.001
+    2100050: ElectricOutlet.001
+    2100052: Mouse.001
+    2100054: Keyboard.001
+    2300000: Aurora R7.001|Aurora R7_Body|Dupli|
+    2300002: Aurora R7.001|Aurora R7_Stand|Dupli|1
+    2300004: Aurora R7.002|Aurora R7_Body|Dupli|
+    2300006: Aurora R7.002|Aurora R7_Stand|Dupli|1
+    2300008: Aurora R7.003|Aurora R7_Body|Dupli|
+    2300010: Aurora R7.003|Aurora R7_Stand|Dupli|1
+    2300012: Aurora R7.004|Aurora R7_Body|Dupli|
+    2300014: Aurora R7.004|Aurora R7_Stand|Dupli|1
+    2300016: Aurora R7.005|Aurora R7_Body|Dupli|
+    2300018: Aurora R7.005|Aurora R7_Stand|Dupli|1
+    2300020: Aurora R7.007|Aurora R7_Body|Dupli|
+    2300022: Aurora R7.007|Aurora R7_Stand|Dupli|1
+    2300024: Aurora R7.008|Aurora R7_Body|Dupli|
+    2300026: Aurora R7.008|Aurora R7_Stand|Dupli|1
+    2300028: Aurora R7.009|Aurora R7_Body|Dupli|
+    2300030: Aurora R7.009|Aurora R7_Stand|Dupli|1
+    2300032: Aurora R7.011|Aurora R7_Body|Dupli|
+    2300034: Aurora R7.011|Aurora R7_Stand|Dupli|1
+    2300036: Aurora R7.012|Aurora R7_Body|Dupli|
+    2300038: Aurora R7.012|Aurora R7_Stand|Dupli|1
+    2300040: Aurora R7.013|Aurora R7_Body|Dupli|
+    2300042: Aurora R7.013|Aurora R7_Stand|Dupli|1
+    2300044: Aurora R7.015|Aurora R7_Body|Dupli|
+    2300046: Aurora R7.015|Aurora R7_Stand|Dupli|1
+    2300048: Blinds.000|Blinds_Holder|Dupli|
+    2300050: Blinds.001|Blinds_Holder|Dupli|
+    2300052: Ceiling
+    2300054: CeilingLight_Low
+    2300056: Chair.001|Chair_Base|Dupli|
+    2300058: Chair.002|Chair_Base|Dupli|
+    2300060: Chair.003|Chair_Base|Dupli|
+    2300062: Chair.004|Chair_Base|Dupli|
+    2300064: Chair.005|Chair_Base|Dupli|
+    2300066: Chair.006|Chair_Base|Dupli|
+    2300068: Chair.007|Chair_Base|Dupli|
+    2300070: Chair.008|Chair_Base|Dupli|
+    2300072: Chair.009|Chair_Base|Dupli|
+    2300074: Chair.010|Chair_Base|Dupli|
+    2300076: Chair.011|Chair_Base|Dupli|
+    2300078: Chair.012|Chair_Base|Dupli|
+    2300080: Chair.013|Chair_Base|Dupli|
+    2300082: Chair.014|Chair_Base|Dupli|
+    2300084: Chair.015|Chair_Base|Dupli|
+    2300086: Chair.016|Chair_Base|Dupli|
+    2300088: Chair|Chair_Base|Dupli|
+    2300090: Door_T110_Door
+    2300092: Door_T111_Door
+    2300094: ElectricOutlet.001|ElectricOutlet_L|Dupli|
+    2300096: ElectricOutlet.002|ElectricOutlet_L|Dupli|
+    2300098: ElectricOutlet.003|ElectricOutlet_L|Dupli|
+    2300100: ElectricOutlet.004|ElectricOutlet_L|Dupli|
+    2300102: ElectricOutlet.005|ElectricOutlet_L|Dupli|
+    2300104: ElectricOutlet.006|ElectricOutlet_L|Dupli|
+    2300106: ElectricOutlet|ElectricOutlet_L|Dupli|
+    2300108: Floor
+    2300110: Floor Lath
+    2300112: Keyboard.001|Keyboard|Dupli|
+    2300114: Keyboard.002|Keyboard|Dupli|
+    2300116: Keyboard.003|Keyboard|Dupli|
+    2300118: Keyboard.004|Keyboard|Dupli|
+    2300120: Keyboard.005|Keyboard|Dupli|
+    2300122: Keyboard.006|Keyboard|Dupli|
+    2300124: Keyboard.007|Keyboard|Dupli|
+    2300126: Keyboard.008|Keyboard|Dupli|
+    2300128: Keyboard.009|Keyboard|Dupli|
+    2300130: Keyboard.010|Keyboard|Dupli|
+    2300132: Keyboard.011|Keyboard|Dupli|
+    2300134: Keyboard.012|Keyboard|Dupli|
+    2300136: Keyboard.013|Keyboard|Dupli|
+    2300138: Monitor.000|Monitor_Screen|Dupli|
+    2300140: Monitor.000|Monitor_Stand|Dupli|1
+    2300142: Monitor.000|Monitor_Stand|Dupli|1.001
+    2300144: Monitor.001|Monitor_Screen|Dupli|
+    2300146: Monitor.001|Monitor_Stand|Dupli|1
+    2300148: Monitor.002|Monitor_Screen|Dupli|
+    2300150: Monitor.003|Monitor_Screen|Dupli|
+    2300152: Monitor.003|Monitor_Stand|Dupli|1
+    2300154: Monitor.004|Monitor_Screen|Dupli|
+    2300156: Monitor.004|Monitor_Stand|Dupli|1
+    2300158: Monitor.005|Monitor_Screen|Dupli|
+    2300160: Monitor.005|Monitor_Stand|Dupli|1
+    2300162: Monitor.006|Monitor_Screen|Dupli|
+    2300164: Monitor.006|Monitor_Stand|Dupli|1
+    2300166: Monitor.007|Monitor_Screen|Dupli|
+    2300168: Monitor.007|Monitor_Stand|Dupli|1
+    2300170: Monitor.008|Monitor_Screen|Dupli|
+    2300172: Monitor.008|Monitor_Stand|Dupli|1
+    2300174: Monitor.009|Monitor_Screen|Dupli|
+    2300176: Monitor.009|Monitor_Stand|Dupli|1
+    2300178: Monitor.010|Monitor_Screen|Dupli|
+    2300180: Monitor.010|Monitor_Stand|Dupli|1
+    2300182: Monitor.011|Monitor_Screen|Dupli|
+    2300184: Monitor.011|Monitor_Stand|Dupli|1
+    2300186: Monitor.012|Monitor_Screen|Dupli|
+    2300188: Monitor.012|Monitor_Stand|Dupli|1
+    2300190: Mouse.001|Mouse_Base|Dupli|
+    2300192: Mouse.002|Mouse_Base|Dupli|
+    2300194: Mouse.003|Mouse_Base|Dupli|
+    2300196: Mouse.004|Mouse_Base|Dupli|
+    2300198: Mouse.005|Mouse_Base|Dupli|
+    2300200: Mouse.006|Mouse_Base|Dupli|
+    2300202: Mouse.007|Mouse_Base|Dupli|
+    2300204: Mouse.008|Mouse_Base|Dupli|
+    2300206: Mouse.009|Mouse_Base|Dupli|
+    2300208: Mouse.010|Mouse_Base|Dupli|
+    2300210: Mouse.011|Mouse_Base|Dupli|
+    2300212: Mouse.012|Mouse_Base|Dupli|
+    2300214: Mouse|Mouse_Base|Dupli|
+    2300216: Projector_Projector_L
+    2300218: Projector_Stand_L
+    2300220: Radiator.001|Radiator_Control|Dupli|
+    2300222: Radiator.001|Radiator_L|Dupli|1
+    2300224: Radiator_Pipe
+    2300226: Radiator|Radiator_Control|Dupli|
+    2300228: Radiator|Radiator_L|Dupli|1
+    2300230: Shelf_Large
+    2300232: Shelve_Small.001|Shelf_Small|Dupli|
+    2300234: Shelve_Small|Shelf_Small|Dupli|
+    2300236: Table.001|Backplate_L|Dupli|1
+    2300238: Table.001|Top|Dupli|
+    2300240: Table.002|Backplate_L|Dupli|1
+    2300242: Table.002|Top|Dupli|
+    2300244: Table.003|Backplate_L|Dupli|1
+    2300246: Table.003|Top|Dupli|
+    2300248: Table.004|Backplate_L|Dupli|1
+    2300250: Table.004|Top|Dupli|
+    2300252: Table.005|Backplate_L|Dupli|1
+    2300254: Table.005|Top|Dupli|
+    2300256: Table.006|Backplate_L|Dupli|1
+    2300258: Table.006|Top|Dupli|
+    2300260: Table.007|Backplate_L|Dupli|1
+    2300262: Table.007|Top|Dupli|
+    2300264: Table.008|Backplate_L|Dupli|1
+    2300266: Table.008|Top|Dupli|
+    2300268: Table|Backplate_L|Dupli|1
+    2300270: Table|Top|Dupli|
+    2300272: Walls
+    2300274: Whiteboard_Board
+    2300276: Window.001|Window_Frame|Dupli|
+    2300278: Window_Sill
+    2300280: Window_Sill.001
+    2300282: Window|Window_Frame|Dupli|
+    3300000: Aurora R7.001|Aurora R7_Body|Dupli|
+    3300002: Aurora R7.001|Aurora R7_Stand|Dupli|1
+    3300004: Aurora R7.002|Aurora R7_Body|Dupli|
+    3300006: Aurora R7.002|Aurora R7_Stand|Dupli|1
+    3300008: Aurora R7.003|Aurora R7_Body|Dupli|
+    3300010: Aurora R7.003|Aurora R7_Stand|Dupli|1
+    3300012: Aurora R7.004|Aurora R7_Body|Dupli|
+    3300014: Aurora R7.004|Aurora R7_Stand|Dupli|1
+    3300016: Aurora R7.005|Aurora R7_Body|Dupli|
+    3300018: Aurora R7.005|Aurora R7_Stand|Dupli|1
+    3300020: Aurora R7.007|Aurora R7_Body|Dupli|
+    3300022: Aurora R7.007|Aurora R7_Stand|Dupli|1
+    3300024: Aurora R7.008|Aurora R7_Body|Dupli|
+    3300026: Aurora R7.008|Aurora R7_Stand|Dupli|1
+    3300028: Aurora R7.009|Aurora R7_Body|Dupli|
+    3300030: Aurora R7.009|Aurora R7_Stand|Dupli|1
+    3300032: Aurora R7.011|Aurora R7_Body|Dupli|
+    3300034: Aurora R7.011|Aurora R7_Stand|Dupli|1
+    3300036: Aurora R7.012|Aurora R7_Body|Dupli|
+    3300038: Aurora R7.012|Aurora R7_Stand|Dupli|1
+    3300040: Aurora R7.013|Aurora R7_Body|Dupli|
+    3300042: Aurora R7.013|Aurora R7_Stand|Dupli|1
+    3300044: Aurora R7.015|Aurora R7_Body|Dupli|
+    3300046: Aurora R7.015|Aurora R7_Stand|Dupli|1
+    3300048: Blinds.000|Blinds_Holder|Dupli|
+    3300050: Blinds.001|Blinds_Holder|Dupli|
+    3300052: Ceiling
+    3300054: CeilingLight_Low
+    3300056: Chair.001|Chair_Base|Dupli|
+    3300058: Chair.002|Chair_Base|Dupli|
+    3300060: Chair.003|Chair_Base|Dupli|
+    3300062: Chair.004|Chair_Base|Dupli|
+    3300064: Chair.005|Chair_Base|Dupli|
+    3300066: Chair.006|Chair_Base|Dupli|
+    3300068: Chair.007|Chair_Base|Dupli|
+    3300070: Chair.008|Chair_Base|Dupli|
+    3300072: Chair.009|Chair_Base|Dupli|
+    3300074: Chair.010|Chair_Base|Dupli|
+    3300076: Chair.011|Chair_Base|Dupli|
+    3300078: Chair.012|Chair_Base|Dupli|
+    3300080: Chair.013|Chair_Base|Dupli|
+    3300082: Chair.014|Chair_Base|Dupli|
+    3300084: Chair.015|Chair_Base|Dupli|
+    3300086: Chair.016|Chair_Base|Dupli|
+    3300088: Chair|Chair_Base|Dupli|
+    3300090: Door_T110_Door
+    3300092: Door_T111_Door
+    3300094: ElectricOutlet.001|ElectricOutlet_L|Dupli|
+    3300096: ElectricOutlet.002|ElectricOutlet_L|Dupli|
+    3300098: ElectricOutlet.003|ElectricOutlet_L|Dupli|
+    3300100: ElectricOutlet.004|ElectricOutlet_L|Dupli|
+    3300102: ElectricOutlet.005|ElectricOutlet_L|Dupli|
+    3300104: ElectricOutlet.006|ElectricOutlet_L|Dupli|
+    3300106: ElectricOutlet|ElectricOutlet_L|Dupli|
+    3300108: Floor
+    3300110: Floor Lath
+    3300112: Keyboard.001|Keyboard|Dupli|
+    3300114: Keyboard.002|Keyboard|Dupli|
+    3300116: Keyboard.003|Keyboard|Dupli|
+    3300118: Keyboard.004|Keyboard|Dupli|
+    3300120: Keyboard.005|Keyboard|Dupli|
+    3300122: Keyboard.006|Keyboard|Dupli|
+    3300124: Keyboard.007|Keyboard|Dupli|
+    3300126: Keyboard.008|Keyboard|Dupli|
+    3300128: Keyboard.009|Keyboard|Dupli|
+    3300130: Keyboard.010|Keyboard|Dupli|
+    3300132: Keyboard.011|Keyboard|Dupli|
+    3300134: Keyboard.012|Keyboard|Dupli|
+    3300136: Keyboard.013|Keyboard|Dupli|
+    3300138: Monitor.000|Monitor_Screen|Dupli|
+    3300140: Monitor.000|Monitor_Stand|Dupli|1
+    3300142: Monitor.000|Monitor_Stand|Dupli|1.001
+    3300144: Monitor.001|Monitor_Screen|Dupli|
+    3300146: Monitor.001|Monitor_Stand|Dupli|1
+    3300148: Monitor.002|Monitor_Screen|Dupli|
+    3300150: Monitor.003|Monitor_Screen|Dupli|
+    3300152: Monitor.003|Monitor_Stand|Dupli|1
+    3300154: Monitor.004|Monitor_Screen|Dupli|
+    3300156: Monitor.004|Monitor_Stand|Dupli|1
+    3300158: Monitor.005|Monitor_Screen|Dupli|
+    3300160: Monitor.005|Monitor_Stand|Dupli|1
+    3300162: Monitor.006|Monitor_Screen|Dupli|
+    3300164: Monitor.006|Monitor_Stand|Dupli|1
+    3300166: Monitor.007|Monitor_Screen|Dupli|
+    3300168: Monitor.007|Monitor_Stand|Dupli|1
+    3300170: Monitor.008|Monitor_Screen|Dupli|
+    3300172: Monitor.008|Monitor_Stand|Dupli|1
+    3300174: Monitor.009|Monitor_Screen|Dupli|
+    3300176: Monitor.009|Monitor_Stand|Dupli|1
+    3300178: Monitor.010|Monitor_Screen|Dupli|
+    3300180: Monitor.010|Monitor_Stand|Dupli|1
+    3300182: Monitor.011|Monitor_Screen|Dupli|
+    3300184: Monitor.011|Monitor_Stand|Dupli|1
+    3300186: Monitor.012|Monitor_Screen|Dupli|
+    3300188: Monitor.012|Monitor_Stand|Dupli|1
+    3300190: Mouse.001|Mouse_Base|Dupli|
+    3300192: Mouse.002|Mouse_Base|Dupli|
+    3300194: Mouse.003|Mouse_Base|Dupli|
+    3300196: Mouse.004|Mouse_Base|Dupli|
+    3300198: Mouse.005|Mouse_Base|Dupli|
+    3300200: Mouse.006|Mouse_Base|Dupli|
+    3300202: Mouse.007|Mouse_Base|Dupli|
+    3300204: Mouse.008|Mouse_Base|Dupli|
+    3300206: Mouse.009|Mouse_Base|Dupli|
+    3300208: Mouse.010|Mouse_Base|Dupli|
+    3300210: Mouse.011|Mouse_Base|Dupli|
+    3300212: Mouse.012|Mouse_Base|Dupli|
+    3300214: Mouse|Mouse_Base|Dupli|
+    3300216: Projector_Projector_L
+    3300218: Projector_Stand_L
+    3300220: Radiator.001|Radiator_Control|Dupli|
+    3300222: Radiator.001|Radiator_L|Dupli|1
+    3300224: Radiator_Pipe
+    3300226: Radiator|Radiator_Control|Dupli|
+    3300228: Radiator|Radiator_L|Dupli|1
+    3300230: Shelf_Large
+    3300232: Shelve_Small.001|Shelf_Small|Dupli|
+    3300234: Shelve_Small|Shelf_Small|Dupli|
+    3300236: Table.001|Backplate_L|Dupli|1
+    3300238: Table.001|Top|Dupli|
+    3300240: Table.002|Backplate_L|Dupli|1
+    3300242: Table.002|Top|Dupli|
+    3300244: Table.003|Backplate_L|Dupli|1
+    3300246: Table.003|Top|Dupli|
+    3300248: Table.004|Backplate_L|Dupli|1
+    3300250: Table.004|Top|Dupli|
+    3300252: Table.005|Backplate_L|Dupli|1
+    3300254: Table.005|Top|Dupli|
+    3300256: Table.006|Backplate_L|Dupli|1
+    3300258: Table.006|Top|Dupli|
+    3300260: Table.007|Backplate_L|Dupli|1
+    3300262: Table.007|Top|Dupli|
+    3300264: Table.008|Backplate_L|Dupli|1
+    3300266: Table.008|Top|Dupli|
+    3300268: Table|Backplate_L|Dupli|1
+    3300270: Table|Top|Dupli|
+    3300272: Walls
+    3300274: Whiteboard_Board
+    3300276: Window.001|Window_Frame|Dupli|
+    3300278: Window_Sill
+    3300280: Window_Sill.001
+    3300282: Window|Window_Frame|Dupli|
+    4300000: Walls
+    4300002: Floor
+    4300004: Ceiling
+    4300006: Floor Lath
+    4300008: Table|Top|Dupli|
+    4300010: Table|Backplate_L|Dupli|1
+    4300012: Table.001|Top|Dupli|
+    4300014: Table.001|Backplate_L|Dupli|1
+    4300016: Table.002|Top|Dupli|
+    4300018: Table.002|Backplate_L|Dupli|1
+    4300020: Table.003|Top|Dupli|
+    4300022: Table.003|Backplate_L|Dupli|1
+    4300024: Table.004|Top|Dupli|
+    4300026: Table.004|Backplate_L|Dupli|1
+    4300028: Table.005|Top|Dupli|
+    4300030: Table.005|Backplate_L|Dupli|1
+    4300032: Table.006|Top|Dupli|
+    4300034: Table.006|Backplate_L|Dupli|1
+    4300036: Table.007|Top|Dupli|
+    4300038: Table.007|Backplate_L|Dupli|1
+    4300040: Table.008|Top|Dupli|
+    4300042: Table.008|Backplate_L|Dupli|1
+    4300044: Shelf_Large
+    4300046: Shelve_Small|Shelf_Small|Dupli|
+    4300048: Shelve_Small.001|Shelf_Small|Dupli|
+    4300050: Blinds.000|Blinds_Holder|Dupli|
+    4300052: Blinds.001|Blinds_Holder|Dupli|
+    4300054: Door_T111_Door
+    4300056: Door_T110_Door
+    4300058: Chair|Chair_Base|Dupli|
+    4300060: Chair.001|Chair_Base|Dupli|
+    4300062: Chair.002|Chair_Base|Dupli|
+    4300064: Chair.003|Chair_Base|Dupli|
+    4300066: Chair.004|Chair_Base|Dupli|
+    4300068: Chair.005|Chair_Base|Dupli|
+    4300070: Chair.006|Chair_Base|Dupli|
+    4300072: Chair.007|Chair_Base|Dupli|
+    4300074: Chair.008|Chair_Base|Dupli|
+    4300076: Chair.009|Chair_Base|Dupli|
+    4300078: Chair.010|Chair_Base|Dupli|
+    4300080: Chair.011|Chair_Base|Dupli|
+    4300082: Chair.012|Chair_Base|Dupli|
+    4300084: Chair.013|Chair_Base|Dupli|
+    4300086: Chair.014|Chair_Base|Dupli|
+    4300088: Chair.015|Chair_Base|Dupli|
+    4300090: Chair.016|Chair_Base|Dupli|
+    4300092: Window|Window_Frame|Dupli|
+    4300094: Window.001|Window_Frame|Dupli|
+    4300096: Window_Sill
+    4300098: Window_Sill.001
+    4300100: Aurora R7.001|Aurora R7_Body|Dupli|
+    4300102: Aurora R7.001|Aurora R7_Stand|Dupli|1
+    4300104: Aurora R7.003|Aurora R7_Body|Dupli|
+    4300106: Aurora R7.003|Aurora R7_Stand|Dupli|1
+    4300108: Aurora R7.004|Aurora R7_Body|Dupli|
+    4300110: Aurora R7.004|Aurora R7_Stand|Dupli|1
+    4300112: Aurora R7.005|Aurora R7_Body|Dupli|
+    4300114: Aurora R7.005|Aurora R7_Stand|Dupli|1
+    4300116: Aurora R7.007|Aurora R7_Body|Dupli|
+    4300118: Aurora R7.007|Aurora R7_Stand|Dupli|1
+    4300120: Aurora R7.008|Aurora R7_Body|Dupli|
+    4300122: Aurora R7.008|Aurora R7_Stand|Dupli|1
+    4300124: Aurora R7.009|Aurora R7_Body|Dupli|
+    4300126: Aurora R7.009|Aurora R7_Stand|Dupli|1
+    4300128: Aurora R7.011|Aurora R7_Body|Dupli|
+    4300130: Aurora R7.011|Aurora R7_Stand|Dupli|1
+    4300132: Aurora R7.012|Aurora R7_Body|Dupli|
+    4300134: Aurora R7.012|Aurora R7_Stand|Dupli|1
+    4300136: Aurora R7.013|Aurora R7_Body|Dupli|
+    4300138: Aurora R7.013|Aurora R7_Stand|Dupli|1
+    4300140: Aurora R7.015|Aurora R7_Body|Dupli|
+    4300142: Aurora R7.015|Aurora R7_Stand|Dupli|1
+    4300144: Aurora R7.002|Aurora R7_Body|Dupli|
+    4300146: Aurora R7.002|Aurora R7_Stand|Dupli|1
+    4300148: Radiator|Radiator_Control|Dupli|
+    4300150: Radiator|Radiator_L|Dupli|1
+    4300152: Radiator.001|Radiator_Control|Dupli|
+    4300154: Radiator.001|Radiator_L|Dupli|1
+    4300156: Radiator_Pipe
+    4300158: Monitor.000|Monitor_Screen|Dupli|
+    4300160: Monitor.000|Monitor_Stand|Dupli|1
+    4300162: Monitor.001|Monitor_Screen|Dupli|
+    4300164: Monitor.001|Monitor_Stand|Dupli|1
+    4300166: Monitor.002|Monitor_Screen|Dupli|
+    4300168: Monitor.003|Monitor_Screen|Dupli|
+    4300170: Monitor.003|Monitor_Stand|Dupli|1
+    4300172: Monitor.004|Monitor_Screen|Dupli|
+    4300174: Monitor.004|Monitor_Stand|Dupli|1
+    4300176: Monitor.005|Monitor_Screen|Dupli|
+    4300178: Monitor.005|Monitor_Stand|Dupli|1
+    4300180: Monitor.006|Monitor_Screen|Dupli|
+    4300182: Monitor.006|Monitor_Stand|Dupli|1
+    4300184: Monitor.007|Monitor_Screen|Dupli|
+    4300186: Monitor.007|Monitor_Stand|Dupli|1
+    4300188: Monitor.008|Monitor_Screen|Dupli|
+    4300190: Monitor.008|Monitor_Stand|Dupli|1
+    4300192: Monitor.009|Monitor_Screen|Dupli|
+    4300194: Monitor.009|Monitor_Stand|Dupli|1
+    4300196: Monitor.010|Monitor_Screen|Dupli|
+    4300198: Monitor.010|Monitor_Stand|Dupli|1
+    4300200: Monitor.011|Monitor_Screen|Dupli|
+    4300202: Monitor.011|Monitor_Stand|Dupli|1
+    4300204: Monitor.012|Monitor_Screen|Dupli|
+    4300206: Monitor.012|Monitor_Stand|Dupli|1
+    4300208: Whiteboard_Board
+    4300210: Projector_Stand_L
+    4300212: Projector_Projector_L
+    4300214: CeilingLight_Low
+    4300216: ElectricOutlet|ElectricOutlet_L|Dupli|
+    4300218: ElectricOutlet.001|ElectricOutlet_L|Dupli|
+    4300220: ElectricOutlet.002|ElectricOutlet_L|Dupli|
+    4300222: ElectricOutlet.003|ElectricOutlet_L|Dupli|
+    4300224: ElectricOutlet.004|ElectricOutlet_L|Dupli|
+    4300226: ElectricOutlet.005|ElectricOutlet_L|Dupli|
+    4300228: ElectricOutlet.006|ElectricOutlet_L|Dupli|
+    4300230: Mouse|Mouse_Base|Dupli|
+    4300232: Mouse.001|Mouse_Base|Dupli|
+    4300234: Mouse.002|Mouse_Base|Dupli|
+    4300236: Mouse.003|Mouse_Base|Dupli|
+    4300238: Mouse.004|Mouse_Base|Dupli|
+    4300240: Mouse.005|Mouse_Base|Dupli|
+    4300242: Mouse.006|Mouse_Base|Dupli|
+    4300244: Mouse.007|Mouse_Base|Dupli|
+    4300246: Mouse.008|Mouse_Base|Dupli|
+    4300248: Mouse.009|Mouse_Base|Dupli|
+    4300250: Mouse.010|Mouse_Base|Dupli|
+    4300252: Mouse.011|Mouse_Base|Dupli|
+    4300254: Mouse.012|Mouse_Base|Dupli|
+    4300256: Keyboard.001|Keyboard|Dupli|
+    4300258: Keyboard.002|Keyboard|Dupli|
+    4300260: Keyboard.003|Keyboard|Dupli|
+    4300262: Keyboard.004|Keyboard|Dupli|
+    4300264: Keyboard.005|Keyboard|Dupli|
+    4300266: Keyboard.006|Keyboard|Dupli|
+    4300268: Keyboard.007|Keyboard|Dupli|
+    4300270: Keyboard.008|Keyboard|Dupli|
+    4300272: Keyboard.009|Keyboard|Dupli|
+    4300274: Keyboard.010|Keyboard|Dupli|
+    4300276: Keyboard.011|Keyboard|Dupli|
+    4300278: Keyboard.012|Keyboard|Dupli|
+    4300280: Keyboard.013|Keyboard|Dupli|
+    4300282: Monitor.000|Monitor_Stand|Dupli|1.001
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AuroraR7.001
+    second: {fileID: 2100000, guid: e31bffbf1d6cee145b6c1e8f382d62e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AuroraR7_Stand.001
+    second: {fileID: 2100000, guid: 673b9b7c7e443f04c88fda3af3bbdb03, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blinds.001
+    second: {fileID: 2100000, guid: f25f9827a59853b4daf099c2de73477d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ceiling.001
+    second: {fileID: 2100000, guid: 0a3f0ce5134082445aa20d567e31b537, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CeilingLight.001
+    second: {fileID: 2100000, guid: 2cebea93e68f2334e9c291889d858b3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair.001
+    second: {fileID: 2100000, guid: c04c6c3fc7fc05c4183c6b60b687f882, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door_T110.001
+    second: {fileID: 2100000, guid: ce063f289479ba847a777f112f7d9f87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door_T111.001
+    second: {fileID: 2100000, guid: 1f29d71e6302d46499759ae508048a83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ElectricOutlet.001
+    second: {fileID: 2100000, guid: 450aac6d474745a43be5145208dfc3b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor.001
+    second: {fileID: 2100000, guid: c14a46bd6bbb41d4a896e39ab5b7cc6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FloorLath.001
+    second: {fileID: 2100000, guid: 1ca8e8e34e64d374b90d2466f7b537a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Keyboard.001
+    second: {fileID: 2100000, guid: 500436b376f22ca469f52035d0c503be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Monitor_Screen.001
+    second: {fileID: 2100000, guid: ca9ed42d77700e046bc65248ec5fa545, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Monitor_Stand.001
+    second: {fileID: 2100000, guid: 77a096b45ff392a46bf26936dcfe7651, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mouse.001
+    second: {fileID: 2100000, guid: d867ea79493ea5146a93007df439d53d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Projector.001
+    second: {fileID: 2100000, guid: 935ef32e84bc2a245b82d7d6b1143f27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Projector_Stand.001
+    second: {fileID: 2100000, guid: 3afe4871905b85044a2998d4d2596c09, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Radiator.001
+    second: {fileID: 2100000, guid: 5d06b0703e7b9ef459f267dafd878794, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Radiator_Control.001
+    second: {fileID: 2100000, guid: 39d7db1e3d52d67499b93ad07d96f350, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Radiator_Pipe.001
+    second: {fileID: 2100000, guid: d3f251a8d42fecd4b8d9710bfddab17f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShelfSmall.001
+    second: {fileID: 2100000, guid: 9810ec47b7f7df64790de925e9fc77d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shelf_Large.001
+    second: {fileID: 2100000, guid: 39e72a03190777a459dffab752e28010, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Table.001
+    second: {fileID: 2100000, guid: 0d98d58485edd64458ff6bf504bb99f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Table_Backplate.001
+    second: {fileID: 2100000, guid: bf573bde4b48c0c4d940b45c558752a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Walls.001
+    second: {fileID: 2100000, guid: bb59357e4692f5e488c2a1fe08d46941, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Whiteboard.001
+    second: {fileID: 2100000, guid: 5dadd87fef0c3084c908d390908ffc6e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window.001
+    second: {fileID: 2100000, guid: 40104ab0fae0e3f4d9635fabb323cb0f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WindowSill.001
+    second: {fileID: 2100000, guid: 1889da6e67685594485fb371c39d7b39, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

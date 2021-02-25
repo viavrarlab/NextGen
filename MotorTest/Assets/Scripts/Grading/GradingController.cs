@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using ModelOutline;
+using Outline = ModelOutline.Outline;
 
 public class GradingController : MonoBehaviour
 {
@@ -24,12 +26,22 @@ public class GradingController : MonoBehaviour
 
     Object[] m_Thumbnails;
 
+    public List<PlacedOrder> PlacedOrder;
+
     [SerializeField]
     public Results m_CurrPickUpObjRes;
 
     public List<Results> m_Results;
+
     [SerializeField]
     bool MethodExecuted;
+
+    public int PlacedOrderID;
+
+    bool ShowOutlineHint;
+
+    private static GradingController _instance;
+    public static GradingController Instance { get { return _instance; } }
 
 
     //---Total Timer---
@@ -46,6 +58,15 @@ public class GradingController : MonoBehaviour
         m_Refresh.onClick.AddListener(DisplayList);
         StartCoroutine(TotalTimer());
         m_Results = new List<Results>();
+
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
     }
     private void Update()
     {
@@ -65,7 +86,7 @@ public class GradingController : MonoBehaviour
             }
             else
             {
-                if(m_CurrPickUpObjRes != null)
+                if (m_CurrPickUpObjRes != null)
                 {
                     m_CurrPickUpObjRes.isPaused = true;
                 }
@@ -73,19 +94,22 @@ public class GradingController : MonoBehaviour
                 MethodExecuted = false;
             }
         }
-
     }
-    void AddResToList(GameObject go)
+    public void AddResToList(GameObject go)
     {
-        MethodExecuted = true;
-
+        if (MethodExecuted != true)
+        {
+            MethodExecuted = true;
+        }
         if (m_Results.Count == 0)
         {
-            Results TempRes = new Results()
+            Results TempRes = new Results
             {
                 partName = go.name,
                 PickUpCount = 0,
                 isPaused = false,
+                CorrectPlacementOrder = go.GetComponent<Placeable>().m_ID,
+                ActualPlacementID = 0
             };
             m_Results.Add(TempRes);
         }
@@ -103,16 +127,23 @@ public class GradingController : MonoBehaviour
                 {
                     partName = go.name,
                     PickUpCount = 0,
-                    isPaused = false
+                    isPaused = false,
+                    CorrectPlacementOrder = go.GetComponent<Placeable>().m_ID,
+                    ActualPlacementID = 0
                 };
                 m_Results.Add(TempRes);
                 return;
             }
         }
     }
+
     void TimerCountControl(GameObject go)
     {
-        if(m_Results.Count >= 1)
+        if (MethodExecuted != true)
+        {
+            MethodExecuted = true;
+        }
+        if (m_Results.Count >= 1)
         {
             bool Contains = m_Results.Any(x => x.partName == go.name);
             Results TempRes = m_Results.Find(x => x.partName == go.name);
@@ -133,26 +164,133 @@ public class GradingController : MonoBehaviour
     }
     public void DisplayList()
     {
-        m_Thumbnails = Resources.LoadAll("Thumbnails", typeof(Sprite));
-        if(m_Results != null)
+        List<Results> SortedList = new List<Results>();
+        if (FindObjectsOfType<ListEntryValues>() != null)
         {
-            foreach(Results res in m_Results)
+            ListEntryValues[] TempListItems = FindObjectsOfType<ListEntryValues>();
+            for (int i = 0; i < TempListItems.Length; i++)
             {
-                if(m_Thumbnails != null)
+                Destroy(TempListItems[i].gameObject);
+            }
+        }
+        m_Thumbnails = Resources.LoadAll("Thumbnails", typeof(Sprite));
+
+        PlacedOrderIdUpdate();
+
+        if (m_Results != null)
+        {
+            SortedList = m_Results.OrderBy(x => x.CorrectPlacementOrder).ToList();
+            foreach (Results res in SortedList)
+            {
+                if (m_Thumbnails != null)
                 {
-                    foreach(Sprite img in m_Thumbnails)
+                    foreach (Sprite img in m_Thumbnails)
                     {
                         if (img.name == res.partName + "_Thumbnail")
                         {
-                            m_ResultRow.GetComponent<ListEntryValues>().UpdateTextsAndImage(img,res.partName, res.PickUpCount.ToString(), res.PartPickTime.ToString());
+                            m_ResultRow.GetComponent<ListEntryValues>().UpdateTextsAndImage(img, res.partName, res.PickUpCount.ToString(), res.PartPickTime.ToString(), res.CorrectPlacementOrder.ToString(), res.ActualPlacementID.ToString());
                         }
                     }
                 }
                 else
                 {
-                    m_ResultRow.GetComponent<ListEntryValues>().UpdateTexts(res.partName, res.PickUpCount.ToString(), res.PartPickTime.ToString());
+                    m_ResultRow.GetComponent<ListEntryValues>().UpdateTexts(res.partName, res.PickUpCount.ToString(), res.PartPickTime.ToString(), res.CorrectPlacementOrder.ToString(), res.ActualPlacementID.ToString());
                 }
                 Instantiate(m_ResultRow, m_ListContent.transform);
+            }
+            SortedList.Clear();
+        }
+    }
+    public void PlacedOrderIdUpdate()
+    {
+        for (int i = 0; i < m_Results.Count; i++)
+        {
+            for (int j = 0; j < PlacedOrder.Count; j++)
+            {
+                if (m_Results[i].partName == PlacedOrder[j].Partname)
+                {
+                    m_Results[i].ActualPlacementID = PlacedOrder[j].PlacedId;
+                }
+            }
+        }
+    }
+
+    public void ObjectPlaced(GameObject Go, int ObjID)
+    {
+        Debug.Log("izpildaas kkad");
+        if (Instance.PlacedOrder.Count == 0)
+        {
+            Instance.PlacedOrder.Add(new PlacedOrder { Partname = Go.name, PlacedId = 0, ObjID = ObjID });
+            Instance.PlacedOrderID = 1;
+        }
+        else
+        {
+            for (int i = 0; i < Instance.PlacedOrder.Count; i++)
+            {
+                if (!Instance.PlacedOrder.Any(x => x.Partname == Go.name))
+                {
+                    if (Instance.PlacedOrder.Any(x => x.ObjID == ObjID))
+                    {
+                        Debug.Log("same id ");
+                        int TempInt = Instance.PlacedOrder.Find(x => x.ObjID == ObjID).PlacedId;
+                        Instance.PlacedOrder.Add(new PlacedOrder { Partname = Go.name, PlacedId = TempInt, ObjID = ObjID });
+                        return;
+                    }
+                    else
+                    {
+                        Instance.PlacedOrder.Add(new PlacedOrder { Partname = Go.name, PlacedId = Instance.PlacedOrderID, ObjID = ObjID });
+                        Instance.PlacedOrderID++;
+                    }
+                }
+            }
+        }
+    }
+    public void ShowHintOutline(GameObject GO, int ObjID)
+    {
+        StartCoroutine(HintOutlineCorutine(GO, ObjID));
+    }
+    IEnumerator HintOutlineCorutine(GameObject GO,int ObjID)
+    {
+
+        int PlacedID = Instance.PlacedOrder.Find(x => x.Partname == GO.name).PlacedId;
+        if (GO.GetComponent<Outline>() != null)
+        {
+
+                if (GO.GetComponent<Outline>().enabled != true)
+                {
+                    if (PlacedID == ObjID)
+                    {
+                        GO.GetComponent<Outline>().OutlineWidth = 4f;
+                        GO.GetComponent<Outline>().OutlineColor = Color.green;
+                        GO.GetComponent<Outline>().enabled = true;
+                    }
+                    else
+                    {
+                        GO.GetComponent<Outline>().OutlineWidth = 4f;
+                        GO.GetComponent<Outline>().OutlineColor = Color.red;
+                        GO.GetComponent<Outline>().enabled = true;
+                    }
+                }
+            yield return new WaitForSeconds(1f);
+                GO.GetComponent<Outline>().enabled = false;
+                GO.GetComponent<Outline>().OutlineWidth = 2f;
+                GO.GetComponent<Outline>().OutlineColor = Color.white;
+            
+        }
+        yield return null;
+    }
+    public void ObjectRemoved(GameObject Go)
+    {
+        for (int i = 0; i < Instance.PlacedOrder.Count; i++)
+        {
+            if (Instance.PlacedOrder[i].Partname == Go.name)
+            {
+                Instance.m_Results.Find(x => x.partName == Go.name).ActualPlacementID = 0;
+                Instance.PlacedOrder.Remove(Instance.PlacedOrder[i]);
+                if (Instance.PlacedOrderID > 0)
+                {
+                    Instance.PlacedOrderID--;
+                }
             }
         }
     }
@@ -170,5 +308,13 @@ public class GradingController : MonoBehaviour
             yield return m_TotalTimerText;
         }
     }
+
+}
+[System.Serializable]
+public class PlacedOrder
+{
+    public string Partname;
+    public int PlacedId;
+    public int ObjID;
 
 }

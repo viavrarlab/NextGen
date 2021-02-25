@@ -13,6 +13,8 @@ TagManager:
   - PlayerHand
   - LeftHandUI
   - GradingController
+  - Grab
+  - GameControl
   layers:
   - Default
   - TransparentFX

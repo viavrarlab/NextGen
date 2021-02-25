@@ -9,6 +9,9 @@ public class Results
     public int PickUpCount;
     public bool isPaused;
     public string PartPickTime;
+    public int CorrectPlacementOrder;
+    public int ActualPlacementID;
+
 
     float time;
     float sec;
@@ -18,16 +21,6 @@ public class Results
     {
 
     }
-    public Results(string partName, int PickUpCount, bool isPaused)
-    {
-        this.partName = partName;
-        this.PickUpCount = PickUpCount;
-        this.isPaused = isPaused;
-    }
-
-
-    public override bool Equals(object obj) => obj is Results res && Equals(res);
-    public bool Equals(Results other) => partName == other.partName && PickUpCount != PickUpCount && isPaused;
 
     public void StartTimer(MonoBehaviour mono)
     {
@@ -52,14 +45,4 @@ public class Results
         yield return null;
     }
 
-
-    public override int GetHashCode()
-    {
-        int hashCode = 1151481828;
-        hashCode = hashCode * -1521134295 + base.GetHashCode();
-        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(partName);
-        hashCode = hashCode * -1521134295 + PickUpCount.GetHashCode();
-        hashCode = hashCode * -1521134295 + isPaused.GetHashCode();
-        return hashCode;
-    }
 }

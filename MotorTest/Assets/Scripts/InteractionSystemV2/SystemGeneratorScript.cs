@@ -1,9 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.EditorCoroutines.Editor;
-using System.Linq;
-using UnityEngine.Animations;
 
 public class SystemGeneratorScript : MonoBehaviour
 {

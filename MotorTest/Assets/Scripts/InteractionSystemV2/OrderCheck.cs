@@ -12,9 +12,10 @@ public class OrderCheck : MonoBehaviour
     public bool m_OrderCorrect;
     public bool m_CanTakeOut;
     [Header("Disable for no order checking")]
-    public bool m_checkOrder = true;
+    public bool m_checkOrder;
 
     ParentConstraint TempConst;
+    GameControllerSC m_GController;
 
     public List<ConstraintSource> TempUpdatedSources;
     public List<ConstraintSource> TempOriginalSources;
@@ -22,6 +23,11 @@ public class OrderCheck : MonoBehaviour
 
     void Start()
     {
+        m_GController = FindObjectOfType<GameControllerSC>();
+        if(m_GController != null)
+        {
+            m_checkOrder = m_GController.SetOrderCheck;
+        }
         SocketGameObj = GameObject.FindGameObjectsWithTag("Socket");
 
         PP_Array = new PlacementPoint[SocketGameObj.Length];

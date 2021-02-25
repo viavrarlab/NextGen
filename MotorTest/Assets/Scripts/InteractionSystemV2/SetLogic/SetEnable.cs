@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
-using UnityScript.Core;
 
 public class SetEnable : MonoBehaviour
 {
     int count = 0;
     public List<GameObject> Sets;
 
+    GameControllerSC GController;
 
     private void Start()
     {
+        GController = FindObjectOfType<GameControllerSC>();
         foreach(Transform child in this.transform)
         {
             if (child.childCount > 1)
@@ -25,11 +26,32 @@ public class SetEnable : MonoBehaviour
                 }
             }
         }
-        disableNextSets();
+        if(GController != null)
+        {
+            if (GController.SetOrderCheck)
+            {
+                disableNextSets();
+            }
+        }
+        else
+        {
+            disableNextSets();
+        }
+
     }
     private void Update()
     {
-        ActivateNextSet();
+        if(GController != null)
+        {
+            if (GController.SetOrderCheck)
+            {
+                ActivateNextSet();
+            }
+        }
+        else
+        {
+            ActivateNextSet();
+        }
     }
     public void ActivateNextSet()
     {
@@ -44,7 +66,6 @@ public class SetEnable : MonoBehaviour
             {
                 if(count != 0 && Sets[count-1].GetComponent<SetComplete>().complete == false)
                 {
-                    //Debug.Log(Sets[count].name.ToString());
                     Sets[count].SetActive(false);
 
                     count--;
@@ -59,7 +80,6 @@ public class SetEnable : MonoBehaviour
             if(set.GetComponent<SetComplete>().SetID != 0)
             {
                 set.SetActive(false);
-
             }
         }
     }

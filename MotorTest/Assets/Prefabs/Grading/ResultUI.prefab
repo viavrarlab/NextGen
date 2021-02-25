@@ -556,8 +556,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 404.60004, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.0016673944}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &8734169769532689208
 CanvasRenderer:
@@ -579,7 +579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalFit: 0
+  m_HorizontalFit: 2
   m_VerticalFit: 2
 --- !u!114 &8734169769532689209
 MonoBehaviour:
@@ -723,7 +723,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8734169768947074931}
   m_HandleRect: {fileID: 8734169768947074930}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -882,8 +882,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8734169770666227616}
   m_HandleRect: {fileID: 8734169770666227631}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.9999966
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1196,12 +1196,34 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 984973017001379836, guid: 575f56631f266094ba6d5b408ce9dffd,
+        type: 3}
+      propertyPath: m_Text
+      value: PickUpCount
+      objectReference: {fileID: 0}
+    - target: {fileID: 984973017671105424, guid: 575f56631f266094ba6d5b408ce9dffd,
+        type: 3}
+      propertyPath: m_Text
+      value: ModelPartName
+      objectReference: {fileID: 0}
+    - target: {fileID: 984973018681382043, guid: 575f56631f266094ba6d5b408ce9dffd,
+        type: 3}
+      propertyPath: m_Text
+      value: Stator
+      objectReference: {fileID: 0}
     - target: {fileID: 984973018766975191, guid: 575f56631f266094ba6d5b408ce9dffd,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: ac2bf57594fa6e24a860ee5e9e43a34a,
         type: 3}
+    - target: {fileID: 4336907552948745850, guid: 575f56631f266094ba6d5b408ce9dffd,
+        type: 3}
+      propertyPath: m_Text
+      value: 'CorrectID
+
+'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 575f56631f266094ba6d5b408ce9dffd, type: 3}
 --- !u!224 &8734169769346704551 stripped

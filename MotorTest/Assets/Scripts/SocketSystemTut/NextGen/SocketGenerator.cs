@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.EditorCoroutines.Editor;
+
 using System.Linq;
 
 public class SocketGenerator : MonoBehaviour
@@ -51,7 +51,7 @@ public class SocketGenerator : MonoBehaviour
 
     public void GenerateColliders()
     {
-        EditorCoroutineUtility.StartCoroutine(Generate(), this);
+        //EditorCoroutineUtility.StartCoroutine(Generate(), this);
     }
 
     public IEnumerator Generate()
@@ -87,7 +87,7 @@ public class SocketGenerator : MonoBehaviour
                 {
                     if (generateConcave)
                     {
-                        EditorCoroutineUtility.StartCoroutine(ColliderTask(t), this);
+                       // EditorCoroutineUtility.StartCoroutine(ColliderTask(t), this);
                     }
                 }
             }
@@ -100,41 +100,41 @@ public class SocketGenerator : MonoBehaviour
     }
 
     [System.Obsolete]
-    private IEnumerator ColliderTask(Transform t)
-    {
-        currentProgress = 0f;
-        fin = false;
-        //print("Generating CONCAVE COLLIDER.");
+    //private IEnumerator ColliderTask(Transform t)
+    //{
+    //    currentProgress = 0f;
+    //    fin = false;
+    //    //print("Generating CONCAVE COLLIDER.");
 
-        if (t.gameObject.GetComponent<ConcaveCollider>() == null)
-        {
-            t.gameObject.AddComponent<ConcaveCollider>();
-        }
+    //    if (t.gameObject.GetComponent<ConcaveCollider>() == null)
+    //    {
+    //        t.gameObject.AddComponent<ConcaveCollider>();
+    //    }
 
-        ConcaveCollider colliderGen = t.gameObject.GetComponent<ConcaveCollider>();
+    //    ConcaveCollider colliderGen = t.gameObject.GetComponent<ConcaveCollider>();
 
-        colliderGen.Algorithm = algorithm;
+    //    colliderGen.Algorithm = algorithm;
 
-        colliderGen.VHACD_Concavity = concavity;
-        colliderGen.VHACD_MaxVerticesPerCH = maxNumVerticesPerCH;
-        colliderGen.VHACD_MinVolumePerCH = minVolumePerCH;
-        colliderGen.VHACD_NormalizeMesh = false;
-        colliderGen.VHACD_NumVoxels = resolution;
-        colliderGen.CreateMeshAssets = false;
+    //    colliderGen.VHACD_Concavity = concavity;
+    //    colliderGen.VHACD_MaxVerticesPerCH = maxNumVerticesPerCH;
+    //    colliderGen.VHACD_MinVolumePerCH = minVolumePerCH;
+    //    colliderGen.VHACD_NormalizeMesh = false;
+    //    colliderGen.VHACD_NumVoxels = resolution;
+    //    colliderGen.CreateMeshAssets = false;
 
-        colliderGen.IsTrigger = collidersAreTriggers;
-
-
-        colliderGen.ComputeHulls(new ConcaveCollider.LogDelegate(Message), new ConcaveCollider.ProgressDelegate(Progress));
+    //    colliderGen.IsTrigger = collidersAreTriggers;
 
 
-        //while (currentProgress < 100f){
-        //    yield return null;
-        //}
-        yield return null;
-        //yield return new EditorWaitForSeconds(5f);
-        fin = true;
-    }
+    //    colliderGen.ComputeHulls(new ConcaveCollider.LogDelegate(Message), new ConcaveCollider.ProgressDelegate(Progress));
+
+
+    //    //while (currentProgress < 100f){
+    //    //    yield return null;
+    //    //}
+    //    yield return null;
+    //    //yield return new EditorWaitForSeconds(5f);
+    //    fin = true;
+    //}
 
 
     public void Clear()

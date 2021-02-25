@@ -42,13 +42,14 @@ public class PlacementPoint : MonoBehaviour
 
     private SocketState m_LastSocketState;
 
-
     private MeshRenderer m_MeshRenderer; // PlacementPoints' graphics. For now they are on the same object and the MR is assigned automatically
     private MaterialPropertyBlock m_MaterialPropertyBlock; // Allows to use a single material, but be able to change each objects' parameters separately (ex., Object1 - blue, Object2 - orange)
 
     public Placeable m_SnappableObject;    // The object that is currently available to snap and/or is snapped.
 
     private ControllerScript m_ControllerScript; // TODO:  MAKE A UNIFIED GRAB SCRIPT THAT IS ADDED TO THE SCENE ONCE!
+
+    GameControllerSC m_GameController;
 
     void Start()
     {
@@ -58,6 +59,11 @@ public class PlacementPoint : MonoBehaviour
         m_OrderCheck = GetComponent<OrderCheck>();
 
         SwitchSocketState(SocketState.Empty);
+        m_GameController = FindObjectOfType<GameControllerSC>();
+        if(m_GameController!= null)
+        {
+            m_CheckForCorrectAngle = m_GameController.SetAngleCheck;
+        }
     }
 
     void Update()
@@ -117,7 +123,7 @@ public class PlacementPoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "PlayerHand" || m_IsOccupied) // If the object is the player hand object OR the socket is already occupied, then just return and ignore the resto of the function
+        if (other.CompareTag( "PlayerHand" )|| m_IsOccupied) // If the object is the player hand object OR the socket is already occupied, then just return and ignore the resto of the function
         {
             return;
         }

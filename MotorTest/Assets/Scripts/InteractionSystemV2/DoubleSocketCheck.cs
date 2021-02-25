@@ -56,8 +56,4 @@ public class DoubleSocketCheck : MonoBehaviour
         NearSockets.Remove(other.gameObject.GetComponent<Collider>());
         ObjectDistance.Clear();
     }
-    public void checkCenter()
-    {
-
-    }
 }

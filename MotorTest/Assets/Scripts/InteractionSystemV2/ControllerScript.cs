@@ -24,12 +24,15 @@ public class ControllerScript : MonoBehaviour
 
     private void Awake()
     {
-        m_PlaceArray = new GameObject[m_CorrectOrder.Parts.Count];
-        for (int i = 0; i < m_CorrectOrder.Parts.Count; i++)
+        if(m_CorrectOrder != null)
         {
-            if (m_CorrectOrder.Parts[i].obj != null)
+            m_PlaceArray = new GameObject[m_CorrectOrder.Parts.Count];
+            for (int i = 0; i < m_CorrectOrder.Parts.Count; i++)
             {
-                m_PlaceArray[i] = m_CorrectOrder.Parts[i].obj;
+                if (m_CorrectOrder.Parts[i].obj != null)
+                {
+                    m_PlaceArray[i] = m_CorrectOrder.Parts[i].obj;
+                }
             }
         }
     }
@@ -50,7 +53,7 @@ public class ControllerScript : MonoBehaviour
                 //add object to pickup array
                 CollidingObj.Add(other.transform.parent.transform.parent.gameObject);
                 //check if the obj can be taken out
-                if (other.transform.parent.transform.parent.GetComponent<Placeable>() != null)
+                if (other.transform.parent.transform.parent.GetComponent<Placeable>() != null && other.transform.parent.transform.parent.GetComponent<Placeable>().m_IsPlaced == true)
                 {
                     for (int i = 0; i < m_PlaceArray.Length; i++)
                     {
@@ -77,6 +80,7 @@ public class ControllerScript : MonoBehaviour
         {
             if (GO == CollidingObj.Last())
             {
+                GO.GetComponent<Outline>().OutlineColor = Color.white;
                 GO.GetComponent<Outline>().enabled = true;
             }
             else
