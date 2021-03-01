@@ -15,8 +15,8 @@ Back_End_Shield_Bearing_Screw_Top,1,True,False
 Back_Shield_Bearing_Screw_Nut_Bottom,1,True,True
 Back_Shield_Bearing_Screw_Nut_Top,1,True,False
 Frame,2,False,False
-Set0,2,False,False
 Front_End_Gasket,2,False,False
+Set0,2,False,False
 Front_Shield_Screw_Left_Down,2,True,False
 Front_Shield_Screw_Left_Up,2,True,False
 Front_Shield_Screw_Right_Down,2,True,False
