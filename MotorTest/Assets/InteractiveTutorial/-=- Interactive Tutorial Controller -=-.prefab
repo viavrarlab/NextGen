@@ -1,0 +1,610 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &261175123798498565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 261175123798498570}
+  - component: {fileID: 261175123798498574}
+  - component: {fileID: 261175123798498569}
+  - component: {fileID: 261175123798498568}
+  - component: {fileID: 261175123798498571}
+  m_Layer: 0
+  m_Name: -=- Interactive Tutorial Controller -=-
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &261175123798498570
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261175123798498565}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.4645636, y: 1.0687875, z: -2.303749}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &261175123798498574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261175123798498565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e0a0e9fa8e46b946a22f4971a2e0bd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TargetObject: {fileID: 0}
+  m_InteractableTag: MotorCollider
+  m_InteractableLayerMask:
+    serializedVersion: 2
+    m_Bits: 65536
+  m_SocketLayerMask:
+    serializedVersion: 2
+    m_Bits: 131072
+  m_SocketMaterial: {fileID: 2100000, guid: a61314d82a2f88b40a9da2d2f2e29390, type: 2}
+  m_SocketRootObject_Name: Sockets
+  m_SocketObject_Prefix: Socket_
+  m_InteractableRigidbodyUseGravity: 0
+  m_InteractableRigidbodyIsKinematic: 0
+  m_InteractiveTutorialController: {fileID: 261175123798498569}
+  m_SocketObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_InteractableObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &261175123798498569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261175123798498565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b19949e72c87d3a4797a76d586e4ef8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CurrentActiveIndex: 0
+  m_CurrentActiveObject: {fileID: 0}
+  m_ObjectListOrdered:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_AllSockets:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_CustomActions:
+  - m_UseIndividualObjectOrder: 0
+    m_CheckGroupID: 0
+    m_IndividualObjectOrderID: 0
+    m_TargetGroupID: 0
+    m_MoveOffsetFromOrigin: {x: 1, y: 0, z: 0}
+  - m_UseIndividualObjectOrder: 0
+    m_CheckGroupID: 1
+    m_IndividualObjectOrderID: 0
+    m_TargetGroupID: 1
+    m_MoveOffsetFromOrigin: {x: 1, y: 0, z: 0}
+  - m_UseIndividualObjectOrder: 1
+    m_CheckGroupID: 0
+    m_IndividualObjectOrderID: 17
+    m_TargetGroupID: 1
+    m_MoveOffsetFromOrigin: {x: -1, y: 0, z: 0}
+  - m_UseIndividualObjectOrder: 1
+    m_CheckGroupID: 0
+    m_IndividualObjectOrderID: 23
+    m_TargetGroupID: 0
+    m_MoveOffsetFromOrigin: {x: -1, y: 0, z: 0}
+  m_IndicationArrow: {fileID: 0}
+  m_InstructionText: {fileID: 0}
+  m_StartUIButtons: {fileID: 0}
+  m_CompletedUIButtons: {fileID: 0}
+  m_Scatterer: {fileID: 261175123798498568}
+  m_TargetObject: {fileID: 0}
+  m_MotorPartsConfig:
+  - m_GameObjectName: Front_End_Shield
+    m_UIName: Front Shield
+    m_GroupID: 0
+  - m_GameObjectName: Front_Bearing
+    m_UIName: Front Bearing
+    m_GroupID: 0
+  - m_GameObjectName: Front_Bearing_Back_Lock
+    m_UIName: Front Bearing Rear Lock
+    m_GroupID: 0
+  - m_GameObjectName: Front_Bearing_Front_Lock
+    m_UIName: Front Bearing Front Lock
+    m_GroupID: 0
+  - m_GameObjectName: Front_End_Shield_Bearing_Screw_Bottom
+    m_UIName: Front Shield Bearing Bottom Screw
+    m_GroupID: 0
+  - m_GameObjectName: Front_End_Shield_Bearing_Screw_Top
+    m_UIName: Front Shield Bearing Top Screw
+    m_GroupID: 0
+  - m_GameObjectName: Front_Shield_Bearing_Screw_Nut_Bottom
+    m_UIName: Front Shield Bearing Bottom Nut
+    m_GroupID: 0
+  - m_GameObjectName: Front_Shield_Bearing_Screw_Nut_Top
+    m_UIName: Front Shield Bearing Top Nut
+    m_GroupID: 0
+  - m_GameObjectName: Back_End_Shield
+    m_UIName: Rear Shield
+    m_GroupID: 1
+  - m_GameObjectName: Back_Bearing
+    m_UIName: Rear Bearing
+    m_GroupID: 1
+  - m_GameObjectName: Back_Bearing_Back_Lock
+    m_UIName: Rear Bearing Rear Lock
+    m_GroupID: 1
+  - m_GameObjectName: Back_Bearing_Front_Lock
+    m_UIName: Rear Bearing Front Lock
+    m_GroupID: 1
+  - m_GameObjectName: Back_End_Shield_Bearing_Screw_Bottom
+    m_UIName: Rear Shield Bearing Bottom Screw
+    m_GroupID: 1
+  - m_GameObjectName: Back_End_Shield_Bearing_Screw_Top
+    m_UIName: Rear Shield Bearing Top Screw
+    m_GroupID: 1
+  - m_GameObjectName: Back_Shield_Bearing_Screw_Nut_Bottom
+    m_UIName: Rear Shield Bearing Bottom Nut
+    m_GroupID: 1
+  - m_GameObjectName: Back_Shield_Bearing_Screw_Nut_Top
+    m_UIName: Rear Shield Bearing Top Nut
+    m_GroupID: 1
+  - m_GameObjectName: Frame
+    m_UIName: Frame
+    m_GroupID: 2
+  - m_GameObjectName: Back_End_Gasket
+    m_UIName: Rear Gasket
+    m_GroupID: 2
+  - m_GameObjectName: Back_Shield_Screw_Left_Down
+    m_UIName: Rear Shield Lower Left Screw
+    m_GroupID: 2
+  - m_GameObjectName: Back_Shield_Screw_Left_Up
+    m_UIName: Rear Shield Upper Left Screw
+    m_GroupID: 2
+  - m_GameObjectName: Back_Shield_Screw_Right_Down
+    m_UIName: Rear Shield Lower Right Screw
+    m_GroupID: 2
+  - m_GameObjectName: Back_Shield_Screw_Right_Up
+    m_UIName: Rear Shield Upper Right Screw
+    m_GroupID: 2
+  - m_GameObjectName: Rotor
+    m_UIName: Rotor
+    m_GroupID: 2
+  - m_GameObjectName: Front_End_Gasket
+    m_UIName: Front Gasket
+    m_GroupID: 2
+  - m_GameObjectName: Front_Shield_Screw_Left_Down
+    m_UIName: Front Shield Lower Left Screw
+    m_GroupID: 2
+  - m_GameObjectName: Front_Shield_Screw_Left_Up
+    m_UIName: Front Shield Upper Left Screw
+    m_GroupID: 2
+  - m_GameObjectName: Front_Shield_Screw_Right_Down
+    m_UIName: Front Shield Lower Right Screw
+    m_GroupID: 2
+  - m_GameObjectName: Front_Shield_Screw_Right_Up
+    m_UIName: Front Shield Upper Right Screw
+    m_GroupID: 2
+  - m_GameObjectName: Fan
+    m_UIName: Fan
+    m_GroupID: 3
+  - m_GameObjectName: Fan_Cover
+    m_UIName: Fan Cover
+    m_GroupID: 3
+  - m_GameObjectName: FanCover_Screw1
+    m_UIName: Fan Cover Screw 1
+    m_GroupID: 3
+  - m_GameObjectName: FanCover_Screw2
+    m_UIName: Fan Cover Screw 2
+    m_GroupID: 3
+  - m_GameObjectName: FanCover_Screw3
+    m_UIName: Fan Cover Screw 3
+    m_GroupID: 3
+  - m_GameObjectName: FanCover_Screw4
+    m_UIName: Fan Cover Screw 4
+    m_GroupID: 3
+  - m_GameObjectName: Wire_Hole_Left_TB
+    m_UIName: Wire Terminal IO Screw 1
+    m_GroupID: 3
+  - m_GameObjectName: Wire_Hole_Right_TB
+    m_UIName: Wire Terminal IO Screw 2
+    m_GroupID: 3
+  - m_GameObjectName: Wire_Terminal
+    m_UIName: Wire Terminal
+    m_GroupID: 3
+  - m_GameObjectName: Terminal_Box_Gasket
+    m_UIName: Wire Terminal Gasket
+    m_GroupID: 3
+  - m_GameObjectName: Terminal_Box_Lid
+    m_UIName: Wire Terminal Lid
+    m_GroupID: 3
+  - m_GameObjectName: Terminal_Box_Screw_1
+    m_UIName: Wire Terminal Screw 1
+    m_GroupID: 3
+  - m_GameObjectName: Terminal_Box_Screw_2
+    m_UIName: Wire Terminal Screw 2
+    m_GroupID: 3
+  - m_GameObjectName: Terminal_Box_Screw_3
+    m_UIName: Wire Terminal Screw 3
+    m_GroupID: 3
+  - m_GameObjectName: Terminal_Box_Screw_4
+    m_UIName: Wire Terminal Screw 4
+    m_GroupID: 3
+  - m_GameObjectName: Mounting_Base_Left
+    m_UIName: Left Mounting Base
+    m_GroupID: 3
+  - m_GameObjectName: Left_MountingBase_Screw_1
+    m_UIName: Left Mounting Base Screw 1
+    m_GroupID: 3
+  - m_GameObjectName: Left_MountingBase_Screw_2
+    m_UIName: Left Mounting Base Screw 2
+    m_GroupID: 3
+  - m_GameObjectName: Mounting_Base_Right
+    m_UIName: Right Mounting Base
+    m_GroupID: 3
+  - m_GameObjectName: Right_MountingBase_Screw_1
+    m_UIName: Right Mounting Base Screw 1
+    m_GroupID: 3
+  - m_GameObjectName: Right_MountingBase_Screw_2
+    m_UIName: Right Mounting Base Screw 2
+    m_GroupID: 3
+  - m_GameObjectName: Hook
+    m_UIName: Transport Hook
+    m_GroupID: 3
+  - m_GameObjectName: Shaft_Key
+    m_UIName: Shaft Key
+    m_GroupID: 3
+  - m_GameObjectName: NamePlate
+    m_UIName: Motor Name Plate
+    m_GroupID: 3
+  m_CSVConfigFileName: MotorPartConfig.csv
+--- !u!114 &261175123798498568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261175123798498565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ae59238d06b9042895de1b72991be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TargetObject: {fileID: 0}
+  m_ScatterStartTransform: {fileID: 0}
+  m_ScatterXAxisOffset: -0.25
+  m_ScatterZAxisOffset: -0.04
+  m_OriginalPositions:
+  - {x: -1.635474, y: 0.99661314, z: -3.1963232}
+  - {x: -1.6354616, y: 0.99659425, z: -3.2143981}
+  - {x: -1.6355267, y: 0.9965942, z: -3.178211}
+  - {x: -1.6354609, y: 0.9965861, z: -3.1898031}
+  - {x: -1.6354333, y: 0.99657583, z: -3.1969671}
+  - {x: -1.6354609, y: 0.934086, z: -3.1972935}
+  - {x: -1.6354609, y: 1.0590861, z: -3.1972933}
+  - {x: -1.6354606, y: 0.93408597, z: -3.1714334}
+  - {x: -1.6354611, y: 1.0590861, z: -3.1714334}
+  - {x: -1.7167107, y: 0.85585684, z: -3.1955628}
+  - {x: -1.7167103, y: 1.137315, z: -3.1955647}
+  - {x: -1.5542115, y: 0.8558572, z: -3.1955647}
+  - {x: -1.5542108, y: 1.137315, z: -3.1955645}
+  - {x: -1.6358219, y: 0.9964273, z: -3.239491}
+  - {x: -1.6354575, y: 0.9974954, z: -3.2312646}
+  - {x: -1.544199, y: 0.8439529, z: -3.1710565}
+  - {x: -1.7258373, y: 1.1497298, z: -3.1710565}
+  - {x: -1.544701, y: 1.1494881, z: -3.1710565}
+  - {x: -1.7248108, y: 0.84244424, z: -3.1710565}
+  - {x: -1.6356204, y: 1.0138279, z: -2.9998956}
+  - {x: -1.6355687, y: 0.996613, z: -2.8077922}
+  - {x: -1.6354616, y: 0.9965941, z: -2.826211}
+  - {x: -1.6355267, y: 0.9965941, z: -2.7900238}
+  - {x: -1.6354609, y: 0.9965861, z: -2.8122504}
+  - {x: -1.6354684, y: 0.99647087, z: -2.8051133}
+  - {x: -1.6354609, y: 0.93408597, z: -2.8073819}
+  - {x: -1.6354609, y: 1.0590861, z: -2.8073819}
+  - {x: -1.6354606, y: 0.9340861, z: -2.8327498}
+  - {x: -1.6354606, y: 1.0590862, z: -2.8327498}
+  - {x: -1.5542109, y: 0.8558567, z: -2.8066125}
+  - {x: -1.5542109, y: 1.137315, z: -2.8066125}
+  - {x: -1.7167108, y: 0.8558567, z: -2.8066125}
+  - {x: -1.7167108, y: 1.1373155, z: -2.8066125}
+  - {x: -1.6354609, y: 1.1958158, z: -3.0480595}
+  - {x: -1.5380026, y: 0.8639913, z: -2.9760005}
+  - {x: -1.5380026, y: 0.8639914, z: -3.0259993}
+  - {x: -1.5246531, y: 0.85477084, z: -3.0009997}
+  - {x: -1.7462686, y: 0.8547708, z: -3.0010002}
+  - {x: -1.8111032, y: 0.9964529, z: -3.05148}
+  - {x: -1.7329191, y: 0.8639913, z: -3.0259993}
+  - {x: -1.7329191, y: 0.8639914, z: -2.9760005}
+  - {x: -1.6354455, y: 0.99659014, z: -2.9966867}
+  - {x: -1.6191515, y: 1.0038416, z: -2.729684}
+  - {x: -1.6354609, y: 1.2040863, z: -2.9347498}
+  - {x: -1.6354613, y: 1.2078388, z: -2.9347456}
+  - {x: -1.6854608, y: 1.2069825, z: -2.9847498}
+  - {x: -1.5854609, y: 1.2069825, z: -2.9847498}
+  - {x: -1.6854608, y: 1.2069826, z: -2.88475}
+  - {x: -1.5854609, y: 1.2069825, z: -2.88475}
+  - {x: -1.7064552, y: 1.1778338, z: -2.90975}
+  - {x: -1.7064552, y: 1.177834, z: -2.9597487}
+  - {x: -1.6354609, y: 1.1669519, z: -2.9361634}
+  m_OriginalRotations:
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  - {x: 0.00000008146034, y: -0, z: -0, w: 1}
+--- !u!114 &261175123798498571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261175123798498565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9e5fd044bad9174582a68785a39fa37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ColorIdle: {r: 0, g: 1, b: 0.9720595, a: 0.32941177}
+  m_ColorValid: {r: 0.38934192, g: 0.8018868, b: 0, a: 0.5019608}
+  m_ColorInvalid: {r: 0.8018868, g: 0, b: 0, a: 0.5254902}
