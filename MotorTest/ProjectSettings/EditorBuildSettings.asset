@@ -9,6 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: 994aec1f75ca4ca4c8657bb6273dcb9f
   - enabled: 1
-    path: Assets/Scenes/TA_TestScene.unity
-    guid: 268bbf968515f0e498fb98abdc588fb1
+    path: Assets/Scenes/LoadingScene.unity
+    guid: c14c164e1f286e641abbbbb580ed01c8
+  - enabled: 1
+    path: Assets/Scenes/T111 - FreeRoam.unity
+    guid: 02d9096b4ad64094d899049f3f0acbec
+  - enabled: 1
+    path: Assets/Scenes/Interactive Tutorial.unity
+    guid: 551666717a72a7f40a7100213a798e15
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}

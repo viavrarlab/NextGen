@@ -14,3 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ignoreKeys:
   - UseOculusMobilerecommendedQualitySettings
+  - TextureCompression
+  - DynamicBatching
+  - PrebakeCollisionMeshes
+  - KeepLoadedShadersAlive
+  - UseOculusMobilerecommendedGraphicsTierSettings

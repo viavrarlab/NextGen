@@ -25,10 +25,12 @@ public class Placeable : MonoBehaviour
             {
                 GradingController.Instance.ObjectPlaced(gameObject, m_ID);
                 GradingController.Instance.ShowHintOutline(gameObject, m_ID);
+                GradingController.Instance.PlacedCounterAdd(m_ID);
             }
             else
             {
                 GradingController.Instance.ObjectRemoved(gameObject);
+                GradingController.Instance.PlacedCounterRemove(m_ID);
             }
         }
     }

@@ -15,6 +15,7 @@ TagManager:
   - GradingController
   - Grab
   - GameControl
+  - VRRIG
   layers:
   - Default
   - TransparentFX

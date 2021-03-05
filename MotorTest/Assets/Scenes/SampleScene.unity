@@ -187,6 +187,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -249,12 +253,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 12
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 789560701}
@@ -357,6 +363,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &15999647
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -437,6 +444,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -499,12 +510,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 3
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 789560701}
@@ -531,6 +544,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &33909402
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -611,6 +625,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -673,12 +691,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 30
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 15999647}
@@ -695,6 +715,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &51757879
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -775,6 +796,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -837,12 +862,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 11
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 1006372716}
@@ -867,6 +894,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &89855671
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -947,6 +975,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -1009,12 +1041,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 28
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 15999647}
@@ -1031,6 +1065,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &206527164
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1111,6 +1146,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -1173,12 +1212,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 26
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 15999647}
@@ -1195,6 +1236,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &230219706
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1275,6 +1317,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -1337,12 +1383,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 22
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 15999647}
@@ -1361,6 +1409,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &234819117
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1441,6 +1490,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -1503,12 +1556,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 32
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 1165129474}
@@ -1523,6 +1578,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &249203138
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1603,6 +1659,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -1665,12 +1725,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 25
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 230219706}
@@ -1687,6 +1749,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &281588332
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1767,6 +1830,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -1829,12 +1896,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 22
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 15999647}
@@ -1853,6 +1922,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &289124583
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1933,6 +2003,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -1995,12 +2069,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 26
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 15999647}
@@ -2017,6 +2093,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &311248764
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2030,85 +2107,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.023592994, y: 0.021025777, z: 0.02350805}
   m_Center: {x: -0.000028587878, y: -0.002779901, z: -0.00004025176}
---- !u!1001 &344248188
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 139b9411ba486194696f302af8bd1759,
-        type: 3}
-      propertyPath: m_Name
-      value: Servo_Motor_with_Insides_Split
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 139b9411ba486194696f302af8bd1759,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 139b9411ba486194696f302af8bd1759,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 98cb02595990174479a792cdf4528b9f, type: 2}
-    - target: {fileID: -4216859302048453862, guid: 139b9411ba486194696f302af8bd1759,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 139b9411ba486194696f302af8bd1759,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 139b9411ba486194696f302af8bd1759,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 139b9411ba486194696f302af8bd1759,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 139b9411ba486194696f302af8bd1759,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 139b9411ba486194696f302af8bd1759,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 139b9411ba486194696f302af8bd1759,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 139b9411ba486194696f302af8bd1759,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 139b9411ba486194696f302af8bd1759,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 139b9411ba486194696f302af8bd1759,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 139b9411ba486194696f302af8bd1759,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 139b9411ba486194696f302af8bd1759, type: 3}
 --- !u!1 &359397858
 GameObject:
   m_ObjectHideFlags: 0
@@ -2176,6 +2174,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -2238,12 +2240,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 23
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 15999647}
@@ -2256,6 +2260,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &359397865
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2336,6 +2341,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -2398,12 +2407,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 30
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 15999647}
@@ -2420,6 +2431,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &363466547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2572,6 +2584,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -2634,12 +2650,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 6
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 1625750299}
@@ -2676,6 +2694,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &378817388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2756,6 +2775,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -2818,12 +2841,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 4
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 789560701}
@@ -2852,6 +2877,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &488010877
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2932,6 +2958,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -2994,12 +3024,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 24
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 15999647}
@@ -3020,6 +3052,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &529243272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3033,6 +3066,75 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.25368336, y: 0.005000055, z: 0.25368333}
   m_Center: {x: 0.000000014901161, y: -0.00000023841858, z: -0.000000074505806}
+--- !u!1001 &554048684
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3472144916827726027, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_Name
+      value: ViveCameraRig
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827889591, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827889591, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827889591, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.619
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827889591, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827889591, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827889591, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827889591, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.00000028088027
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827889591, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827889591, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827889591, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -179.99998
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472144916827889591, guid: c4f395288e15c924d80cc1442ad804d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c4f395288e15c924d80cc1442ad804d7, type: 3}
 --- !u!1 &557709982
 GameObject:
   m_ObjectHideFlags: 0
@@ -3100,6 +3202,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -3162,12 +3268,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 29
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 15999647}
@@ -3188,6 +3296,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &557709989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3268,6 +3377,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -3330,12 +3443,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 14
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 378817388}
@@ -3358,6 +3473,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &569350934
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3438,6 +3554,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -3500,12 +3620,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 4
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 789560701}
@@ -3534,6 +3656,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &614242598
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3617,7 +3740,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: e57ec0787ed14aa45bf32059f07cc3aa,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e57ec0787ed14aa45bf32059f07cc3aa,
         type: 3}
@@ -4321,6 +4444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sets: []
+  m_ModelComplete: 0
 --- !u!114 &633398397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4802,6 +4926,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -4864,12 +4992,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 14
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 378817388}
@@ -4892,6 +5022,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &691790129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4972,6 +5103,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -5034,12 +5169,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 22
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 15999647}
@@ -5058,6 +5195,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &700605755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5160,7 +5298,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &718107745
 GameObject:
@@ -5285,6 +5423,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -5347,12 +5489,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 26
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 15999647}
@@ -5369,6 +5513,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &719100709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5449,6 +5594,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -5511,12 +5660,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 28
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 15999647}
@@ -5533,6 +5684,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &733896504
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5613,6 +5765,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -5675,12 +5831,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 10
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 378817388}
@@ -5709,6 +5867,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &745282392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5789,6 +5948,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -5851,12 +6014,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 23
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 15999647}
@@ -5869,6 +6034,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &773690284
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5949,6 +6115,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -6011,12 +6181,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 0
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 1517893927}
@@ -6053,6 +6225,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &789560701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6133,6 +6306,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -6195,12 +6372,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 31
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 15999647}
@@ -6213,6 +6392,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &880731670
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6226,89 +6406,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.022664651, y: 0.12468052, z: 0.06880736}
   m_Center: {x: -0.00000012107193, y: -0.009414792, z: -0.000000074505806}
---- !u!1 &963194225
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 963194228}
-  - component: {fileID: 963194227}
-  - component: {fileID: 963194226}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &963194226
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
---- !u!20 &963194227
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &963194228
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &996474957
 GameObject:
   m_ObjectHideFlags: 0
@@ -6376,6 +6473,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -6438,12 +6539,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 2
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 789560701}
@@ -6466,6 +6569,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &996474964
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6546,6 +6650,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -6610,12 +6718,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 18
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 378817388}
@@ -6666,6 +6776,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1004172596
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6746,6 +6857,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -6808,12 +6923,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 9
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 378817388}
@@ -6842,6 +6959,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1006372716
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6855,6 +6973,99 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2503575, y: 0.3007972, z: 0.02000016}
   m_Center: {x: -0.0000014677644, y: -0.000016242266, z: -0.0024295151}
+--- !u!1 &1013885588
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1013885592}
+  - component: {fileID: 1013885591}
+  - component: {fileID: 1013885590}
+  - component: {fileID: 1013885589}
+  m_Layer: 12
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &1013885589
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013885588}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1013885590
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013885588}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1013885591
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013885588}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1013885592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013885588}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 6.88, y: 1, z: 10}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1015276917
 GameObject:
   m_ObjectHideFlags: 0
@@ -6922,6 +7133,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -6984,12 +7199,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 19
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 789560701}
@@ -7010,6 +7227,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1015276924
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7090,6 +7308,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -7152,12 +7374,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 33
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 1165129474}
@@ -7172,6 +7396,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1048725310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7252,6 +7477,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -7314,12 +7543,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 26
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 15999647}
@@ -7336,6 +7567,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1061834603
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7416,6 +7648,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -7478,12 +7714,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 14
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 378817388}
@@ -7506,6 +7744,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1100719974
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7586,6 +7825,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -7648,12 +7891,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 22
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 15999647}
@@ -7672,6 +7917,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1117358717
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7808,6 +8054,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -7870,12 +8120,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 16
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 789560701}
@@ -7940,6 +8192,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1165129474
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8020,6 +8273,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -8082,12 +8339,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 19
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 789560701}
@@ -8108,6 +8367,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1204996100
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8188,6 +8448,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -8250,12 +8514,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 10
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 378817388}
@@ -8284,6 +8550,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1300098740
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8364,6 +8631,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -8426,12 +8697,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 5
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 33909402}
@@ -8454,6 +8727,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1300969824
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8534,6 +8808,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -8596,12 +8874,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 5
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 33909402}
@@ -8624,6 +8904,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1361657384
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8704,6 +8985,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -8766,12 +9051,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 17
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 789560701}
@@ -8804,6 +9091,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1364043122
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8884,6 +9172,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -8948,12 +9240,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 13
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 789560701}
@@ -8996,6 +9290,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1378440704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9076,6 +9371,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -9138,12 +9437,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 20
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 1165129474}
@@ -9158,6 +9459,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1505992197
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9238,6 +9540,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -9300,12 +9606,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 1
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 789560701}
@@ -9328,6 +9636,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1517893927
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9408,6 +9717,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -9470,12 +9783,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 27
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 15999647}
@@ -9496,6 +9811,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1542686703
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9576,6 +9892,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -9638,12 +9958,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 7
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 378817388}
@@ -9666,6 +9988,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1625750299
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9714,12 +10037,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 35
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 789560701}
@@ -9832,6 +10157,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!54 &1664995025
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9863,6 +10189,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -10008,6 +10338,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -10070,12 +10404,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 14
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 378817388}
@@ -10098,6 +10434,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1688763625
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10240,6 +10577,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -10302,12 +10643,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 21
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 378817388}
@@ -10360,6 +10703,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1781409241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10440,6 +10784,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -10502,12 +10850,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 11
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 1006372716}
@@ -10532,6 +10882,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1829278566
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10612,6 +10963,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -10674,12 +11029,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 34
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets: []
   m_DefaultStateColor: {r: 1, g: 1, b: 1, a: 1}
@@ -10688,6 +11045,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1838204954
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10834,6 +11192,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -10896,12 +11258,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 15
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 488010877}
@@ -10966,6 +11330,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1919905796
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11046,6 +11411,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -11108,12 +11477,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 19
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 789560701}
@@ -11134,6 +11505,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &1969803778
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11214,6 +11586,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -11276,12 +11652,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 19
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 789560701}
@@ -11302,6 +11680,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &2063300207
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11382,6 +11761,10 @@ MonoBehaviour:
   SocketGameObj: []
   PP_Array: []
   m_OrderCorrect: 0
+  m_CanTakeOut: 0
+  m_checkOrder: 0
+  TempUpdatedSources: []
+  TempOriginalSources: []
   item:
     m_Obj_ID: 0
     m_isPlaced: 0
@@ -11444,12 +11827,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 8
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
+  m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_CanTakeOut: 0
-  m_OrderCheck: {fileID: 0}
+  m_SkipXAngle: 0
+  m_SkipYAngle: 0
+  m_SkipZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 378817388}
@@ -11474,6 +11859,7 @@ MonoBehaviour:
   m_ValidRotationColor: {r: 0, g: 1, b: 1, a: 1}
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
+  m_SnappableObject: {fileID: 0}
 --- !u!65 &2102979424
 BoxCollider:
   m_ObjectHideFlags: 0

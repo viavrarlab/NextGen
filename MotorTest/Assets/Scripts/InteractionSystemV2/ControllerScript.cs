@@ -13,8 +13,11 @@ public class ControllerScript : MonoBehaviour
     public CorrectOrderTests m_CorrectOrder;
     public GameObject[] m_PlaceArray;
     public bool Outline;
+    [SerializeField]
     private bool m_triggerPush;
+    [SerializeField]
     private bool m_GrabPush;
+    [SerializeField]
     private bool m_triggerAxisPull;
     public bool TriggerPush { get => m_triggerPush; set => m_triggerPush = value; }
     public bool TriggerAxisPull { get => m_triggerAxisPull; set => m_triggerAxisPull = value; }
@@ -22,8 +25,13 @@ public class ControllerScript : MonoBehaviour
 
     public List<GameObject> CollidingObj = new List<GameObject>();
 
+    private void Start()
+    {
+        
+    }
     private void Awake()
     {
+        m_CorrectOrder = FindObjectOfType<CorrectOrderTests>();
         if(m_CorrectOrder != null)
         {
             m_PlaceArray = new GameObject[m_CorrectOrder.Parts.Count];

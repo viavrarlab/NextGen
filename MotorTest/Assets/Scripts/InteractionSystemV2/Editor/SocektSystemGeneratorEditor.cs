@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using UnityEditor.Experimental.TerrainAPI;
 using UnityEngine.Animations;
 using Unity.EditorCoroutines.Editor;
 using System.Linq;
-using NUnit.Framework.Constraints;
 using ModelOutline;
 
 [CustomEditor(typeof(SystemGeneratorScript))]
@@ -29,8 +27,6 @@ public class SocektSystemGeneratorEditor : Editor
 
     private bool fin = true;
 
-    private float currentProgress = 0f;
-
     SystemGeneratorScript m_SysGen;
     [Space(5f)]
 
@@ -50,6 +46,7 @@ public class SocektSystemGeneratorEditor : Editor
 
     public List<GameObject> m_AllSets = new List<GameObject>();
 
+    public float currentProgress;
 
     private void OnEnable()
     {
@@ -69,7 +66,7 @@ public class SocektSystemGeneratorEditor : Editor
         }
         if (GUILayout.Button("ObjectID"))
         {
-            AddScriptValues();
+            //AddScriptValues();
             AddObjectID();
         }
         if (GUILayout.Button("Generate Colliders and grabables"))
@@ -171,7 +168,7 @@ public class SocektSystemGeneratorEditor : Editor
         {
             if (CLCarray[i].OrderNotMandatory == true)
             {
-                Placeable placeable = Placeable.CreateComponentReturn(CLCarray[i].obj.gameObject, id);
+                Placeable.CreateComponentReturn(CLCarray[i].obj.gameObject, id);
                 if (CLCarray[i + 1].OrderNotMandatory == false)
                 {
                     id++;
@@ -183,7 +180,7 @@ public class SocektSystemGeneratorEditor : Editor
             }
             else
             {
-                Placeable placeable = Placeable.CreateComponentReturn(CLCarray[i].obj.gameObject, id);
+                Placeable.CreateComponentReturn(CLCarray[i].obj.gameObject, id);
                 id++;
             }
         }
@@ -219,7 +216,7 @@ public class SocektSystemGeneratorEditor : Editor
         {
             foreach(GameObject Set in SetList)
             {
-                if (Set.name == t.gameObject.name && t.gameObject.active) 
+                if (Set.name == t.gameObject.name && t.gameObject.activeInHierarchy) 
                 {
                     Set.transform.parent = t;
                     t.gameObject.tag = "SetGrab";
@@ -319,7 +316,7 @@ public class SocektSystemGeneratorEditor : Editor
         m_SysGen.transform.gameObject.AddComponent<SetEnable>();
         //socketRoot.AddComponent<BoxCollider>();
         socketRoot.tag = "PlacementRoot";
-        socketRoot.layer = 10;
+        socketRoot.layer = 16;
 
         List<GameObject> setObjectRoots = new List<GameObject>();
 
@@ -545,7 +542,6 @@ public class SocektSystemGeneratorEditor : Editor
     }
     private IEnumerator ColliderTask(Transform t)
     {
-        currentProgress = 0f;
         fin = false;
 
         if (t.gameObject.GetComponent<ConcaveCollider>() == null)
@@ -567,7 +563,7 @@ public class SocektSystemGeneratorEditor : Editor
         colliderGen.IsTrigger = collidersAreTriggers;
 
 
-        colliderGen.ComputeHulls(new ConcaveCollider.LogDelegate(Message), new ConcaveCollider.ProgressDelegate(Progress));
+        //colliderGen.ComputeHulls(new ConcaveCollider.LogDelegate(Message), new ConcaveCollider.ProgressDelegate(Progress));
 
         yield return null;
 
@@ -675,15 +671,16 @@ public class SocektSystemGeneratorEditor : Editor
         }
         return Mathf.Abs(volume);
     }
-    void Progress(string message, float fPercent)
-    {
-        currentProgress = fPercent;
-        //Debug.Log($"Current progress: {currentProgress}");
-    }
 
-    void Message(string message)
-    {
-        //Debug.Log(message);
-    }
+    //void Progress(string message, float fPercent)
+    //{
+    //    currentProgress = fPercent;
+    //    //Debug.Log($"Current progress: {currentProgress}");
+    //}
+
+    //void Message(string message)
+    //{
+    //    //Debug.Log(message);
+    //}
 }
 

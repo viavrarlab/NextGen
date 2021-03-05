@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using System.Linq;
 
 public class SetEnable : MonoBehaviour
 {
@@ -10,14 +11,30 @@ public class SetEnable : MonoBehaviour
 
     GameControllerSC GController;
 
+    [SerializeField]
+    bool m_ModelComplete;
+
+    public bool M_ModelComplete
+    {
+        get { return m_ModelComplete; }
+        set
+        {
+            if (M_ModelComplete == value) return;
+            M_ModelComplete = value;
+            if (M_ModelComplete)
+            {
+                
+            }
+        }
+    }
     private void Start()
     {
         GController = FindObjectOfType<GameControllerSC>();
-        foreach(Transform child in this.transform)
+        foreach (Transform child in this.transform)
         {
             if (child.childCount > 1)
             {
-                for(int i = 0; i < child.childCount; i++)
+                for (int i = 0; i < child.childCount; i++)
                 {
                     if (child.GetChild(i).gameObject.layer == 15)
                     {
@@ -26,7 +43,7 @@ public class SetEnable : MonoBehaviour
                 }
             }
         }
-        if(GController != null)
+        if (GController != null)
         {
             if (GController.SetOrderCheck)
             {
@@ -41,7 +58,7 @@ public class SetEnable : MonoBehaviour
     }
     private void Update()
     {
-        if(GController != null)
+        if (GController != null)
         {
             if (GController.SetOrderCheck)
             {
@@ -55,29 +72,41 @@ public class SetEnable : MonoBehaviour
     }
     public void ActivateNextSet()
     {
-        foreach (GameObject set in Sets)
+        if (Sets.All(x => x.GetComponent<SetComplete>().complete == true))
         {
-            if (set.GetComponent<SetComplete>().complete == true && set.GetComponent<SetComplete>().SetID == count)
+            m_ModelComplete = true;
+            return;
+        }
+        else
+        {
+            m_ModelComplete = false;
+        }
+        if (Sets.Any(x => x.GetComponent<SetComplete>().complete == false))
+        {
+            foreach (GameObject set in Sets)
             {
-                Sets[count + 1].SetActive(true);
-                count++;
-            }
-            else
-            {
-                if(count != 0 && Sets[count-1].GetComponent<SetComplete>().complete == false)
+                if (set.GetComponent<SetComplete>().complete == true && set.GetComponent<SetComplete>().SetID == count)
                 {
-                    Sets[count].SetActive(false);
-
-                    count--;
+                    Sets[count + 1].SetActive(true);
+                    count++;
                 }
+                else
+                {
+                    if (count != 0 && Sets[count - 1].GetComponent<SetComplete>().complete == false)
+                    {
+                        Sets[count].SetActive(false);
+                        count--;
+                    }
+                }
+
             }
         }
     }
     public void disableNextSets()
     {
-        foreach(GameObject set in Sets)
+        foreach (GameObject set in Sets)
         {
-            if(set.GetComponent<SetComplete>().SetID != 0)
+            if (set.GetComponent<SetComplete>().SetID != 0)
             {
                 set.SetActive(false);
             }

@@ -12,13 +12,20 @@ public class GradingController : MonoBehaviour
     ControllerScript m_ControllerScript;
 
     [SerializeField]
-    Canvas m_ControllerUI;
-
-    [SerializeField]
     Canvas m_ResultUI;
 
     [SerializeField]
+    GameObject m_TotaltimerUI;
+
+    [SerializeField]
+    GameObject m_CorrectPlacedUI;
+
+    [SerializeField]
+    GameObject m_IncorrectPlacedUI;
+
+    [SerializeField]
     GameObject m_ListContent;
+
     Button m_Refresh;
 
     [SerializeField]
@@ -28,7 +35,6 @@ public class GradingController : MonoBehaviour
 
     public List<PlacedOrder> PlacedOrder;
 
-    [SerializeField]
     public Results m_CurrPickUpObjRes;
 
     public List<Results> m_Results;
@@ -38,25 +44,30 @@ public class GradingController : MonoBehaviour
 
     public int PlacedOrderID;
 
-    bool ShowOutlineHint;
+    public int m_CorrectPlacedCount;
+    public int m_IncorrectPlacedCount;
 
     private static GradingController _instance;
     public static GradingController Instance { get { return _instance; } }
 
+    SetEnable m_SetEnable;
 
     //---Total Timer---
     float time;
     float sec;
     float min;
 
-    Text m_TotalTimerText;
+    [SerializeField]
+    string m_TotalTimerText;
+
     private void Awake()
     {
+        m_SetEnable = FindObjectOfType<SetEnable>();
         m_ControllerScript = FindObjectOfType<ControllerScript>();
-        m_TotalTimerText = m_ControllerUI.GetComponentInChildren<Text>();
         m_Refresh = m_ResultUI.GetComponentInChildren<Button>();
         m_Refresh.onClick.AddListener(DisplayList);
         StartCoroutine(TotalTimer());
+        
         m_Results = new List<Results>();
 
         if (_instance != null && _instance != this)
@@ -67,6 +78,7 @@ public class GradingController : MonoBehaviour
         {
             _instance = this;
         }
+        m_ResultUI.enabled = false;
     }
     private void Update()
     {
@@ -94,6 +106,20 @@ public class GradingController : MonoBehaviour
                 MethodExecuted = false;
             }
         }
+        if(m_SetEnable != null)
+        {
+            if (m_SetEnable.M_ModelComplete)
+            {
+                if (!m_ResultUI.enabled)
+                {
+                    m_ResultUI.enabled = true;
+                    StopCoroutine(TotalTimer());
+                    m_CorrectPlacedUI.GetComponent<Text>().text += m_CorrectPlacedCount.ToString();
+                    m_IncorrectPlacedUI.GetComponent<Text>().text += m_IncorrectPlacedCount.ToString();
+                    m_TotaltimerUI.GetComponent<Text>().text += m_TotalTimerText;
+                }
+            }
+        }
     }
     public void AddResToList(GameObject go)
     {
@@ -103,15 +129,18 @@ public class GradingController : MonoBehaviour
         }
         if (m_Results.Count == 0)
         {
-            Results TempRes = new Results
+            if (go.GetComponent<Placeable>() != null)
             {
-                partName = go.name,
-                PickUpCount = 0,
-                isPaused = false,
-                CorrectPlacementOrder = go.GetComponent<Placeable>().m_ID,
-                ActualPlacementID = 0
-            };
-            m_Results.Add(TempRes);
+                Results TempRes = new Results
+                {
+                    partName = go.name,
+                    PickUpCount = 0,
+                    isPaused = false,
+                    CorrectPlacementOrder = go.GetComponent<Placeable>().m_ID,
+                    ActualPlacementID = 0
+                };
+                m_Results.Add(TempRes);
+            }
         }
         else
         {
@@ -123,20 +152,22 @@ public class GradingController : MonoBehaviour
             }
             else
             {
-                Results TempRes = new Results
+                if(go.GetComponent<Placeable>()!= null)
                 {
-                    partName = go.name,
-                    PickUpCount = 0,
-                    isPaused = false,
-                    CorrectPlacementOrder = go.GetComponent<Placeable>().m_ID,
-                    ActualPlacementID = 0
-                };
-                m_Results.Add(TempRes);
-                return;
+                    Results TempRes = new Results
+                    {
+                        partName = go.name,
+                        PickUpCount = 0,
+                        isPaused = false,
+                        CorrectPlacementOrder = go.GetComponent<Placeable>().m_ID,
+                        ActualPlacementID = 0
+                    };
+                    m_Results.Add(TempRes);
+                    return;
+                }
             }
         }
     }
-
     void TimerCountControl(GameObject go)
     {
         if (MethodExecuted != true)
@@ -217,7 +248,6 @@ public class GradingController : MonoBehaviour
 
     public void ObjectPlaced(GameObject Go, int ObjID)
     {
-        Debug.Log("izpildaas kkad");
         if (Instance.PlacedOrder.Count == 0)
         {
             Instance.PlacedOrder.Add(new PlacedOrder { Partname = Go.name, PlacedId = 0, ObjID = ObjID });
@@ -234,6 +264,7 @@ public class GradingController : MonoBehaviour
                         Debug.Log("same id ");
                         int TempInt = Instance.PlacedOrder.Find(x => x.ObjID == ObjID).PlacedId;
                         Instance.PlacedOrder.Add(new PlacedOrder { Partname = Go.name, PlacedId = TempInt, ObjID = ObjID });
+                        m_CorrectPlacedCount++;
                         return;
                     }
                     else
@@ -241,6 +272,44 @@ public class GradingController : MonoBehaviour
                         Instance.PlacedOrder.Add(new PlacedOrder { Partname = Go.name, PlacedId = Instance.PlacedOrderID, ObjID = ObjID });
                         Instance.PlacedOrderID++;
                     }
+                }
+            }
+        }
+    }
+    public void PlacedCounterAdd(int ObjId)
+    {
+        if(PlacedOrderID == ObjId)
+        {
+            m_CorrectPlacedCount++;
+        }
+        else
+        {
+            m_IncorrectPlacedCount++;
+        }
+    }
+    public void PlacedCounterRemove(int ObjId)
+    {
+        if(PlacedOrderID == ObjId)
+        {
+            m_CorrectPlacedCount--;
+        }
+        else
+        {
+            m_IncorrectPlacedCount--;
+        }
+    }
+    public void ObjectRemoved(GameObject Go)
+    {
+        for (int i = 0; i < Instance.PlacedOrder.Count; i++)
+        {
+            if (Instance.PlacedOrder[i].Partname == Go.name)
+            {
+                Instance.m_Results.Find(x => x.partName == Go.name).ActualPlacementID = 0;
+                Instance.PlacedOrder.Remove(Instance.PlacedOrder[i]);
+                if (Instance.PlacedOrderID > 0)
+                {
+                    Instance.PlacedOrderID--;
+                    m_IncorrectPlacedCount++;
                 }
             }
         }
@@ -279,36 +348,19 @@ public class GradingController : MonoBehaviour
         }
         yield return null;
     }
-    public void ObjectRemoved(GameObject Go)
-    {
-        for (int i = 0; i < Instance.PlacedOrder.Count; i++)
-        {
-            if (Instance.PlacedOrder[i].Partname == Go.name)
-            {
-                Instance.m_Results.Find(x => x.partName == Go.name).ActualPlacementID = 0;
-                Instance.PlacedOrder.Remove(Instance.PlacedOrder[i]);
-                if (Instance.PlacedOrderID > 0)
-                {
-                    Instance.PlacedOrderID--;
-                }
-            }
-        }
-    }
     public IEnumerator TotalTimer()
     {
-
         while (true)
         {
             time += Time.deltaTime;
             sec = (int)(time % 60);
             min = (int)(time / 60);
 
-            m_TotalTimerText.text = "Time elapsed - " + string.Format("{0:00}:{1:00}", min, sec);
+            m_TotalTimerText = " Time elapsed - " + string.Format("{0:00}:{1:00}", min, sec);
 
             yield return m_TotalTimerText;
         }
     }
-
 }
 [System.Serializable]
 public class PlacedOrder

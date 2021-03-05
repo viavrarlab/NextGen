@@ -26,7 +26,22 @@ public class LeftHandUIController : MonoBehaviour
     {
         if(SceneManager.GetActiveScene().buildIndex != 0)
         {
-            if (m_Gcontroller.EnableHint)
+            if(m_Gcontroller != null)
+            {
+                if (m_Gcontroller.EnableHint)
+                {
+                    if (m_ControllerUI.enabled)
+                    {
+                        m_ControllerUI.enabled = false;
+                    }
+                    else
+                    {
+                        m_ControllerUI.enabled = true;
+                        NextPartHint();
+                    }
+                }
+            }
+            else
             {
                 if (m_ControllerUI.enabled)
                 {

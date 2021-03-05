@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-using Valve.VR;
-using HTC.UnityPlugin.Vive;
 using UnityEngine.Animations;
-using TMPro;
+using System.Linq;
 
 /// <summary>
 /// This could be automated when creating armature/object IDs - to each ID'd object we add this and configure it accordingly (everything, including mesh, its transforms, trigger bounds, etc)
@@ -47,13 +45,17 @@ public class PlacementPoint : MonoBehaviour
 
     public Placeable m_SnappableObject;    // The object that is currently available to snap and/or is snapped.
 
+    [SerializeField]
     private ControllerScript m_ControllerScript; // TODO:  MAKE A UNIFIED GRAB SCRIPT THAT IS ADDED TO THE SCENE ONCE!
+
+    public ControllerScript[] m_BothControllers;
 
     GameControllerSC m_GameController;
 
     void Start()
     {
-        m_ControllerScript = GameObject.FindObjectOfType<ControllerScript>();
+        m_ControllerScript = FindObjectOfType<ControllerScript>();
+        m_BothControllers = FindObjectsOfType<ControllerScript>();
         m_MeshRenderer = GetComponent<MeshRenderer>();
         m_MaterialPropertyBlock = new MaterialPropertyBlock();
         m_OrderCheck = GetComponent<OrderCheck>();
@@ -154,11 +156,14 @@ public class PlacementPoint : MonoBehaviour
                 }
             }
         }
-
     }
 
     private void OnTriggerStay(Collider other)
     {
+        if (m_BothControllers.FirstOrDefault(x => x.TriggerPush || x.GrabPush)) 
+        {
+            m_ControllerScript = m_BothControllers.FirstOrDefault(x => x.TriggerPush || x.GrabPush);
+        }
         //If object is placed and want to take it out of the socket
         if (m_ControllerScript.TriggerPush == true && m_IsOccupied && m_ControllerScript.collidingObjectToBePickedUp != null && m_SnappableObject.CanTakeOut) // If the object is the player hand object OR the socket is already occupied, then just return and ignore the resto of the function
         {
@@ -168,7 +173,6 @@ public class PlacementPoint : MonoBehaviour
                 m_SnappableObject.m_IsPlaced = false;
                 m_IsOccupied = false;
             }
-
         }
         else
         if (m_IsOccupied)
@@ -294,16 +298,16 @@ public class PlacementPoint : MonoBehaviour
         m_MeshRenderer.SetPropertyBlock(m_MaterialPropertyBlock);
     }
 
-    float GetMaterialAlpha()
-    {
-        if (m_MeshRenderer == null)
-        {
-            Debug.LogWarning("No MeshRenderer component assigned.");
-            return 0f;
-        }
-        m_MeshRenderer.GetPropertyBlock(m_MaterialPropertyBlock);
-        return m_MaterialPropertyBlock.GetFloat("_AlphaValue");
-    }
+    //float GetMaterialAlpha()
+    //{
+    //    if (m_MeshRenderer == null)
+    //    {
+    //        Debug.LogWarning("No MeshRenderer component assigned.");
+    //        return 0f;
+    //    }
+    //    m_MeshRenderer.GetPropertyBlock(m_MaterialPropertyBlock);
+    //    return m_MaterialPropertyBlock.GetFloat("_AlphaValue");
+    //}
 
     bool CheckAngle(Quaternion _incomingRotation)
     {
