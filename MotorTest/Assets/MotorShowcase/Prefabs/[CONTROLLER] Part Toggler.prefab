@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4013407255732048420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4013407255732048422}
+  - component: {fileID: 4013407255732048421}
+  m_Layer: 0
+  m_Name: '[CONTROLLER] Part Toggler'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4013407255732048422
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4013407255732048420}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1420319, y: -0.49188617, z: 0.6225316}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4013407255732048421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4013407255732048420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5844dcdf28e5e7349b384cfd1679d6bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShaderNormal_N: Universal Render Pipeline/Lit
+  m_ShaderTransparent_N: Shader Graphs/Fresnel
+  m_UITogglePrefab: {fileID: 7326418328902824784, guid: 37ea0a01a70186247a4aba7eab4a4398,
+    type: 3}
+  m_UIContentRoot_AllParts: {fileID: 0}
+  m_Target: {fileID: 0}
