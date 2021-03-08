@@ -9,27 +9,27 @@ using Outline = ModelOutline.Outline;
 public class GradingController : MonoBehaviour
 {
     [SerializeField]
-    ControllerScript m_ControllerScript;
+    ControllerScript m_ControllerScript = null;
 
     [SerializeField]
-    Canvas m_ResultUI;
+    Canvas m_ResultUI = null;
 
     [SerializeField]
-    GameObject m_TotaltimerUI;
+    GameObject m_TotaltimerUI = null;
 
     [SerializeField]
-    GameObject m_CorrectPlacedUI;
+    GameObject m_CorrectPlacedUI = null;
 
     [SerializeField]
-    GameObject m_IncorrectPlacedUI;
+    GameObject m_IncorrectPlacedUI = null;
 
     [SerializeField]
-    GameObject m_ListContent;
+    GameObject m_ListContent = null;
 
     Button m_Refresh;
 
     [SerializeField]
-    GameObject m_ResultRow;
+    GameObject m_ResultRow = null;
 
     Object[] m_Thumbnails;
 

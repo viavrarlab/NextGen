@@ -20,8 +20,8 @@ public class TweenMasterController : MonoBehaviour
             //    OnVariableChange(m_TweenTimeScale);
         }
     }
-    public delegate void OnVariableChangeDelegate(float newVal);
-    public event OnVariableChangeDelegate OnVariableChange;
+    //public delegate void OnVariableChangeDelegate(float newVal);
+    //public event OnVariableChangeDelegate OnVariableChange;
 
 
     public void UpdateTweenTimescale(float timescale)

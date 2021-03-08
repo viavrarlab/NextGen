@@ -50,7 +50,7 @@ LightmapSettings:
     m_BounceScale: 1
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
-    m_EnvironmentLightingMode: 0
+    m_EnvironmentLightingMode: 1
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
@@ -71,7 +71,7 @@ LightmapSettings:
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
-    m_MixedBakeMode: 2
+    m_MixedBakeMode: 1
     m_BakeBackend: 1
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 112000000, guid: f194cb88b57405a4db1f7e2e73dbd22c,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -343,6 +343,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &16459272
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -666,6 +668,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!65 &40770611
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -885,6 +889,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &41016414
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1801,6 +1807,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &93676130
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2549,6 +2557,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!65 &162611845
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2649,6 +2659,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &184903977
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2818,6 +2830,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &202506920
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3203,6 +3217,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &267520524
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3569,6 +3585,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &289059810
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4112,6 +4130,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &362561744
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4418,6 +4438,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &390419975
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4593,6 +4615,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &404880148
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5154,6 +5178,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &483633290
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5409,6 +5435,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &485923027
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5570,6 +5598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sets: []
+  m_ModelComplete: 0
 --- !u!114 &516285135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7028,6 +7057,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!65 &633503004
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7277,6 +7308,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &640648042
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7595,6 +7628,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!65 &652852992
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7693,6 +7728,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &662666423
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8433,6 +8470,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &708964834
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8986,6 +9025,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!65 &781736053
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9638,6 +9679,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &814336736
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9857,6 +9900,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &825857407
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10028,6 +10073,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &830977758
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10473,6 +10520,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &836067564
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11431,6 +11480,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &897515838
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11620,6 +11671,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &903108739
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12201,6 +12254,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &955282199
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12650,6 +12705,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!65 &990589083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13332,6 +13389,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &1051115872
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13684,6 +13743,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &1077335724
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13861,6 +13922,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &1083706785
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14700,6 +14763,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &1205248362
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14939,6 +15004,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &1239715339
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15425,7 +15492,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!64 &1319895277
 MeshCollider:
@@ -15676,6 +15743,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &1345212700
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17058,6 +17127,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &1455692853
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17825,6 +17896,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &1522524163
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18297,6 +18370,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &1550102613
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18738,6 +18813,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &1595412312
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19061,6 +19138,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!65 &1605885831
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19462,6 +19541,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &1631289261
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19739,6 +19820,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!65 &1640148441
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19810,6 +19893,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &1657010514
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20433,6 +20518,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &1695727022
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20813,6 +20900,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &1737022821
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -21392,6 +21481,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &1750663056
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -21665,6 +21756,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!65 &1785707708
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21946,6 +22039,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &1808881353
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -22369,6 +22464,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &1843603427
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23010,6 +23107,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &1859821237
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23395,6 +23494,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &1901899575
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23847,6 +23948,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &1922659883
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -24459,6 +24562,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &1971936061
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -25576,6 +25681,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &2114586647
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -25920,6 +26027,8 @@ MonoBehaviour:
   m_InvalidRotationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_CurrentSocketState: 0
   m_SnappableObject: {fileID: 0}
+  m_ControllerScript: {fileID: 0}
+  m_BothControllers: []
 --- !u!54 &2121229471
 Rigidbody:
   m_ObjectHideFlags: 0

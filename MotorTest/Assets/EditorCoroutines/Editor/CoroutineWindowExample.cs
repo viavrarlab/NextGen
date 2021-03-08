@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEditor;
-
+using UnityEngine.Networking;
 //namespace marijnz.EditorCoroutines
 //{
 	public class CoroutineWindowExample : EditorWindow
@@ -75,14 +75,13 @@ using UnityEditor;
 			}
 		}
 
-	[System.Obsolete]
 	IEnumerator ExampleWWW()
 		{
 			while (true)
 			{
-				var www = new WWW("https://unity3d.com/");
+				var www = new UnityWebRequest("https://unity3d.com/");
 				yield return www;
-				Debug.Log("Hello EditorCoroutine!" + www.text);
+				Debug.Log("Hello EditorCoroutine!" + www.ToString());
 				yield return new WaitForSeconds(2f);
 			}
 		}

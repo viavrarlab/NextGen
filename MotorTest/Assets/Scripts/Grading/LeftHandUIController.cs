@@ -9,7 +9,7 @@ public class LeftHandUIController : MonoBehaviour
     [SerializeField]
     Canvas m_ControllerUI;
     [SerializeField]
-    Image m_HintImage;
+    Image m_HintImage = null;
 
     Object[] m_Thumbnails;
 

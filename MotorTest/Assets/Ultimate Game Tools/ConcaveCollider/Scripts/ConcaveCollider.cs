@@ -152,7 +152,6 @@ public class ConcaveCollider : MonoBehaviour
 
 #if UNITY_EDITOR
 
-    [Obsolete]
     public bool ComputeHulls(LogDelegate log, ProgressDelegate progress)
     {
         bool hadError = false;
@@ -161,13 +160,13 @@ public class ConcaveCollider : MonoBehaviour
         if(CreateMeshAssets)
         {
             string uniqueID = null;;
-            Debug.LogFormat("Obj: {0} of type {1}", gameObject.transform.name, UnityEditor.PrefabUtility.GetPrefabType(this.gameObject));
-            if (UnityEditor.PrefabUtility.GetPrefabParent(this.gameObject) != null)
+            Debug.LogFormat("Obj: {0} of type {1}", gameObject.transform.name, UnityEditor.PrefabUtility.GetPrefabAssetType(this.gameObject));
+            if (UnityEditor.PrefabUtility.GetCorrespondingObjectFromSource(this.gameObject) != null)
             {
-                string prefabPath = UnityEditor.AssetDatabase.GetAssetPath(UnityEditor.PrefabUtility.GetPrefabParent(this.gameObject));
+                string prefabPath = UnityEditor.AssetDatabase.GetAssetPath(UnityEditor.PrefabUtility.GetCorrespondingObjectFromSource(this.gameObject));
                 int startIndex = 1 + prefabPath.LastIndexOf("/");
                 prefabPath = prefabPath.Substring(startIndex, prefabPath.LastIndexOf(".") - startIndex);
-                uniqueID = string.Format("{0}_{1}", prefabPath, UnityEditor.PrefabUtility.GetPrefabParent(this.gameObject).name);
+                uniqueID = string.Format("{0}_{1}", prefabPath, UnityEditor.PrefabUtility.GetCorrespondingObjectFromSource(this.gameObject).name);
             }
             else
                 uniqueID = string.Format("{0}_{1}", gameObject.name, this.GetInstanceID().ToString());

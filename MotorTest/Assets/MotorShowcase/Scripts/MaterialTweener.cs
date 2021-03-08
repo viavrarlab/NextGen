@@ -13,11 +13,10 @@ public class MaterialTweener : MonoBehaviour
     
     public List<TweenProperties> m_TweenPropertyList;
 
-    private bool m_Enabled = false;
+    //private bool m_Enabled = false;
 
-    [SerializeField]
-    private float m_Time = 0f;
-    private int m_LoopsDone = 0;
+    //[SerializeField]
+    //private float m_Time = 0f;
 
     private Renderer m_Renderer;
     private MaterialPropertyBlock m_PropBlock;

@@ -6,17 +6,17 @@ using UnityEngine.UI;
 public class ListEntryValues : MonoBehaviour
 {
     [SerializeField]
-    GameObject Image;
+    GameObject Image = null;
     [SerializeField]
-    GameObject PartNameText;
+    GameObject PartNameText = null;
     [SerializeField]
-    GameObject PartCountText;
+    GameObject PartCountText = null;
     [SerializeField]
-    GameObject PartTimerText;
+    GameObject PartTimerText = null;
     [SerializeField]
-    GameObject CorrectPlaceIndex;
+    GameObject CorrectPlaceIndex = null;
     [SerializeField]
-    GameObject ActualPlacementIndex;
+    GameObject ActualPlacementIndex = null;
 
     public void UpdateTextsAndImage(Sprite thumbnail,string PartName, string PartPicCount, string Timer, string corrOrder,string ActualOrder)
     {

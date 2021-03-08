@@ -14,7 +14,7 @@ public class AnimateSpline : MonoBehaviour
 
     public float m_AnimationLength = 1f;
 
-    private bool m_IsAtRest = false;
+    public bool m_IsAtRest = false;
 
     
 

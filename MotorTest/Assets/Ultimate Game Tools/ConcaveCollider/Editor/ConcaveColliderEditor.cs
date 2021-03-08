@@ -162,7 +162,6 @@ public class ConcaveColliderEditor : Editor
         {
             if(m_concaveCollider)
             {
-
                 m_concaveCollider.ComputeHulls(new ConcaveCollider.LogDelegate(Log), new ConcaveCollider.ProgressDelegate(Progress));
                 EditorUtility.ClearProgressBar();
             }

@@ -8,7 +8,7 @@ public class InputManager : MonoBehaviour
     [SerializeField]
     private VivePoseTracker m_Pose = null;
     [SerializeField]
-    private HandRole Hand;
+    private HandRole Hand = new HandRole();
 
     [Header("Trigger")]
     public ControllerButton m_TriggerButton;

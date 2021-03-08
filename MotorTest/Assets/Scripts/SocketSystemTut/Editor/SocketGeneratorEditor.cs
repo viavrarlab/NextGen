@@ -36,10 +36,10 @@ public class SocketGeneratorEditor : Editor
             m_SocketGen.SetPostGenerationOptions();
         }
 
-        if (GUILayout.Button("Clear"))
-        {
-            m_SocketGen.Clear();
-        }
+        //if (GUILayout.Button("Clear"))
+        //{
+        //    m_SocketGen.Clear();
+        //}
     }
 
 

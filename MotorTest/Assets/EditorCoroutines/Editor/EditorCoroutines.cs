@@ -4,6 +4,7 @@ using UnityEditor;
 using System.Collections.Generic;
 using System;
 using System.Reflection;
+using UnityEngine.Networking;
 
 //namespace marijnz.EditorCoroutines
 //{
@@ -88,8 +89,7 @@ public class EditorCoroutines
 
 		struct YieldWWW : ICoroutineYield
 		{
-		[Obsolete]
-		public WWW Www;
+		public UnityWebRequest Www;
 
 		[Obsolete]
 		public bool IsDone(float deltaTime)
@@ -355,7 +355,6 @@ public class EditorCoroutines
 		}
 
 	// returns false if no next, returns true if OK
-	[Obsolete]
 	static bool Process(EditorCoroutine coroutine)
 		{
 			object current = coroutine.routine.Current;
@@ -375,9 +374,9 @@ public class EditorCoroutines
 					customYield = current as CustomYieldInstruction
 				};
 			}
-			else if (current is WWW)
+			else if (current is UnityWebRequest)
 			{
-				coroutine.currentYield = new YieldWWW {Www = (WWW) current};
+				coroutine.currentYield = new YieldWWW {Www = (UnityWebRequest) current};
 			}
 			else if (current is WaitForFixedUpdate || current is WaitForEndOfFrame)
 			{

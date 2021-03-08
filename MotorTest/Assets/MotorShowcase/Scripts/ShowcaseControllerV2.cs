@@ -843,8 +843,8 @@ namespace ShowcaseV2
         [Button]
         public void ExportGroupsToTextFile()
         {
-            int groupID = 0;
-            int stepID = 0;
+            //int groupID = 0;
+            //int stepID = 0;
 
             string path = "Assets/Resources/GroupExport.txt";
             StreamWriter writer = new StreamWriter(path, true);
@@ -1029,8 +1029,8 @@ namespace ShowcaseV2
 
     class ObjectCircle
     {
-        public Transform m_Transform;
-        public Vector2 m_Center;
-        public float m_Radius;
+        public Transform m_Transform = null;
+        public Vector2 m_Center = new Vector2();
+        public float m_Radius = 0;
     }
 }
