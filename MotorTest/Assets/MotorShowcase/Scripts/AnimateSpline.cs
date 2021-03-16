@@ -8,6 +8,7 @@ using NaughtyAttributes;
 public class AnimateSpline : MonoBehaviour
 {
     public LineManager m_Spline;
+    public SplineMesher.SplineMesher m_Mesher;
 
     public Transform m_RestPosition;
     public Transform m_EndPosition;
@@ -25,7 +26,10 @@ public class AnimateSpline : MonoBehaviour
         {
             m_Spline = GetComponent<LineManager>();
         }
-
+        if (m_Mesher == null)
+        {
+            m_Mesher = GetComponent<SplineMesher.SplineMesher>();
+        }
         AnimateToRest(0.001f);
     }
 
@@ -51,6 +55,7 @@ public class AnimateSpline : MonoBehaviour
             m_Spline.controllerList[m_Spline.controllerList.Count - 1] -= deltaPos; // Add/Subtract the delta position to the last spline controller (if it's the last knot, there will only be one controller)
 
             m_Spline.ManualUpdate();
+            m_Mesher.ManualUpdate();
 
             prevPos = m_Spline.knotList[m_Spline.knotList.Count - 1];
         }).OnComplete(() =>
@@ -79,6 +84,7 @@ public class AnimateSpline : MonoBehaviour
             m_Spline.controllerList[m_Spline.controllerList.Count - 1] -= deltaPos;
 
             m_Spline.ManualUpdate();
+            m_Mesher.ManualUpdate();
 
             prevPos = m_Spline.knotList[m_Spline.knotList.Count - 1];
         }).OnComplete(() =>

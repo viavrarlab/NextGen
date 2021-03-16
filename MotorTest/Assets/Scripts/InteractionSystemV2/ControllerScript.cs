@@ -65,7 +65,7 @@ public class ControllerScript : MonoBehaviour
                 {
                     for (int i = 0; i < m_PlaceArray.Length; i++)
                     {
-                        if (m_PlaceArray[i] != null && m_PlaceArray[i].GetComponent<Placeable>() != null && i != m_PlaceArray.Length)
+                        if (m_PlaceArray[i] != null && m_PlaceArray[i].GetComponent<Placeable>() != null && i < m_PlaceArray.Length -1)
                         {
                             if (other.transform.parent.transform.parent.gameObject.GetComponent<Placeable>().m_ID == m_PlaceArray[i].GetComponent<Placeable>().m_ID && m_PlaceArray[i + 1].GetComponent<Placeable>().m_IsPlaced == false)
                             {

@@ -48,7 +48,8 @@ namespace SplineMesher {
         #endregion
 
         public void ManualUpdate() {
-            OnValidate();
+            ManualValidate();
+            //OnValidate();
         }
 
         void Update() {
@@ -59,7 +60,7 @@ namespace SplineMesher {
         }
 
         void OnValidate() {
-            ManualValidate();
+            ManualUpdate();
         }
 
         void ManualValidate()

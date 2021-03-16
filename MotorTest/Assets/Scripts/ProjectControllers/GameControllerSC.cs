@@ -18,25 +18,34 @@ public class GameControllerSC : MonoBehaviour
     [SerializeField]
     GameObject BackToMainFromFreeRoam = null;
 
-    [SerializeField]
-    Toggle AngleCheck = null;
+    //[SerializeField]
+    //Toggle AngleCheck = null;
     [SerializeField]
     GameObject OrderCheck = null;
     [SerializeField]
     GameObject HintEnable = null;
 
+    public GameObject[] Instructions;
+
     public bool SetAngleCheck;
     public bool SetOrderCheck;
     public bool EnableHint;
+
+    private static GameControllerSC _instance;
+    public static GameControllerSC Instance { get { return _instance; } }
+
     private void Awake()
     {
-        GameObject[] Obj = GameObject.FindGameObjectsWithTag("GameController");
-        if (Obj.Length > 1)
+        if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
         }
+        else
+        {
+            _instance = this;
+        }
         DontDestroyOnLoad(this.gameObject);
-                
+
     }
     private void OnEnable()
     {
@@ -44,10 +53,25 @@ public class GameControllerSC : MonoBehaviour
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if(scene.buildIndex == 1)
+        if (scene.buildIndex == 1)
         {
+            Instructions = GameObject.FindGameObjectsWithTag("Instructions");
+            if (Instructions != null)
+            {
+                foreach(GameObject go in Instructions)
+                {
+                    if (!go.activeInHierarchy)
+                    {
+                        go.SetActive(true);
+                    }
+                }
+            }
+
             LoadingCircle = GameObject.Find("LoadingCanva");
-            LoadingCircle.SetActive(false);
+            if (LoadingCircle != null)
+            {
+                LoadingCircle.SetActive(false);
+            }
             StartFreeRoamExperience = GameObject.Find("FreeRoamButton");
             StartInteractiveTutorial = GameObject.Find("InteractiveTuTButton");
             StartMotorShowCase = GameObject.Find("ShowCaseButton");
@@ -60,10 +84,26 @@ public class GameControllerSC : MonoBehaviour
             OrderCheck.GetComponent<Toggle>().onValueChanged.AddListener(OrderCheckToggle);
             HintEnable.GetComponent<Toggle>().onValueChanged.AddListener(HintToggle);
         }
-        if(scene.buildIndex == 2)
+        if (scene.buildIndex == 2 || scene.buildIndex == 4 || scene.buildIndex == 3)
         {
+            Instructions = GameObject.FindGameObjectsWithTag("Instructions");
+            if (Instructions != null)
+            {
+                foreach (GameObject go in Instructions)
+                {
+                    if (go.activeInHierarchy)
+                    {
+                        go.SetActive(false);
+                    }
+                }
+            }
+            LoadingCircle = GameObject.Find("LoadingCanva");
+            if(LoadingCircle != null)
+            {
+                LoadingCircle.SetActive(false);
+            }
             BackToMainFromFreeRoam = GameObject.Find("Back_To_Menu");
-            BackToMainFromFreeRoam.GetComponent<Button>().onClick.AddListener(BackToMainFromFree);
+            BackToMainFromFreeRoam.GetComponent<Button>().onClick.AddListener(BackToMain);
         }
     }
     public void FreeRoamExperiance()
@@ -81,8 +121,9 @@ public class GameControllerSC : MonoBehaviour
         LoadingCircle.SetActive(true);
         StartCoroutine(LoadSceneAsync(4));
     }
-    public void BackToMainFromFree()
+    public void BackToMain()
     {
+        LoadingCircle.SetActive(true);
         StartCoroutine(LoadSceneAsync(1));
     }
     public void AngleCheckToggle(bool angle)

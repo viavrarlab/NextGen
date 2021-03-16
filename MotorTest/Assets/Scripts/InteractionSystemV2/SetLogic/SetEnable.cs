@@ -9,8 +9,6 @@ public class SetEnable : MonoBehaviour
     int count = 0;
     public List<GameObject> Sets;
 
-    GameControllerSC GController;
-
     [SerializeField]
     bool m_ModelComplete;
 
@@ -29,7 +27,6 @@ public class SetEnable : MonoBehaviour
     }
     private void Start()
     {
-        GController = FindObjectOfType<GameControllerSC>();
         foreach (Transform child in this.transform)
         {
             if (child.childCount > 1)
@@ -43,9 +40,9 @@ public class SetEnable : MonoBehaviour
                 }
             }
         }
-        if (GController != null)
+        if (GameControllerSC.Instance != null)
         {
-            if (GController.SetOrderCheck)
+            if (GameControllerSC.Instance.SetOrderCheck)
             {
                 disableNextSets();
             }
@@ -58,9 +55,13 @@ public class SetEnable : MonoBehaviour
     }
     private void Update()
     {
-        if (GController != null)
+        if (!m_ModelComplete)
         {
-            if (GController.SetOrderCheck)
+            ObjectCompleteCheck();
+        }
+        if (GameControllerSC.Instance != null)
+        {
+            if (GameControllerSC.Instance.SetOrderCheck)
             {
                 ActivateNextSet();
             }
@@ -72,15 +73,6 @@ public class SetEnable : MonoBehaviour
     }
     public void ActivateNextSet()
     {
-        if (Sets.All(x => x.GetComponent<SetComplete>().complete == true))
-        {
-            m_ModelComplete = true;
-            return;
-        }
-        else
-        {
-            m_ModelComplete = false;
-        }
         if (Sets.Any(x => x.GetComponent<SetComplete>().complete == false))
         {
             foreach (GameObject set in Sets)
@@ -110,6 +102,18 @@ public class SetEnable : MonoBehaviour
             {
                 set.SetActive(false);
             }
+        }
+    }
+    public void ObjectCompleteCheck()
+    {
+        if (Sets.All(x => x.GetComponent<SetComplete>().complete == true))
+        {
+            m_ModelComplete = true;
+            return;
+        }
+        else
+        {
+            m_ModelComplete = false;
         }
     }
 }

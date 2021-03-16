@@ -21,7 +21,7 @@ public class PlacementPoint : MonoBehaviour
     public bool m_SkipXAngle = false;
     public bool m_SkipYAngle = false;
     public bool m_SkipZAngle = false;
-
+    private bool m_GameControllerAngleCheck;
     private OrderCheck m_OrderCheck;
 
     public float snapspeed = .4f;
@@ -64,7 +64,7 @@ public class PlacementPoint : MonoBehaviour
         m_GameController = FindObjectOfType<GameControllerSC>();
         if(m_GameController!= null)
         {
-            m_CheckForCorrectAngle = m_GameController.SetAngleCheck;
+            m_GameControllerAngleCheck = m_GameController.SetAngleCheck;
         }
     }
 
@@ -165,7 +165,7 @@ public class PlacementPoint : MonoBehaviour
             m_ControllerScript = m_BothControllers.FirstOrDefault(x => x.TriggerPush || x.GrabPush);
         }
         //If object is placed and want to take it out of the socket
-        if (m_ControllerScript.TriggerPush == true && m_IsOccupied && m_ControllerScript.collidingObjectToBePickedUp != null && m_SnappableObject.CanTakeOut) // If the object is the player hand object OR the socket is already occupied, then just return and ignore the resto of the function
+        if (m_ControllerScript != null && m_ControllerScript.TriggerPush == true && m_IsOccupied && m_ControllerScript.collidingObjectToBePickedUp != null && m_SnappableObject.CanTakeOut) // If the object is the player hand object OR the socket is already occupied, then just return and ignore the resto of the function
         {
             if (m_ControllerScript.objectinhand == m_SnappableObject.gameObject)
             {
@@ -192,7 +192,7 @@ public class PlacementPoint : MonoBehaviour
                 {
                     if (m_OrderCheck.m_OrderCorrect)
                     {
-                        if (m_CheckForCorrectAngle) // if option is check
+                        if (m_CheckForCorrectAngle && m_GameControllerAngleCheck) // if option is check
                         {
                             if (CheckAngle(m_SnappableObject.transform.rotation))   // Check if user has rotated the object correctly
                             {

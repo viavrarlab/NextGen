@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 6833795027460362609}
   - component: {fileID: 1002628390933556616}
   m_Layer: 0
-  m_Name: NextGen TP Marker
+  m_Name: NextGen_TP_Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2561847669166451527
 Transform:
   m_ObjectHideFlags: 0

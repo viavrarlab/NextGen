@@ -31,8 +31,9 @@ public class Teleport : MonoBehaviour
 
     void Start()
     {
+        m_Marker = GameObject.Find("NextGen_TP_Marker");
         //m_Pose = GetComponent<SteamVR_Behaviour_Pose>();
-        m_Marker.SetActive(false);
+        //m_Marker.SetActive(false);
     }
 
     void FixedUpdate()
