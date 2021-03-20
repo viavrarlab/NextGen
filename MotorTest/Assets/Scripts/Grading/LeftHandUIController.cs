@@ -70,7 +70,18 @@ public class LeftHandUIController : MonoBehaviour
                     if (img.name == m_CorrOrder.Parts[i+1].obj.name + "_Thumbnail")
                     {
                         m_HintImage.sprite = img;
-                        PartName.text = m_CorrOrder.Parts[i + 1].obj.name;
+                        if(m_CorrOrder.Parts[i + 1].obj.name == "Set0")
+                        {
+                            PartName.text = m_CorrOrder.Parts[i + 1].obj.name.Replace("Set0", "Front shield");
+                        }
+                        if (m_CorrOrder.Parts[i + 1].obj.name == "Set1")
+                        {
+                            PartName.text = m_CorrOrder.Parts[i + 1].obj.name.Replace("Set1", "Back shield");
+                        }
+                        else
+                        {
+                            PartName.text = m_CorrOrder.Parts[i + 1].obj.name.Replace('_', ' ');
+                        }
                     }
                 }
             }
@@ -81,7 +92,18 @@ public class LeftHandUIController : MonoBehaviour
                     if (img.name == m_CorrOrder.Parts[i].obj.name + "_Thumbnail")
                     {
                         m_HintImage.GetComponentInChildren<Image>().sprite = img;
-                        PartName.text = m_CorrOrder.Parts[i].obj.name;
+                        if (m_CorrOrder.Parts[i + 1].obj.name == "Set0")
+                        {
+                            PartName.text = m_CorrOrder.Parts[i].obj.name.Replace("Set0", "Front shield");
+                        }
+                        if (m_CorrOrder.Parts[i + 1].obj.name == "Set1")
+                        {
+                            PartName.text = m_CorrOrder.Parts[i].obj.name.Replace("Set1", "Back shield");
+                        }
+                        else
+                        {
+                            PartName.text = m_CorrOrder.Parts[i].obj.name.Replace('_', ' ');
+                        }
                     }
                 }
                 break;

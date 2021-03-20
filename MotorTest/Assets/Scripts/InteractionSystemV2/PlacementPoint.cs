@@ -11,17 +11,17 @@ using System.Linq;
 public class PlacementPoint : MonoBehaviour
 {
     public int m_PlaceableID;   // This must correspond to the Placeable objects' ID that you want to place here
-    public Quaternion m_CorrectPlacementAngle; // TODO: make this automated somehow. Maybe when generating placement points / ObjectConfig.. IDK
+    public Vector3 m_CorrectPlacementAngle; // TODO: make this automated somehow. Maybe when generating placement points / ObjectConfig.. IDK
     public bool m_IsOccupied = false; // If this socket/point has something socketed 
     public float m_CorrectAngleThreshold = 7.5f; // How precise does the Placeable objects' rotation has to be in order to allow snapping into socket. Used in CheckAngle(). Measures as angle degrees.
     [Header("Disable order check")]
     public bool m_CheckOrder = true;
     [Header("Disable angle checks")]
     public bool m_CheckForCorrectAngle = false;
-    public bool m_SkipXAngle = false;
-    public bool m_SkipYAngle = false;
-    public bool m_SkipZAngle = false;
-    private bool m_GameControllerAngleCheck;
+    public bool m_CheckOnlyXAngle = false;
+    public bool m_CheckOnlyYAngle = false;
+    public bool m_CheckOnlyZAngle = false;
+    private bool m_GameControllerAngleCheck = true;
     private OrderCheck m_OrderCheck;
 
     public float snapspeed = .4f;
@@ -62,7 +62,7 @@ public class PlacementPoint : MonoBehaviour
 
         SwitchSocketState(SocketState.Empty);
         m_GameController = FindObjectOfType<GameControllerSC>();
-        if(m_GameController!= null)
+        if (m_GameController != null)
         {
             m_GameControllerAngleCheck = m_GameController.SetAngleCheck;
         }
@@ -125,7 +125,7 @@ public class PlacementPoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag( "PlayerHand" )|| m_IsOccupied) // If the object is the player hand object OR the socket is already occupied, then just return and ignore the resto of the function
+        if (other.CompareTag("PlayerHand") || m_IsOccupied) // If the object is the player hand object OR the socket is already occupied, then just return and ignore the resto of the function
         {
             return;
         }
@@ -150,7 +150,7 @@ public class PlacementPoint : MonoBehaviour
                     if (m_SnappableObject != p) // Kind of redundant check, but whatever - just keep it as extra security. Just setting the member variable to incoming objects Placeable script reference.
                     {
                         m_SnappableObject = p;
-                        m_CorrectPlacementAngle = transform.rotation; // update socket angle
+                        m_CorrectPlacementAngle = transform.rotation.eulerAngles; // update socket angle
                     }
                     //m_IsOccupied = true;
                 }
@@ -160,7 +160,8 @@ public class PlacementPoint : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (m_BothControllers.FirstOrDefault(x => x.TriggerPush || x.GrabPush)) 
+
+        if (m_BothControllers.FirstOrDefault(x => x.TriggerPush || x.GrabPush))
         {
             m_ControllerScript = m_BothControllers.FirstOrDefault(x => x.TriggerPush || x.GrabPush);
         }
@@ -169,8 +170,8 @@ public class PlacementPoint : MonoBehaviour
         {
             if (m_ControllerScript.objectinhand == m_SnappableObject.gameObject)
             {
-                m_SnappableObject.GetComponentInParent<ParentConstraint>().constraintActive = false;
                 m_SnappableObject.m_IsPlaced = false;
+                m_SnappableObject.GetComponentInParent<ParentConstraint>().constraintActive = false;             
                 m_IsOccupied = false;
             }
         }
@@ -179,12 +180,11 @@ public class PlacementPoint : MonoBehaviour
         {
             return;
         }
-
         if (other.CompareTag("Socket"))
         {
             Physics.IgnoreCollision(other, this.gameObject.GetComponent<BoxCollider>());
         }
-        if (!m_IsOccupied)
+        if (!m_IsOccupied && GameControllerSC.Instance != null && !GameControllerSC.Instance.ObjectIsSnapping)
         {
             if (m_SnappableObject != null)
             {
@@ -194,7 +194,7 @@ public class PlacementPoint : MonoBehaviour
                     {
                         if (m_CheckForCorrectAngle && m_GameControllerAngleCheck) // if option is check
                         {
-                            if (CheckAngle(m_SnappableObject.transform.rotation))   // Check if user has rotated the object correctly
+                            if (CheckAngle(m_SnappableObject.transform.rotation.eulerAngles))   // Check if user has rotated the object correctly
                             {
                                 SwitchSocketState(SocketState.IntersectingValidObject);
                                 if (!m_ControllerScript.TriggerPush && !m_ControllerScript.GrabPush)
@@ -251,10 +251,10 @@ public class PlacementPoint : MonoBehaviour
             SwitchSocketState(SocketState.Empty);
             m_SnappableObject = null;
         }
-        if (other.GetComponentInParent<Placeable>() != null)
-        {
-            //SwitchSocketState(SocketState.Empty);
-        }
+        //if (other.GetComponentInParent<Placeable>() != null)
+        //{
+        //    //SwitchSocketState(SocketState.Empty);
+        //}
     }
 
     void ToggleSocketMeshRenderer(bool _state)
@@ -309,44 +309,82 @@ public class PlacementPoint : MonoBehaviour
     //    return m_MaterialPropertyBlock.GetFloat("_AlphaValue");
     //}
 
-    bool CheckAngle(Quaternion _incomingRotation)
+    bool CheckAngle(Vector3 _incomingRotation)
     {
-        // might need optimization and some bug fixing... not good with quaternions...
-        float angle = 0f;
-
-        //skip angle check on x axis
-        if (m_SkipXAngle)
+        bool isSameRotation = false;
+        //angle check on x axis
+        if (m_CheckOnlyXAngle)
         {
-            Quaternion SkipX = new Quaternion(0f, _incomingRotation.y, _incomingRotation.z, _incomingRotation.w);
-            Quaternion CorrXrot = new Quaternion(0f, m_CorrectPlacementAngle.y, m_CorrectPlacementAngle.z, _incomingRotation.w);
-            angle = Vector3.Angle(SkipX.eulerAngles, CorrXrot.eulerAngles);
+            isSameRotation = CorectRotationX(_incomingRotation, m_CorrectPlacementAngle, true);
         }
-        //skip angle check on y axis
-        if (m_SkipYAngle)
+        //angle check on y axis
+        if (m_CheckOnlyYAngle)
         {
-            Quaternion SkipY = new Quaternion(_incomingRotation.x, 0f, _incomingRotation.z, _incomingRotation.w);
-            Quaternion CorrYrot = new Quaternion(m_CorrectPlacementAngle.x, 0f, m_CorrectPlacementAngle.z, m_CorrectPlacementAngle.w);
-            angle = Vector3.Angle(SkipY.eulerAngles, CorrYrot.eulerAngles);
+            isSameRotation = CorectRotationY(_incomingRotation, m_CorrectPlacementAngle, true);
         }
-        //skip angle check on z axis
-        if (m_SkipZAngle)
+        //angle check on z axis
+        if (m_CheckOnlyZAngle)
         {
-            Quaternion SkipZ = new Quaternion(_incomingRotation.x, _incomingRotation.y, 0f, _incomingRotation.w);
-            Quaternion CorrZrot = new Quaternion(m_CorrectPlacementAngle.x, m_CorrectPlacementAngle.y, 0f, m_CorrectPlacementAngle.w);
-            angle = Vector3.Angle(SkipZ.eulerAngles, CorrZrot.eulerAngles);
+            isSameRotation = CorectRotationZ(_incomingRotation, m_CorrectPlacementAngle, true);
         }
-        //ignore all angles
-        if (!m_SkipXAngle && !m_SkipYAngle && !m_SkipZAngle)
+        //Check all angles
+        if (!m_CheckOnlyXAngle && !m_CheckOnlyYAngle && !m_CheckOnlyZAngle)
         {
-            Quaternion angleA = m_CorrectPlacementAngle;  // Convert Euler angles to Quaternion for the correct/expected rotation and store it in a variable.
-            Quaternion angleB = _incomingRotation;  // Store incoming Placeable objects' rotation in variable
-            angle = Quaternion.Angle(angleA, angleB); // Calculate difference between the 2 angles
+            isSameRotation = CorectRotationAllAngles(_incomingRotation, m_CorrectPlacementAngle, true);
         }
-        bool isSameRotation = Mathf.Abs(angle) < m_CorrectAngleThreshold;   // If the difference is less than a threshold then we accept that it's the same rotation
+        //bool isSameRotation = Mathf.Abs(angle) < m_CorrectAngleThreshold;   // If the difference is less than a threshold then we accept that it's the same rotation
         return isSameRotation;
+    }
+    bool CorectRotationAllAngles(Vector3 objRotation, Vector3 currentRot, bool useThisFunc)
+    {
+        if (!useThisFunc)
+            return true;
+        if (IsInRange(objRotation.x - m_CorrectAngleThreshold, objRotation.x + m_CorrectAngleThreshold, currentRot.x)
+            &&
+            IsInRange(objRotation.y - m_CorrectAngleThreshold, objRotation.y + m_CorrectAngleThreshold, currentRot.y)
+            &&
+            IsInRange(objRotation.z - m_CorrectAngleThreshold, objRotation.z + m_CorrectAngleThreshold, currentRot.z))
+            return true;
+        else
+            return false;
+    }
+    bool CorectRotationX(Vector3 objRotation, Vector3 currentRot, bool useThisFunc)
+    {
+        if (!useThisFunc)
+            return true;
+        if (IsInRange(objRotation.x - m_CorrectAngleThreshold, objRotation.x + m_CorrectAngleThreshold, currentRot.y))
+            return true;
+        else
+            return false;
+    }
+    bool CorectRotationY(Vector3 objRotation, Vector3 currentRot, bool useThisFunc)
+    {
+        if (!useThisFunc)
+            return true;
+        if (IsInRange(objRotation.y - m_CorrectAngleThreshold, objRotation.y + m_CorrectAngleThreshold, currentRot.y))
+            return true;
+        else
+            return false;
+    }
+    bool CorectRotationZ(Vector3 objRotation, Vector3 currentRot, bool useThisFunc)
+    {
+        if (!useThisFunc)
+            return true;
+        if (IsInRange(objRotation.z - m_CorrectAngleThreshold, objRotation.z + m_CorrectAngleThreshold, currentRot.z))
+            return true;
+        else
+            return false;
+    }
+    bool IsInRange(float min, float max, float value)
+    {
+        if (value >= min && value <= max)
+            return true;
+        else
+            return false;
     }
     private IEnumerator SnapWithAnimation()
     {
+        GameControllerSC.Instance.ObjectIsSnapping = true;
         float t = 0f;
         Vector3 StartPosition = m_SnappableObject.transform.position;
         Quaternion StartRotation = m_SnappableObject.transform.localRotation;
@@ -354,7 +392,7 @@ public class PlacementPoint : MonoBehaviour
         {
             t += Time.deltaTime / snapspeed;
             Vector3 currentposition = Vector3.Lerp(StartPosition, transform.position, t);
-            Quaternion Currentroatation = Quaternion.Lerp(StartRotation, m_CorrectPlacementAngle, t);
+            Quaternion Currentroatation = Quaternion.Lerp(StartRotation, Quaternion.Euler(m_CorrectPlacementAngle), t);
             m_SnappableObject.transform.rotation = Currentroatation;
             m_SnappableObject.transform.position = currentposition;
             yield return null;
@@ -363,6 +401,7 @@ public class PlacementPoint : MonoBehaviour
         m_IsOccupied = true;
         SwitchSocketState(SocketState.Snapped);
         m_SnappableObject.GetComponent<ParentConstraint>().constraintActive = true;
+        GameControllerSC.Instance.ObjectIsSnapping = false;
         yield return null;
     }
 }

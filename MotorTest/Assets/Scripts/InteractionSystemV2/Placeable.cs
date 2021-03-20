@@ -21,7 +21,7 @@ public class Placeable : MonoBehaviour
         {
             if (M_isPlaced == value) return;
             M_isPlaced = value;
-            if (M_isPlaced)
+            if (value)
             {
                 GradingController.Instance.ObjectPlaced(gameObject, m_ID);
                 GradingController.Instance.ShowHintOutline(gameObject, m_ID);
@@ -32,6 +32,7 @@ public class Placeable : MonoBehaviour
                 GradingController.Instance.ObjectRemoved(gameObject);
                 GradingController.Instance.PlacedCounterRemove(m_ID);
             }
+            GradingController.Instance.UpdateWhiteBoardCounter(value);
         }
     }
 

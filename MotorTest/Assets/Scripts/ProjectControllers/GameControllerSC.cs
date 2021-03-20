@@ -31,6 +31,9 @@ public class GameControllerSC : MonoBehaviour
     public bool SetOrderCheck;
     public bool EnableHint;
 
+    private bool m_IsSnapping;
+    public bool ObjectIsSnapping { get => m_IsSnapping; set => m_IsSnapping = value; }
+
     private static GameControllerSC _instance;
     public static GameControllerSC Instance { get { return _instance; } }
 

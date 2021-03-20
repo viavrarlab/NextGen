@@ -22,6 +22,11 @@ public class GradingController : MonoBehaviour
     [SerializeField]
     GameObject m_TotalTimerWhiteBoardUI = null;
     Text m_WhiteBoardTimer = null;
+    [SerializeField]
+    GameObject m_WhiteboardPartCounterUI = null;
+    Text m_WhiteBoardPartCounter;
+
+    CorrectOrderTests m_CorrOrder;
 
     [SerializeField]
     GameObject m_CorrectPlacedUI = null;
@@ -52,6 +57,7 @@ public class GradingController : MonoBehaviour
 
     public int m_CorrectPlacedCount;
     public int m_IncorrectPlacedCount;
+    int m_PlacedPartsCount;
 
     private static GradingController _instance;
     public static GradingController Instance { get { return _instance; } }
@@ -71,8 +77,10 @@ public class GradingController : MonoBehaviour
         m_SetEnable = FindObjectOfType<SetEnable>();
         m_ControllerScript = FindObjectOfType<ControllerScript>();
         BothControllers = FindObjectsOfType<ControllerScript>();
+        m_CorrOrder = FindObjectOfType<CorrectOrderTests>();
         m_Refresh = m_ResultUI.GetComponentInChildren<Button>();
         m_WhiteBoardTimer = m_TotalTimerWhiteBoardUI.GetComponent<Text>();
+        m_WhiteBoardPartCounter = m_WhiteboardPartCounterUI.GetComponent<Text>();
         m_Refresh.onClick.AddListener(DisplayList);
         StartCoroutine(TotalTimer());
         
@@ -126,7 +134,7 @@ public class GradingController : MonoBehaviour
                 {
                     m_ResultUI.enabled = true;
                     DisplayList();
-                    StopCoroutine(TotalTimer());
+                    StopAllCoroutines();
                     m_CorrectPlacedUI.GetComponent<Text>().text += m_CorrectPlacedCount.ToString();
                     m_IncorrectPlacedUI.GetComponent<Text>().text += m_IncorrectPlacedCount.ToString();
                     m_TotaltimerResultUI.GetComponent<Text>().text += m_TotalTimerText;
@@ -233,7 +241,7 @@ public class GradingController : MonoBehaviour
                     {
                         if (img.name == res.partName + "_Thumbnail")
                         {
-                            m_ResultRow.GetComponent<ListEntryValues>().UpdateTextsAndImage(img, res.partName, res.PickUpCount.ToString(), res.PartPickTime.ToString(), res.CorrectPlacementOrder.ToString(), res.ActualPlacementID.ToString());
+                            m_ResultRow.GetComponent<ListEntryValues>().UpdateTextsAndImage(img, res.partName.Replace('_',' '), res.PickUpCount.ToString(), res.PartPickTime.ToString(), res.CorrectPlacementOrder.ToString(), res.ActualPlacementID.ToString());
                         }
                     }
                 }
@@ -314,7 +322,10 @@ public class GradingController : MonoBehaviour
     }
     public void ObjectRemoved(GameObject Go)
     {
-        Instance.m_Results.Find(x => x.partName == Go.name).ActualPlacementID = 0;
+        if(m_Results != null)
+        {
+            Instance.m_Results.Find(x => x.partName == Go.name).ActualPlacementID = 0;
+        }
         for (int i = 0; i < Instance.PlacedOrder.Count; i++)
         {
             if (Instance.PlacedOrder[i].Partname == Go.name)
@@ -360,6 +371,23 @@ public class GradingController : MonoBehaviour
             
         }
         yield return null;
+    }
+    void PlacedPartCounterWhiteBoard(bool Placed)
+    {
+
+        if (Placed)
+        {
+            m_PlacedPartsCount++;
+        }
+        else
+        {
+            m_PlacedPartsCount--;
+        }
+    }
+    public void UpdateWhiteBoardCounter(bool Placed)
+    {
+        PlacedPartCounterWhiteBoard(Placed);
+        m_WhiteBoardPartCounter.text = "Placed parts = " + m_PlacedPartsCount.ToString() + "/" + m_CorrOrder.Parts.Count.ToString();
     }
     public IEnumerator TotalTimer()
     {
