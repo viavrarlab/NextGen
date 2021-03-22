@@ -59,7 +59,7 @@ Material:
     m_Floats:
     - Vector1_B398CFB6: 1
     - _AlphaClip: 0
-    - _AlphaValue: 1
+    - _AlphaValue: 0.423
     - _Blend: 0
     - _BumpScale: 1
     - _Cull: 2

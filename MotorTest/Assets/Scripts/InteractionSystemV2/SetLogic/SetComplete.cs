@@ -87,6 +87,7 @@ public class SetComplete : MonoBehaviour
         foreach(GameObject GO in SetModels)
         {
             GO.GetComponent<MeshRenderer>().enabled = false;
+            GO.GetComponentInChildren<Collider>().enabled = false;
         }
     }
     public void DisableSetModelMesh()
@@ -95,6 +96,7 @@ public class SetComplete : MonoBehaviour
         foreach (GameObject GO in SetModels)
         {
             GO.GetComponent<MeshRenderer>().enabled = true;
+            GO.GetComponentInChildren<Collider>().enabled = true;
         }
     }
 }

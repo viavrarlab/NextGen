@@ -135,6 +135,7 @@ public class GradingController : MonoBehaviour
                     m_ResultUI.enabled = true;
                     DisplayList();
                     StopAllCoroutines();
+                    PlacedCounters();
                     m_CorrectPlacedUI.GetComponent<Text>().text += m_CorrectPlacedCount.ToString();
                     m_IncorrectPlacedUI.GetComponent<Text>().text += m_IncorrectPlacedCount.ToString();
                     m_TotaltimerResultUI.GetComponent<Text>().text += m_TotalTimerText;
@@ -283,7 +284,6 @@ public class GradingController : MonoBehaviour
                 {
                     if (Instance.PlacedOrder.Any(x => x.ObjID == ObjID))
                     {
-                        Debug.Log("same id ");
                         int TempInt = Instance.PlacedOrder.Find(x => x.ObjID == ObjID).PlacedId;
                         Instance.PlacedOrder.Add(new PlacedOrder { Partname = Go.name, PlacedId = TempInt, ObjID = ObjID });
                         m_CorrectPlacedCount++;
@@ -298,26 +298,20 @@ public class GradingController : MonoBehaviour
             }
         }
     }
-    public void PlacedCounterAdd(int ObjId)
+    public void PlacedCounters()
     {
-        if(PlacedOrderID == ObjId)
+        m_CorrectPlacedCount = 0;
+        m_IncorrectPlacedCount = 0;
+        foreach(Results Res in m_Results)
         {
-            m_CorrectPlacedCount++;
-        }
-        else
-        {
-            m_IncorrectPlacedCount++;
-        }
-    }
-    public void PlacedCounterRemove(int ObjId)
-    {
-        if(PlacedOrderID == ObjId)
-        {
-            m_CorrectPlacedCount--;
-        }
-        else
-        {
-            m_IncorrectPlacedCount--;
+            if(Res.CorrectPlacementOrder == Res.ActualPlacementID)
+            {
+                m_CorrectPlacedCount++;
+            }
+            else
+            {
+                m_IncorrectPlacedCount++;
+            }
         }
     }
     public void ObjectRemoved(GameObject Go)
