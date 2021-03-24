@@ -64,7 +64,7 @@ public class SocketObject : MonoBehaviour
         }
     }
 
-    void SwitchSocketState(SocketState _state)
+    public void SwitchSocketState(SocketState _state)
     {
         m_CurrentSocketState = _state;
     }
