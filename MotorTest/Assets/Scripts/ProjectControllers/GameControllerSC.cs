@@ -86,6 +86,7 @@ public class GameControllerSC : MonoBehaviour
             //AngleCheck.onValueChanged.AddListener(AngleCheckToggle);
             OrderCheck.GetComponent<Toggle>().onValueChanged.AddListener(OrderCheckToggle);
             HintEnable.GetComponent<Toggle>().onValueChanged.AddListener(HintToggle);
+            SetOrderCheck = true;
         }
         if (scene.buildIndex == 2 || scene.buildIndex == 4 || scene.buildIndex == 3)
         {

@@ -19,12 +19,17 @@ public class GradingController : MonoBehaviour
     [SerializeField]
     GameObject m_TotaltimerResultUI = null;
 
+    //whiteboard Fields
+    [Header("WhiteBoardFields")]
     [SerializeField]
     GameObject m_TotalTimerWhiteBoardUI = null;
     Text m_WhiteBoardTimer = null;
     [SerializeField]
     GameObject m_WhiteboardPartCounterUI = null;
     Text m_WhiteBoardPartCounter;
+    [SerializeField]
+    GameObject m_WhiteBoardPointCounterUI = null;
+    Text m_WhiteBoardPoints;
 
     CorrectOrderTests m_CorrOrder;
 
@@ -55,9 +60,24 @@ public class GradingController : MonoBehaviour
 
     public int PlacedOrderID;
 
+    //correct placement counters
+    [Header("Correct placement counters")]
     public int m_CorrectPlacedCount;
     public int m_IncorrectPlacedCount;
     int m_PlacedPartsCount;
+
+    //point system
+    [Header("Point system variables")]
+    public float m_Points;
+    [SerializeField]
+    GameObject m_PlusOneText;
+    [SerializeField]
+    GameObject m_MinusOneText;
+    public float floatingspeed = .5f;
+    Vector3 m_TextStartPosition;
+    public bool pointAdded;
+    public bool ObjectExitedSocket;
+
 
     private static GradingController _instance;
     public static GradingController Instance { get { return _instance; } }
@@ -81,9 +101,12 @@ public class GradingController : MonoBehaviour
         m_Refresh = m_ResultUI.GetComponentInChildren<Button>();
         m_WhiteBoardTimer = m_TotalTimerWhiteBoardUI.GetComponent<Text>();
         m_WhiteBoardPartCounter = m_WhiteboardPartCounterUI.GetComponent<Text>();
+        m_WhiteBoardPoints = m_WhiteBoardPointCounterUI.GetComponent<Text>();
         m_Refresh.onClick.AddListener(DisplayList);
         StartCoroutine(TotalTimer());
-        
+
+        m_TextStartPosition = m_PlusOneText.transform.localPosition;
+
         m_Results = new List<Results>();
 
         if (_instance != null && _instance != this)
@@ -125,8 +148,12 @@ public class GradingController : MonoBehaviour
                 m_CurrPickUpObjRes = null;
                 MethodExecuted = false;
             }
+            if (!m_ControllerScript.TriggerPush && !m_ControllerScript.GrabPush && ObjectExitedSocket)
+            {
+                pointAdded = false;
+            }
         }
-        if(m_SetEnable != null)
+        if (m_SetEnable != null)
         {
             if (m_SetEnable.M_ModelComplete)
             {
@@ -175,7 +202,7 @@ public class GradingController : MonoBehaviour
             }
             else
             {
-                if(go.GetComponent<Placeable>()!= null)
+                if (go.GetComponent<Placeable>() != null)
                 {
                     Results TempRes = new Results
                     {
@@ -208,7 +235,7 @@ public class GradingController : MonoBehaviour
                 TempRes.StartTimer(this);
                 TempRes.isPaused = false;
             }
-            else if(Contains)
+            else if (Contains)
             {
                 TempRes.StopTimer(this);
                 TempRes.isPaused = true;
@@ -242,7 +269,7 @@ public class GradingController : MonoBehaviour
                     {
                         if (img.name == res.partName + "_Thumbnail")
                         {
-                            m_ResultRow.GetComponent<ListEntryValues>().UpdateTextsAndImage(img, res.partName.Replace('_',' '), res.PickUpCount.ToString(), res.PartPickTime.ToString(), res.CorrectPlacementOrder.ToString(), res.ActualPlacementID.ToString());
+                            m_ResultRow.GetComponent<ListEntryValues>().UpdateTextsAndImage(img, res.partName.Replace('_', ' '), res.PickUpCount.ToString(), res.PartPickTime.ToString(), res.CorrectPlacementOrder.ToString(), res.ActualPlacementID.ToString());
                         }
                     }
                 }
@@ -254,6 +281,50 @@ public class GradingController : MonoBehaviour
             }
             SortedList.Clear();
         }
+    }
+
+    public void PointCounter(bool OrderCheck)
+    {
+        if (!pointAdded)
+        {
+            pointAdded = true;
+            ObjectExitedSocket = false;
+            if (OrderCheck)
+            {
+                Debug.Log("+1 point");
+                m_Points++;
+                m_PlusOneText.SetActive(true);
+                StartCoroutine(PointTextAnimation(m_PlusOneText));
+            }
+            if (!OrderCheck)
+            {
+                Debug.Log("-0,5 point");
+                m_Points -= 0.5f;
+                m_MinusOneText.SetActive(true);
+                StartCoroutine(PointTextAnimation(m_MinusOneText));
+            }
+        }
+    }
+    IEnumerator PointTextAnimation(GameObject Go)
+    {
+        Vector3 startposition = m_TextStartPosition;
+        Go.transform.localPosition = startposition + new Vector3(0f,0f,5f);
+        Vector3 Endposition = new Vector3(0, 60f, 0);
+        float t = 0;
+        
+        while(t <= 1)
+        {
+            t += Time.deltaTime / floatingspeed;
+            Vector3 currentposition = Vector3.Lerp(startposition, Endposition, t);
+            Go.transform.localPosition = currentposition;
+            yield return null;
+        }
+        Go.SetActive(false);
+        yield return null;
+    }
+    public void WhiteBoardPointUpdate()
+    {
+        m_WhiteBoardPoints.text = "Points = " + m_Points.ToString() + "/" + m_CorrOrder.Parts.Count.ToString();
     }
     public void PlacedOrderIdUpdate()
     {
@@ -302,9 +373,9 @@ public class GradingController : MonoBehaviour
     {
         m_CorrectPlacedCount = 0;
         m_IncorrectPlacedCount = 0;
-        foreach(Results Res in m_Results)
+        foreach (Results Res in m_Results)
         {
-            if(Res.CorrectPlacementOrder == Res.ActualPlacementID)
+            if (Res.CorrectPlacementOrder == Res.ActualPlacementID)
             {
                 m_CorrectPlacedCount++;
             }
@@ -316,14 +387,14 @@ public class GradingController : MonoBehaviour
     }
     public void ObjectRemoved(GameObject Go)
     {
-        if(m_Results != null)
+        if (m_Results != null)
         {
             Instance.m_Results.Find(x => x.partName == Go.name).ActualPlacementID = 0;
         }
         for (int i = 0; i < Instance.PlacedOrder.Count; i++)
         {
             if (Instance.PlacedOrder[i].Partname == Go.name)
-            { 
+            {
                 Instance.PlacedOrder.Remove(Instance.PlacedOrder[i]);
                 if (Instance.PlacedOrderID > 0)
                 {
@@ -336,33 +407,33 @@ public class GradingController : MonoBehaviour
     {
         StartCoroutine(HintOutlineCorutine(GO, ObjID));
     }
-    IEnumerator HintOutlineCorutine(GameObject GO,int ObjID)
+    IEnumerator HintOutlineCorutine(GameObject GO, int ObjID)
     {
 
         int PlacedID = Instance.PlacedOrder.Find(x => x.Partname == GO.name).PlacedId;
         if (GO.GetComponent<Outline>() != null)
         {
 
-                if (GO.GetComponent<Outline>().enabled != true)
+            if (GO.GetComponent<Outline>().enabled != true)
+            {
+                if (PlacedID == ObjID)
                 {
-                    if (PlacedID == ObjID)
-                    {
-                        GO.GetComponent<Outline>().OutlineWidth = 4f;
-                        GO.GetComponent<Outline>().OutlineColor = Color.green;
-                        GO.GetComponent<Outline>().enabled = true;
-                    }
-                    else
-                    {
-                        GO.GetComponent<Outline>().OutlineWidth = 4f;
-                        GO.GetComponent<Outline>().OutlineColor = Color.red;
-                        GO.GetComponent<Outline>().enabled = true;
-                    }
+                    GO.GetComponent<Outline>().OutlineWidth = 4f;
+                    GO.GetComponent<Outline>().OutlineColor = Color.green;
+                    GO.GetComponent<Outline>().enabled = true;
                 }
+                else
+                {
+                    GO.GetComponent<Outline>().OutlineWidth = 4f;
+                    GO.GetComponent<Outline>().OutlineColor = Color.red;
+                    GO.GetComponent<Outline>().enabled = true;
+                }
+            }
             yield return new WaitForSeconds(1f);
-                GO.GetComponent<Outline>().enabled = false;
-                GO.GetComponent<Outline>().OutlineWidth = 2f;
-                GO.GetComponent<Outline>().OutlineColor = Color.white;
-            
+            GO.GetComponent<Outline>().enabled = false;
+            GO.GetComponent<Outline>().OutlineWidth = 2f;
+            GO.GetComponent<Outline>().OutlineColor = Color.white;
+
         }
         yield return null;
     }
