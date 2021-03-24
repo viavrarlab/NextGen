@@ -166,16 +166,16 @@ public class PlacementPoint : MonoBehaviour
             m_ControllerScript = m_BothControllers.FirstOrDefault(x => x.TriggerPush || x.GrabPush);
         }
         //If object is placed and want to take it out of the socket
-        if (m_ControllerScript != null && m_ControllerScript.TriggerPush == true && m_IsOccupied && m_ControllerScript.collidingObjectToBePickedUp != null && m_SnappableObject.CanTakeOut) // If the object is the player hand object OR the socket is already occupied, then just return and ignore the resto of the function
-        {
-            if (m_ControllerScript.objectinhand == m_SnappableObject.gameObject)
-            {
-                m_SnappableObject.m_IsPlaced = false;
-                m_SnappableObject.GetComponentInParent<ParentConstraint>().constraintActive = false;             
-                m_IsOccupied = false;
-            }
-        }
-        else
+        //if (m_ControllerScript != null && m_ControllerScript.TriggerPush == true && m_IsOccupied && m_ControllerScript.collidingObjectToBePickedUp != null && m_SnappableObject.CanTakeOut) // If the object is the player hand object OR the socket is already occupied, then just return and ignore the resto of the function
+        //{
+        //    if (m_ControllerScript.objectinhand == m_SnappableObject.gameObject)
+        //    {
+        //        m_SnappableObject.m_IsPlaced = false;
+        //        m_SnappableObject.GetComponentInParent<ParentConstraint>().constraintActive = false;             
+        //        m_IsOccupied = false;
+        //    }
+        //}
+        //else
         if (m_IsOccupied)
         {
             return;
@@ -189,7 +189,7 @@ public class PlacementPoint : MonoBehaviour
             if (m_SnappableObject != null)
             {
                 if (m_PlaceableID == m_SnappableObject.m_ID)
-                {
+                {                    
                     if (m_OrderCheck.m_OrderCorrect)
                     {
                         if (m_CheckForCorrectAngle && m_GameControllerAngleCheck) // if option is check
@@ -199,6 +199,11 @@ public class PlacementPoint : MonoBehaviour
                                 SwitchSocketState(SocketState.IntersectingValidObject);
                                 if (!m_ControllerScript.TriggerPush && !m_ControllerScript.GrabPush)
                                 {
+                                    if (GameControllerSC.Instance.SetOrderCheck)
+                                    {
+                                        GradingController.Instance.PointCounter(m_OrderCheck.m_OrderCorrect);
+                                        GradingController.Instance.WhiteBoardPointUpdate();
+                                    }
                                     StartCoroutine(SnapWithAnimation()); //snap object in
                                 }
                             }
@@ -213,6 +218,11 @@ public class PlacementPoint : MonoBehaviour
                                 SwitchSocketState(SocketState.IntersectingValidObject);
                                 if (!m_ControllerScript.TriggerPush && !m_ControllerScript.GrabPush)
                                 {
+                                    if (GameControllerSC.Instance.SetOrderCheck)
+                                    {
+                                        GradingController.Instance.PointCounter(m_OrderCheck.m_OrderCorrect);
+                                        GradingController.Instance.WhiteBoardPointUpdate();
+                                    }
                                     StartCoroutine(SnapWithAnimation());
                                 }
                             }
@@ -221,6 +231,11 @@ public class PlacementPoint : MonoBehaviour
                     else
                     {
                         SwitchSocketState(SocketState.IntersectingInvalidObject);
+                        if (GameControllerSC.Instance.SetOrderCheck)
+                        {
+                            GradingController.Instance.PointCounter(m_OrderCheck.m_OrderCorrect);
+                            GradingController.Instance.WhiteBoardPointUpdate();
+                        }
                     }
                 }
             }
@@ -233,6 +248,7 @@ public class PlacementPoint : MonoBehaviour
         {
             return;
         }
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -249,7 +265,12 @@ public class PlacementPoint : MonoBehaviour
         if (!m_IsOccupied)
         {
             SwitchSocketState(SocketState.Empty);
+            if(m_SnappableObject != null)
+            {
+                GradingController.Instance.ObjectExitedSocket = true;
+            }
             m_SnappableObject = null;
+
         }
         //if (other.GetComponentInParent<Placeable>() != null)
         //{
@@ -402,6 +423,7 @@ public class PlacementPoint : MonoBehaviour
         SwitchSocketState(SocketState.Snapped);
         m_SnappableObject.GetComponent<ParentConstraint>().constraintActive = true;
         GameControllerSC.Instance.ObjectIsSnapping = false;
+        GradingController.Instance.pointAdded = false;
         yield return null;
     }
 }
