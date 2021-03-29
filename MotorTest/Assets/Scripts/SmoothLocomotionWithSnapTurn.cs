@@ -22,13 +22,18 @@ public class SmoothLocomotionWithSnapTurn : MonoBehaviour
     public float m_CharacterRadius = 0.1f;
     public float m_CharacterHeight = 2f;
 
+    public float m_DistanceTravelled = 0f;
+
     private bool m_HasTurned = false;
     private CharacterController m_CharController;
+
+    private Vector3 m_LastPosition = Vector3.zero;
 
     private void Start ()
     {
         m_CharController = (m_RigTransform.gameObject.GetComponent<CharacterController> () != null) ? m_RigTransform.gameObject.GetComponent<CharacterController> () : m_RigTransform.gameObject.AddComponent<CharacterController> ();
-        SetUpCharacterController();
+        m_LastPosition = m_RigTransform.position;
+        SetUpCharacterController ();
     }
 
     void SetUpCharacterController ()
@@ -37,7 +42,7 @@ public class SmoothLocomotionWithSnapTurn : MonoBehaviour
         {
             m_CharController.radius = m_CharacterRadius;
             m_CharController.height = m_CharacterHeight;
-            m_CharController.center = new Vector3(0f, (m_CharController.height / 2f), 0f);
+            m_CharController.center = new Vector3 (0f, (m_CharController.height / 2f), 0f);
         }
     }
 
@@ -67,9 +72,11 @@ public class SmoothLocomotionWithSnapTurn : MonoBehaviour
         Vector3 adjustedDirection = m_CameraTransform.TransformDirection (rawDirection);
         adjustedDirection.y = 0f;
 
-        float directionInvert = m_InvertDirection ? -1 : 1;
-        m_CharController.SimpleMove((adjustedDirection * directionInvert) * m_MoveSpeed * Time.deltaTime);
+        float directionInvert = m_InvertDirection ? -1f : 1f;
+        m_CharController.SimpleMove ((adjustedDirection * directionInvert) * m_MoveSpeed * Time.deltaTime);
         // m_CharController.Move((adjustedDirection * directionInvert) * m_MoveSpeed * Time.deltaTime);
+        
+        CalculateTraveledDistance();
     }
 
     private void SnapTurn (Vector2 input)
@@ -79,5 +86,11 @@ public class SmoothLocomotionWithSnapTurn : MonoBehaviour
             m_RigTransform.Rotate (input.x * m_RigTransform.up * m_TurnAngle);
             m_HasTurned = true;
         }
+    }
+
+    private void CalculateTraveledDistance ()
+    {
+        m_DistanceTravelled += Vector3.Distance(m_RigTransform.position, m_LastPosition);
+        m_LastPosition = m_RigTransform.position;
     }
 }
