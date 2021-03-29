@@ -98,7 +98,9 @@ public class InteractiveTutorialController : MonoBehaviour
 
     private void ResetModelPosition(){
         m_TargetObject.position = m_TargetObjectStartPosition.position;
+        m_TargetObject.rotation = m_TargetObjectStartPosition.rotation;
         m_TargetObject.Find ("Sockets").localPosition = Vector3.zero;
+        m_TargetObject.Find("Sockets").localRotation = Quaternion.Euler( Vector3.zero);
     }
 
     public void GetTargetObjects ()

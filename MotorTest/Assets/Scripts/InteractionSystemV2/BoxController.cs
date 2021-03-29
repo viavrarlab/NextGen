@@ -40,7 +40,7 @@ public class BoxController : MonoBehaviour
     }
     void GenerateObject(Collider otherObject)
     {
-        if (!Generated && otherObject.GetComponent<ControllerScript>() != null && otherObject.GetComponent<ControllerScript>().TriggerPush)
+        if (!Generated && otherObject.GetComponent<ControllerScript>() != null && otherObject.GetComponent<ControllerScript>().TriggerPush && otherObject.GetComponent<ControllerScript>().objectinhand == null)
         {
             Generated = true;
             m_controller = otherObject.gameObject;
