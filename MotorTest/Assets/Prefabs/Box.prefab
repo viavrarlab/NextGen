@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 6878451497982653810}
   - component: {fileID: 2824197875363231554}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6878451497982653810
 Transform:
   m_ObjectHideFlags: 0
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4245572696162043131}
   - component: {fileID: 5578009354752464466}
   - component: {fileID: 4555019122033919747}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 5373206529700698637}
   - component: {fileID: 2948055150788991735}
   - component: {fileID: 607830429853994876}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 9102182841108520661}
   - component: {fileID: 6334941588624809517}
   - component: {fileID: 7163184239122436051}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: TMP SubMeshUI [LiberationSans SDF Material + LiberationSans SDF Atlas]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,9 +386,10 @@ GameObject:
   - component: {fileID: 3311699817757392568}
   - component: {fileID: 1385044187856232198}
   - component: {fileID: 1601105742712665976}
-  m_Layer: 0
+  - component: {fileID: 8065661408051337693}
+  m_Layer: 19
   m_Name: Box
-  m_TagString: Grab
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -467,7 +468,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -497,8 +498,26 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.15, y: 0.051249404, z: 0.24000004}
-  m_Center: {x: 0, y: 0.025624698, z: 0.019999996}
+  m_Size: {x: 0.15, y: 0.023859505, z: 0.2042224}
+  m_Center: {x: 0, y: 0.011929749, z: 0.0021111742}
+--- !u!114 &8065661408051337693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6833201323100923828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &7136922052176161171
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +529,7 @@ GameObject:
   - component: {fileID: 3321622641522206617}
   - component: {fileID: 2442869924357354718}
   - component: {fileID: 3535124051051810447}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -586,13 +605,13 @@ GameObject:
   - component: {fileID: 1652526698622099598}
   - component: {fileID: 3326378842347166843}
   - component: {fileID: 2412714871450701464}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6263136787850704542
 Transform:
   m_ObjectHideFlags: 0

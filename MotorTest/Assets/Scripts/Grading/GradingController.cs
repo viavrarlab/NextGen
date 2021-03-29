@@ -70,9 +70,9 @@ public class GradingController : MonoBehaviour
     [Header("Point system variables")]
     public float m_Points;
     [SerializeField]
-    GameObject m_PlusOneText;
+    GameObject m_PlusOneText = null;
     [SerializeField]
-    GameObject m_MinusOneText;
+    GameObject m_MinusOneText = null;
     public float floatingspeed = .5f;
     Vector3 m_TextStartPosition;
     public bool pointAdded;

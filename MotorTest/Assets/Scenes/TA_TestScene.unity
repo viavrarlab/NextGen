@@ -318,14 +318,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 21
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 485923032}
@@ -633,14 +633,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 3
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 652852992}
@@ -860,14 +860,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 18
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 903108743}
@@ -1784,14 +1784,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 25
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 485923032}
@@ -2528,14 +2528,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 4
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 1640148441}
@@ -2638,14 +2638,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 32
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 1843603432}
@@ -2807,14 +2807,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 25
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 485923032}
@@ -3182,14 +3182,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 9
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 903108743}
@@ -3528,14 +3528,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 17
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 903108743}
@@ -4101,14 +4101,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 6
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 903108743}
@@ -4407,14 +4407,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 7
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 903108743}
@@ -4586,14 +4586,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 4
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 1640148441}
@@ -5155,14 +5155,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 29
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 485923032}
@@ -5326,14 +5326,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 11
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 652852992}
@@ -7022,14 +7022,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 3
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 652852992}
@@ -7287,14 +7287,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 31
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 1843603432}
@@ -7585,14 +7585,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 0
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 990589083}
@@ -7709,14 +7709,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 30
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 485923032}
@@ -8445,14 +8445,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 21
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 485923032}
@@ -8994,14 +8994,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 10
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 2121229475}
@@ -9579,6 +9579,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.492
       objectReference: {fileID: 0}
+    - target: {fileID: -1005738906630443671, guid: 047f179ec85aaea49adefb7fcd702f39,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.00000051781535
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 047f179ec85aaea49adefb7fcd702f39, type: 3}
 --- !u!1 &801208992
@@ -9660,14 +9665,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 22
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 485923032}
@@ -9871,14 +9876,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 18
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 903108743}
@@ -10048,14 +10053,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 21
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 485923032}
@@ -10485,14 +10490,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 9
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 903108743}
@@ -11453,14 +11458,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 14
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 652852992}
@@ -11628,14 +11633,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 5
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 362561748}
@@ -12225,14 +12230,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 18
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 903108743}
@@ -12676,14 +12681,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 1
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 652852992}
@@ -13350,14 +13355,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 13
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 652852992}
@@ -13716,14 +13721,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 26
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 485923032}
@@ -13891,14 +13896,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 10
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 2121229475}
@@ -14736,14 +14741,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 14
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 652852992}
@@ -14955,14 +14960,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 12
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 652852992}
@@ -15720,14 +15725,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 29
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 485923032}
@@ -17104,14 +17109,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 25
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 485923032}
@@ -17869,14 +17874,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 14
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 652852992}
@@ -18343,14 +18348,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 28
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 485923032}
@@ -18784,14 +18789,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 18
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 903108743}
@@ -19121,14 +19126,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 33
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets: []
   m_DefaultStateColor: {r: 1, g: 1, b: 1, a: 1}
@@ -19516,14 +19521,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 21
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 485923032}
@@ -19787,14 +19792,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 2
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 652852992}
@@ -19870,14 +19875,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 25
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 485923032}
@@ -20493,14 +20498,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 24
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 93676134}
@@ -20829,14 +20834,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 15
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 40770611}
@@ -21422,14 +21427,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 20
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 903108743}
@@ -21727,14 +21732,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 2
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 652852992}
@@ -22012,14 +22017,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 14
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 652852992}
@@ -22393,14 +22398,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 16
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 652852992}
@@ -23080,14 +23085,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 23
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 485923032}
@@ -23471,14 +23476,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 27
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 485923032}
@@ -23925,14 +23930,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 27
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 485923032}
@@ -24543,14 +24548,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 22
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 485923032}
@@ -25660,14 +25665,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 19
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 1843603432}
@@ -25992,14 +25997,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlaceableID: 8
-  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0, w: 0}
+  m_CorrectPlacementAngle: {x: 0, y: 0, z: 0}
   m_IsOccupied: 0
   m_CorrectAngleThreshold: 7.5
   m_CheckOrder: 1
   m_CheckForCorrectAngle: 1
-  m_SkipXAngle: 0
-  m_SkipYAngle: 0
-  m_SkipZAngle: 0
+  m_CheckOnlyXAngle: 0
+  m_CheckOnlyYAngle: 0
+  m_CheckOnlyZAngle: 0
   snapspeed: 0.4
   m_IntersectingSockets:
   - m_Collider: {fileID: 903108743}

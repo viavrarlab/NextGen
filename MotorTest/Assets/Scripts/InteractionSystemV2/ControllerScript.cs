@@ -50,9 +50,9 @@ public class ControllerScript : MonoBehaviour
         {
             Physics.IgnoreCollision(this.gameObject.GetComponent<Collider>(), other);
         }
-        if (other.CompareTag("MotorCollider") || other.CompareTag("SetGrab") || other.CompareTag("PlacementRoot"))
+        if (other.CompareTag("MotorCollider") || other.CompareTag("SetGrab") || other.CompareTag("PlacementRoot") || other.CompareTag("Box"))
         {
-            if (other.CompareTag("PlacementRoot"))
+            if (other.CompareTag("PlacementRoot") || other.CompareTag("Box"))
             {
                 CollidingObj.Add(other.gameObject);
             }
@@ -99,7 +99,7 @@ public class ControllerScript : MonoBehaviour
     }
     public void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("PlacementRoot"))
+        if (other.CompareTag("PlacementRoot") || other.CompareTag("Box"))
         {
             other.GetComponent<Outline>().enabled = false;
             CollidingObj.Remove(other.gameObject);
@@ -124,7 +124,7 @@ public class ControllerScript : MonoBehaviour
         {
             if (!go.CompareTag("MotorPart"))
             {
-                if (go.CompareTag("SetGrab") || go.CompareTag("PlacementRoot"))
+                if (go.CompareTag("SetGrab") || go.CompareTag("PlacementRoot") || go.CompareTag("Box"))
                 {
                     collidingObjectToBePickedUp = go;
                     break;

@@ -17,6 +17,7 @@ TagManager:
   - GameControl
   - VRRIG
   - Instructions
+  - Box
   layers:
   - Default
   - TransparentFX
@@ -37,7 +38,7 @@ TagManager:
   - OBJ
   - IntTutSocket
   - Movement
-  - 
+  - Box
   - 
   - 
   - 

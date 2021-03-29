@@ -13,7 +13,7 @@ public class SetComplete : MonoBehaviour
 
     public List<GameObject> childs;
     public List<GameObject> SetModels;
-    CorrectOrderTests COT;
+
     private void Awake()
     {
         foreach (Transform child in this.transform)
@@ -39,14 +39,6 @@ public class SetComplete : MonoBehaviour
                 SetMR.enabled = false;
             } 
         }
-        COT = GetComponentInParent<CorrectOrderTests>();
-        foreach(CustomListClass GO in COT.Parts)
-        {
-            if(GO.set == SetID)
-            {
-                SetModels.Add(GO.obj);
-            }
-        }
     }
     private void Update()
     {
@@ -71,6 +63,10 @@ public class SetComplete : MonoBehaviour
 
             if (childs[i].GetComponent<PlacementPoint>().m_IsOccupied)
             {
+                if (!SetModels.Contains(childs[i].GetComponent<PlacementPoint>().m_SnappableObject.gameObject))
+                {
+                    SetModels.Add(childs[i].GetComponent<PlacementPoint>().m_SnappableObject.gameObject);
+                }
                 complete = true;
             }
             else

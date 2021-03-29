@@ -5410,6 +5410,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6833201323100923828, guid: ce9bce2554e030a4aa054b66a327bd64,
+        type: 3}
+      propertyPath: m_TagString
+      value: Box
+      objectReference: {fileID: 0}
     - target: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5448,7 +5453,7 @@ PrefabInstance:
     - target: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
@@ -5493,9 +5498,7 @@ PrefabInstance:
     - target: {fileID: 4555019122033919747, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_text
-      value: 'Front Panel Frame screws
-
-'
+      value: 'Front Panel Frame screws '
       objectReference: {fileID: 0}
     - target: {fileID: 4555019122033919747, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
@@ -5510,7 +5513,7 @@ PrefabInstance:
     - target: {fileID: 3311699817757392568, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535124051051810447, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
@@ -5746,6 +5749,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6833201323100923828, guid: ce9bce2554e030a4aa054b66a327bd64,
+        type: 3}
+      propertyPath: m_TagString
+      value: Box
+      objectReference: {fileID: 0}
     - target: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5784,7 +5792,7 @@ PrefabInstance:
     - target: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
@@ -5829,7 +5837,7 @@ PrefabInstance:
     - target: {fileID: 4555019122033919747, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_text
-      value: 'Back Panel Frame screws '
+      value: Fan Cover Screws
       objectReference: {fileID: 0}
     - target: {fileID: 4555019122033919747, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
@@ -5844,7 +5852,7 @@ PrefabInstance:
     - target: {fileID: 3311699817757392568, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535124051051810447, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
@@ -5889,12 +5897,6 @@ Transform:
   m_Father: {fileID: 2093115068}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &492264222 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
-    type: 3}
-  m_PrefabInstance: {fileID: 860469467}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &499026836
 GameObject:
   m_ObjectHideFlags: 0
@@ -8398,6 +8400,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6833201323100923828, guid: ce9bce2554e030a4aa054b66a327bd64,
+        type: 3}
+      propertyPath: m_TagString
+      value: Box
+      objectReference: {fileID: 0}
     - target: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8496,7 +8503,7 @@ PrefabInstance:
     - target: {fileID: 3311699817757392568, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535124051051810447, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
@@ -8507,6 +8514,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2824197875363231554, guid: ce9bce2554e030a4aa054b66a327bd64,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.0036655047
+      objectReference: {fileID: 0}
+    - target: {fileID: 2824197875363231554, guid: ce9bce2554e030a4aa054b66a327bd64,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.063596286
+      objectReference: {fileID: 0}
+    - target: {fileID: 2824197875363231554, guid: ce9bce2554e030a4aa054b66a327bd64,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.03188277
+      objectReference: {fileID: 0}
+    - target: {fileID: 2824197875363231554, guid: ce9bce2554e030a4aa054b66a327bd64,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.0021002025
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce9bce2554e030a4aa054b66a327bd64, type: 3}
@@ -9212,6 +9239,12 @@ Transform:
   m_Father: {fileID: 2093115074}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &791053301 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 463184, guid: cb3370c18187bb444b240cfb08dcc02f,
+    type: 3}
+  m_PrefabInstance: {fileID: 929255490}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &792558038
 GameObject:
   m_ObjectHideFlags: 0
@@ -9427,6 +9460,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6833201323100923828, guid: ce9bce2554e030a4aa054b66a327bd64,
+        type: 3}
+      propertyPath: m_TagString
+      value: Box
+      objectReference: {fileID: 0}
     - target: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9465,7 +9503,7 @@ PrefabInstance:
     - target: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
@@ -9510,7 +9548,7 @@ PrefabInstance:
     - target: {fileID: 4555019122033919747, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_text
-      value: Terminal box screws
+      value: Right mounting base
       objectReference: {fileID: 0}
     - target: {fileID: 4555019122033919747, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
@@ -9525,7 +9563,7 @@ PrefabInstance:
     - target: {fileID: 3311699817757392568, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535124051051810447, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
@@ -9827,10 +9865,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6833201323100923828, guid: ce9bce2554e030a4aa054b66a327bd64,
+        type: 3}
+      propertyPath: m_TagString
+      value: Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833201323100923828, guid: ce9bce2554e030a4aa054b66a327bd64,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.343
+      value: 0.34299994
       objectReference: {fileID: 0}
     - target: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
@@ -9865,7 +9913,7 @@ PrefabInstance:
     - target: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
@@ -9910,7 +9958,7 @@ PrefabInstance:
     - target: {fileID: 4555019122033919747, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_text
-      value: Front Bearing shield nuts and bolts
+      value: Front Bearing shield screws and bolts
       objectReference: {fileID: 0}
     - target: {fileID: 4555019122033919747, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
@@ -9925,7 +9973,7 @@ PrefabInstance:
     - target: {fileID: 3311699817757392568, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535124051051810447, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
@@ -11175,6 +11223,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6020818835376704321, guid: cb3370c18187bb444b240cfb08dcc02f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 929255499, guid: cb3370c18187bb444b240cfb08dcc02f, type: 3}
+      propertyPath: m_TouchpadButton
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb3370c18187bb444b240cfb08dcc02f, type: 3}
 --- !u!1 &929255491 stripped
@@ -11189,6 +11246,33 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 929255490}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &929255493 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8725501001735101059, guid: cb3370c18187bb444b240cfb08dcc02f,
+    type: 3}
+  m_PrefabInstance: {fileID: 929255490}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &929255494 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8725501001735101058, guid: cb3370c18187bb444b240cfb08dcc02f,
+    type: 3}
+  m_PrefabInstance: {fileID: 929255490}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &929255495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929255493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f170387417a3549926b561cef6cf5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlayerTransform: {fileID: 791053301}
+  UIelement: {fileID: 929255494}
+  FlipUI: 1
 --- !u!114 &929255507 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 929255507, guid: cb3370c18187bb444b240cfb08dcc02f,
@@ -13741,12 +13825,12 @@ Transform:
   m_Children:
   - {fileID: 1232647240}
   - {fileID: 1529376468}
-  - {fileID: 492264222}
   - {fileID: 692018365}
   - {fileID: 101087528}
   - {fileID: 706998686}
   - {fileID: 1961889198}
   - {fileID: 1033320338}
+  - {fileID: 1406674199}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15665,6 +15749,33 @@ Transform:
   m_Father: {fileID: 2093115189}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1406674197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6833201323100923828, guid: ce9bce2554e030a4aa054b66a327bd64,
+    type: 3}
+  m_PrefabInstance: {fileID: 860469467}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1406674198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406674197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e28d3d8e6e10143b356a6ee84b0064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BoxObject: {fileID: 2093115190}
+  MotorRoot: {fileID: 2093115030}
+  Generated: 0
+--- !u!4 &1406674199 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
+    type: 3}
+  m_PrefabInstance: {fileID: 860469467}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1414859978
 GameObject:
   m_ObjectHideFlags: 0
@@ -18006,6 +18117,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6833201323100923828, guid: ce9bce2554e030a4aa054b66a327bd64,
+        type: 3}
+      propertyPath: m_TagString
+      value: Box
+      objectReference: {fileID: 0}
     - target: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18044,7 +18160,7 @@ PrefabInstance:
     - target: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
@@ -18089,7 +18205,7 @@ PrefabInstance:
     - target: {fileID: 4555019122033919747, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_text
-      value: Terminal box screws
+      value: Left mounting base
       objectReference: {fileID: 0}
     - target: {fileID: 4555019122033919747, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
@@ -18104,7 +18220,7 @@ PrefabInstance:
     - target: {fileID: 3311699817757392568, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535124051051810447, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
@@ -18301,6 +18417,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.12517881, y: 0.15039861, z: 0.010000229}
   m_Center: {x: -0.00000071525574, y: -0.000008165836, z: -0.0012149811}
+--- !u!1 &1774918983 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 269731998386766452, guid: cb3370c18187bb444b240cfb08dcc02f,
+    type: 3}
+  m_PrefabInstance: {fileID: 929255490}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1774918984 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3645467159697578833, guid: cb3370c18187bb444b240cfb08dcc02f,
+    type: 3}
+  m_PrefabInstance: {fileID: 929255490}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1774918985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774918983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f170387417a3549926b561cef6cf5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlayerTransform: {fileID: 791053301}
+  UIelement: {fileID: 1774918984}
+  FlipUI: 0
 --- !u!1 &1802878118
 GameObject:
   m_ObjectHideFlags: 0
@@ -20366,6 +20509,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6833201323100923828, guid: ce9bce2554e030a4aa054b66a327bd64,
+        type: 3}
+      propertyPath: m_TagString
+      value: Box
+      objectReference: {fileID: 0}
     - target: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20404,7 +20552,7 @@ PrefabInstance:
     - target: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
@@ -20449,7 +20597,7 @@ PrefabInstance:
     - target: {fileID: 4555019122033919747, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_text
-      value: "Aizmugures gult\u0146iem"
+      value: Terminal box screws
       objectReference: {fileID: 0}
     - target: {fileID: 4555019122033919747, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
@@ -20464,7 +20612,7 @@ PrefabInstance:
     - target: {fileID: 3311699817757392568, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535124051051810447, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
@@ -21660,6 +21808,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Full_Motor_With_Sets_Export
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: fd8be72844540bf47a9301850949ee57,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -6036717309293909608, guid: fd8be72844540bf47a9301850949ee57,
         type: 3}
@@ -29788,6 +29941,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6833201323100923828, guid: ce9bce2554e030a4aa054b66a327bd64,
+        type: 3}
+      propertyPath: m_TagString
+      value: Box
+      objectReference: {fileID: 0}
     - target: {fileID: 7534295396575483303, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29871,7 +30029,7 @@ PrefabInstance:
     - target: {fileID: 4555019122033919747, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_text
-      value: Back Bearing shield nuts and bolts
+      value: Back Bearing shield screws and bolts
       objectReference: {fileID: 0}
     - target: {fileID: 4555019122033919747, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
@@ -29886,7 +30044,7 @@ PrefabInstance:
     - target: {fileID: 3311699817757392568, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535124051051810447, guid: ce9bce2554e030a4aa054b66a327bd64,
         type: 3}
