@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using NaughtyAttributes;
-using DG.Tweening;
-using System.Linq;
-using UnityEngine.UI;
-using TMPro;
 using System.IO;
+using System.Linq;
+using DG.Tweening;
+using NaughtyAttributes;
+using TMPro;
+using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace ShowcaseV2
 {
@@ -22,7 +22,7 @@ namespace ShowcaseV2
         //[HorizontalLine(color: EColor.Black)]
         //public float m_TweenTimescale = 1f;
 
-        [HorizontalLine(color: EColor.Black)]
+        [HorizontalLine (color: EColor.Black)]
         [ReadOnly]
         public int m_groupIndex = 0;
         [ReadOnly]
@@ -43,31 +43,29 @@ namespace ShowcaseV2
         //public float m_ObjectVolumeMultiplier = 100f;
         //public float m_VolumeThresholdForSmallObjects = 2f;
 
+        [InfoBox ("Groups in arrays are referenced starting from 0. (Ex., to get the first group, we need to specify it as 0.). For custom objects we need to use that naming (ex., first group would be Group0).", EInfoBoxType.Normal)]
+        [Tooltip ("Add sets to other sets to animate them together.")]
+        public List<CustomGroupObject> m_CustomGroupObjects = new List<CustomGroupObject> ();
 
-        [InfoBox("Groups in arrays are referenced starting from 0. (Ex., to get the first group, we need to specify it as 0.). For custom objects we need to use that naming (ex., first group would be Group0).", EInfoBoxType.Normal)]
-        [Tooltip("Add sets to other sets to animate them together.")]
-        public List<CustomGroupObject> m_CustomGroupObjects = new List<CustomGroupObject>();
+        [HorizontalLine (color: EColor.Black)]
 
-        [HorizontalLine(color: EColor.Black)]
+        [SerializeField] private List<GroupGameObjects> m_GroupGameObjects = new List<GroupGameObjects> ();
+        [SerializeField] private List<ObjectOrigin> m_OriginalTransforms = new List<ObjectOrigin> ();
+        [SerializeField] private List<ObjectOrigin> m_ScatteredTransforms = new List<ObjectOrigin> ();
+        [SerializeField] private List<ObjectOrigin> m_GroupFinalTransforms = new List<ObjectOrigin> ();
 
-        [SerializeField] private List<GroupGameObjects> m_GroupGameObjects = new List<GroupGameObjects>();
-        [SerializeField] private List<ObjectOrigin> m_OriginalTransforms = new List<ObjectOrigin>();
-        [SerializeField] private List<ObjectOrigin> m_ScatteredTransforms = new List<ObjectOrigin>();
-        [SerializeField] private List<ObjectOrigin> m_GroupFinalTransforms = new List<ObjectOrigin>();
-
-
-        public List<GroupTweens> m_GroupTweens = new List<GroupTweens>();
+        public List<GroupTweens> m_GroupTweens = new List<GroupTweens> ();
 
         private int m_SetSortTemp = 0;
         private bool m_IsAnimating = false;
         private WaitForSeconds m_PauseBetweenTweensTimer;
 
-        [HorizontalLine(color: EColor.Black)]
+        [HorizontalLine (color: EColor.Black)]
 
         public TextMeshProUGUI m_NowAssemblingText;
         public TextMeshProUGUI m_StepText;
 
-        [InfoBox("JSON exporting/importing currently disabled.", EInfoBoxType.Warning)]
+        [InfoBox ("JSON exporting/importing currently disabled.", EInfoBoxType.Warning)]
         [ReadOnly]
         public int ingoreInt;
 
@@ -77,15 +75,14 @@ namespace ShowcaseV2
         public int m_TotalSteps = 0;
 
         public bool m_AllStepsComplete = false;
-        public UnityEvent OnAllStepsCompleteEvent = new UnityEvent();
-        public UnityEvent OnStepsDisassembleEvent = new UnityEvent();
+        public UnityEvent OnAllStepsCompleteEvent = new UnityEvent ();
+        public UnityEvent OnStepsDisassembleEvent = new UnityEvent ();
 
         //public CanvasGroup m_MainCanvas;
         //public ToggleGameObject m_LoadingCanvas;
 
         [ReadOnly]
-        public List<GameObject> m_AllObjects = new List<GameObject>();
-
+        public List<GameObject> m_AllObjects = new List<GameObject> ();
 
         private ObjectScatterer m_Scatterer;
         //public int m_RemoveFromGroudIndex = 0;
@@ -97,12 +94,12 @@ namespace ShowcaseV2
         //    m_Groups[m_RemoveFromGroudIndex].m_Group.RemoveAt(m_RemoveFromStepIndex);
         //}
 
-        private void Awake()
+        private void Awake ()
         {
-            m_Scatterer = gameObject.GetComponent<ObjectScatterer>();
+            m_Scatterer = gameObject.GetComponent<ObjectScatterer> ();
         }
 
-        private IEnumerator Start()
+        private IEnumerator Start ()
         {
             //m_MainCanvas.alpha = 0f;
             //m_MainCanvas.interactable = false;
@@ -110,12 +107,11 @@ namespace ShowcaseV2
 
             //m_LoadingCanvas.ToggleOn();
 
-
             DOTween.defaultAutoKill = false;
             DOTween.defaultRecyclable = true;
-            m_PauseBetweenTweensTimer = new WaitForSeconds(m_PauseBetweenTweens);
+            m_PauseBetweenTweensTimer = new WaitForSeconds (m_PauseBetweenTweens);
 
-            SetTextAssembling("---");
+            SetTextAssembling ("---");
 
             //yield return null;
 
@@ -127,19 +123,18 @@ namespace ShowcaseV2
             //GameObject.FindObjectOfType<PartToggler>().SetUpUI();
             //yield return null;
 
-
-            yield return StartCoroutine(SaveOriginalPositions());
+            yield return StartCoroutine (SaveOriginalPositions ());
 
             //yield return StartCoroutine(ScatterObjects());
-            m_Scatterer.PerformScatter();
-            yield return StartCoroutine(SaveScatteredPositions());
-            SortIntoSets();
+            m_Scatterer.PerformScatter ();
+            yield return StartCoroutine (SaveScatteredPositions ());
+            SortIntoSets ();
 
             // after parts have been sorted into sets, they are now under Group parent objects. Those objects also need their original positions saved.
             foreach (Transform t in m_TargetObject)
             {
-                ObjectOrigin oo = new ObjectOrigin(t, t.localPosition, t.localRotation.eulerAngles);
-                m_OriginalTransforms.Add(oo);
+                ObjectOrigin oo = new ObjectOrigin (t, t.localPosition, t.localRotation.eulerAngles);
+                m_OriginalTransforms.Add (oo);
             }
 
             m_TotalSteps = 0;
@@ -147,12 +142,12 @@ namespace ShowcaseV2
             int id = 0;
             foreach (GroupGameObjects ggo in m_GroupGameObjects)
             {
-                m_GroupTweens.Add(new GroupTweens());
-                m_GroupTweens[id].m_Steps = new List<StepTweens>();
+                m_GroupTweens.Add (new GroupTweens ());
+                m_GroupTweens[id].m_Steps = new List<StepTweens> ();
                 foreach (GameObject go in ggo.m_StepObjects)
                 {
 
-                    m_GroupTweens[id].m_Steps.Add(new StepTweens());
+                    m_GroupTweens[id].m_Steps.Add (new StepTweens ());
                     m_TotalSteps++;
                 }
                 id++;
@@ -167,40 +162,73 @@ namespace ShowcaseV2
             //m_MainCanvas.blocksRaycasts = true;
         }
 
-        //[Button]
-        public void CopyOriginalPositionsFromAuxTargetObject()
+        // [Button]
+        public void CopyOriginalPositionsFromAuxTargetObject ()
         {
-            m_OriginalTransforms.Clear();
+            m_OriginalTransforms.Clear ();
             foreach (Transform t in m_AuxTargetObject)
             {
-                ObjectOrigin oo = new ObjectOrigin(t, t.localPosition, t.localRotation.eulerAngles);
-                m_OriginalTransforms.Add(oo);
+                ObjectOrigin oo = new ObjectOrigin (t, t.localPosition, t.localRotation.eulerAngles);
+                m_OriginalTransforms.Add (oo);
             }
         }
 
+        // [Button]
+        public void ReplaceGroupStepObjectsFromAuxObject ()
+        {
+            if(m_AuxTargetObject == null){
+                Debug.LogWarning("Aux object not set.");
+                return;
+            }
+            for (var i = 0; i < m_Groups.Count; i++)
+            {
+                for (var j = 0; j < m_Groups[i].m_Group.Count; j++)
+                {
+                    for (var k = 0; k < m_Groups[i].m_Group[j].m_GroupStepObjects.Count; k++)
+                    {
+                        GameObject tempObj = GetGameObjectFromAuxByName(m_Groups[i].m_Group[j].m_GroupStepObjects[k].name);
+                        m_Groups[i].m_Group[j].m_GroupStepObjects[k] = tempObj;
+                    }
+                }
+            }
+        }
+
+        GameObject GetGameObjectFromAuxByName (string name)
+        {
+            foreach (Transform t in m_AuxTargetObject)
+            {
+                if (t.gameObject.name == name)
+                {
+                    return t.gameObject;
+                }
+            }
+            Debug.LogError($"Could not find object {name} in {m_AuxTargetObject.gameObject.name}");
+            return null;
+        }
+
         //[Button]
-        public void ReplaceOriginalPositionTransformsWithTargetObject()
+        public void ReplaceOriginalPositionTransformsWithTargetObject ()
         {
             for (int i = 0; i < m_OriginalTransforms.Count; i++)
             {
-                m_OriginalTransforms[i].m_Object = m_TargetObject.GetChild(i);
+                m_OriginalTransforms[i].m_Object = m_TargetObject.GetChild (i);
             }
         }
 
         //[Button]
-        public IEnumerator SaveOriginalPositions()
+        public IEnumerator SaveOriginalPositions ()
         {
-            m_OriginalTransforms.Clear();
+            m_OriginalTransforms.Clear ();
             foreach (Transform t in m_TargetObject)
             {
-                ObjectOrigin oo = new ObjectOrigin(t, t.position, t.localRotation.eulerAngles);
-                m_OriginalTransforms.Add(oo);
+                ObjectOrigin oo = new ObjectOrigin (t, t.position, t.localRotation.eulerAngles);
+                m_OriginalTransforms.Add (oo);
                 yield return null;
             }
             yield return null;
         }
 
-        private float DistanceToCenter(ObjectCircle obj)
+        private float DistanceToCenter (ObjectCircle obj)
         {
             //float objectVolume = VolumeOfMesh(obj.m_Transform.gameObject.GetComponent<MeshFilter>().sharedMesh);
             BoxCollider currentCol = m_ScatterVolumeUnified;
@@ -211,14 +239,15 @@ namespace ShowcaseV2
             return (difference.x * difference.x) + (difference.y * difference.y);
         }
 
-        private int Comparer(ObjectCircle p1, ObjectCircle p2)
+        private int Comparer (ObjectCircle p1, ObjectCircle p2)
         {
-            float d1 = DistanceToCenter(p1);
-            float d2 = DistanceToCenter(p2);
-            if(d1 < d2)
+            float d1 = DistanceToCenter (p1);
+            float d2 = DistanceToCenter (p2);
+            if (d1 < d2)
             {
                 return 1;
-            }else if(d1 > d2)
+            }
+            else if (d1 > d2)
             {
                 return -1;
             }
@@ -229,17 +258,17 @@ namespace ShowcaseV2
         }
 
         //[Button]
-        public IEnumerator ScatterObjects()
+        public IEnumerator ScatterObjects ()
         {
             if (true)
             {
-                Dictionary<GameObject, float> objectVolumeDict = new Dictionary<GameObject, float>();
-                foreach(Transform t in m_TargetObject)
+                Dictionary<GameObject, float> objectVolumeDict = new Dictionary<GameObject, float> ();
+                foreach (Transform t in m_TargetObject)
                 {
-                    objectVolumeDict.Add(t.gameObject, VolumeOfMesh(t.gameObject.GetComponent<MeshFilter>().mesh));
+                    objectVolumeDict.Add (t.gameObject, VolumeOfMesh (t.gameObject.GetComponent<MeshFilter> ().mesh));
                 }
 
-                Dictionary<GameObject, float> sortedByVolume = objectVolumeDict.OrderBy(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
+                Dictionary<GameObject, float> sortedByVolume = objectVolumeDict.OrderBy (x => x.Value).ToDictionary (x => x.Key, x => x.Value);
 
                 Vector3 startPos = m_ScatterStartTransform.position;
 
@@ -248,10 +277,10 @@ namespace ShowcaseV2
                 int row = 1;
                 for (int i = 0; i < sortedByVolume.Count; i++)
                 {
-                    GameObject curObj = sortedByVolume.ElementAt(i).Key;
-                    float curVolume = sortedByVolume.ElementAt(i).Value * 10000f;
+                    GameObject curObj = sortedByVolume.ElementAt (i).Key;
+                    float curVolume = sortedByVolume.ElementAt (i).Value * 10000f;
 
-                    float remappedVolume = curVolume.Remap(0f, 5000f, 0.1f, 0.75f);
+                    float remappedVolume = curVolume.Remap (0f, 5000f, 0.1f, 0.75f);
                     //float adjustedVolume = remappedVolume;
 
                     //if(adjustedVolume > currentBiggestVolume)
@@ -259,15 +288,14 @@ namespace ShowcaseV2
                     //    currentBiggestVolume = adjustedVolume;
                     //}
 
-                    Bounds objectMeshBounds = curObj.GetComponent<MeshRenderer>().bounds;
-                    RotateObjectToRestPosition(curObj.transform, objectMeshBounds);
+                    Bounds objectMeshBounds = curObj.GetComponent<MeshRenderer> ().bounds;
+                    RotateObjectToRestPosition (curObj.transform, objectMeshBounds);
 
-                    placePos.y = curObj.GetComponent<MeshRenderer>().bounds.size.y / 2f;
+                    placePos.y = curObj.GetComponent<MeshRenderer> ().bounds.size.y / 2f;
 
-                    
-                    if(i % 5 == 0 && i != 0)
+                    if (i % 5 == 0 && i != 0)
                     {
-                        
+
                         placePos.x = startPos.x;
                         //placePos.y = startPos.y;
                         float moveZAmount = (row) * 0.08f;
@@ -282,7 +310,7 @@ namespace ShowcaseV2
             yield return null;
         }
 
-        bool IsOverlapping(ObjectCircle o1, ObjectCircle o2)
+        bool IsOverlapping (ObjectCircle o1, ObjectCircle o2)
         {
             return false;
         }
@@ -299,18 +327,17 @@ namespace ShowcaseV2
         //    }
         //}
 
-        private IEnumerator PlaceObjectInVolume(Transform target)
+        private IEnumerator PlaceObjectInVolume (Transform target)
         {
 
-            Vector3 size = target.gameObject.GetComponent<MeshRenderer>().bounds.size;
+            Vector3 size = target.gameObject.GetComponent<MeshRenderer> ().bounds.size;
 
             //float objectVolume = VolumeOfMesh(target.GetComponent<MeshFilter>().sharedMesh);
 
+            float radius = Mathf.Max (Mathf.Max (size.x, size.y), size.z);
 
-            float radius = Mathf.Max(Mathf.Max(size.x, size.y), size.z);
-
-            LayerMask mask = LayerMask.GetMask("Scatter");
-            Collider[] hitColliders = Physics.OverlapSphere(target.position, radius * 2f, mask);
+            LayerMask mask = LayerMask.GetMask ("Scatter");
+            Collider[] hitColliders = Physics.OverlapSphere (target.position, radius * 2f, mask);
             if (hitColliders.Length < 2)
             {
                 yield break;
@@ -321,15 +348,13 @@ namespace ShowcaseV2
             int badCount = 0;
             while (bestPositionFound == false)
             {
-                if(i >= m_ScatterTryIterations)
+                if (i >= m_ScatterTryIterations)
                 {
                     break;
                 }
 
-
-
                 BoxCollider targetVolume = m_ScatterVolumeUnified;
-                Vector3 newRandPos = GetRandomPositionInsideBox(targetVolume);
+                Vector3 newRandPos = GetRandomPositionInsideBox (targetVolume);
                 newRandPos.y = 0f;
                 newRandPos.y += size.y / 2f;
                 target.position = newRandPos;
@@ -338,17 +363,17 @@ namespace ShowcaseV2
                 {
                     if (other != target)
                     {
-                        Vector3 otherSize = other.gameObject.GetComponent<MeshRenderer>().bounds.size;
-                        float otherRadius = Mathf.Max(Mathf.Max(otherSize.x, otherSize.y), otherSize.z);
-                        float distance = Vector3.Distance(newRandPos, other.position);
-                        if (Mathf.Abs(distance) < (radius + otherRadius) * 2f)
+                        Vector3 otherSize = other.gameObject.GetComponent<MeshRenderer> ().bounds.size;
+                        float otherRadius = Mathf.Max (Mathf.Max (otherSize.x, otherSize.y), otherSize.z);
+                        float distance = Vector3.Distance (newRandPos, other.position);
+                        if (Mathf.Abs (distance) < (radius + otherRadius) * 2f)
                         {
                             badCount++;
                         }
                     }
                 }
 
-                if(badCount <= 1)
+                if (badCount <= 1)
                 {
                     bestPositionFound = true;
                 }
@@ -356,7 +381,7 @@ namespace ShowcaseV2
                 i++;
                 yield return null;
             }
-            
+
             //LayerMask mask = LayerMask.GetMask("Scatter");
 
             //float radius = Mathf.Max(Mathf.Max(size.x, size.y), size.z);
@@ -374,41 +399,41 @@ namespace ShowcaseV2
             yield return null;
         }
 
-        private void RotateObjectToRestPosition(Transform obj, Bounds bounds)
+        private void RotateObjectToRestPosition (Transform obj, Bounds bounds)
         {
-            List<float> sizeList = new List<float>();
-            sizeList.Add(bounds.size.x);
-            sizeList.Add(bounds.size.y);
-            sizeList.Add(bounds.size.z);
+            List<float> sizeList = new List<float> ();
+            sizeList.Add (bounds.size.x);
+            sizeList.Add (bounds.size.y);
+            sizeList.Add (bounds.size.z);
 
-            float max = Mathf.Max(sizeList.ToArray());
-            int index = sizeList.IndexOf(max);
+            float max = Mathf.Max (sizeList.ToArray ());
+            int index = sizeList.IndexOf (max);
 
             Vector3 rotationAxis = Vector3.zero;
             switch (index)
             {
                 case 0:
                     float xY = (bounds.size.y > bounds.size.z) ? 1f : 0f;
-                    rotationAxis = new Vector3(1f, 0f, 0f);
+                    rotationAxis = new Vector3 (1f, 0f, 0f);
 
-                    Quaternion rotX = Quaternion.LookRotation(rotationAxis, Vector3.up);
-                    if (xY > 0f) { rotX.eulerAngles += new Vector3(90f, 0f, 0f); } 
+                    Quaternion rotX = Quaternion.LookRotation (rotationAxis, Vector3.up);
+                    if (xY > 0f) { rotX.eulerAngles += new Vector3 (90f, 0f, 0f); }
                     obj.rotation = rotX;
                     break;
-                    
+
                 case 1:
                     float yX = (bounds.size.x > bounds.size.z) ? 0f : 1f;
                     float z = (bounds.size.x > bounds.size.z) ? 0f : 1f;
-                    rotationAxis = new Vector3(0f, 1f, 0f);
-                    Quaternion rotY = Quaternion.LookRotation(rotationAxis, Vector3.up);
-                    if(yX > 0f) { rotY.eulerAngles = new Vector3(rotY.eulerAngles.x + 90f, rotY.eulerAngles.y, 0f); }
+                    rotationAxis = new Vector3 (0f, 1f, 0f);
+                    Quaternion rotY = Quaternion.LookRotation (rotationAxis, Vector3.up);
+                    if (yX > 0f) { rotY.eulerAngles = new Vector3 (rotY.eulerAngles.x + 90f, rotY.eulerAngles.y, 0f); }
                     obj.rotation = rotY;
                     break;
                 case 2:
                     float zY = (bounds.size.x > bounds.size.y) ? 0f : 1f;
-                    rotationAxis = new Vector3(0f, 0f, 1f);
-                    Quaternion rotZ = Quaternion.LookRotation(rotationAxis, Vector3.up);
-                    if (zY > 0f) { rotZ.eulerAngles += new Vector3(0f, 0f, 90f); }
+                    rotationAxis = new Vector3 (0f, 0f, 1f);
+                    Quaternion rotZ = Quaternion.LookRotation (rotationAxis, Vector3.up);
+                    if (zY > 0f) { rotZ.eulerAngles += new Vector3 (0f, 0f, 90f); }
                     obj.rotation = rotZ;
                     break;
                 default:
@@ -416,24 +441,24 @@ namespace ShowcaseV2
             }
         }
 
-        private int GetRandomPosNeg()
+        private int GetRandomPosNeg ()
         {
-            return Random.Range(0, 2) * 2 - 1;
+            return Random.Range (0, 2) * 2 - 1;
         }
 
         //[Button]
-        public IEnumerator SaveScatteredPositions()
+        public IEnumerator SaveScatteredPositions ()
         {
             foreach (Transform t in m_TargetObject)
             {
-                ObjectOrigin oo = new ObjectOrigin(t, t.localPosition, t.localRotation.eulerAngles);
-                m_ScatteredTransforms.Add(oo);
+                ObjectOrigin oo = new ObjectOrigin (t, t.localPosition, t.localRotation.eulerAngles);
+                m_ScatteredTransforms.Add (oo);
             }
             yield return null;
         }
 
         //[Button]
-        public void SortIntoSets()
+        public void SortIntoSets ()
         {
             if (m_SetSortTemp >= m_Groups.Count)
             {
@@ -442,40 +467,39 @@ namespace ShowcaseV2
 
             // Add container objects for each set group and add the objects to it
 
-            GameObject groupParent = new GameObject();
+            GameObject groupParent = new GameObject ();
             groupParent.name = "Group" + m_SetSortTemp;
             groupParent.transform.position = m_TargetObject.position;
-            groupParent.transform.SetParent(m_TargetObject);
-            
+            groupParent.transform.SetParent (m_TargetObject);
 
             int stepID = 0;
-            GroupGameObjects ggo = new GroupGameObjects();
-            ggo.m_StepObjects = new List<GameObject>();
+            GroupGameObjects ggo = new GroupGameObjects ();
+            ggo.m_StepObjects = new List<GameObject> ();
             ggo.m_GroupObject = groupParent;
 
             foreach (GroupStep group in m_Groups[m_SetSortTemp].m_Group)
             {
-                GameObject stepParent = new GameObject();
+                GameObject stepParent = new GameObject ();
                 stepParent.name = "Step" + stepID;
-                stepParent.transform.SetParent(groupParent.transform);
+                stepParent.transform.SetParent (groupParent.transform);
 
                 if (group.m_GroupStepObjects.Count > 0)
                 {
                     foreach (GameObject obj in group.m_GroupStepObjects)
                     {
-                        
-                        obj.transform.SetParent(stepParent.transform);
+
+                        obj.transform.SetParent (stepParent.transform);
                     }
                 }
                 if (stepParent != null)
                 {
-                    ggo.m_StepObjects.Add(stepParent);
+                    ggo.m_StepObjects.Add (stepParent);
                 }
 
                 stepID++;
             }
 
-            m_GroupGameObjects.Add(ggo);
+            m_GroupGameObjects.Add (ggo);
 
             // To be able to use set groups for animation within another group, we need to insert that group object into the specific List 
             // Example, Group0 and Group1 (motor end shields) are a part of the Group2, and they need to be placed at the correct spots when animating Group3.
@@ -484,74 +508,72 @@ namespace ShowcaseV2
             {
                 if (m_SetSortTemp == cso.m_TargetGroupIndex)
                 {
-                    m_Groups[m_SetSortTemp].m_Group[cso.m_TargetStepIndex].m_GroupStepObjects.Insert(cso.m_IndexInListToAdd, FindGroupParentObjectByName(cso.m_CustomObjectName));
+                    m_Groups[m_SetSortTemp].m_Group[cso.m_TargetStepIndex].m_GroupStepObjects.Insert (cso.m_IndexInListToAdd, FindGroupParentObjectByName (cso.m_CustomObjectName));
                 }
             }
 
             if (m_SetSortTemp < m_Groups.Count)
             {
                 m_SetSortTemp++;
-                SortIntoSets();
+                SortIntoSets ();
             }
         }
 
         //[Button]
-        public void ResetObjectPositions()
+        public void ResetObjectPositions ()
         {
             for (int i = 0; i < m_OriginalTransforms.Count; i++)
             {
-                m_TargetObject.GetChild(i).localPosition = m_OriginalTransforms[i].m_Position;
-                m_TargetObject.GetChild(i).localRotation = Quaternion.Euler(m_OriginalTransforms[i].m_Rotation);
+                m_TargetObject.GetChild (i).localPosition = m_OriginalTransforms[i].m_Position;
+                m_TargetObject.GetChild (i).localRotation = Quaternion.Euler (m_OriginalTransforms[i].m_Rotation);
             }
         }
 
-        public bool CheckForAllStepsComplete(bool invokeCompleteEvent)
+        public bool CheckForAllStepsComplete (bool invokeCompleteEvent)
         {
             bool check = m_CurrentStep >= m_TotalSteps;
-            
-            if(invokeCompleteEvent && check && OnAllStepsCompleteEvent != null)
+
+            if (invokeCompleteEvent && check && OnAllStepsCompleteEvent != null)
             {
-                OnAllStepsCompleteEvent.Invoke();
+                OnAllStepsCompleteEvent.Invoke ();
             }
             return check;
 
         }
 
         [Button]
-        public void AssembleNextGroup()
+        public void AssembleNextGroup ()
         {
             if (m_groupIndex >= m_GroupGameObjects.Count)
             {
                 return;
             }
 
-
             if (m_IsAnimating == false)
             {
-                if(m_StepIndex < m_Groups[m_groupIndex].m_Group.Count)
+                if (m_StepIndex < m_Groups[m_groupIndex].m_Group.Count)
                 {
                     //print($"stepIndex:  {m_StepIndex}/{m_Groups[m_groupIndex].m_Group.Count}");
                     m_CurrentStep++;
-                    StartCoroutine(AssembleNextStepCoroutine(/*m_StepIndex*/));
-                    
+                    StartCoroutine (AssembleNextStepCoroutine ( /*m_StepIndex*/ ));
+
                 }
-                else if(m_groupIndex + 1 < m_GroupGameObjects.Count)
+                else if (m_groupIndex + 1 < m_GroupGameObjects.Count)
                 {
                     //print($"groupIndex:  {m_groupIndex}/{m_Groups.Count}");
                     m_groupIndex++;
                     m_StepIndex = 0;
                     m_CurrentStep++;
-                    StartCoroutine(AssembleNextStepCoroutine(/*m_StepIndex*/));
+                    StartCoroutine (AssembleNextStepCoroutine ( /*m_StepIndex*/ ));
                 }
-                
+
             }
 
-            m_AllStepsComplete = CheckForAllStepsComplete(true);
+            m_AllStepsComplete = CheckForAllStepsComplete (true);
         }
 
-
         [Button]
-        public void AssemblePreviousGroup()
+        public void AssemblePreviousGroup ()
         {
             if (m_groupIndex <= 0 && m_StepIndex <= 0)
             {
@@ -564,47 +586,47 @@ namespace ShowcaseV2
                 if (m_StepIndex >= 0)
                 {
                     m_CurrentStep--;
-                    StartCoroutine(AssemblePreviousStepCoroutine(/*m_StepIndex*/));
+                    StartCoroutine (AssemblePreviousStepCoroutine ( /*m_StepIndex*/ ));
                 }
                 else
                 {
                     m_groupIndex--;
                     m_StepIndex = m_Groups[m_groupIndex].m_Group.Count - 1;
                     m_CurrentStep--;
-                    StartCoroutine(AssemblePreviousStepCoroutine(/*m_StepIndex*/));
+                    StartCoroutine (AssemblePreviousStepCoroutine ( /*m_StepIndex*/ ));
                 }
             }
 
             //m_AllStepsComplete = CheckForAllStepsComplete(false);
-            if(m_CurrentStep < m_TotalSteps && m_AllStepsComplete)
+            if (m_CurrentStep < m_TotalSteps && m_AllStepsComplete)
             {
-                OnStepsDisassembleEvent.Invoke();
+                OnStepsDisassembleEvent.Invoke ();
             }
         }
 
-        IEnumerator AssembleNextStepCoroutine(/*int index*/)
+        IEnumerator AssembleNextStepCoroutine ( /*int index*/ )
         {
             m_IsAnimating = true;
-            SetTextAssembling(m_Groups[m_groupIndex].m_Group[m_StepIndex].m_GroupStepOutputText);
+            SetTextAssembling (m_Groups[m_groupIndex].m_Group[m_StepIndex].m_GroupStepOutputText);
             if (m_GroupTweens[m_groupIndex].m_Steps[m_StepIndex].m_StepTweens == null)
             {
                 //print("Creating a new tween and playing it");
-                m_GroupTweens[m_groupIndex].m_Steps[m_StepIndex].m_StepTweens = new List<Tweener>();
+                m_GroupTweens[m_groupIndex].m_Steps[m_StepIndex].m_StepTweens = new List<Tweener> ();
 
                 foreach (GameObject go in m_Groups[m_groupIndex].m_Group[m_StepIndex].m_GroupStepObjects)
                 {
-                    ObjectOrigin curObj = FindObjectOriginal(go.transform);
-                    Tweener tp = go.transform.DOLocalMove(curObj.m_Position, m_TweenLength).SetAutoKill(false);
-                    Tweener tr = go.transform.DORotate(curObj.m_Rotation, m_TweenLength).SetAutoKill(false);
-                    m_GroupTweens[m_groupIndex].m_Steps[m_StepIndex].m_StepTweens.Add(tp);
-                    m_GroupTweens[m_groupIndex].m_Steps[m_StepIndex].m_StepTweens.Add(tr);
+                    ObjectOrigin curObj = FindObjectOriginal (go.transform);
+                    Tweener tp = go.transform.DOLocalMove (curObj.m_Position, m_TweenLength).SetAutoKill (false);
+                    Tweener tr = go.transform.DORotate (curObj.m_Rotation, m_TweenLength).SetAutoKill (false);
+                    m_GroupTweens[m_groupIndex].m_Steps[m_StepIndex].m_StepTweens.Add (tp);
+                    m_GroupTweens[m_groupIndex].m_Steps[m_StepIndex].m_StepTweens.Add (tr);
                     tp.stringId = go.name;
 
                     //yield return m_PauseBetweenTweensTimer;
-                    yield return tp.WaitForCompletion();
+                    yield return tp.WaitForCompletion ();
                 }
 
-                if(m_StepIndex >= m_Groups[m_groupIndex].m_Group.Count - 1)
+                if (m_StepIndex >= m_Groups[m_groupIndex].m_Group.Count - 1)
                 {
                     if (m_Groups[m_groupIndex].m_Group[m_StepIndex].m_PutAsideWhenAssembled == true)
                     {
@@ -616,16 +638,14 @@ namespace ShowcaseV2
                         //    totalGroupBounds.Encapsulate(rend.bounds);
                         //}
 
-                        
-
                         //Vector3 boundsPos = m_ObjectHoldingVolume.transform.TransformPoint(totalGroupBounds.center);
                         //print(boundsPos);
 
-                        Vector3 finalPosition = GetRandomPositionInsideBox(m_ObjectHoldingVolume);
+                        Vector3 finalPosition = GetRandomPositionInsideBox (m_ObjectHoldingVolume);
                         finalPosition.y = m_ObjectHoldingVolume.transform.position.y;
                         //finalPosition -= boundsPos;
 
-                        m_GroupTweens[m_groupIndex].m_Steps[m_StepIndex].m_StepTweens.Add(groupParent.DOMove(finalPosition, m_TweenLength).SetAutoKill(false));
+                        m_GroupTweens[m_groupIndex].m_Steps[m_StepIndex].m_StepTweens.Add (groupParent.DOMove (finalPosition, m_TweenLength).SetAutoKill (false));
                     }
                 }
 
@@ -635,8 +655,8 @@ namespace ShowcaseV2
                 //print("Playing a stored sequence");
                 foreach (Tween t in m_GroupTweens[m_groupIndex].m_Steps[m_StepIndex].m_StepTweens)
                 {
-                    t.PlayForward();
-                    yield return t.WaitForCompletion();
+                    t.PlayForward ();
+                    yield return t.WaitForCompletion ();
                     //yield return m_PauseBetweenTweensTimer;
                 }
 
@@ -646,7 +666,7 @@ namespace ShowcaseV2
             yield return null;
             m_IsAnimating = false;
         }
-        IEnumerator AssemblePreviousStepCoroutine()
+        IEnumerator AssemblePreviousStepCoroutine ()
         {
             if (m_StepIndex < 0)
             {
@@ -655,16 +675,14 @@ namespace ShowcaseV2
             else
             {
                 m_IsAnimating = true;
-                SetTextAssembling(m_Groups[m_groupIndex].m_Group[m_StepIndex].m_GroupStepOutputText);
+                SetTextAssembling (m_Groups[m_groupIndex].m_Group[m_StepIndex].m_GroupStepOutputText);
 
-                foreach (Tween t in m_GroupTweens[m_groupIndex].m_Steps[m_StepIndex].m_StepTweens.Cast<Tween>().Reverse())
+                foreach (Tween t in m_GroupTweens[m_groupIndex].m_Steps[m_StepIndex].m_StepTweens.Cast<Tween> ().Reverse ())
                 {
-                    t.PlayBackwards();
-                    yield return t.WaitForCompletion();
+                    t.PlayBackwards ();
+                    yield return t.WaitForCompletion ();
                     //yield return m_PauseBetweenTweensTimer;
                 }
-
-
 
                 //Transform groupObjectToReset = m_GroupGameObjects[m_groupIndex].m_GroupObject.transform;
                 //groupObjectToReset.localPosition = Vector3.zero;
@@ -724,12 +742,12 @@ namespace ShowcaseV2
                 yield return null;
                 //SetTextAssembling("---");
                 m_IsAnimating = false;
-                
+
             }
-            
+
         }
 
-        ObjectOrigin FindObjectOriginal(Transform targetObject)
+        ObjectOrigin FindObjectOriginal (Transform targetObject)
         {
             foreach (ObjectOrigin t in m_OriginalTransforms)
             {
@@ -741,7 +759,7 @@ namespace ShowcaseV2
             return null;
         }
 
-        ObjectOrigin FindObjectScattered(Transform targetObject)
+        ObjectOrigin FindObjectScattered (Transform targetObject)
         {
             foreach (ObjectOrigin t in m_ScatteredTransforms)
             {
@@ -753,7 +771,7 @@ namespace ShowcaseV2
             return null;
         }
 
-        ObjectOrigin FindGroupContainer(Transform targetObject)
+        ObjectOrigin FindGroupContainer (Transform targetObject)
         {
             foreach (ObjectOrigin t in m_GroupFinalTransforms)
             {
@@ -765,19 +783,19 @@ namespace ShowcaseV2
             return null;
         }
 
-        private GameObject FindGroupParentObjectByName(string name)
+        private GameObject FindGroupParentObjectByName (string name)
         {
             foreach (GroupGameObjects go in m_GroupGameObjects)
             {
-                if(go.m_GroupObject.name == name)
+                if (go.m_GroupObject.name == name)
                 {
                     return go.m_GroupObject;
                 }
                 else
                 {
-                    foreach(GameObject sgo in go.m_StepObjects)
+                    foreach (GameObject sgo in go.m_StepObjects)
                     {
-                        if(sgo.name == name)
+                        if (sgo.name == name)
                         {
                             return sgo;
                         }
@@ -787,7 +805,7 @@ namespace ShowcaseV2
             return null;
         }
 
-        private GameObject GetGameObjectByNameInTarget(string name)
+        private GameObject GetGameObjectByNameInTarget (string name)
         {
             foreach (Transform t in m_TargetObject)
             {
@@ -799,17 +817,17 @@ namespace ShowcaseV2
             return null;
         }
 
-        private Vector3 GetRandomPositionInsideBox(BoxCollider targetVolume)
+        private Vector3 GetRandomPositionInsideBox (BoxCollider targetVolume)
         {
-            Vector3 pos = new Vector3(
-                Random.Range(-targetVolume.size.x / 2f, targetVolume.size.x / 2f),
+            Vector3 pos = new Vector3 (
+                Random.Range (-targetVolume.size.x / 2f, targetVolume.size.x / 2f),
                 0f,
-                Random.Range(-targetVolume.size.z / 2f, targetVolume.size.z / 2f)
+                Random.Range (-targetVolume.size.z / 2f, targetVolume.size.z / 2f)
             );
 
             //pos += targetVolume.transform.position;
 
-            Vector3 finalPos = targetVolume.transform.TransformPoint(pos);
+            Vector3 finalPos = targetVolume.transform.TransformPoint (pos);
 
             //print(pos);
 
@@ -821,7 +839,6 @@ namespace ShowcaseV2
         //{
         //    List<SetGOExport> m_SetObjectListTemp = new List<SetGOExport>();
         //    m_SetObjectListTemp.Clear();
-
 
         //    foreach (Set set in m_Sets)
         //    {
@@ -841,13 +858,13 @@ namespace ShowcaseV2
         //}
 
         [Button]
-        public void ExportGroupsToTextFile()
+        public void ExportGroupsToTextFile ()
         {
             //int groupID = 0;
             //int stepID = 0;
 
             string path = "Assets/Resources/GroupExport.txt";
-            StreamWriter writer = new StreamWriter(path, true);
+            StreamWriter writer = new StreamWriter (path, true);
 
             //foreach (Group g in m_Groups)
             //{
@@ -873,17 +890,17 @@ namespace ShowcaseV2
 
             for (int i = 0; i < m_Groups.Count; i++)
             {
-                writer.WriteLine($"Group{i}");
+                writer.WriteLine ($"Group{i}");
                 for (int j = 0; j < m_Groups[i].m_Group.Count; j++)
                 {
-                    writer.WriteLine($"--- Step{j}");
+                    writer.WriteLine ($"--- Step{j}");
                     for (int k = 0; k < m_Groups[i].m_Group[j].m_GroupStepObjects.Count; k++)
                     {
-                        writer.WriteLine($"------ {m_Groups[i].m_Group[j].m_GroupStepObjects[k].name}");
+                        writer.WriteLine ($"------ {m_Groups[i].m_Group[j].m_GroupStepObjects[k].name}");
                     }
                 }
             }
-            writer.Close();
+            writer.Close ();
 
         }
 
@@ -892,7 +909,6 @@ namespace ShowcaseV2
         //{
         //    string path = System.IO.Path.Combine(Application.dataPath, "SetExport.json");
         //    string json = System.IO.File.ReadAllText(path);
-
 
         //    SetGOExportWrapper wrapper = new SetGOExportWrapper();
         //    wrapper = JsonUtility.FromJson<SetGOExportWrapper>(json);
@@ -908,13 +924,12 @@ namespace ShowcaseV2
         //    }
         //}
 
-        void SetTextAssembling(string text)
+        void SetTextAssembling (string text)
         {
             m_NowAssemblingText.text = $"Step {m_CurrentStep}/{m_TotalSteps}\n{text}";
         }
 
-
-        public float SignedVolumeOfTriangle(Vector3 p1, Vector3 p2, Vector3 p3)
+        public float SignedVolumeOfTriangle (Vector3 p1, Vector3 p2, Vector3 p3)
         {
             float v321 = p3.x * p2.y * p1.z;
             float v231 = p2.x * p3.y * p1.z;
@@ -924,25 +939,23 @@ namespace ShowcaseV2
             float v123 = p1.x * p2.y * p3.z;
             return (1.0f / 6.0f) * (-v321 + v231 + v312 - v132 - v213 + v123);
         }
-        public float VolumeOfMesh(Mesh mesh)
+        public float VolumeOfMesh (Mesh mesh)
         {
             Vector3 m = mesh.bounds.size;
             return m.x * m.y * m.z;
 
-         //   float volume = 0;
-         //   Vector3[] vertices = mesh.vertices;
-         //   int[] triangles = mesh.triangles;
-         //   for (int i = 0; i < mesh.triangles.Length; i += 3)
-         //{
-         //       Vector3 p1 = vertices[triangles[i + 0]];
-         //       Vector3 p2 = vertices[triangles[i + 1]];
-         //       Vector3 p3 = vertices[triangles[i + 2]];
-         //       volume += SignedVolumeOfTriangle(p1, p2, p3);
-         //   }
-         //   return Mathf.Abs(volume);
+            //   float volume = 0;
+            //   Vector3[] vertices = mesh.vertices;
+            //   int[] triangles = mesh.triangles;
+            //   for (int i = 0; i < mesh.triangles.Length; i += 3)
+            //{
+            //       Vector3 p1 = vertices[triangles[i + 0]];
+            //       Vector3 p2 = vertices[triangles[i + 1]];
+            //       Vector3 p3 = vertices[triangles[i + 2]];
+            //       volume += SignedVolumeOfTriangle(p1, p2, p3);
+            //   }
+            //   return Mathf.Abs(volume);
         }
-
-
 
     }
 
@@ -986,7 +999,7 @@ namespace ShowcaseV2
         public Vector3 m_Position;
         public Vector3 m_Rotation;
 
-        public ObjectOrigin(Transform _transform, Vector3 _position, Vector3 _rotation)
+        public ObjectOrigin (Transform _transform, Vector3 _position, Vector3 _rotation)
         {
             m_Object = _transform;
             m_Position = _position;
@@ -999,6 +1012,7 @@ namespace ShowcaseV2
     {
         public List<StepTweens> m_Steps;
     }
+
     [System.Serializable]
     public class StepTweens
     {
@@ -1008,29 +1022,29 @@ namespace ShowcaseV2
     [System.Serializable]
     public class CustomGroupObject
     {
-        [Tooltip("Target group to which the custom object will be added to.")]
+        [Tooltip ("Target group to which the custom object will be added to.")]
         public int m_TargetGroupIndex = 0;
-        [Tooltip("Target step to which the custom object will be added to.")]
+        [Tooltip ("Target step to which the custom object will be added to.")]
         public int m_TargetStepIndex = 0;
-        [Tooltip("The index in list where the custom object will be added. To specify animation order.")]
+        [Tooltip ("The index in list where the custom object will be added. To specify animation order.")]
         public int m_IndexInListToAdd = 0;
-        [Tooltip("The custom objects name to search for.")]
+        [Tooltip ("The custom objects name to search for.")]
         public string m_CustomObjectName = "";
     }
 
     [System.Serializable]
     public class CustomSetMoveToHolding
     {
-        [Tooltip("Target set index to specify with which set to move the other set.")]
+        [Tooltip ("Target set index to specify with which set to move the other set.")]
         public int m_TargetSetIndex = 0;
-        [Tooltip("The other set which will be moved.")]
+        [Tooltip ("The other set which will be moved.")]
         public int m_ChildSetIndex = 0;
     }
 
     class ObjectCircle
     {
         public Transform m_Transform = null;
-        public Vector2 m_Center = new Vector2();
+        public Vector2 m_Center = new Vector2 ();
         public float m_Radius = 0;
     }
 }
