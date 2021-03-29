@@ -5,9 +5,6 @@ using System.Linq;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Animations;
-using UnityEngine.Events;
-using UnityEngine.UI;
 
 public class InteractiveTutorialController : MonoBehaviour
 {

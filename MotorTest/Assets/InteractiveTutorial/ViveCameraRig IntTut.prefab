@@ -216,9 +216,9 @@ GameObject:
   - component: {fileID: 7817206615369565710}
   - component: {fileID: 7817206615369565713}
   - component: {fileID: 5772429966196359886}
-  - component: {fileID: 7871162835718994047}
   - component: {fileID: 1794991080362672372}
   - component: {fileID: 1730481117}
+  - component: {fileID: 1228138055}
   m_Layer: 14
   m_Name: LeftHand
   m_TagString: PlayerHand
@@ -329,21 +329,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   m_FadeTime: 0.25
---- !u!114 &7871162835718994047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7817206615369394168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad0ad94f0785fe44cbe5db4daba732b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ControllerUI: {fileID: 0}
-  m_HintImage: {fileID: 0}
-  PartName: {fileID: 0}
 --- !u!114 &1794991080362672372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,18 +382,7 @@ MonoBehaviour:
   m_AButton: 4
   OnADown:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7871162835718994047}
-        m_MethodName: EnableUI
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnAUp:
     m_PersistentCalls:
       m_Calls: []
@@ -485,7 +459,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentActiveObject: {fileID: 0}
+  currentActiveSet: {fileID: 0}
   m_Interactable: {fileID: 0}
+--- !u!114 &1228138055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7817206615369394168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e5c659bcf0e114f9ca66822f80c83e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Hand: 1
+  m_RigTransform: {fileID: 7817206615369111362}
+  m_CameraTransform: {fileID: 7817206615369182070}
+  m_EnableMovement: 1
+  m_MoveSpeed: 10
+  m_InvertDirection: 0
+  m_EnableSnapTurn: 0
+  m_TurnThreshold: 0.9
+  m_TurnResetThreshold: 0.1
+  m_TurnAngle: 45
 --- !u!1 &7817206615369397810
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +616,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7817206615369111362}
-  m_Layer: 0
+  - component: {fileID: 1307192867}
+  m_Layer: 18
   m_Name: ViveCameraRig IntTut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -647,6 +645,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: 0}
+--- !u!143 &1307192867
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7817206615369410622}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.2
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &7817206615369426862
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,6 +816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentActiveObject: {fileID: 0}
+  currentActiveSet: {fileID: 0}
   m_Interactable: {fileID: 0}
 --- !u!114 &4353532444259778470
 MonoBehaviour:
@@ -864,14 +881,36 @@ MonoBehaviour:
   m_GripButton: 2
   OnGripDown:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7817206615369426860}
+        m_MethodName: GrabSet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnGripUp:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7817206615369426860}
+        m_MethodName: ReleaseSet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnGripHold:
     m_PersistentCalls:
       m_Calls: []
-  m_TouchpadButton: 1
+  m_TouchpadButton: -1
   OnTouchpadDown:
     m_PersistentCalls:
       m_Calls:
@@ -939,7 +978,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7817206615369426862}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75c78b95b8b93894a840aafd6e68763d, type: 3}
   m_Name: 
@@ -1001,7 +1040,7 @@ MonoBehaviour:
     m_roleValueInt: 0
   m_origin: {fileID: 0}
   m_deviceIndex: 0
-  m_overrideModel: 0
+  m_overrideModel: 24
   m_overrideShader: {fileID: 4800000, guid: 8d2bb70cbf9db8d4da26e15b26e74248, type: 3}
 --- !u!1 &7817206615369436550
 GameObject:
@@ -1190,7 +1229,7 @@ Camera:
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1212,7 +1251,7 @@ Behaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7817206615369453184}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!81 &7817206615363498894
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1302,7 +1341,7 @@ MonoBehaviour:
     m_roleValueInt: 0
   m_origin: {fileID: 0}
   m_deviceIndex: 0
-  m_overrideModel: 0
+  m_overrideModel: 23
   m_overrideShader: {fileID: 4800000, guid: 8d2bb70cbf9db8d4da26e15b26e74248, type: 3}
 --- !u!1 &9218534415356772406
 GameObject:
