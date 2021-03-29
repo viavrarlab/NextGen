@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
@@ -27,9 +29,12 @@ public class InteractiveTutorialController : MonoBehaviour
     public ObjectScatterer m_Scatterer;
 
     public Transform m_TargetObject;
+    public Transform m_TargetObjectStartPosition;
 
     public List<MotorPart> m_MotorPartsConfig;
     public string m_CSVConfigFileName = "configList.csv";
+
+    public ComponentGenerator m_CompGen;
 
     public static InteractiveTutorialController i;
 
@@ -40,7 +45,8 @@ public class InteractiveTutorialController : MonoBehaviour
 
     void Start ()
     {
-        ResetTutorial ();
+        Invoke("ResetTutorial", 1f);
+        // ResetTutorial ();
     }
 
     private void Init ()
@@ -51,7 +57,7 @@ public class InteractiveTutorialController : MonoBehaviour
         DisableAllSockets ();
         GetSocketForObject (m_ObjectListOrdered[m_CurrentActiveIndex]).ToggleSocketActiveState (true);
         SetInstructionText (m_ObjectListOrdered[m_CurrentActiveIndex].m_MotorPartInformation.m_UIName);
-        IndicationArrow.i.Move (m_ObjectListOrdered[m_CurrentActiveIndex].transform.position + GetVerticalBounds(m_ObjectListOrdered[m_CurrentActiveIndex].gameObject));
+        IndicationArrow.i.Move (m_ObjectListOrdered[m_CurrentActiveIndex].transform.position + GetVerticalBounds (m_ObjectListOrdered[m_CurrentActiveIndex].gameObject));
         foreach (InteractableObject intObj in m_ObjectListOrdered)
         {
             intObj.ResetComponents ();
@@ -78,6 +84,8 @@ public class InteractiveTutorialController : MonoBehaviour
 
     public void ResetTutorial ()
     {
+        ResetModelPosition();
+        DisableAllSockets ();
         SetInstructionText ("Press 'Start' to begin!", true);
         m_StartUIButtons.SetActive (true);
         m_CompletedUIButtons.SetActive (false);
@@ -89,6 +97,11 @@ public class InteractiveTutorialController : MonoBehaviour
         {
             s.ToggleSocketActiveState (false);
         }
+    }
+
+    private void ResetModelPosition(){
+        m_TargetObject.position = m_TargetObjectStartPosition.position;
+        m_TargetObject.Find ("Sockets").localPosition = Vector3.zero;
     }
 
     public void GetTargetObjects ()
@@ -157,7 +170,7 @@ public class InteractiveTutorialController : MonoBehaviour
             m_CurrentActiveIndex += 1;
             GetSocketForObject (m_ObjectListOrdered[m_CurrentActiveIndex]).ToggleSocketActiveState (true);
             SetInstructionText (m_ObjectListOrdered[m_CurrentActiveIndex].m_MotorPartInformation.m_UIName);
-            IndicationArrow.i.Move (m_ObjectListOrdered[m_CurrentActiveIndex].transform.position + GetVerticalBounds(m_ObjectListOrdered[m_CurrentActiveIndex].gameObject));
+            IndicationArrow.i.Move (m_ObjectListOrdered[m_CurrentActiveIndex].transform.position + GetVerticalBounds (m_ObjectListOrdered[m_CurrentActiveIndex].gameObject));
         }
         else
         {
@@ -167,15 +180,16 @@ public class InteractiveTutorialController : MonoBehaviour
 
     private void CheckAndExecuteCustomActions (InteractableObject interactableObject)
     {
+
         foreach (CustomPartAction action in m_CustomActions)
         {
             if (action.m_UseIndividualObjectOrder)
             {
                 if (action.m_IndividualObjectOrderID == m_CurrentActiveIndex)
                 {
-                    foreach (InteractableObject intObj in GetAllGroupObjects (action.m_TargetGroupID)) // Get all objects in the target group and move them
+                    foreach (SocketObject obj in GetSocketsForGroup (GetAllGroupObjects (action.m_TargetGroupID))) // Get all objects in the target group and move them
                     {
-                        intObj.LocalMove (action.m_MoveOffsetFromOrigin, 0.5f);
+                        obj.transform.DOBlendableLocalMoveBy (action.m_MoveOffsetFromOrigin, 0.5f).SetDelay (0.5f);
                     }
                 }
             }
@@ -186,15 +200,20 @@ public class InteractiveTutorialController : MonoBehaviour
                     int tempNextActiveID = m_CurrentActiveIndex + 1;
                     if (m_ObjectListOrdered[tempNextActiveID].m_MotorPartInformation.m_GroupID != interactableObject.m_MotorPartInformation.m_GroupID) // If the current object is the last one in the group
                     {
-                        foreach (InteractableObject intObj in GetAllGroupObjects (action.m_TargetGroupID)) // Get all objects in the target group and move them
+                        foreach (SocketObject obj in GetSocketsForGroup (GetAllGroupObjects (action.m_TargetGroupID))) // Get all objects in the target group and move them
                         {
-                            intObj.LocalMove (action.m_MoveOffsetFromOrigin, 0.5f);
+                            obj.transform.DOBlendableLocalMoveBy (action.m_MoveOffsetFromOrigin, 0.5f).SetDelay (0.5f);
                         }
                     }
                 }
             }
 
         }
+    }
+
+    private Transform GetGroupObjectTransform (int groupID)
+    {
+        return m_TargetObject.Find ("Sockets").Find ("Group" + groupID);
     }
 
     private List<InteractableObject> GetAllGroupObjects (int groupID)
@@ -229,12 +248,23 @@ public class InteractiveTutorialController : MonoBehaviour
         return null;
     }
 
+    private List<SocketObject> GetSocketsForGroup (List<InteractableObject> groupInteractables)
+    {
+        List<SocketObject> tempList = new List<SocketObject> ();
+        foreach (InteractableObject interactableObject in groupInteractables)
+        {
+            tempList.Add (GetSocketForObject (interactableObject));
+        }
+
+        return tempList;
+    }
+
     private Vector3 GetVerticalBounds (GameObject obj)
     {
-            Vector3 extents = obj.GetComponent<Collider>().bounds.extents;
-            extents.x = 0f;
-            extents.z = 0f;
-            return extents;
+        Vector3 extents = obj.GetComponent<Collider> ().bounds.extents;
+        extents.x = 0f;
+        extents.z = 0f;
+        return extents;
     }
 }
 
@@ -247,4 +277,11 @@ public class CustomPartAction
     public int m_IndividualObjectOrderID;
     public int m_TargetGroupID; // The group to use in the action
     public Vector3 m_MoveOffsetFromOrigin;
+}
+
+[System.Serializable]
+public class GroupHierarchy
+{
+    public int m_ParentID;
+    public List<int> m_ChildID;
 }

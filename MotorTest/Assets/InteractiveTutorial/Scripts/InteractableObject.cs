@@ -15,6 +15,8 @@ public class InteractableObject : MonoBehaviour
 
     public MotorPart m_MotorPartInformation;
 
+    private ParentConstraint m_Constraint;
+
     private Rigidbody m_Rigidbody;
     private Collider m_Collider;
     private ModelOutline.Outline m_Outline;
@@ -24,6 +26,7 @@ public class InteractableObject : MonoBehaviour
         m_Rigidbody = gameObject.GetComponent<Rigidbody> ();
         m_Collider = gameObject.GetComponent<Collider> ();
         m_Outline = gameObject.GetComponent<ModelOutline.Outline>();
+        m_Constraint = gameObject.GetComponent<ParentConstraint>();
 
         ResetComponents();
     }
@@ -33,6 +36,7 @@ public class InteractableObject : MonoBehaviour
         m_Outline.enabled = false;
         m_Rigidbody.isKinematic = false;
         m_Collider.enabled = true;
+        m_Constraint.constraintActive = false;
     }
 
     public void PutIntoSocket (XRBaseInteractor interactor)
@@ -55,6 +59,8 @@ public class InteractableObject : MonoBehaviour
             transform.DORotateQuaternion (m_ExpectedSocket.transform.rotation, 0.5f).OnComplete (() =>
             {
                 OnFinishPlaceInSocket ();
+                m_ExpectedSocket.m_IsOccupied = true;
+                
                 InteractiveTutorialController.i.ActivateNextSocket ();
             });
         }
@@ -70,6 +76,7 @@ public class InteractableObject : MonoBehaviour
         m_Outline.enabled = false;
         m_Rigidbody.isKinematic = true;
         m_Collider.enabled = false;
+        m_Constraint.constraintActive = true;
     }
 
     private void OnTriggerEnter (Collider other)

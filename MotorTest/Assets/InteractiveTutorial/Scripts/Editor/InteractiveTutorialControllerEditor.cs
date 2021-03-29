@@ -1,32 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
-[CustomEditor(typeof(InteractiveTutorialController))]
+[CustomEditor (typeof (InteractiveTutorialController))]
 public class InteractiveTutorialControllerEditor : Editor
 {
-    public override void OnInspectorGUI()
+    public override void OnInspectorGUI ()
     {
-        DrawDefaultInspector();
+        DrawDefaultInspector ();
 
-        InteractiveTutorialController myTarget = (InteractiveTutorialController)target;
+        InteractiveTutorialController myTarget = (InteractiveTutorialController) target;
 
-        if (GUILayout.Button("Get Target Objects"))
+        if (GUILayout.Button ("Get Target Objects"))
         {
-            myTarget.GetTargetObjects();
+            myTarget.GetTargetObjects ();
         }
 
-        if (GUILayout.Button("Load Motor Part Config CSV"))
+        if (GUILayout.Button ("Load Motor Part Config CSV"))
         {
-            myTarget.LoadMotorPartConfigCSV();
+            myTarget.LoadMotorPartConfigCSV ();
         }
 
-        if (GUILayout.Button("Populate Interactable Object Part Information"))
+        if (GUILayout.Button ("Populate Interactable Object Part Information"))
         {
-            myTarget.PopulateInteractableObjectPartInformation();
+            myTarget.PopulateInteractableObjectPartInformation ();
         }
 
+        if (GUILayout.Button ("Start Tutorial"))
+        {
+            myTarget.BeginTutorial ();
+        }
     }
 }
-
