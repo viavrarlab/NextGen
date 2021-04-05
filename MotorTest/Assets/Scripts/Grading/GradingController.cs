@@ -82,6 +82,12 @@ public class GradingController : MonoBehaviour
     private static GradingController _instance;
     public static GradingController Instance { get { return _instance; } }
 
+    //Teleport Counters
+    [SerializeField]
+    GameObject TeleportCountUI;
+    [SerializeField]
+    GameObject TeleportDistanceUI;
+
     SetEnable m_SetEnable;
 
     //---Total Timer---
@@ -439,7 +445,6 @@ public class GradingController : MonoBehaviour
     }
     void PlacedPartCounterWhiteBoard(bool Placed)
     {
-
         if (Placed)
         {
             m_PlacedPartsCount++;
@@ -453,6 +458,11 @@ public class GradingController : MonoBehaviour
     {
         PlacedPartCounterWhiteBoard(Placed);
         m_WhiteBoardPartCounter.text = "Placed parts = " + m_PlacedPartsCount.ToString() + "/" + m_CorrOrder.Parts.Count.ToString();
+    }
+    public void TeleportCounterAndDistance(int TeleportCount, float TeleportDistance)
+    {
+        TeleportCountUI.GetComponent<Text>().text = "Times teleported = " + TeleportCount.ToString();
+        TeleportDistanceUI.GetComponent<Text>().text = "Distance teleported = " + System.Math.Round(TeleportDistance, 2).ToString() + "m";
     }
     public IEnumerator TotalTimer()
     {

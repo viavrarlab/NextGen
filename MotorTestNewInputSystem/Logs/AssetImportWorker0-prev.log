@@ -1,0 +1,500 @@
+Using pre-set license
+Built from '2020.3/release' branch; Version is '2020.3.2f1 (8fd9074bf66c) revision 9427207'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19041.867; Version 2004; 64bit' Language: 'en' Physical Memory: 16145 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Users\Toms\Desktop\MyFILES\UnityEditors\2020.3.2f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/UnityProjekit/NextGenTest/MotorTestNewInputSystem
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+55082
+Successfully changed project path to: D:/UnityProjekit/NextGenTest/MotorTestNewInputSystem
+D:/UnityProjekit/NextGenTest/MotorTestNewInputSystem
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 63.43 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.53 ms.
+Initialize engine version: 2020.3.2f1 (8fd9074bf66c)
+[Subsystems] Discovering subsystems at path C:/Users/Toms/Desktop/MyFILES/UnityEditors/2020.3.2f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/UnityProjekit/NextGenTest/MotorTestNewInputSystem/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f15)
+    Vendor:   
+    VRAM:     5980 MB
+    Driver:   27.21.14.6589
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'C:/Users/Toms/Desktop/MyFILES/UnityEditors/2020.3.2f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Users/Toms/Desktop/MyFILES/UnityEditors/2020.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Users/Toms/Desktop/MyFILES/UnityEditors/2020.3.2f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56488
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Users/Toms/Desktop/MyFILES/UnityEditors/2020.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001277 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 58.13 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.288 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002339 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 67.29 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+[XR] OculusXRPlugin: registering subsystems
+[XR] Unable to register display lifecyle provider: [1]
+[XR] Oculus Input lifecycle provider registered.
+[XR] Unable to register input lifecyle provider: [1]
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in D:\UnityProjekit\NextGenTest\MotorTest\Library\PackageCache\com.unity.xr.oculus@1.8.1\Runtime\OculusLoader.cs:243 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in D:\UnityProjekit\NextGenTest\MotorTest\Library\PackageCache\com.unity.xr.oculus@1.8.1\Runtime\OculusLoader.cs:228 
+
+(Filename: D:/UnityProjekit/NextGenTest/MotorTest/Library/PackageCache/com.unity.xr.oculus@1.8.1/Runtime/OculusLoader.cs Line: 243)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.946 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.74 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 3567 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 167.8 MB.
+System memory in use after: 168.0 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 4023.
+Total: 3.313900 ms (FindLiveObjects: 0.484400 ms CreateObjectMapping: 0.286700 ms MarkObjects: 2.443400 ms  DeleteObjects: 0.098500 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Models/Hands/LeftHand.mb
+  artifactKey: Guid(895e8768bc41166438c5aab580a3545d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Hands/LeftHand.mb using Guid(895e8768bc41166438c5aab580a3545d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3113072565b29c924dceb3e63607b50') in 0.024331 seconds
+  Import took 0.029923 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.780369 seconds.
+  path: Assets/Models/MeshColliderTest
+  artifactKey: Guid(246e2e0db3ee7bf489b7b20997ff07a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/MeshColliderTest using Guid(246e2e0db3ee7bf489b7b20997ff07a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87666dbb9bd37bf5fd99cd63623c31e0') in 0.006496 seconds
+  Import took 0.012898 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.369833 seconds.
+  path: Assets/Models/Hands/RightHand.mb
+  artifactKey: Guid(86a5767a0898def49800d83cb16eb991) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Hands/RightHand.mb using Guid(86a5767a0898def49800d83cb16eb991) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa75cca245b8debf9fbe87484e3ebab1') in 0.006124 seconds
+  Import took 0.012450 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002862 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.80 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in D:\UnityProjekit\NextGenTest\MotorTest\Library\PackageCache\com.unity.xr.oculus@1.8.1\Runtime\OculusLoader.cs:243 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in D:\UnityProjekit\NextGenTest\MotorTest\Library\PackageCache\com.unity.xr.oculus@1.8.1\Runtime\OculusLoader.cs:228 
+
+(Filename: D:/UnityProjekit/NextGenTest/MotorTest/Library/PackageCache/com.unity.xr.oculus@1.8.1/Runtime/OculusLoader.cs Line: 243)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.936 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524288) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 3378 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.3 MB.
+System memory in use after: 149.6 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 4027.
+Total: 2.554300 ms (FindLiveObjects: 0.369700 ms CreateObjectMapping: 0.200900 ms MarkObjects: 1.967100 ms  DeleteObjects: 0.015500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003033 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.94 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in D:\UnityProjekit\NextGenTest\MotorTest\Library\PackageCache\com.unity.xr.oculus@1.8.1\Runtime\OculusLoader.cs:243 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in D:\UnityProjekit\NextGenTest\MotorTest\Library\PackageCache\com.unity.xr.oculus@1.8.1\Runtime\OculusLoader.cs:228 
+
+(Filename: D:/UnityProjekit/NextGenTest/MotorTest/Library/PackageCache/com.unity.xr.oculus@1.8.1/Runtime/OculusLoader.cs Line: 243)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.879 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524288) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 3378 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.4 MB.
+System memory in use after: 149.6 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 4031.
+Total: 3.579900 ms (FindLiveObjects: 0.371000 ms CreateObjectMapping: 0.364200 ms MarkObjects: 2.806600 ms  DeleteObjects: 0.036600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 519.112897 seconds.
+  path: Assets/Scripts/Grading/PointPlayerRotation.cs
+  artifactKey: Guid(06f170387417a3549926b561cef6cf5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Grading/PointPlayerRotation.cs using Guid(06f170387417a3549926b561cef6cf5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0c1b01a50fad79608da5bdb30b7628c') in 0.015257 seconds
+  Import took 0.020509 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012744 seconds.
+  path: Assets/Scripts/Grading/PointPlayerRotation.cs
+  artifactKey: Guid(06f170387417a3549926b561cef6cf5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Grading/PointPlayerRotation.cs using Guid(06f170387417a3549926b561cef6cf5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0c1b01a50fad79608da5bdb30b7628c') in 0.001398 seconds
+  Import took 0.007026 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.006068 seconds.
+  path: Assets/InteractiveTutorial/Scripts/ViveControllerPickup.cs
+  artifactKey: Guid(e4bcf88a0513877438184580202c4ec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InteractiveTutorial/Scripts/ViveControllerPickup.cs using Guid(e4bcf88a0513877438184580202c4ec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e824e27c032e5a6f235563470c3a5d8d') in 0.005739 seconds
+  Import took 0.011457 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.751664 seconds.
+  path: Assets/Scripts/SmoothLocomotionWithSnapTurn.cs
+  artifactKey: Guid(88e5c659bcf0e114f9ca66822f80c83e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/SmoothLocomotionWithSnapTurn.cs using Guid(88e5c659bcf0e114f9ca66822f80c83e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a21b0edc49e2a37f29024b6cf592f46') in 0.005851 seconds
+  Import took 0.012783 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000909 seconds.
+  path: Assets/Scripts/SmoothLocomotionWithSnapTurn.cs
+  artifactKey: Guid(88e5c659bcf0e114f9ca66822f80c83e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/SmoothLocomotionWithSnapTurn.cs using Guid(88e5c659bcf0e114f9ca66822f80c83e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a21b0edc49e2a37f29024b6cf592f46') in 0.001731 seconds
+  Import took 0.007272 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.850957 seconds.
+  path: Assets/Scripts/SortedListFull_Motor_With_Sets.txt
+  artifactKey: Guid(ddd229906aa12844dbc1b15ea423d55c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/SortedListFull_Motor_With_Sets.txt using Guid(ddd229906aa12844dbc1b15ea423d55c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '498fabb60a4e43b42257b1d3b6e8473a') in 0.016739 seconds
+  Import took 0.023885 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002450 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.86 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in D:\UnityProjekit\NextGenTest\MotorTest\Library\PackageCache\com.unity.xr.oculus@1.8.1\Runtime\OculusLoader.cs:243 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in D:\UnityProjekit\NextGenTest\MotorTest\Library\PackageCache\com.unity.xr.oculus@1.8.1\Runtime\OculusLoader.cs:228 
+
+(Filename: D:/UnityProjekit/NextGenTest/MotorTest/Library/PackageCache/com.unity.xr.oculus@1.8.1/Runtime/OculusLoader.cs Line: 243)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.932 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524288) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 3378 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.4 MB.
+System memory in use after: 149.7 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 4035.
+Total: 2.406700 ms (FindLiveObjects: 0.447400 ms CreateObjectMapping: 0.255500 ms MarkObjects: 1.668900 ms  DeleteObjects: 0.014100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002906 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.11 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in D:\UnityProjekit\NextGenTest\MotorTest\Library\PackageCache\com.unity.xr.oculus@1.8.1\Runtime\OculusLoader.cs:243 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in D:\UnityProjekit\NextGenTest\MotorTest\Library\PackageCache\com.unity.xr.oculus@1.8.1\Runtime\OculusLoader.cs:228 
+
+(Filename: D:/UnityProjekit/NextGenTest/MotorTest/Library/PackageCache/com.unity.xr.oculus@1.8.1/Runtime/OculusLoader.cs Line: 243)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.931 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524288) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 3378 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.5 MB.
+System memory in use after: 149.7 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 4039.
+Total: 2.285500 ms (FindLiveObjects: 0.363400 ms CreateObjectMapping: 0.179900 ms MarkObjects: 1.727500 ms  DeleteObjects: 0.013900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002561 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in D:\UnityProjekit\NextGenTest\MotorTest\Library\PackageCache\com.unity.xr.oculus@1.8.1\Runtime\OculusLoader.cs:243 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in D:\UnityProjekit\NextGenTest\MotorTest\Library\PackageCache\com.unity.xr.oculus@1.8.1\Runtime\OculusLoader.cs:228 
+
+(Filename: D:/UnityProjekit/NextGenTest/MotorTest/Library/PackageCache/com.unity.xr.oculus@1.8.1/Runtime/OculusLoader.cs Line: 243)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.871 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524288) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.80 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 3378 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.5 MB.
+System memory in use after: 149.7 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 4043.
+Total: 2.982200 ms (FindLiveObjects: 0.422400 ms CreateObjectMapping: 0.209300 ms MarkObjects: 2.293200 ms  DeleteObjects: 0.056200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 1388.617862 seconds.
+  path: Assets/InteractiveTutorial/-=- Interactive Tutorial Controller -=-.prefab
+  artifactKey: Guid(d89c811ddc57f404d9add996f6f97109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InteractiveTutorial/-=- Interactive Tutorial Controller -=-.prefab using Guid(d89c811ddc57f404d9add996f6f97109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbbd0f6d1d2ca4b3311f058b584120df') in 0.031546 seconds
+  Import took 0.038376 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/MotorShowcase/Models/ABB-ACS880/ABB-ACS880.fbx
+  artifactKey: Guid(ac1b4ccd4132c3c439dbba46c7571d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MotorShowcase/Models/ABB-ACS880/ABB-ACS880.fbx using Guid(ac1b4ccd4132c3c439dbba46c7571d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02d07ad937758da82ef5185277e61bcb') in 1.257759 seconds
+  Import took 1.263308 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000325 seconds.
+  path: Assets/MotorShowcase/Prefabs/[CONTROLLER] Part Toggler.prefab
+  artifactKey: Guid(9f5342850266ba949b6787c8a698b331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MotorShowcase/Prefabs/[CONTROLLER] Part Toggler.prefab using Guid(9f5342850266ba949b6787c8a698b331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddb36c551ab7d6d04e61dda2cfadcf01') in 0.007354 seconds
+  Import took 0.013074 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000270 seconds.
+  path: Assets/Models/Controller/912102001_jamaica-gray-porcelain-tile_display.jpg
+  artifactKey: Guid(4382c8fe6c696ed4dbd04a5918e36ee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Controller/912102001_jamaica-gray-porcelain-tile_display.jpg using Guid(4382c8fe6c696ed4dbd04a5918e36ee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8812dcc54a25c68f0048eb7d5d06526') in 0.032158 seconds
+  Import took 0.038167 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000149 seconds.
+  path: Assets/MotorShowcase/Prefabs Export/[MODEL] Motor CrossSection.prefab
+  artifactKey: Guid(fb09fae6f1f70a841a2589a3a651f121) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MotorShowcase/Prefabs Export/[MODEL] Motor CrossSection.prefab using Guid(fb09fae6f1f70a841a2589a3a651f121) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7a4902ec45c7aaf8eb1e577a6689b47') in 1.224330 seconds
+  Import took 1.231108 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/InteractiveTutorial/-=- Interactive Tutorial Controller -=-.prefab
+  artifactKey: Guid(d89c811ddc57f404d9add996f6f97109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InteractiveTutorial/-=- Interactive Tutorial Controller -=-.prefab using Guid(d89c811ddc57f404d9add996f6f97109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbbd0f6d1d2ca4b3311f058b584120df') in 0.003392 seconds
+  Import took 0.008313 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000329 seconds.
+  path: Assets/MotorShowcase/Prefabs/[MODEL] Motor CrossSection.prefab
+  artifactKey: Guid(e34058c9a4ddd3a4aa58c51112a1f748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MotorShowcase/Prefabs/[MODEL] Motor CrossSection.prefab using Guid(e34058c9a4ddd3a4aa58c51112a1f748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1dd43ff40e02372f0c9ff85d33c94b0') in 0.134131 seconds
+  Import took 0.140513 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000285 seconds.
+  path: Assets/MotorShowcase/Prefabs/[MODEL] Motor_SubstExport_v2.prefab
+  artifactKey: Guid(3a7b7de8cbedd9c439a19b08f4dbbbe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MotorShowcase/Prefabs/[MODEL] Motor_SubstExport_v2.prefab using Guid(3a7b7de8cbedd9c439a19b08f4dbbbe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2adf07a198bd47a103be995d9421d16e') in 0.136352 seconds
+  Import took 0.142441 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/MotorShowcase/Prefabs Export/[TWEEN] Wire flow tween controller.prefab
+  artifactKey: Guid(ebb113146cb89b0428b93801a4956469) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MotorShowcase/Prefabs Export/[TWEEN] Wire flow tween controller.prefab using Guid(ebb113146cb89b0428b93801a4956469) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bff8258030382084d237e4ace5c6fb3f') in 0.013359 seconds
+  Import took 0.018436 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000323 seconds.
+  path: Assets/MotorShowcase/Prefabs Export/[MAIN CONTROLLER] ShowcaseControler V2 .prefab
+  artifactKey: Guid(16fb6cdd668f6da43b7a4eaa7676abca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MotorShowcase/Prefabs Export/[MAIN CONTROLLER] ShowcaseControler V2 .prefab using Guid(16fb6cdd668f6da43b7a4eaa7676abca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f515499a97ca7fd8dd12a7ade1f328ed') in 0.011983 seconds
+  Import took 0.017116 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/MotorShowcase/Prefabs/[TWEEN] Wire flow tween controller.prefab
+  artifactKey: Guid(286fce343e7767041b0c649fc6e19d8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MotorShowcase/Prefabs/[TWEEN] Wire flow tween controller.prefab using Guid(286fce343e7767041b0c649fc6e19d8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7850bc68a6b8bffba1d878b031b12908') in 0.002447 seconds
+  Import took 0.008049 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000332 seconds.
+  path: Assets/MotorShowcase/Prefabs Export/[AUDIO] OneShot.prefab
+  artifactKey: Guid(611961d8556bfed4f92baf2c9c92f4bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MotorShowcase/Prefabs Export/[AUDIO] OneShot.prefab using Guid(611961d8556bfed4f92baf2c9c92f4bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e203cb4ccb5e972ed097974c9c3fe8a') in 0.007867 seconds
+  Import took 0.012904 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000294 seconds.
+  path: Assets/Resources/639428-200.png
+  artifactKey: Guid(9ae1ebcff81284d42b08c37cf488541a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/639428-200.png using Guid(9ae1ebcff81284d42b08c37cf488541a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f8d2bbe69d139f9ebe6263ffd5fa46e') in 0.022898 seconds
+  Import took 0.028532 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/MotorShowcase/Prefabs/[MAIN CONTROLLER] ShowcaseControler V2 .prefab
+  artifactKey: Guid(ba5e345c00c170148a98006bf60f0e23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MotorShowcase/Prefabs/[MAIN CONTROLLER] ShowcaseControler V2 .prefab using Guid(ba5e345c00c170148a98006bf60f0e23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc6bec0cc3dd2db639b5a64f19e4de01') in 0.002533 seconds
+  Import took 0.007239 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 144.106740 seconds.
+  path: Assets/Prefabs/XR Rig.prefab
+  artifactKey: Guid(83443fadd0209044ea5bd0f34fa1c2ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/XR Rig.prefab using Guid(83443fadd0209044ea5bd0f34fa1c2ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67034693f753f34a93ab8727b762e7a1') in 0.670217 seconds
+  Import took 0.677390 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.237901 seconds.
+  path: Assets/Prefabs/ViveCameraRig.prefab
+  artifactKey: Guid(c4f395288e15c924d80cc1442ad804d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ViveCameraRig.prefab using Guid(c4f395288e15c924d80cc1442ad804d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28f63d1fe6206213d86d3dd8ce7b88ad') in 0.038803 seconds
+  Import took 0.045820 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.063460 seconds.
+  path: Assets/Prefabs/XR Rig.prefab
+  artifactKey: Guid(83443fadd0209044ea5bd0f34fa1c2ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/XR Rig.prefab using Guid(83443fadd0209044ea5bd0f34fa1c2ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '270eb9042bdbb81153a25d8de959cc52') in 0.032793 seconds
+  Import took 0.039177 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.890899 seconds.
+  path: Assets/Scenes/Motor Showcase.unity
+  artifactKey: Guid(7a27dd44e7ca3994f8f4c636db943ee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Motor Showcase.unity using Guid(7a27dd44e7ca3994f8f4c636db943ee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '141517b52870d088d2cb1c1b0f2bf4f4') in 0.006681 seconds
+  Import took 0.012752 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 72.192356 seconds.
+  path: Assets/Prefabs
+  artifactKey: Guid(61c4316816c70154c984c6fded1e7674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs using Guid(61c4316816c70154c984c6fded1e7674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '046af26e5b3afd844cbcab94fef7d9a5') in 0.005955 seconds
+  Import took 0.012843 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 113.769226 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(223066cbbd7b63648a45a437e38dc053) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(223066cbbd7b63648a45a437e38dc053) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b177c44c04e3942b8c483f93216e1b4b') in 0.006034 seconds
+  Import took 0.013033 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.765650 seconds.
+  path: Assets/Scenes/T111 - FreeRoam.unity
+  artifactKey: Guid(02d9096b4ad64094d899049f3f0acbec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/T111 - FreeRoam.unity using Guid(02d9096b4ad64094d899049f3f0acbec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f191d82904a795d779d77c2906f515b8') in 0.006818 seconds
+  Import took 0.012868 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001345 seconds.
+  path: Assets/Scenes/T111 - FreeRoam.unity
+  artifactKey: Guid(02d9096b4ad64094d899049f3f0acbec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/T111 - FreeRoam.unity using Guid(02d9096b4ad64094d899049f3f0acbec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f191d82904a795d779d77c2906f515b8') in 0.001846 seconds
+  Import took 0.007339 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

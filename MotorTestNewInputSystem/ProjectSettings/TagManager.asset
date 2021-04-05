@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Door
+  - MotorCollider
+  - SetGrab
+  - Socket
+  - PlacementRoot
+  - MotorPart
+  - PlayerHand
+  - LeftHandUI
+  - GradingController
+  - Grab
+  - GameControl
+  - VRRIG
+  - Instructions
+  - Box
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - PostProcessing
+  - Locked
+  - Placeable
+  - PlacementPoint
+  - Teleport
+  - Interactable
+  - Hand
+  - Sets
+  - OBJ
+  - IntTutSocket
+  - Movement
+  - Box
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

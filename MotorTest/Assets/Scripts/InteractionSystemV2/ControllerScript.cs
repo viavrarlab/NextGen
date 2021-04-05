@@ -25,10 +25,6 @@ public class ControllerScript : MonoBehaviour
 
     public List<GameObject> CollidingObj = new List<GameObject>();
 
-    private void Start()
-    {
-        
-    }
     private void Awake()
     {
         m_CorrectOrder = FindObjectOfType<CorrectOrderTests>();
@@ -86,14 +82,17 @@ public class ControllerScript : MonoBehaviour
     {
         foreach (GameObject GO in CollidingObj)
         {
-            if (GO == CollidingObj.Last())
+            if(GO.GetComponent<Outline>() != null)
             {
-                GO.GetComponent<Outline>().OutlineColor = Color.white;
-                GO.GetComponent<Outline>().enabled = true;
-            }
-            else
-            {
-                GO.GetComponent<Outline>().enabled = false;
+                if (GO == CollidingObj.Last())
+                {
+                    GO.GetComponent<Outline>().OutlineColor = Color.white;
+                    GO.GetComponent<Outline>().enabled = true;
+                }
+                else
+                {
+                    GO.GetComponent<Outline>().enabled = false;
+                }
             }
         }
     }
@@ -101,7 +100,10 @@ public class ControllerScript : MonoBehaviour
     {
         if (other.CompareTag("PlacementRoot") || other.CompareTag("Box"))
         {
-            other.GetComponent<Outline>().enabled = false;
+            if (other.GetComponent<Outline>() != null)
+            {
+                other.GetComponent<Outline>().enabled = false;
+            }
             CollidingObj.Remove(other.gameObject);
         }
         else

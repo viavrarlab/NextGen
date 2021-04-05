@@ -10,30 +10,25 @@ public class Teleport : MonoBehaviour
     public GameObject m_Marker;
     public Transform m_CameraRig;
     public Transform m_Camera;
-    //public SteamVR_Action_Boolean m_TeleportAction;
 
     public LayerMask m_TeleportLayers = -1;
 
-    //public HandRole m_HandRole;
-    //public ControllerButton m_ControllerButton;
-
     private bool m_TeleportStarted = false;
 
-    //private SteamVR_Behaviour_Pose m_Pose = null;
     private bool m_HasPosition = false;
 
     private bool m_IsTeleporting = false;
     public float m_FadeTime = 0.25f;
 
-    private MeshRenderer m_Renderer;
-    private Material m_Material;
     RaycastHit m_Hit;
+
+    //Grading
+    public int TeleportCount;
+    public float TeleportDistance;
 
     void Start()
     {
         m_Marker = GameObject.Find("NextGen_TP_Marker");
-        //m_Pose = GetComponent<SteamVR_Behaviour_Pose>();
-        //m_Marker.SetActive(false);
     }
 
     void FixedUpdate()
@@ -42,14 +37,6 @@ public class Teleport : MonoBehaviour
         {
             m_HasPosition = UpdatePointer();
         }
-
-        // THIS IS THE LAST USED:  =================
-
-        //if (ViveInput.GetPressUp(m_HandRole, m_ControllerButton))
-        //{
-        //    TryTeleport();
-        //}
-
     }
 
     public void TeleportStart()
@@ -81,20 +68,14 @@ public class Teleport : MonoBehaviour
     {
         m_IsTeleporting = true;
 
-
-        //SteamVR_Fade.Start(Color.black, m_FadeTime, true);
-        //SteamVR_Fade.View(Color.black, m_FadeTime);
-
-        //yield return new WaitForSeconds(m_FadeTime);
         yield return new WaitForEndOfFrame();
-        //Vector3 posRig = new Vector3(targetPos.position.x, cameraRig.position.y, targetPos.position.z);
-        //Vector3 posCam = new Vector3(targetPos.position.x, m_Camera.position.y, targetPos.position.z);
+        TeleportDistance += Vector3.Distance(cameraRig.position, targetPos);
+        TeleportCount++;
+        if(GradingController.Instance != null)
+        {
+            GradingController.Instance.TeleportCounterAndDistance(TeleportCount, TeleportDistance);
+        }
         cameraRig.position = targetPos;
-        //m_Camera.position = posCam;
-
-
-        //SteamVR_Fade.Start(Color.clear, m_FadeTime, true);
-        //SteamVR_Fade.View(Color.clear, m_FadeTime);
 
         m_IsTeleporting = false;
         m_Marker.SetActive(false);
