@@ -2,9 +2,9 @@
 using UnityEngine.Events;
 using UnityEngine.XR;
 using System.Collections.Generic;
+using NaughtyAttributes;
 
 //Input for unity built in xr manager
-[System.Serializable]
 public class InputManager : MonoBehaviour
 {
     public InputDeviceCharacteristics deviceRole;
@@ -13,43 +13,61 @@ public class InputManager : MonoBehaviour
     public List<InputDevice> inputDevices = new List<InputDevice>();
 
     [Header("Trigger")]
+    [Foldout("Trigger Inputs")]
     public UnityEvent OnTriggerDown = new UnityEvent();
+    [Foldout("Trigger Inputs")]
     public UnityEvent OnTriggerUp = new UnityEvent();
+    [Foldout("Trigger Inputs")]
     public UnityEvent OnTriggerHold = new UnityEvent();
     bool m_TriggerLastStateDown;
     bool m_TriggerLastStateUp;
 
 
-    [Header("Primary Button")]
+    [Header("Primary Button Inputs")]
+    [Foldout("Primary Button Inputs")]
     public UnityEvent OnADown = new UnityEvent();
+    [Foldout("Primary Button Inputs")]
     public UnityEvent OnAUp = new UnityEvent();
+    [Foldout("Primary Button Inputs")]
     public UnityEvent OnAHold = new UnityEvent();
     bool m_PrimaryButtonLastStateDown;
     bool m_PrimaryButtonLastStateUp;
 
-    [Header("Secondary Button")]
+    [Header("Secondary Button Inputs")]
+    [Foldout("Secondary Button Inputs")]
     public UnityEvent OnBDown = new UnityEvent();
+    [Foldout("Secondary Button Inputs")]
     public UnityEvent OnBUp = new UnityEvent();
+    [Foldout("Secondary Button Inputs")]
     public UnityEvent OnBHold = new UnityEvent();
     bool m_SecondaryButtonLastStateDown;
     bool m_SecondaryButtonLastStateUp;
 
     [Header("Grip")]
+    [Foldout("Grip Button Inputs")]
     public UnityEvent OnGripDown = new UnityEvent();
+    [Foldout("Grip Button Inputs")]
     public UnityEvent OnGripUp = new UnityEvent();
+    [Foldout("Grip Button Inputs")]
     public UnityEvent OnGripHold = new UnityEvent();
     bool m_GripButtonLastStateDown;
     bool m_GripButtonLastStateUp;
 
     [Header("JoyStick")]
+    [Foldout("Joystick Inputs")]
     [SerializeField]
     float JoyStickXMinThreshold = .1f;
+    [Foldout("Joystick Inputs")]
     [SerializeField]
     float JoyStickYMinThreshold = .1f;
+    [Foldout("Joystick Inputs")]
     [SerializeField]
     float m_JoystickMaxThreshold = 0.9f;
+    [Foldout("Joystick Inputs")]
     public UnityEvent<Vector2> JoyStickMove = new UnityEvent<Vector2>();
+    [Foldout("Joystick Inputs")]
     public UnityEvent OnJoyStickDown = new UnityEvent();
+    [Foldout("Joystick Inputs")]
     public UnityEvent OnJoyStickUp = new UnityEvent();
     bool m_JoyStickLastStateDown;
     bool m_JoyStickLastStateUp;
@@ -73,71 +91,58 @@ public class InputManager : MonoBehaviour
             if (TriggerDown(inputDevices[0]))
             {
                 OnTriggerDown.Invoke();
-                Debug.Log("trigger pushed mf");
             }
             if (TriggerUp(inputDevices[0]))
             {
                 OnTriggerUp.Invoke();
-                Debug.Log("Trigger released mf");
             }
             if (TriggerHold(inputDevices[0]))
             {
                 OnTriggerHold.Invoke();
-                Debug.Log("Trigger is held");
             }
 
             //--------Primary button Inputs --------
             if (PrimaryButtonDown(inputDevices[0]))
             {
                 OnADown.Invoke();
-                Debug.Log("A button pressed");
             }
             if (PrimaryButtonUp(inputDevices[0]))
             {
                 OnAUp.Invoke();
-                Debug.Log("A button released");
             }
             if (PrimaryButtonHold(inputDevices[0]))
             {
                 OnAHold.Invoke();
-                Debug.Log("A button hold");
             }
             //--------Secondary button Inputs --------
             if (SecondaryButtonDown(inputDevices[0]))
             {
                 OnBDown.Invoke();
-                Debug.Log("B button pressed");
             }
             if (SecondaryButtonUp(inputDevices[0]))
             {
                 OnBUp.Invoke();
-                Debug.Log("B button released");
             }
             if (SecondaryButtonHold(inputDevices[0]))
             {
                 OnBHold.Invoke();
-                Debug.Log("B button hold");
             }
             //--------Grip button Inputs --------
             if (GripButtonDown(inputDevices[0]))
             {
                 OnGripDown.Invoke();
-                Debug.Log("GripButtonDown pressed");
             }
             if (GripButtonUp(inputDevices[0]))
             {
                 OnGripUp.Invoke();
-                Debug.Log("GripButtonUp");
             }
             if (GripHold(inputDevices[0]))
             {
                 OnGripHold.Invoke();
-                Debug.Log("GripHold");
             }
             //--------JoyStick Inputs --------
             if (JoyStick().x > JoyStickXMinThreshold && JoyStick().x < m_JoystickMaxThreshold || JoyStick().y > JoyStickYMinThreshold && JoyStick().y < m_JoystickMaxThreshold || JoyStick().x < -JoyStickXMinThreshold && JoyStick().x > -m_JoystickMaxThreshold || JoyStick().y < -JoyStickYMinThreshold && JoyStick().y > -m_JoystickMaxThreshold)
             {
-                Debug.Log("X = " +JoyStick().x.ToString() + " Y = " + JoyStick().y.ToString());
                 Debug.Log("IsWithInThreshold");
                 JoyStickMove.Invoke(JoyStick());
             }

@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: ViA
-  productName: Motor_29_03_2021
+  productName: Motor_06_04_2021_NewInputs
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 1, g: 0, b: 0, a: 0.65882355}
@@ -130,8 +130,9 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.135
-  preloadedAssets: []
+  bundleVersion: 0.2
+  preloadedAssets:
+  - {fileID: 11400000, guid: 353e71b4d526bd74897b16ce87563e6c, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -149,7 +150,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.ViA.Motor_29_03_2021
+    Android: com.ViA.Motor_06_04_2021_NewInputs
     Standalone: com.ViA.Motor29032021
   buildNumber:
     Standalone: 0
