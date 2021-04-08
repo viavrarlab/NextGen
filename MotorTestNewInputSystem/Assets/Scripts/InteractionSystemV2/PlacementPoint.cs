@@ -40,7 +40,6 @@ public class PlacementPoint : MonoBehaviour
     public SocketState m_CurrentSocketState = SocketState.None;
 
     private SocketState m_LastSocketState;
-
     private MeshRenderer m_MeshRenderer; // PlacementPoints' graphics. For now they are on the same object and the MR is assigned automatically
     private MaterialPropertyBlock m_MaterialPropertyBlock; // Allows to use a single material, but be able to change each objects' parameters separately (ex., Object1 - blue, Object2 - orange)
 
@@ -78,32 +77,32 @@ public class PlacementPoint : MonoBehaviour
                 case SocketState.Empty:
                     ToggleSocketMeshRenderer(true);
                     UpdateMaterial(m_DefaultStateColor);
-                    FadeAlphaTo(0.2f);
+                    //FadeAlphaTo(0.2f);
                     m_LastSocketState = m_CurrentSocketState;
                     return;
                 case SocketState.IntersectingValidObject:
                     ToggleSocketMeshRenderer(true);
                     //ToggleIntersectingSockets(false);
                     UpdateMaterial(m_ValidObjectColor);
-                    FadeAlphaTo(0.5f);
+                    //FadeAlphaTo(0.5f);
                     m_LastSocketState = m_CurrentSocketState;
                     return;
                 case SocketState.IntersectingInvalidObject:
                     ToggleSocketMeshRenderer(true);
                     UpdateMaterial(m_InvalidObjectColor);
-                    FadeAlphaTo(0.5f);
+                    //FadeAlphaTo(0.5f);
                     m_LastSocketState = m_CurrentSocketState;
                     return;
                 case SocketState.IntersectingValidRotation:
                     ToggleSocketMeshRenderer(true);
                     UpdateMaterial(m_ValidRotationColor);
-                    FadeAlphaTo(0.5f);
+                    //FadeAlphaTo(0.5f);
                     m_LastSocketState = m_CurrentSocketState;
                     return;
                 case SocketState.IntersectingInvalidRotation:
                     ToggleSocketMeshRenderer(true);
                     UpdateMaterial(m_InvalidRotationColor);
-                    FadeAlphaTo(0.5f);
+                    //FadeAlphaTo(0.5f);
                     m_LastSocketState = m_CurrentSocketState;
                     return;
                 case SocketState.Snapped:
@@ -316,7 +315,7 @@ public class PlacementPoint : MonoBehaviour
             return;
         }
         m_MeshRenderer.GetPropertyBlock(m_MaterialPropertyBlock);
-        m_MaterialPropertyBlock.SetColor("_Color", _col);
+        m_MaterialPropertyBlock.SetColor("_BaseColor", _col);
         m_MeshRenderer.SetPropertyBlock(m_MaterialPropertyBlock);
     }
 

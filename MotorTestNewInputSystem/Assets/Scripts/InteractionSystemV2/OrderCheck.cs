@@ -46,7 +46,7 @@ public class OrderCheck : MonoBehaviour
             Physics.IgnoreCollision(GetComponent<BoxCollider>(), other.GetComponent<BoxCollider>());
         }
         //Check if Constraint has more than 1 source and change weights according to the gameobject
-        if (other.transform.parent.transform.parent != null && other.transform.parent.transform.parent.GetComponent<ParentConstraint>() != null)
+        if (other.transform.parent.transform.parent != null && other.transform.parent.transform.parent.GetComponent<ParentConstraint>() != null && !other.CompareTag("PlayerHand"))
         {
             if (other.transform.parent.transform.parent.GetComponent<ParentConstraint>().sourceCount > 1)
             {
@@ -87,7 +87,7 @@ public class OrderCheck : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         //if multiple sockets, check which socket will the object be placed in and change parent constraint source weight
-        if (other.transform.parent.transform.parent != null && other.transform.parent.transform.parent.GetComponent<ParentConstraint>() != null)
+        if (other.transform.parent.transform.parent != null && other.transform.parent.transform.parent.GetComponent<ParentConstraint>() != null && !other.CompareTag("PlayerHand"))
         {
             if (other.transform.parent.transform.parent.GetComponent<ParentConstraint>().sourceCount > 1)
             {

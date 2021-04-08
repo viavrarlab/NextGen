@@ -1482,6 +1482,11 @@ PrefabInstance:
       propertyPath: m_Marker
       value: 
       objectReference: {fileID: 1858020320}
+    - target: {fileID: 8620121449958892038, guid: 83443fadd0209044ea5bd0f34fa1c2ff,
+        type: 3}
+      propertyPath: m_CharacterHeight
+      value: 1.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8620121451604754796, guid: 83443fadd0209044ea5bd0f34fa1c2ff,
         type: 3}
       propertyPath: m_RootOrder
@@ -1536,6 +1541,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620121451604754797, guid: 83443fadd0209044ea5bd0f34fa1c2ff,
+        type: 3}
+      propertyPath: m_TrackingOriginMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8620121451604754798, guid: 83443fadd0209044ea5bd0f34fa1c2ff,
         type: 3}
