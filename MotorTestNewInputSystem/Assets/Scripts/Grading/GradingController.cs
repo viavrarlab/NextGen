@@ -82,11 +82,14 @@ public class GradingController : MonoBehaviour
     private static GradingController _instance;
     public static GradingController Instance { get { return _instance; } }
 
-    //Teleport Counters
+    //Teleport and movement Counters
     [SerializeField]
     GameObject TeleportCountUI;
     [SerializeField]
     GameObject TeleportDistanceUI;
+    [SerializeField]
+    GameObject WalkedDistanceUI;
+    SmoothLocomotionWithSnapTurn m_MotionScript;
 
     SetEnable m_SetEnable;
 
@@ -104,6 +107,7 @@ public class GradingController : MonoBehaviour
         m_ControllerScript = FindObjectOfType<ControllerScript>();
         BothControllers = FindObjectsOfType<ControllerScript>();
         m_CorrOrder = FindObjectOfType<CorrectOrderTests>();
+        m_MotionScript = FindObjectOfType<SmoothLocomotionWithSnapTurn>();
         m_Refresh = m_ResultUI.GetComponentInChildren<Button>();
         m_WhiteBoardTimer = m_TotalTimerWhiteBoardUI.GetComponent<Text>();
         m_WhiteBoardPartCounter = m_WhiteboardPartCounterUI.GetComponent<Text>();
@@ -169,9 +173,12 @@ public class GradingController : MonoBehaviour
                     DisplayList();
                     StopAllCoroutines();
                     PlacedCounters();
-                    m_CorrectPlacedUI.GetComponent<Text>().text += m_CorrectPlacedCount.ToString();
+                    m_MinusOneText.SetActive(false);
+                    m_PlusOneText.SetActive(false);
+;                    m_CorrectPlacedUI.GetComponent<Text>().text += m_CorrectPlacedCount.ToString();
                     m_IncorrectPlacedUI.GetComponent<Text>().text += m_IncorrectPlacedCount.ToString();
                     m_TotaltimerResultUI.GetComponent<Text>().text += m_TotalTimerText;
+                    WalkedDistanceUI.GetComponent<Text>().text += "Distance walked = " + System.Math.Round(m_MotionScript.m_DistanceTravelled, 2).ToString() + "m";
                 }
             }
         }
@@ -463,7 +470,7 @@ public class GradingController : MonoBehaviour
     public void TeleportCounterAndDistance(int TeleportCount, float TeleportDistance)
     {
         TeleportCountUI.GetComponent<Text>().text = "Times teleported = " + TeleportCount.ToString();
-        TeleportDistanceUI.GetComponent<Text>().text = "Distance teleported = " + System.Math.Round(TeleportDistance, 2).ToString() + "m";
+        TeleportDistanceUI.GetComponent<Text>().text = "Distance moved = " + System.Math.Round(TeleportDistance, 2).ToString() + "m";
     }
     public IEnumerator TotalTimer()
     {
