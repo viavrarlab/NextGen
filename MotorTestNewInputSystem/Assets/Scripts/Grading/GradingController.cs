@@ -30,7 +30,7 @@ public class GradingController : MonoBehaviour
     [SerializeField]
     GameObject m_WhiteBoardPointCounterUI = null;
     Text m_WhiteBoardPoints;
-
+    [SerializeField]
     CorrectOrderTests m_CorrOrder;
 
     [SerializeField]
@@ -89,8 +89,10 @@ public class GradingController : MonoBehaviour
     GameObject TeleportDistanceUI;
     [SerializeField]
     GameObject WalkedDistanceUI;
+    [SerializeField]
     SmoothLocomotionWithSnapTurn m_MotionScript;
 
+    [SerializeField]
     SetEnable m_SetEnable;
 
     //---Total Timer---
@@ -103,11 +105,11 @@ public class GradingController : MonoBehaviour
 
     private void Awake()
     {
-        m_SetEnable = FindObjectOfType<SetEnable>();
+        //m_SetEnable = FindObjectOfType<SetEnable>();
         m_ControllerScript = FindObjectOfType<ControllerScript>();
         BothControllers = FindObjectsOfType<ControllerScript>();
-        m_CorrOrder = FindObjectOfType<CorrectOrderTests>();
-        m_MotionScript = FindObjectOfType<SmoothLocomotionWithSnapTurn>();
+        //m_CorrOrder = FindObjectOfType<CorrectOrderTests>();
+        //m_MotionScript = FindObjectOfType<SmoothLocomotionWithSnapTurn>();
         m_Refresh = m_ResultUI.GetComponentInChildren<Button>();
         m_WhiteBoardTimer = m_TotalTimerWhiteBoardUI.GetComponent<Text>();
         m_WhiteBoardPartCounter = m_WhiteboardPartCounterUI.GetComponent<Text>();

@@ -79,10 +79,10 @@ namespace ModelOutline
         + "Precompute disabled: Per-vertex calculations are performed at runtime in Awake(). This may cause a pause for large meshes.")]
         public bool precomputeOutline;
 
-        [SerializeField, HideInInspector]
+        [SerializeField]
         private List<Mesh> bakeKeys = new List<Mesh>();
 
-        [SerializeField, HideInInspector]
+        [SerializeField]
         private List<ListVector3> bakeValues = new List<ListVector3>();
 
         private Renderer[] renderers;

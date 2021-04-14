@@ -18,6 +18,7 @@ TagManager:
   - VRRIG
   - Instructions
   - Box
+  - MotorRoot
   layers:
   - Default
   - TransparentFX

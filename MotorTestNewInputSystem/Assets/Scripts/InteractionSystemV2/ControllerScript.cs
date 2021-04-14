@@ -25,7 +25,7 @@ public class ControllerScript : MonoBehaviour
 
     public List<GameObject> CollidingObj = new List<GameObject>();
 
-    private void Awake()
+    private void Start()
     {
         m_CorrectOrder = FindObjectOfType<CorrectOrderTests>();
         if(m_CorrectOrder != null)

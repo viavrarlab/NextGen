@@ -14,7 +14,7 @@ public class SetComplete : MonoBehaviour
     public List<GameObject> childs;
     public List<GameObject> SetModels;
 
-    private void Awake()
+    private void Start()
     {
         foreach (Transform child in this.transform)
         {

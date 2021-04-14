@@ -27,6 +27,7 @@ public class GameControllerSC : MonoBehaviour
 
     public GameObject[] Instructions;
 
+
     public bool SetAngleCheck;
     public bool SetOrderCheck;
     public bool EnableHint;
