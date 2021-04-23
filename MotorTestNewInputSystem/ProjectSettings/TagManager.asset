@@ -19,6 +19,7 @@ TagManager:
   - Instructions
   - Box
   - MotorRoot
+  - BoxContent
   layers:
   - Default
   - TransparentFX

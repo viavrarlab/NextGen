@@ -1896,6 +1896,7 @@ MonoBehaviour:
   m_ControllerUI: {fileID: 7305540052180340619}
   m_HintImage: {fileID: 3820815621510464179}
   PartName: {fileID: 1574492484209317992}
+  PP_Array: []
 --- !u!1 &8620121451604754798
 GameObject:
   m_ObjectHideFlags: 0

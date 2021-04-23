@@ -28,7 +28,7 @@ public class ControllerScript : MonoBehaviour
     private void Start()
     {
         m_CorrectOrder = FindObjectOfType<CorrectOrderTests>();
-        if(m_CorrectOrder != null)
+        if (m_CorrectOrder != null)
         {
             m_PlaceArray = new GameObject[m_CorrectOrder.Parts.Count];
             for (int i = 0; i < m_CorrectOrder.Parts.Count; i++)
@@ -48,9 +48,13 @@ public class ControllerScript : MonoBehaviour
         }
         if (other.CompareTag("MotorCollider") || other.CompareTag("SetGrab") || other.CompareTag("PlacementRoot") || other.CompareTag("Box"))
         {
-            if (other.CompareTag("PlacementRoot") || other.CompareTag("Box"))
+            if (other.CompareTag("PlacementRoot"))
             {
                 CollidingObj.Add(other.gameObject);
+            }
+            if (other.CompareTag("Box"))
+            {
+                CollidingObj.Add(other.transform.parent.gameObject);
             }
             if (other.CompareTag("MotorCollider") || other.CompareTag("SetGrab"))
             {
@@ -61,7 +65,7 @@ public class ControllerScript : MonoBehaviour
                 {
                     for (int i = 0; i < m_PlaceArray.Length; i++)
                     {
-                        if (m_PlaceArray[i] != null && m_PlaceArray[i].GetComponent<Placeable>() != null && i < m_PlaceArray.Length -1)
+                        if (m_PlaceArray[i] != null && m_PlaceArray[i].GetComponent<Placeable>() != null && i < m_PlaceArray.Length - 1)
                         {
                             if (other.transform.parent.transform.parent.gameObject.GetComponent<Placeable>().m_ID == m_PlaceArray[i].GetComponent<Placeable>().m_ID && m_PlaceArray[i + 1].GetComponent<Placeable>().m_IsPlaced == false)
                             {
@@ -82,7 +86,7 @@ public class ControllerScript : MonoBehaviour
     {
         foreach (GameObject GO in CollidingObj)
         {
-            if(GO.GetComponent<Outline>() != null)
+            if (GO.GetComponent<Outline>() != null)
             {
                 if (GO == CollidingObj.Last())
                 {
@@ -98,7 +102,7 @@ public class ControllerScript : MonoBehaviour
     }
     public void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("PlacementRoot") || other.CompareTag("Box"))
+        if (other.CompareTag("PlacementRoot"))
         {
             if (other.GetComponent<Outline>() != null)
             {
@@ -106,11 +110,23 @@ public class ControllerScript : MonoBehaviour
             }
             CollidingObj.Remove(other.gameObject);
         }
+        if (other.CompareTag("Box"))
+        {
+            if (other.transform.parent.GetComponent<Outline>() != null)
+            {
+                other.transform.parent.GetComponent<Outline>().enabled = false;
+            }
+            CollidingObj.Remove(other.transform.parent.gameObject);
+        }
         else
         {
-            other.transform.parent.transform.parent.gameObject.GetComponent<Outline>().enabled = false;
-            other.transform.parent.transform.parent.gameObject.GetComponent<Placeable>().CanTakeOut = false;
-            CollidingObj.Remove(other.transform.parent.transform.parent.gameObject);
+            if (other.transform.parent.transform.parent != null)
+            {
+                other.transform.parent.transform.parent.gameObject.GetComponent<Outline>().enabled = false;
+                other.transform.parent.transform.parent.gameObject.GetComponent<Placeable>().CanTakeOut = false;
+                CollidingObj.Remove(other.transform.parent.transform.parent.gameObject);
+            }
+           
         }
 
         if (!collidingObjectToBePickedUp)
@@ -153,6 +169,23 @@ public class ControllerScript : MonoBehaviour
         if (collidingObjectToBePickedUp != null)
         {
             GrabObject();
+        }
+    }
+    public void PickUp()
+    {
+        foreach (GameObject go in CollidingObj)
+        {
+            if (objectinhand == null)
+            {
+                if (go.CompareTag("SetGrab") && CollidingObj.Last() || go.CompareTag("PlacementRoot") && CollidingObj.Last() || go.CompareTag("BoxContent") && CollidingObj.Last() || go.CompareTag("MotorPart") && CollidingObj.Last())
+                {
+                    collidingObjectToBePickedUp = go;
+                }
+            }
+            if (collidingObjectToBePickedUp != null)
+            {
+                GrabObject();
+            }
         }
     }
     void GrabObject()

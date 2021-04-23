@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Linq;
+using System;
+using System.Text;
 
 public class LeftHandUIController : MonoBehaviour
 {
@@ -13,7 +16,10 @@ public class LeftHandUIController : MonoBehaviour
     [SerializeField]
     Text PartName = null;
 
-    Object[] m_Thumbnails;
+    UnityEngine.Object[] m_Thumbnails;
+
+    [SerializeField]
+    PlacementPoint[] PP_Array;
 
     CorrectOrderTests m_CorrOrder;
     GameControllerSC m_Gcontroller;
@@ -22,13 +28,19 @@ public class LeftHandUIController : MonoBehaviour
         //m_ControllerUI = gameObject.GetComponentInChildren<Canvas>();
         m_ControllerUI.enabled = false;
         m_CorrOrder = FindObjectOfType<CorrectOrderTests>();
+        string[] NameArray = m_CorrOrder.Parts.Select(x => x.obj.name+"_Socket").ToArray();
         m_Gcontroller = FindObjectOfType<GameControllerSC>();
+        PlacementPoint[] TempArray = FindObjectsOfType<PlacementPoint>();
+        PP_Array = TempArray.OrderBy(x => Array.IndexOf(NameArray, x.name)).ToArray();
+        //PP_Array = TempArray.OrderBy()
+        //PP_Array = TempArray;
+        Array.Clear(TempArray, 0, TempArray.Length);
     }
     public void EnableUI()
     {
-        if(SceneManager.GetActiveScene().buildIndex == 2)
+        if (SceneManager.GetActiveScene().buildIndex == 2)
         {
-            if(m_Gcontroller != null)
+            if (m_Gcontroller != null)
             {
                 if (m_Gcontroller.EnableHint)
                 {
@@ -61,26 +73,30 @@ public class LeftHandUIController : MonoBehaviour
     {
         m_Thumbnails = Resources.LoadAll("Thumbnails", typeof(Sprite));
 
-        for(int i = 0; i < m_CorrOrder.Parts.Count; i++)
+        for (int i = 0; i < PP_Array.Length; i++)
         {
-            if(m_CorrOrder.Parts[i].obj.GetComponent<Placeable>().m_IsPlaced == true && i < m_CorrOrder.Parts.Count - 1)
+            if (PP_Array[i].m_IsOccupied == true && i < PP_Array.Length - 1)
             {
                 foreach (Sprite img in m_Thumbnails)
                 {
-                    if (img.name == m_CorrOrder.Parts[i+1].obj.name + "_Thumbnail")
+                    if (img.name == PP_Array[i+1].name.Replace("_Socket", "_Thumbnail"))
                     {
                         m_HintImage.sprite = img;
-                        if(m_CorrOrder.Parts[i + 1].obj.name == "Set0")
+                        if (PP_Array[i + 1].name == "Set0_Socket")
                         {
-                            PartName.text = m_CorrOrder.Parts[i + 1].obj.name.Replace("Set0", "Front shield");
+                            PartName.text = PP_Array[i + 1].name.Replace("Set0_Socket", "Assembled Front End shield");
                         }
-                        if (m_CorrOrder.Parts[i + 1].obj.name == "Set1")
+                        if (PP_Array[i + 1].name == "Set1_Socket")
                         {
-                            PartName.text = m_CorrOrder.Parts[i + 1].obj.name.Replace("Set1", "Back shield");
+                            PartName.text = PP_Array[i + 1].name.Replace("Set1", "Back shield");
                         }
                         else
                         {
-                            PartName.text = m_CorrOrder.Parts[i + 1].obj.name.Replace('_', ' ');
+                            StringBuilder sb = new StringBuilder(PP_Array[i+1].name);
+                            sb.Replace("_", " ");
+                            sb.Replace("Socket", " ");
+                            PartName.text = sb.ToString();
+                            //PartName.text = PP_Array[i + 1].name.Replace("_", " ");
                         }
                     }
                 }
@@ -89,20 +105,24 @@ public class LeftHandUIController : MonoBehaviour
             {
                 foreach (Sprite img in m_Thumbnails)
                 {
-                    if (img.name == m_CorrOrder.Parts[i].obj.name + "_Thumbnail")
+                    if (img.name == PP_Array[i].name.Replace("_Socket", "_Thumbnail"))
                     {
                         m_HintImage.GetComponentInChildren<Image>().sprite = img;
-                        if (m_CorrOrder.Parts[i + 1].obj.name == "Set0")
+                        if (PP_Array[i].name == "Set0_Socket")
                         {
-                            PartName.text = m_CorrOrder.Parts[i].obj.name.Replace("Set0", "Front shield");
+                            PartName.text = PP_Array[i].name.Replace("Set0_Socket", "Assembled Front End shield");
                         }
-                        if (m_CorrOrder.Parts[i + 1].obj.name == "Set1")
+                        if (PP_Array[i].name == "Set1_Socket")
                         {
-                            PartName.text = m_CorrOrder.Parts[i].obj.name.Replace("Set1", "Back shield");
+                            PartName.text = PP_Array[i].name.Replace("Set1_Socket", "Assembled Back end shield");
                         }
                         else
                         {
-                            PartName.text = m_CorrOrder.Parts[i].obj.name.Replace('_', ' ');
+                            StringBuilder sb = new StringBuilder(PP_Array[i].name);
+                            sb.Replace("_", " ");
+                            sb.Replace("Socket", " ");
+                            PartName.text = sb.ToString();
+                            //PartName.text = PP_Array[i].name.Replace("_", " ");
                         }
                     }
                 }

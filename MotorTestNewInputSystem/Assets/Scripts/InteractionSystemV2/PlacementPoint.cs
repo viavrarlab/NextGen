@@ -184,12 +184,12 @@ public class PlacementPoint : MonoBehaviour
         {
             Physics.IgnoreCollision(other, this.gameObject.GetComponent<BoxCollider>());
         }
-        if (!m_IsOccupied && GameControllerSC.Instance != null && !GameControllerSC.Instance.ObjectIsSnapping)
+        if (!m_IsOccupied && GameControllerSC.Instance != null && !GameControllerSC.Instance.ObjectIsSnapping )
         {
             if (m_SnappableObject != null)
             {
                 if (m_PlaceableID == m_SnappableObject.m_ID)
-                {                    
+                {
                     if (m_OrderCheck.m_OrderCorrect)
                     {
                         if (m_CheckForCorrectAngle && m_GameControllerAngleCheck) // if option is check
@@ -197,7 +197,7 @@ public class PlacementPoint : MonoBehaviour
                             if (CheckAngle(m_SnappableObject.transform.rotation.eulerAngles))   // Check if user has rotated the object correctly
                             {
                                 SwitchSocketState(SocketState.IntersectingValidObject);
-                                if (!m_ControllerScript.TriggerPush && !m_ControllerScript.GrabPush)
+                                if (!m_ControllerScript.TriggerPush)
                                 {
                                     if (GameControllerSC.Instance.SetOrderCheck)
                                     {
@@ -216,7 +216,7 @@ public class PlacementPoint : MonoBehaviour
                         {
                             {
                                 SwitchSocketState(SocketState.IntersectingValidObject);
-                                if (!m_ControllerScript.TriggerPush && !m_ControllerScript.GrabPush)
+                                if (!m_ControllerScript.TriggerPush)
                                 {
                                     if (GameControllerSC.Instance.SetOrderCheck)
                                     {
@@ -249,6 +249,7 @@ public class PlacementPoint : MonoBehaviour
             return;
         }
 
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -265,7 +266,7 @@ public class PlacementPoint : MonoBehaviour
         if (!m_IsOccupied)
         {
             SwitchSocketState(SocketState.Empty);
-            if(m_SnappableObject != null)
+            if (m_SnappableObject != null)
             {
                 GradingController.Instance.ObjectExitedSocket = true;
             }
